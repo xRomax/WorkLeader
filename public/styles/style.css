@@ -1,0 +1,120 @@
+html, body {
+  overflow-x:hidden;
+  overflow-y:hidden;
+}
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.sidenav-trigger {
+  color: #26a69a;
+}
+
+.hot-work {
+  width: auto;
+  font-weight: bold;
+  padding: 0px;
+}
+.hot-work>.text-work {
+  margin: 0px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.carousel-hot-work>a>img {
+  width: 400px;
+}
+
+.jobs-form {
+  border: 2px solid #81d4fa  ;
+  border-radius: 10px; 
+}
+
+.sticky-block {
+  z-index:996;
+  height: 20%;
+  min-height: 167px;
+  width: 170px;
+  position: fixed;
+  right: 0; top: 40%;
+  border-radius: 10px 0 0 10px;
+}
+.sticky-block>ul>li>a {
+  color: white;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+.parallax-container .section {
+  width: 100%;
+}
+
+.jobs-img {
+  width: 230px;
+}
+
+@media only screen and (min-width : 993px) {
+  .parallax-container .country-flag {
+    position: absolute;
+    top: 40%;
+  }
+}
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 10%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+  .flag-block img {
+    width: 100px;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+  .flag-block img {
+    width: 70px;
+  }
+  .carousel .indicators {
+    display: none;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+.kubik_forma{ 
+	background-color: #D8D8D8; 
+	width: 500px; 
+	margin: auto auto; 
+	position: relative; 
+	text-align: center; 
+	border-radius: 5px; 
+	z-index: 2; 
+}
+
+/* .bold {
+  font-weight: bold;
+} */
