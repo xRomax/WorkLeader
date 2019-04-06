@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col s3">
         <ul id="nav-mobile" class="sidenav sidenav-fixed blue-grey">
-          <li class="logo"><img src="public/images/logo.png" alt="WorkLeader" style="width: 100%;"></li>
+          <li class="logo"><img src="/public/images/logo.png" alt="WorkLeader" style="width: 100%;"></li>
           <li class="bold"><a href="/admin" class="waves-effect waves-teal">Главная</a></li>
           <li class="no-padding">
             <ul class="collapsible collapsible-accordion">

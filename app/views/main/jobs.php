@@ -26,7 +26,7 @@
           <div class="col s12">
             <p><b>В пансионат по уходу за пожилыми людьми требуеться медсестра</b></p>
               <div class="col l4 m6 s12">
-                <img class="z-depth-2" src="public/images/flag/pol.png" alt="Польша" style="width:20px;"> Польшa
+                <img class="z-depth-2" src="/public/images/flag/pol.png" alt="Польша" style="width:20px;"> Польшa
                 <div class="row">
                   <div class="col s6">
                     <p>Пол:</p>
@@ -51,7 +51,7 @@
                 </div>
               </div>
               <div class="col l4 m12 s6">
-                <img style="width:230px;" src="public/images/med.jpg" alt="">
+                <img style="width:230px;" src="/public/images/med.jpg" alt="">
               </div>
               <div class="col l12 m12 s12">
                 <a href="jobs/jobs_desc" class="btn-large waves-effect waves-light light-blue lighten-1d">Подробнее</a>

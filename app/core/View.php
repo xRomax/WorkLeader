@@ -16,12 +16,14 @@ class View {
 
 	public function render() {
 		$path = 'app/views/'.$this->path.'.php';
+		
 		if (file_exists($path)) {
 			ob_start();
 			require $path;
 			$content = ob_get_clean();
 			require 'app/views/templates/'.$this->template.'.php';
 		}
+		
 	}
 
 	public function redirect($url) {

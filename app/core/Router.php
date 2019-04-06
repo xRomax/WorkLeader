@@ -17,12 +17,13 @@ class Router {
 	}
 
 	public function add($route, $params) {
-			// $route = preg_replace('/{([a-z]+):([^\}]+)}/', '(?P<\1>\2)', $route);
+			$route = preg_replace('/{([a-z]+):([^\}]+)}/', '(?P<\1>\2)', $route);
 			$route = '#^'.$route.'$#';
 			$this->routes[$route] = $params;
 	}
 
 	public function match() {
+		// debug($_SERVER);
 		$url = trim($_SERVER['REQUEST_URI'], '/');
 		foreach ($this->routes as $route => $params) {
 			if (preg_match($route, $url, $matches)) {

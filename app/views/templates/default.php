@@ -6,12 +6,15 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="stylesheet" href="public/styles/materialize.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="/public/styles/materialize.css">
+	<link rel="stylesheet" href="/public/styles/style.css">
+	<link rel="shortcut icon" href="/public/images/favicon.png" type="image/x-icon">
 
-	<link rel="stylesheet" href="public/styles/style.css">
-	
-	<link rel="shortcut icon" href="public/images/favicon.png" type="image/x-icon">
+  <script src="/public/scripts/jquery.js"></script>
+  <script src="/public/scripts/materialize.js"></script>
+  <script src="/public/scripts/nicescroll.js"></script>
+  <script src="/public/scripts/script.js"></script>
 
 	<title>WorkLeader | Работа в Европейских странах</title>
 </head>
@@ -58,7 +61,7 @@
                 </ul>
               <h5 class="white-text">Документы</h5>
               <ul>
-                  <li><a target="_blank" class="white-text" href="img/sertif.png"><i class="material-icons">description</i>Сертификат №17726</a></li>
+                  <li><a target="_blank" class="white-text" href="public/img/sertif.png"><i class="material-icons">description</i>Сертификат №17726</a></li>
                 </ul>
           </div>
           <div class="col l4 s12">
@@ -113,12 +116,6 @@
       <li><a class="btn-floating btn-large red modal-trigger tooltipped" data-position="left" data-tooltip="Заказать консультацию" href="#modal1"><i class="large material-icons">message</i></a></li>
 		</ul>
 	</div>
-
-    <script src="public/scripts/jquery.js"></script>
-
-    <script src="public/scripts/materialize.js"></script>
-		<script src="public/scripts/nicescroll.js"></script>
-    <script src="public/scripts/script.js"></script>
     
 </body>
 </html>

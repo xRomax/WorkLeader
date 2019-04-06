@@ -6,11 +6,15 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="stylesheet" href="public/styles/materialize.css">
-	<link rel="stylesheet" href="public/styles/style.css">
-	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="/public/styles/materialize.css">
+	<link rel="stylesheet" href="/public/styles/style.css">
 	<link rel="shortcut icon" href="public/images/favicon.png" type="image/x-icon">
+
+	<script src="/public/scripts/jquery.js"></script>
+  <script src="/public/scripts/materialize.js"></script>
+	<script src="/public/scripts/nicescroll.js"></script>
+  <script src="/public/scripts/script.js"></script>
 
 	<title>Авторизация в панель администратора</title>
 </head>
@@ -18,10 +22,5 @@
   
 	<?php echo $content; ?>
 
-  <script src="public/scripts/jquery.js"></script>
-  <script src="public/scripts/materialize.js"></script>
-	<script src="public/scripts/nicescroll.js"></script>
-  <script src="public/scripts/script.js"></script>
-    
 </body>
 </html>

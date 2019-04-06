@@ -22,10 +22,6 @@ return [
 		'controller' => 'main',
 		'action' => 'jobs',
 	],
-	'jobs' => [
-		'controller' => 'main',
-		'action' => 'jobs',
-	],
 	// AdminController
 	'admin' => [
 		'controller' => 'admin',
