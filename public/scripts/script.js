@@ -85,7 +85,28 @@ $(document).ready(function(){
   }, 6000);
 
 
-
+  $('.ajax').submit(function(event) {
+    var json;
+    event.preventDefault();
+    // var a = $(this).attr('action');
+    $.ajax({
+      type: $(this).attr('method'),
+      url: $(this).attr('action'),
+      data: new FormData(this),
+      contentType: false,
+      cache: false,
+      processData: false,
+      success: function(result) {
+        // switch (a) {
+        //     case 'show.php': $(".resultat1").html(result); break;
+        // }
+        json = jQuery.parseJSON(result);
+        if (json.url) {
+          window.location.href = '/' + json.url;
+        } else {
+          alert(json.status + ' - ' + json.message);
+        }
+      },
+    });
+  });
 });
-
-

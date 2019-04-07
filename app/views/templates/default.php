@@ -42,6 +42,7 @@
           </div>
       </nav>
   </div>
+
   <?php echo $content; ?>
 
   <footer class="page-footer teal">
@@ -54,10 +55,10 @@
           <div class="col l4 s12">
               <h5 class="white-text">Контакты</h5>
               <ul>
-									<li><a class="white-text" href="tel:0985847073"><i class="material-icons">phone</i>098 584 70 73</a></li>
-									<li><a class="white-text" href="tel:0685551526"><i class="material-icons">phone</i>068 555 15 26</a></li>
-									<li><a class="white-text" href="mailto:workleaderandco@gmail.com"><i class="material-icons">email</i>workleaderandco@gmail.com</a></li>
-									<li><a class="white-text" href="mailto:johnsonhayes123@gmail.com"><i class="material-icons">email</i>johnsonhayes123@gmail.com</a></li>
+                <li><a class="white-text" href="tel:0985847073"><i class="material-icons">phone</i>098 584 70 73</a></li>
+                <li><a class="white-text" href="tel:0685551526"><i class="material-icons">phone</i>068 555 15 26</a></li>
+                <li><a class="white-text" href="mailto:workleaderandco@gmail.com"><i class="material-icons">email</i>workleaderandco@gmail.com</a></li>
+                <li><a class="white-text" href="mailto:johnsonhayes123@gmail.com"><i class="material-icons">email</i>johnsonhayes123@gmail.com</a></li>
                 </ul>
               <h5 class="white-text">Документы</h5>
               <ul>
@@ -76,43 +77,45 @@
       </div>
     </footer>
     
-    <div id="modal1" class="modal">
-      <div class="modal-content row">
-          <form class="col s12">
-            <div class="row">
-              <div class="input-field col f6 m6 s12">
-                <i class="material-icons prefix">account_circle</i>
-                <input id="icon_prefix" type="text" class="validate">
-                <label for="icon_prefix">Имя</label>
-                </div>
-              <div class="input-field col f6 m6 s12">
-                <i class="material-icons prefix">phone</i>
-                <input id="icon_telephone" type="tel" class="validate">
-                <label for="icon_telephone">Номер телефона</label>
-                </div>
+  <div id="modal1" class="modal">
+    <div class="modal-content row">
+        <form action="/jobs" method="post" class="col s12 ajax">
+          <div class="row">
+            <div class="input-field col f6 m6 s12">
+              <i class="material-icons prefix">account_circle</i>
+              <input id="icon_prefix" type="text" name="name">
+              <label for="icon_prefix">Имя</label>
+            </div>
+
+            <div class="input-field col f6 m6 s12">
+              <i class="material-icons prefix">phone</i>
+              <input id="icon_telephone" type="tel" name="mobile">
+              <label for="icon_telephone">Номер телефона</label>
               </div>
-              <div class="row">
-                  <div class="input-field col s12">
-                    <i class="material-icons prefix">textsms</i>
-                    <textarea id="textarea1" class="materialize-textarea"></textarea>
-                    <label for="textarea1">Коментарий</label>
-                  </div>
-                </div>
-            </form>
+            </div>
+
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">textsms</i>
+                <textarea id="textarea1" class="materialize-textarea" name="text"></textarea>
+                <label for="textarea1">Коментарий</label>
+              </div>
+            </div>
+
+            <button type="submit" class="btn waves-effect waves-light">Отправить<i class="material-icons right">send</i></button>
+            </div>
+          </form>
       </div>
-      <div class="modal-footer">
-        <a href="#!" class="modal-close waves-effect waves-green btn-flat"><i class="material-icons">send</i>Отправить</a>
-      </div>
-    </div>
+  </div>
   
 	<div class="fixed-action-btn ">
 		<a class="btn-floating btn-large red pulse tooltipped" data-position="left" data-tooltip="Связаться с нами"><i class="large material-icons">contacts</i></a>
 		<ul>
 		  <li><a class="btn-floating btn-large waves-effect waves-light blue accent-4"  href="https://www.facebook.com/WorkLeaderandCo/" target="_blank"><i class="fab fa-facebook-square fa-3x"></i></a></li>
-		  <li><a class="btn-floating btn-large waves-effect waves-light pink darken-2"  href="#!"><i class="fab fa-instagram fa-3x"></i></a></li>
+		  <!-- <li><a class="btn-floating btn-large waves-effect waves-light pink darken-2"  href="#!"><i class="fab fa-instagram fa-3x"></i></a></li>
       <li><a class="btn-floating btn-large waves-effect waves-light blue darken-2"  href="#!"><i class="fab fa-vk fa-3x"></i></a></li>
-      <li><a class="btn-floating btn-large waves-effect waves-light blue lighten-1" href="#!"><i class="fab fa-telegram fa-3x"></i></a></li>
-      <li><a class="btn-floating btn-large waves-effect waves-light green tooltipped" data-position="left" data-tooltip="Позвоните нам" href="#!"><i class="fas fa-phone fa-3x"></i></a></li>
+      <li><a class="btn-floating btn-large waves-effect waves-light blue lighten-1" href="#!"><i class="fab fa-telegram fa-3x"></i></a></li> -->
+      <li><a class="btn-floating btn-large waves-effect waves-light green tooltipped" data-position="left" data-tooltip="Позвоните нам" href="tel:380986670836"><i class="fas fa-phone fa-3x"></i></a></li>
       <li><a class="btn-floating btn-large red modal-trigger tooltipped" data-position="left" data-tooltip="Заказать консультацию" href="#modal1"><i class="large material-icons">message</i></a></li>
 		</ul>
 	</div>
