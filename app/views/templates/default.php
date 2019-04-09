@@ -22,7 +22,7 @@
   <div class="navbar-fixed">
     <nav class="white" role="navigation">
         <div class="nav-wrapper container">
-          <a id="logo-container" href="#" class="brand-logo">WorkLeader</a>
+          <a id="logo-container" href="/" class="brand-logo">WorkLeader</a>
           <ul class="right hide-on-med-and-down">
             <li id='index'><a href="/">Главная</a></li>
             <li id='jobs'><a href="jobs">Вакансии</a></li>

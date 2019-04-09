@@ -36,7 +36,9 @@ $(document).ready(function(){
 
   $('.carousel.carousel-country').carousel({
     duration: 500,
-    padding: 100,
+    padding: 50,
+    numVisible: 7,
+    dist: -40,
   });
 
   $('.carousel.carousel-hot-work').carousel({
@@ -76,9 +78,9 @@ $(document).ready(function(){
     $('.baner').carousel('next');
   }, 5000);
   
-  setInterval(function() {
-    $('.carousel-country').carousel('next');
-  }, 3000);
+  // setInterval(function() {
+  //   $('.carousel-country').carousel('next');
+  // }, 3000);
 
   setInterval(function() {
     $('.carousel-hot-work').carousel('next');
