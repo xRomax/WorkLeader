@@ -21,16 +21,16 @@
 <body>
   <div class="navbar-fixed">
     <ul id="services_dropdown" class="dropdown-content" style="width: 144px;">
-      <li><a href="/services">Услуги</a></li>
+      <li style="height:64px;"><a style="height:100%;" href="/services"><h6>Услуги</h6></a></li>
       <li class="divider"></li>
-      <li><a href="">Трудоустройство в польше</a></li>
-      <li><a href="">Подбор вакансий</a></li>
-      <li><a href="">Открытие фирмы</a></li>
+      <li><a href="/services/job_in_poland">Трудоустройство в польше</a></li>
+      <li><a href="/services/find_jobs">Подбор вакансий</a></li>
+      <li><a href="/services/open_company">Открытие фирмы</a></li>
     </ul>
     <nav class="white" role="navigation">
         <div class="nav-wrapper">
           <a id="logo-container" href="/" class="brand-logo">WorkLeader</a>
-          <a id="" class="brand-logo center teal-text text-lighten-2" href="tel:0985847073">+38(098)-584-70-73</a>
+          <a id="tel-number" class="brand-logo center teal-text text-lighten-2" href="tel:0985847073">+38(098)-584-70-73</a>
           <a href="tel:0685551526">+38(068)-555-15-26</a>
           <ul class="right hide-on-med-and-down">
             <li id='index'><a href="/">Главная</a></li>
@@ -61,7 +61,7 @@
           <h5 class="white-text">Работа и виза - наша специализация</h5>
           <p class="grey-text text-lighten-4">Обратившись в нашу компанию вы получаете качественный сервис, наш консультант ответит вам в любое время 24/7, абсолютно полное ведение до результата, пунктуальные сроки получения документов на руки, бесплатные консультации по каждому аспекту жизни в польше, начиная от экономии финансов до покупки авто и аренды жилья.</p>
           </div>
-          <div class="col l4 s12">
+          <div class="col l3 offset-l1 s12">
               <h5 class="white-text">Контакты</h5>
               <ul>
                 <li><a class="white-text" href="tel:0985847073"><i class="material-icons">phone</i>098 584 70 73</a></li>
@@ -74,7 +74,7 @@
                   <li><a target="_blank" class="white-text" href="public/img/sertif.png"><i class="material-icons">description</i>Сертификат №17726</a></li>
                 </ul>
           </div>
-          <div class="col l4 s12">
+          <div class="col l3 offset-l1 s12">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.1065868911778!2d35.055717300566364!3d48.45773694038088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1b7637877a2bf153!2z0JrQvtGA0L_Rg9GBIOKEljMg0JTQndCjINGW0Lwg0J4u0JPQvtC90YfQsNGA0LAsINCk0LDQutGD0LvRjNGC0LXRgiDQn9GA0LjQutC70LDQtNC90L7RlyDQvNCw0YLQtdC80LDRgtC40LrQuA!5e0!3m2!1sru!2sua!4v1550962120097" width="300px;" height="300px;" frameborder="0" style="border:0" allowfullscreen></iframe>
           </div>
         </div>

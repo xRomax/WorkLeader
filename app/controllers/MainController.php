@@ -36,6 +36,21 @@ class MainController extends Controller {
 		$this->view->render();
 	}
 
+	public function servicesFindJobAction() {
+		$this->contactAction();
+		$this->view->render();
+	}
+
+	public function servicesJobInPolAction() {
+		$this->contactAction();
+		$this->view->render();
+	}
+
+	public function servicesOpenCompAction() {
+		$this->contactAction();
+		$this->view->render();
+	}
+
 	public function contactAction() {
 		if (!empty($_POST)) {
 			if (!$this->model->contactValidate($_POST)) {

@@ -1,12 +1,11 @@
 function activeLink () {
   var URL = window.location.href;
   var URL_mas = URL.split('/');
-  var URL_mas = URL_mas[3].split('.');
+  URL_mas = URL_mas[3].split('.');
   var URI = URL_mas[0];
   if (URI == '') URI = 'index'; 
   $("#" + URI).addClass('active');
 }
-activeLink();
 
 $(document).ready(function(){
   $("body").niceScroll();
@@ -64,7 +63,7 @@ $(document).ready(function(){
       padding: -50,
       duration: 800,
     });
-    $('brand-logo center').hide();
+    $('#tel-number').css("display","none");
   };
 
   $('.scrollspy').scrollSpy({
@@ -78,10 +77,6 @@ $(document).ready(function(){
   setInterval(function() {
     $('.baner').carousel('next');
   }, 5000);
-  
-  // setInterval(function() {
-  //   $('.carousel-country').carousel('next');
-  // }, 3000);
 
   setInterval(function() {
     $('.carousel-hot-work').carousel('next');
@@ -91,10 +86,11 @@ $(document).ready(function(){
     $("#services_dropdown").width(150);
   });
 
+  // activeLink();
+
   $('.ajax').submit(function(event) {
     var json;
     event.preventDefault();
-    // var a = $(this).attr('action');
     $.ajax({
       type: $(this).attr('method'),
       url: $(this).attr('action'),
@@ -103,9 +99,6 @@ $(document).ready(function(){
       cache: false,
       processData: false,
       success: function(result) {
-        // switch (a) {
-        //     case 'show.php': $(".resultat1").html(result); break;
-        // }
         json = jQuery.parseJSON(result);
         if (json.url) {
           window.location.href = '/' + json.url;

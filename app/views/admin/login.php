@@ -6,14 +6,14 @@
 				<form action="index.php" method="post">
 					<div class="row">
 						<div class="input-field col s12">
-							<input required name="elogin" type="text" class="validate">
-							<label for="elogin">Логін</label>
+							<input required name="login" type="text" class="validate">
+							<label for="login">Логін</label>
 					</div>
 						</div>
 					<div class="row">
 						<div class="input-field col s12">
-							<input required name="epass" type="password" class="validate">
-							<label for="epass">Пароль</label>
+							<input required name="pass" type="password" class="validate">
+							<label for="pass">Пароль</label>
 						</div>
 					</div>
 					<input class="waves-light btn" name="logined" type="submit" value="Вхід">

@@ -1,4 +1,4 @@
-<br><br>
+<br><br><br><br>
 <div class="container">
 
   <div class="row">
@@ -7,6 +7,7 @@
       <div class="card">
         <div class="card-image">
           <img src="/public/images/services/1.jpg">
+          <a href="/services/job_in_poland" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">chevron_right</i></a>
         </div>
         <div class="card-content">
           <h5><u>Трудоустройство в Польше</u></h5>
@@ -43,6 +44,7 @@
       <div class="card">
         <div class="card-image">
           <img src="/public/images/services/3.jpg">
+          <a href="/services/find_jobs" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">chevron_right</i></a>
         </div>
         <div class="card-content">
           <h5><u>Подбор вакансий</u></h5>
@@ -79,6 +81,7 @@
       <div class="card">
         <div class="card-image">
           <img src="/public/images/services/5.jpg">
+          <a href="/services/open_company" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">chevron_right</i></a>
         </div>
         <div class="card-content">
           <h5><u>Открытие фирмы</u></h5>

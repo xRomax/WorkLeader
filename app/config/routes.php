@@ -18,6 +18,18 @@ return [
 		'controller' => 'main',
 		'action' => 'services',
 	],
+	'services/job_in_poland' => [
+		'controller' => 'main',
+		'action' => 'servicesJobInPol',
+	],
+	'services/find_jobs' => [
+		'controller' => 'main',
+		'action' => 'servicesFindJob',
+	],
+	'services/open_company' => [
+		'controller' => 'main',
+		'action' => 'servicesOpenComp',
+	],
 	'jobs' => [
 		'controller' => 'main',
 		'action' => 'jobs',
