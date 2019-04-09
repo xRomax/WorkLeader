@@ -3,9 +3,9 @@
 <script type="text/javascript">var hellopreloader = document.getElementById("hellopreloader_preload");function fadeOutnojquery(el){el.style.opacity = 1;var interhellopreloader = setInterval(function(){el.style.opacity = el.style.opacity - 0.05;if (el.style.opacity <=0.05){ clearInterval(interhellopreloader);hellopreloader.style.display = "none";}},16);}window.onload = function(){setTimeout(function(){fadeOutnojquery(hellopreloader);},1500);};</script> -->
 
   <div class="carousel carousel-slider baner">
-    <a class="carousel-item" href="#!"><img src="public/images/baner1.jpg"></a>
-    <a class="carousel-item" href="#!"><img src="public/images/baner2.jpg"></a>
-    <a class="carousel-item" href="#!"><img src="public/images/baner3.jpg"></a>
+    <a class="carousel-item" href="#!"><img src="/public/images/banner/1.jpg"></a>
+    <a class="carousel-item" href="#!"><img src="/public/images/banner/2.jpg"></a>
+    <a class="carousel-item" href="#!"><img src="/public/images/banner/3.jpg"></a>
   </div>
 
   <div class="col hide-on-small-only m3 l2 sticky-block teal lighten-2">
@@ -166,10 +166,10 @@
         </h5>
         <div class="row">
           
-          <div class="col s4">
+          <div class="col l4 s12">
             <div class="card">
               <div class="card-image">
-                <img src="/public/images/med.jpg">
+                <img src="/public/images/jobs/med.jpg">
                 <span class="card-title">Медсестра</span>
               </div>
               <div class="card-content black-text">
@@ -181,14 +181,14 @@
             </div>
           </div>
 
-          <div class="col s4">
+          <div class="col l4 s12">
             <div class="card">
               <div class="card-image">
-                <img src="/public/images/upak.jpeg">
+                <img src="/public/images/jobs/upak.jpeg">
                 <span class="card-title">Упаковщик</span>
               </div>
               <div class="card-content black-text">
-                <p>Упаковщик в гипермаркет. Работа подойщёт любому человеку который желает заработать.</p>
+                <p>Работа упаковщиком подойщёт любому человеку который желает заработать.</p>
               </div>
               <div class="card-action">
                 <a href="/jobs/upak">Узнать больше..</a>
@@ -196,10 +196,10 @@
             </div>
           </div>
 
-          <div class="col s4">
+          <div class="col l4 s12">
             <div class="card">
               <div class="card-image">
-                <img src="/public/images/swar.jpeg">
+                <img src="/public/images/jobs/swar.jpeg">
                 <span class="card-title">Сварщик</span>
               </div>
               <div class="card-content black-text">

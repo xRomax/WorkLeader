@@ -64,6 +64,7 @@ $(document).ready(function(){
       padding: -50,
       duration: 800,
     });
+    $('brand-logo center').hide();
   };
 
   $('.scrollspy').scrollSpy({
@@ -86,6 +87,9 @@ $(document).ready(function(){
     $('.carousel-hot-work').carousel('next');
   }, 6000);
 
+  $("#services").click(function() {
+    $("#services_dropdown").width(150);
+  });
 
   $('.ajax').submit(function(event) {
     var json;

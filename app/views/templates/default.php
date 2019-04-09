@@ -20,15 +20,24 @@
 </head>
 <body>
   <div class="navbar-fixed">
+    <ul id="services_dropdown" class="dropdown-content" style="width: 144px;">
+      <li><a href="/services">Услуги</a></li>
+      <li class="divider"></li>
+      <li><a href="">Трудоустройство в польше</a></li>
+      <li><a href="">Подбор вакансий</a></li>
+      <li><a href="">Открытие фирмы</a></li>
+    </ul>
     <nav class="white" role="navigation">
-        <div class="nav-wrapper container">
+        <div class="nav-wrapper">
           <a id="logo-container" href="/" class="brand-logo">WorkLeader</a>
+          <a id="" class="brand-logo center teal-text text-lighten-2" href="tel:0985847073">+38(098)-584-70-73</a>
+          <a href="tel:0685551526">+38(068)-555-15-26</a>
           <ul class="right hide-on-med-and-down">
             <li id='index'><a href="/">Главная</a></li>
-            <li id='jobs'><a href="jobs">Вакансии</a></li>
-            <li id='services'><a href="services">Услуги</a></li>
-            <li id='about'><a href="about">О нас</a></li>
-            <li id='news'><a href="news">Новости</a></li>
+            <li id='services' class="dropdown-trigger" data-target="services_dropdown"><a href="/services">Услуги<i class="material-icons right">arrow_drop_down</i></a></li>
+            <li id='jobs'><a href="/jobs">Вакансии</a></li>
+            <li id='about'><a href="/about">О нас</a></li>
+            <li id='news'><a href="/news">Новости</a></li>
             </ul>
           
           <ul id="nav-mobile" class="sidenav">
