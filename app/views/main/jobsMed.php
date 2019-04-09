@@ -13,7 +13,7 @@
             <p>Зарплата:</p>
           </div>
           <div class="col s9">
-            <p><img class="z-depth-2" src="public/images/flag/pol.png" alt="Польша" style="width:20px;"> Польшa</p>
+            <p><img class="z-depth-2" src="/public/images/flag/pol.png" alt="Польша" style="width:20px;"> Польшa</p>
             <p>Женский</p>
             <p>18-50 лет</p>
             <p>от 1 года</p>

@@ -54,7 +54,7 @@
                 <img style="width:230px;" src="/public/images/med.jpg" alt="">
               </div>
               <div class="col l12 m12 s12">
-                <a href="jobs/jobs_desc" class="btn-large waves-effect waves-light light-blue lighten-1d">Подробнее</a>
+                <a href="jobs/med_sestra" class="btn-large waves-effect waves-light light-blue lighten-1d">Подробнее</a>
               </div>
             </div>
         </div>

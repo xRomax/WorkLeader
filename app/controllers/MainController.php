@@ -16,6 +16,11 @@ class MainController extends Controller {
 		$this->view->render();
 	}
 
+	public function jobsMedAction() {
+		$this->contactAction();
+		$this->view->render();
+	}
+
 	public function aboutAction() {
 		$this->contactAction();
 		$this->view->render();

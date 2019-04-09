@@ -1,6 +1,6 @@
-<style type="text/css">#hellopreloader>p{display:none;}#hellopreloader_preload{display: block;position: fixed;z-index: 99999;top: 0;left: 0;width: 100%;height: 100%;min-width: 1000px;background: #19B5FE url(http://hello-site.ru//main/images/preloads/grid.svg) center center no-repeat;background-size:54px;}</style>
+<!-- <style type="text/css">#hellopreloader>p{display:none;}#hellopreloader_preload{display: block;position: fixed;z-index: 99999;top: 0;left: 0;width: 100%;height: 100%;min-width: 1000px;background: #19B5FE url(http://hello-site.ru//main/images/preloads/grid.svg) center center no-repeat;background-size:54px;}</style>
 <div id="hellopreloader"><div id="hellopreloader_preload"></div><p><a href="http://hello-site.ru">Hello-Site.ru. Бесплатный конструктор сайтов.</a></p></div>
-<script type="text/javascript">var hellopreloader = document.getElementById("hellopreloader_preload");function fadeOutnojquery(el){el.style.opacity = 1;var interhellopreloader = setInterval(function(){el.style.opacity = el.style.opacity - 0.05;if (el.style.opacity <=0.05){ clearInterval(interhellopreloader);hellopreloader.style.display = "none";}},16);}window.onload = function(){setTimeout(function(){fadeOutnojquery(hellopreloader);},1500);};</script>
+<script type="text/javascript">var hellopreloader = document.getElementById("hellopreloader_preload");function fadeOutnojquery(el){el.style.opacity = 1;var interhellopreloader = setInterval(function(){el.style.opacity = el.style.opacity - 0.05;if (el.style.opacity <=0.05){ clearInterval(interhellopreloader);hellopreloader.style.display = "none";}},16);}window.onload = function(){setTimeout(function(){fadeOutnojquery(hellopreloader);},1500);};</script> -->
 
   <div class="carousel carousel-slider baner">
     <a class="carousel-item" href="#!"><img src="public/images/baner1.jpg"></a>
@@ -159,31 +159,62 @@
   <div class="parallax-container valign-wrapper hide-on-med-and-down show-on-large">
     <div class="section scrollspy no-pad-bot" id="hot-vacancii">
       <div class="container">
+        <h5 class="header col s12 hot-work">
+          <span class="text-work">
+            <span class="red-text accent-4 blue-grey lighten-3">ГОРЯЧИЕ</span><span class="">ВАКАНСИИ</span>
+          </span>
+        </h5>
+        <div class="row">
+          
+          <div class="col s4">
+            <div class="card">
+              <div class="card-image">
+                <img src="/public/images/med.jpg">
+                <span class="card-title">Медсестра</span>
+              </div>
+              <div class="card-content black-text">
+                <p>Требуется мед сестра в пансионат для ухода за пожилыми людьми.</p>
+              </div>
+              <div class="card-action">
+                <a href="/jobs/med_sestra">Узнать больше..</a>
+              </div>
+            </div>
+          </div>
 
-          <h5 class="header col s12 hot-work">
-            <span class="text-work">
-              <span class="red-text accent-4 blue-grey lighten-3">ГОРЯЧИЕ</span>
-              <span class="">ВАКАНСИИ</span></h5>
-            </span>
+          <div class="col s4">
+            <div class="card">
+              <div class="card-image">
+                <img src="/public/images/upak.jpeg">
+                <span class="card-title">Упаковщик</span>
+              </div>
+              <div class="card-content black-text">
+                <p>Упаковщик в гипермаркет. Работа подойщёт любому человеку который желает заработать.</p>
+              </div>
+              <div class="card-action">
+                <a href="/jobs/upak">Узнать больше..</a>
+              </div>
+            </div>
+          </div>
 
-        <div class="row carousel carousel-hot-work">
-          <a class="carousel-item" href="#!" target="_blank"><img style="width:240px;" class="jobs-img" src="public/images/swar.jpeg"><h4 style="color: white">Сварщик</h4></a>
-          <a class="carousel-item" href="#!" target="_blank"><img style="width:240px;" class="jobs-img" src="public/images/upak.jpeg"><h4 style="color: white">Упаковщик</h4></a>
-          <a class="carousel-item" href="#!" target="_blank"><img style="width:240px;" class="jobs-img" src="public/images/magaz.jpeg"><h4 style="color: white">Кассир</h4></a>
+          <div class="col s4">
+            <div class="card">
+              <div class="card-image">
+                <img src="/public/images/swar.jpeg">
+                <span class="card-title">Сварщик</span>
+              </div>
+              <div class="card-content black-text">
+                <p>Требуется сварщик какого то разряда и т.д.</p>
+              </div>
+              <div class="card-action">
+                <a href="/jobs/swarchik">Узнать больше..</a>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
     <div class="parallax"><img src="public/images/parallax/bg-pol.jpg"></div>
-  </div>
-  
-  <div class="container hide-on-large-only show-on-medium-and-down">
-    <div class="section">
-      <div class="row carousel flag-block">
-          <a class="carousel-item" href="#!" target="_blank"><img class="jobs-img" src="public/images/swar.jpeg"><h4 style="color: black">Сварщик</h4></a>
-          <a class="carousel-item" href="#!" target="_blank"><img class="jobs-img" src="public/images/upak.jpeg"><h4 style="color: black">Упаковщик</h4></a>
-          <a class="carousel-item" href="#!" target="_blank"><img class="jobs-img" src="public/images/magaz.jpeg"><h4 style="color: black">Кассир</h4></a>
-        </div>
-    </div>
   </div>
 
   <div class="container center">

@@ -22,6 +22,10 @@ return [
 		'controller' => 'main',
 		'action' => 'jobs',
 	],
+	'jobs/med_sestra' => [
+		'controller' => 'main',
+		'action' => 'jobsMed',
+	],
 	// AdminController
 	'admin' => [
 		'controller' => 'admin',
