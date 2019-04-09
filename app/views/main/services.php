@@ -6,7 +6,7 @@
     <div class="col s12 l5">
       <div class="card">
         <div class="card-image">
-          <img src="/public/images/services/1.jpg">
+          <img src="/public/images/services/1.png">
           <a href="/services/job_in_poland" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">chevron_right</i></a>
         </div>
         <div class="card-content">
@@ -23,7 +23,7 @@
     <div class="col s12 l5 offset-l1">
       <div class="card">
         <div class="card-image">
-          <img src="/public/images/services/2.jpg">
+          <img src="/public/images/services/2.png">
         </div>
         <div class="card-content">
           <h5><u>Оформление документов в Чехию</u></h5>
@@ -43,7 +43,7 @@
     <div class="col s12 l5">
       <div class="card">
         <div class="card-image">
-          <img src="/public/images/services/3.jpg">
+          <img src="/public/images/services/3.png">
           <a href="/services/find_jobs" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">chevron_right</i></a>
         </div>
         <div class="card-content">
@@ -60,7 +60,7 @@
     <div class="col s12 l5 offset-l1">
       <div class="card">
         <div class="card-image">
-          <img src="/public/images/services/4.jpg">
+          <img src="/public/images/services/4.png">
         </div>
         <div class="card-content">
           <h5><u>Безвизовый режим</u></h5>
@@ -80,7 +80,7 @@
     <div class="col s12 l5">
       <div class="card">
         <div class="card-image">
-          <img src="/public/images/services/5.jpg">
+          <img src="/public/images/services/5.png">
           <a href="/services/open_company" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">chevron_right</i></a>
         </div>
         <div class="card-content">
@@ -97,7 +97,7 @@
     <div class="col s12 l5 offset-l1">
       <div class="card">
         <div class="card-image">
-          <img src="/public/images/services/6.jpg">
+          <img src="/public/images/services/6.png">
         </div>
         <div class="card-content">
           <h5><u>Гражданство в Румынии</u></h5>

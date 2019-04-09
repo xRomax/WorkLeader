@@ -89,7 +89,7 @@
   <div class="row">
     <div class="col s12">
       <div style="text-align:center;" class="blue lighten-1">
-        <p style="margin: 0 2px 0 2px;" class="center white-text center-text-desc">
+        <p style="margin: 0 2px 0 2px;" class="center white-text">
           <i class="fas fa-exclamation-triangle"></i>
           Трудоустройство в Польше по рабочей визе осуществляется сроком на полгода. По окончании этого срока визу можно продлить.
           <i class="fas fa-exclamation-triangle"></i>
