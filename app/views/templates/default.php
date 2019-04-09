@@ -42,10 +42,10 @@
           
           <ul id="nav-mobile" class="sidenav">
             <li id='index'><a href="/">Главная</a></li>
-            <li id='jobs'><a href="jobs">Вакансии</a></li>
-            <li id='services'><a href="services">Услуги</a></li>
-            <li id='about'><a href="about">О нас</a></li>
-            <li id='news'><a href="news">Новости</a></li>
+            <li id='jobs'><a href="/jobs">Вакансии</a></li>
+            <li id='services'><a href="/services">Услуги</a></li>
+            <li id='about'><a href="/about">О нас</a></li>
+            <li id='news'><a href="/news">Новости</a></li>
             </ul>
           <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
           </div>
@@ -64,14 +64,14 @@
           <div class="col l3 offset-l1 s12">
               <h5 class="white-text">Контакты</h5>
               <ul>
-                <li><a class="white-text" href="tel:0985847073"><i class="material-icons">phone</i>098 584 70 73</a></li>
-                <li><a class="white-text" href="tel:0685551526"><i class="material-icons">phone</i>068 555 15 26</a></li>
-                <li><a class="white-text" href="mailto:workleaderandco@gmail.com"><i class="material-icons">email</i>workleaderandco@gmail.com</a></li>
-                <li><a class="white-text" href="mailto:johnsonhayes123@gmail.com"><i class="material-icons">email</i>johnsonhayes123@gmail.com</a></li>
+                <li><a class="white-text" href="tel:0985847073"><i class="fas fa-phone font-icons"></i>098 584 70 73</a></li>
+                <li><a class="white-text" href="tel:0685551526"><i class="fas fa-phone font-icons"></i>068 555 15 26</a></li>
+                <li><a class="white-text" href="mailto:workleaderandco@gmail.com"><i class="fas fa-envelope font-icons"></i>workleaderandco@gmail.com</a></li>
+                <li><a class="white-text" href="mailto:johnsonhayes123@gmail.com"><i class="fas fa-envelope font-icons"></i>johnsonhayes123@gmail.com</a></li>
                 </ul>
               <h5 class="white-text">Документы</h5>
               <ul>
-                  <li><a target="_blank" class="white-text" href="public/img/sertif.png"><i class="material-icons">description</i>Сертификат №17726</a></li>
+                  <li><a target="_blank" class="white-text" href="public/img/sertif.png"><i class="far fa-file font-icons"></i>Сертификат №17726</a></li>
                 </ul>
           </div>
           <div class="col l3 offset-l1 s12">

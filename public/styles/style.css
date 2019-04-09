@@ -116,11 +116,25 @@ footer.page-footer {
 	z-index: 2; 
 }
 
-.line { 
+.v-line { 
   border-left: 4px solid #00c0e3;
   margin-left: 20px;
   padding-left: 10px;
  }
+
+.g-line { 
+  border-bottom: 4px solid #00c0e3;
+  /* margin-left: 20px;
+  padding-left: 10px; */
+  margin: 7px 0 7px 0;
+ }
+
+.material-icons {
+  vertical-align: center;
+}
+.font-icons {
+  margin-right: 4px;
+}
 /*список на странице openComp */
  .rounded {
   counter-reset: li; 
