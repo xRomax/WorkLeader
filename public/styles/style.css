@@ -1,8 +1,12 @@
 html, body {
   font-family: Arial, Helvetica, sans-serif;
-  overflow-x:hidden;
-  overflow-y:hidden;
+  /* overflow-x:hidden;
+  overflow-y:hidden; */
 }
+.nicescroll-rails-hr {
+  display: none;
+}
+
 nav ul a,
 nav .brand-logo {
   color: #444;
@@ -108,7 +112,7 @@ footer.page-footer {
 
 .kubik_forma{ 
 	background-color: #D8D8D8; 
-	width: 500px; 
+	min-width: 400px; 
 	margin: auto auto; 
 	position: relative; 
 	text-align: center; 
@@ -118,14 +122,12 @@ footer.page-footer {
 
 .v-line { 
   border-left: 4px solid #00c0e3;
-  margin-left: 20px;
-  padding-left: 10px;
+  margin-left: 30px;
+  padding-left: 30px;
  }
 
 .g-line { 
   border-bottom: 4px solid #00c0e3;
-  /* margin-left: 20px;
-  padding-left: 10px; */
   margin: 7px 0 7px 0;
  }
 
@@ -135,6 +137,37 @@ footer.page-footer {
 .font-icons {
   margin-right: 4px;
 }
+/* Текст поверх картинки */
+.image {
+	position: relative;
+	/* width: 100%; */
+}
+
+h4 {
+	position: absolute;
+	top: 200px;
+	left: 0;
+  width: 100%;
+  vertical-align: center;
+}
+/* ---------------- */
+
+/* Блок контактов */
+.contact-block {
+  position: relative;
+  text-align: center;
+  background: url(/public/images/JobInPol/chtoto.png) no-repeat top center;
+  height: 100%;
+}
+/* ------------------ */
+
+/* bottomForm */
+.bottomFrom input{
+  background-color: white;
+  border-radius: 10px;
+}
+/* ---------------- */
+
 /*список на странице openComp */
  .rounded {
   counter-reset: li; 

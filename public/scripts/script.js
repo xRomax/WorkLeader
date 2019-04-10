@@ -86,7 +86,14 @@ $(document).ready(function(){
     $("#services_dropdown").width(150);
   });
 
-  // activeLink();
+  activeLink();
+
+  $(".modalForm #icon_telephone").mask("+38(999)999-99-99");
+  $(".sideForm #telephone").mask("+38(999)999-99-99");
+  $(".bottomForm #phone").mask("+38(999)999-99-99");
+
+  $(".nicescroll-rails-hr").css("display","none");
+
 
   $('.ajax').submit(function(event) {
     var json;

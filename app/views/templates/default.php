@@ -12,9 +12,11 @@
 	<link rel="shortcut icon" href="/public/images/favicon.png" type="image/x-icon">
 
   <script src="/public/scripts/jquery.js"></script>
+  <script src="/public/scripts/jquery.maskedinput.js"></script>
   <script src="/public/scripts/materialize.js"></script>
   <script src="/public/scripts/nicescroll.js"></script>
   <script src="/public/scripts/script.js"></script>
+  
 
 	<title>WorkLeader | Работа в Европейских странах</title>
 </head>
@@ -23,7 +25,7 @@
     <ul id="services_dropdown" class="dropdown-content" style="width: 144px;">
       <li style="height:64px;"><a style="height:100%;" href="/services"><h6>Услуги</h6></a></li>
       <li class="divider"></li>
-      <li><a href="/services/job_in_poland">Трудоустройство в польше</a></li>
+      <li><a href="/services/job_in_poland">Трудоустройство в Польше</a></li>
       <li><a href="/services/find_jobs">Подбор вакансий</a></li>
       <li><a href="/services/open_company">Открытие фирмы</a></li>
     </ul>
@@ -87,8 +89,9 @@
     </footer>
     
   <div id="modal1" class="modal">
-    <div class="modal-content row">
+    <div class="modal-content modalForm row">
         <form action="/jobs" method="post" class="col s12 ajax">
+          <input type="hidden" name="type" value="modalForm">
           <div class="row">
             <div class="input-field col f6 m6 s12">
               <i class="material-icons prefix">account_circle</i>
@@ -98,7 +101,7 @@
 
             <div class="input-field col f6 m6 s12">
               <i class="material-icons prefix">phone</i>
-              <input id="icon_telephone" type="tel" name="mobile">
+              <input id="icon_telephone" type="tel" name="phone">
               <label for="icon_telephone">Номер телефона</label>
               </div>
             </div>

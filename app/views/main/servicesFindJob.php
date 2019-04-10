@@ -1,6 +1,7 @@
-<div class="carousel carousel-slider baner">
+<!-- <div class="carousel carousel-slider baner">
   <a class="carousel-item"><img src="/public/images/FindJobs/top.png" alt="Поиск работы"></a>
-</div>
+</div> -->
+<img src="/public/images/FindJobs/top.png" alt="Поиск работы">
 <br>
 <div class="container">
   <div class="row">
@@ -14,25 +15,26 @@
       высокооплачиваемая должность и вакансия в Европе.
     </div>
 
-    <div class="col l6 s12 v-line">
+    <div class="col l5 offset-l1 s12 v-line">
       <h5>Хотите бесплатную консультацию?</h5>
       <p>Введите данные и менеджер свяжется с вами в ближайшее время.</p>
 
-      <form action="/services/servicesOpenComp" method="post">
+      <form action="/services/find_jobs" method="post" class="sideForm ajax">
+      <input type="hidden" name="type" value="sideForm">
         <div class="row">
           <div class="input-field col l6 s12">
-            <input id="name" type="text" class="validate">
+            <input id="name" name="name" type="text" class="validate">
             <label for="name">Имя</label>
           </div>
   
           <div class="input-field col l6 s12 ">
-            <input id="email" type="text" class="validate">
+            <input id="email" name="email" type="text" class="validate">
             <label for="email">Email</label>
           </div>
           
           <div class="input-field col l6 s12">
-            <input id="phone" type="text" class="validate">
-            <label for="phone">Телефон</label>
+            <input id="telephone" name="phone" type="text" class="validate">
+            <label for="telephone">Телефон</label>
           </div>
   
           <div class="col l6 s12">

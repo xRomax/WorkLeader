@@ -6,13 +6,13 @@
 				<form action="index.php" method="post">
 					<div class="row">
 						<div class="input-field col s12">
-							<input required name="login" type="text" class="validate">
+							<input name="login" type="text" class="validate">
 							<label for="login">Логін</label>
 					</div>
 						</div>
 					<div class="row">
 						<div class="input-field col s12">
-							<input required name="pass" type="password" class="validate">
+							<input name="pass" type="password" class="validate">
 							<label for="pass">Пароль</label>
 						</div>
 					</div>

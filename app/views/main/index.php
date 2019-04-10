@@ -1,6 +1,6 @@
-<style type="text/css">#hellopreloader>p{display:none;}#hellopreloader_preload{display: block;position: fixed;z-index: 99999;top: 0;left: 0;width: 100%;height: 100%;min-width: 1000px;background: #19B5FE url(http://hello-site.ru//main/images/preloads/grid.svg) center center no-repeat;background-size:54px;}</style>
+<!-- <style type="text/css">#hellopreloader>p{display:none;}#hellopreloader_preload{display: block;position: fixed;z-index: 99999;top: 0;left: 0;width: 100%;height: 100%;min-width: 1000px;background: #19B5FE url(http://hello-site.ru//main/images/preloads/grid.svg) center center no-repeat;background-size:54px;}</style>
 <div id="hellopreloader"><div id="hellopreloader_preload"></div><p><a href="http://hello-site.ru">Hello-Site.ru. Бесплатный конструктор сайтов.</a></p></div>
-<script type="text/javascript">var hellopreloader = document.getElementById("hellopreloader_preload");function fadeOutnojquery(el){el.style.opacity = 1;var interhellopreloader = setInterval(function(){el.style.opacity = el.style.opacity - 0.05;if (el.style.opacity <=0.05){ clearInterval(interhellopreloader);hellopreloader.style.display = "none";}},16);}window.onload = function(){setTimeout(function(){fadeOutnojquery(hellopreloader);},1500);};</script>
+<script type="text/javascript">var hellopreloader = document.getElementById("hellopreloader_preload");function fadeOutnojquery(el){el.style.opacity = 1;var interhellopreloader = setInterval(function(){el.style.opacity = el.style.opacity - 0.05;if (el.style.opacity <=0.05){ clearInterval(interhellopreloader);hellopreloader.style.display = "none";}},16);}window.onload = function(){setTimeout(function(){fadeOutnojquery(hellopreloader);},1500);};</script> -->
 
   <div class="carousel carousel-slider baner">
     <a class="carousel-item" href="#!"><img src="/public/images/banner/1.jpg"></a>
@@ -84,12 +84,14 @@
       </div>
     </div>
   </div>
-    
-  <div class="parallax-container valign-wrapper">
+
+  <br><br>
+
+  <div class="parallax-container valign-wrapper hide-on-med-and-down show-on-large">
     <div class="no-pad-bot section scrollspy" id="country-flag">
       <div class="container">
         <div class="row center">
-          <div class="hide-on-med-and-down show-on-large">
+          <div class="">
             <h4>Наши направления</h4>
               <div class="carousel carousel-country">
                 <a class="carousel-item" href="#!" target="_blank"><img src="public/images/flag/cze.png"><h4 style="color: white">Работа в Чехии</h4></a>
@@ -101,25 +103,27 @@
                 <a class="carousel-item" href="#!" target="_blank"><img src="public/images/flag/est.png"><h4 style="color: white">Работа в Эстонии</h4></a>
                 </div>
             </div>
-
-          <div class="hide-on-large-only show-on-medium-and-down center">
-            <h5>Наши направления</h5>
-            <div class="carousel carousel-country-medium-and-down flag-block">
-                <a class="carousel-item" href="#!" target="_blank"><img src="public/images/flag/cze.png"><h6 style="color: white">Работа в Чехии</h6></a>
-                <a class="carousel-item" href="#!" target="_blank"><img src="public/images/flag/ger.png"><h6 style="color: white">Работа в Германии</h6></a>
-                <a class="carousel-item" href="#!" target="_blank"><img src="public/images/flag/pol.png"><h6 style="color: white">Работа в Польше</h6></a>
-                <a class="carousel-item" href="#!" target="_blank"><img src="public/images/flag/nor.png"><h6 style="color: white">Работа в Норвегии</h6></a>
-                <a class="carousel-item" href="#!" target="_blank"><img src="public/images/flag/ukr.png"><h6 style="color: white">Работа в Украине</h6></a>
-                <a class="carousel-item" href="#!" target="_blank"><img src="public/images/flag/lith.png"><h6 style="color: white">Работа в Литве</h6></a>
-                <a class="carousel-item" href="#!" target="_blank"><img src="public/images/flag/est.png"><h6 style="color: white">Работа в Эстонии</h6></a>
-                </div>
-            </div>
-          </div>
         </div>
       </div>
-      <div class="parallax"><img src="public/images/parallax/bg-ger.jpg"></div>
     </div>
-    
+    <div class="parallax"><img src="public/images/parallax/bg-ger.jpg"></div>
+  </div>
+  
+  <div class="hide-on-large-only show-on-medium-and-down center">
+    <h4>Наши направления</h4>
+    <div class="carousel carousel-country-medium-and-down flag-block row">
+      <a class="carousel-item col s6" href="#!" target="_blank"><img src="public/images/flag/cze.png"><h6>Работа в Чехии</h6></a>
+      <a class="carousel-item col s6" href="#!" target="_blank"><img src="public/images/flag/ger.png"><h6>Работа в Германии</h6></a>
+      <a class="carousel-item col s6" href="#!" target="_blank"><img src="public/images/flag/pol.png"><h6>Работа в Польше</h6></a>
+      <a class="carousel-item col s6" href="#!" target="_blank"><img src="public/images/flag/nor.png"><h6>Работа в Норвегии</h6></a>
+      <a class="carousel-item col s6" href="#!" target="_blank"><img src="public/images/flag/ukr.png"><h6>Работа в Украине</h6></a>
+      <a class="carousel-item col s6" href="#!" target="_blank"><img src="public/images/flag/lith.png"><h6>Работа в Литве</h6></a>
+      <a class="carousel-item col s6" href="#!" target="_blank"><img src="public/images/flag/est.png"><h6>Работа в Эстонии</h6></a>
+    </div>
+  </div>
+
+  <br><br>
+
   <div class="container">
     <div class="section scrollspy"  id="how-we-work">
       <div class="row">
@@ -155,6 +159,8 @@
       </div>
     </div>
   </div>
+
+  <br><br>
 
   <div class="parallax-container valign-wrapper hide-on-med-and-down show-on-large">
     <div class="section scrollspy no-pad-bot" id="hot-vacancii">
@@ -216,6 +222,8 @@
     </div>
     <div class="parallax"><img src="public/images/parallax/bg-pol.jpg"></div>
   </div>
+
+  <br><br>
 
   <div class="container center">
     <a href="https://www.google.com/maps?ll=48.458207,35.055779&z=17&t=m&hl=ru-RU&gl=UA&mapclient=embed&cid=1978830141285724499" target="_blank">
