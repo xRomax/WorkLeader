@@ -123,11 +123,13 @@ $(document).ready(function(){
       processData: false,
       success: function(result) {
         json = jQuery.parseJSON(result);
-        if (json.url) {
-          window.location.href = '/' + json.url;
-        } else {
-          alert(json.status + ' - ' + json.message);
-        }
+        Swal.fire({
+          type: json.status,
+          title: json.title,
+          text: json.message,
+        });
+        $("body").css("padding-right","0px");
+        $('.modal').modal('close');
         if (json.status == "success") $("input").val("").trigger('reset');
       },
     });

@@ -39,12 +39,12 @@
           </div>
           
           <div class="input-field col l6 s12">
-            <input id="telephone" name="phone" type="text" class="validate">
+            <input id="telephone" name="phone" type="tel" class="validate">
             <label for="telephone">Телефон</label>
           </div>
   
           <div class="col l6 s12">
-            <button class="btn waves-effect waves-light" type="submit" name="action">Отправить
+            <button class="btn waves-effect waves-light" type="submit">Отправить
               <i class="material-icons right">send</i>
             </button>
           </div>

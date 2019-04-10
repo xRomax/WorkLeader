@@ -48,7 +48,7 @@
           </div>
   
           <div class="col l6 s12">
-            <button class="btn waves-effect waves-light" type="submit" name="action">Отправить
+            <button class="btn waves-effect waves-light" type="submit">Отправить
               <i class="material-icons right">send</i>
             </button>
           </div>
@@ -145,7 +145,7 @@
         <label class="white-text" for="bottomName">Имя</label>
       </div>
       <div class="input-field col l2 m4 s12">
-        <input id="phone" name="phone" type="text" class="validate white-text">
+        <input id="phone" name="phone" type="tel" class="validate white-text">
         <label class="white-text" for="phone">Телефон</label>
       </div>
       <div class="col l2 m12 s12">
