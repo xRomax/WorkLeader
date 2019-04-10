@@ -6,6 +6,7 @@
   <br>
     <b>Спроси нас о вакансии</b>
     <form action="/jobs/med_sestra" method="post" class="modalForm ajax">
+    <input style="position:fixed; top:-100000px;" type="reset">
     <input type="hidden" name="type" value="modalForm">
       <div class="col s12">
         <div class="row">

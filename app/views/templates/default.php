@@ -101,35 +101,36 @@
     
   <div id="modal1" class="modal">
     <div class="modal-content modalForm row">
-        <form action="/jobs" method="post" class="col s12 ajax">
-          <input type="hidden" name="type" value="modalForm">
+      <form action="/jobs" method="post" class="col s12 ajax">
+        <input style="position:fixed; top:-100000px;" type="reset">
+        <input type="hidden" name="type" value="modalForm">
+        <div class="row">
+          <div class="input-field col f6 m6 s12">
+            <i class="material-icons prefix">account_circle</i>
+            <input id="icon_prefix" type="text" name="name">
+            <label for="icon_prefix">Имя</label>
+          </div>
+
+          <div class="input-field col f6 m6 s12">
+            <i class="material-icons prefix">phone</i>
+            <input id="icon_telephone" type="tel" name="phone">
+            <label for="icon_telephone">Номер телефона</label>
+            </div>
+          </div>
+
           <div class="row">
-            <div class="input-field col f6 m6 s12">
-              <i class="material-icons prefix">account_circle</i>
-              <input id="icon_prefix" type="text" name="name">
-              <label for="icon_prefix">Имя</label>
+            <div class="input-field col s12">
+              <i class="material-icons prefix">textsms</i>
+              <input id="textarea" type="text" name="text">
+              <label for="textarea">Сообщение</label>
             </div>
+          </div>
 
-            <div class="input-field col f6 m6 s12">
-              <i class="material-icons prefix">phone</i>
-              <input id="icon_telephone" type="tel" name="phone">
-              <label for="icon_telephone">Номер телефона</label>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="input-field col s12">
-                <i class="material-icons prefix">textsms</i>
-                <input id="textarea" type="text" name="text">
-                <label for="textarea">Сообщение</label>
-              </div>
-            </div>
-
-            <button type="submit" class="btn waves-effect waves-light formReset">
-              Отправить<i class="material-icons right">send</i>
-            </button>
-            </div>
-          </form>
+          <button type="submit" class="btn waves-effect waves-light formReset">
+            Отправить<i class="material-icons right">send</i>
+          </button>
+          </div>
+        </form>
       </div>
   </div>
   
