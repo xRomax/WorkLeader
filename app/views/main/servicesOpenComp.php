@@ -1,7 +1,7 @@
-<!-- <div class="carousel carousel-slider baner">
+<div class="carousel carousel-slider baner">
   <a class="carousel-item"><img src="/public/images/OpenComp/topPoland.png" alt="Открытие фирмы в польше"></a>
-</div> -->
-<img src="/public/images/OpenComp/topPoland.png" alt="Открытие фирмы в польше">
+</div>
+<!-- <img src="/public/images/OpenComp/topPoland.png" alt="Открытие фирмы в польше"> -->
 <br>
 <div class="container">
   <div class="row">
@@ -69,9 +69,10 @@
       </ol>
     </div>
   </div>
-
+<br><br>
   <div class="row">
     <div class="col l6 s12">
+      <h5>Стоимость открытия компании в Польше составляет 600 евро и включает в себя:</h5>
       <ul class="rounded">
         <li><a>разработку устава, подбор КВЕДОВ;</a></li>
         <li><a>регистрация индивидуального налогового номера NIP;</a></li>
@@ -87,16 +88,41 @@
     <div class="col l6 s12">
       <div class="row">
         <div class="col s12">
-          <img style="width:80%;" src="/public/images/openComp/phone.png" alt="phone">
-        </div>
-        <div style="width:80%;" class="col s12">
-          <div style="text-align:center;" class="blue lighten-1">
+          <img style="width:100%;" src="/public/images/openComp/phone.png" alt="phone">
+          <div style="text-align:center; width:100%;" class="blue lighten-1">
             <p style="margin: 0 2px 0 2px;" class="center white-text">Срок открытия фирмы в Польше до 20 дней</p>
           </div>
         </div>
+        <!-- <div class="col s12">
+          <div style="text-align:center;" class="blue lighten-1">
+            <p style="margin: 0 2px 0 2px;" class="center white-text">Срок открытия фирмы в Польше до 20 дней</p>
+          </div>
+        </div> -->
       </div>
     </div>
   </div>
+</div>
 
+<div style="background: url(/public/images/openComp/towers.png) no-repeat top center;" class="contact-block white-text"><br>
+  <h6>Впишите свой номер телефона и мы свяжемся с Вами в ближайшее время</h6><br>
+  <form action="/services/find_jobs" method="post" class="bottomForm ajax">
+  <input type="hidden" name="type" value="bottomForm">
+    <div class="row">
+      <div class="input-field col l2 offset-l3 s12">
+        <input id="bottomName" name="name" type="text" class="validate white-text">
+        <label class="white-text" for="bottomName">Имя</label>
+      </div>
+      <div class="input-field col l2 s12">
+        <input id="phone" name="phone" type="text" class="validate white-text">
+        <label class="white-text" for="phone">Телефон</label>
+      </div>
+      <div class="col l2 s12">
+        <a class="btn waves-effect waves-light btn-large blue lighten-2 sendBottomForm">Узнать больше!
+          <i class="material-icons right">send</i>
+        </a>
+      </div>
+    </div>
+  </form>
+  </div>
 </div>
 <!-- <img src="/public/images/OpenComp/towers.png" alt="towers"> -->

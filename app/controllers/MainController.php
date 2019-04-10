@@ -57,7 +57,7 @@ class MainController extends Controller {
 				$this->view->message('error', $this->model->error);
 			}
 			$this->view->message('success', 'Сообщение отправлено Администратору');
-			mail('romadeamon@gmail.com', $this->model->messageTitle, $this->model->messageBody);
+			mail('workleader0@gmail.com', $this->model->messageTitle, $this->model->messageBody);
 			
 		}
 	}

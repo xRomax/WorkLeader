@@ -122,22 +122,26 @@
 
   <br><br>
 </div>
-<div class="contact-block white-text"><br>
-    <h6 class="" style="margin-top: 10px;">Впишите свой номер телефона и мы свяжемся с Вами в ближайшее время</h6>
-    <form action="/services/job_in_poland" method="post" class="bottomForm ajax">
-    <input type="hidden" name="type" value="bottomForm">
-      <div class="row">
-        <div class="input-field col l4 offset-l2 s12">
-          <input id="phone" name="phone" type="text" class="validate">
-          <label for="phone">Телефон</label>
-        </div>
-        <div class="col l6 s12">
-          <button class="btn waves-effect waves-light" type="submit" name="action">Отправить
-            <i class="material-icons right">send</i>
-          </button>
-        </div>
+<div style="background: url(/public/images/JobInPol/chtoto.png) no-repeat top center;" class="contact-block white-text"><br>
+  <h6>Впишите свой номер телефона и мы свяжемся с Вами в ближайшее время</h6><br>
+  <form action="/services/job_in_poland" method="post" class="bottomForm ajax">
+  <input type="hidden" name="type" value="bottomForm">
+    <div class="row">
+      <div class="input-field col l2 offset-l3 s12">
+        <input id="bottomName" name="name" type="text" class="validate white-text">
+        <label class="white-text" for="bottomName">Имя</label>
       </div>
-    </form>
+      <div class="input-field col l2s12">
+        <input id="phone" name="phone" type="text" class="validate white-text">
+        <label class="white-text" for="phone">Телефон</label>
+      </div>
+      <div class="col l2 s12">
+        <a class="btn waves-effect waves-light btn-large blue lighten-2 sendBottomForm">Узнать больше!
+          <i class="material-icons right">send</i>
+        </a>
+      </div>
     </div>
+  </form>
   </div>
+</div>
 <!-- <img src="/public/images/OpenComp/towers.png" alt="towers"> -->

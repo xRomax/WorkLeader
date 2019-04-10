@@ -61,12 +61,16 @@ class Main extends Model {
 	}
 
 	public function contactBottomForm($post) {
-		if (!$_POST["phone"]) {
+		$nameLen = iconv_strlen($post['name']);
+		if ($nameLen < 3 or $nameLen > 25) {
+			$this->error = 'Имя должно содержать от 3 до 25 символов';
+			return false;
+		} elseif (!$_POST["phone"]) {
 			$this->error = 'Телефон указан неверно';
 			return false;
 		}
 		$this->messageTitle = "Заказ срочного звонка | Сообщение из сайта";
-		$this->messageBody = "Телефон:".$post["phone"];
+		$this->messageBody = "Имя клиента:".$post["name"]."\nТелефон:".$post["phone"];
 		return true;
 	}
 

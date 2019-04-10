@@ -78,6 +78,8 @@ $(document).ready(function(){
     $('.baner').carousel('next');
   }, 5000);
 
+  $('.baner').height(200);
+
   setInterval(function() {
     $('.carousel-hot-work').carousel('next');
   }, 6000);
@@ -94,6 +96,9 @@ $(document).ready(function(){
 
   $(".nicescroll-rails-hr").css("display","none");
 
+  $(".sendBottomForm").click(function() {
+     $(".bottomForm").submit();
+  });
 
   $('.ajax').submit(function(event) {
     var json;

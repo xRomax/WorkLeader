@@ -114,7 +114,9 @@
               </div>
             </div>
 
-            <button type="submit" class="btn waves-effect waves-light">Отправить<i class="material-icons right">send</i></button>
+            <button type="submit" class="btn waves-effect waves-light formReset">
+              Отправить<i class="material-icons right">send</i>
+            </button>
             </div>
           </form>
       </div>

@@ -1,7 +1,7 @@
-<!-- <div class="carousel carousel-slider baner">
+<div class="carousel carousel-slider baner">
   <a class="carousel-item"><img src="/public/images/FindJobs/top.png" alt="Поиск работы"></a>
-</div> -->
-<img src="/public/images/FindJobs/top.png" alt="Поиск работы">
+</div>
+<!-- <img src="/public/images/FindJobs/top.png" alt="Поиск работы"> -->
 <br>
 <div class="container">
   <div class="row">
@@ -117,5 +117,28 @@
     </div>
   </div>
   <br><br>
+</div>
+
+<div style="background: url(/public/images/FindJobs/1.png) no-repeat top center;" class="contact-block white-text"><br>
+  <h6>Впишите свой номер телефона и мы свяжемся с Вами в ближайшее время</h6><br>
+  <form action="/services/find_jobs" method="post" class="bottomForm ajax">
+  <input type="hidden" name="type" value="bottomForm">
+    <div class="row">
+      <div class="input-field col l2 offset-l3 s12">
+        <input id="bottomName" name="name" type="text" class="validate white-text">
+        <label class="white-text" for="bottomName">Имя</label>
+      </div>
+      <div class="input-field col l2 s12">
+        <input id="phone" name="phone" type="text" class="validate white-text">
+        <label class="white-text" for="phone">Телефон</label>
+      </div>
+      <div class="col l2 s12">
+        <a class="btn waves-effect waves-light btn-large blue lighten-2 sendBottomForm">Узнать больше!
+          <i class="material-icons right">send</i>
+        </a>
+      </div>
+    </div>
+  </form>
+  </div>
 </div>
 <!-- <img src="/public/images/OpenComp/towers.png" alt="towers"> -->
