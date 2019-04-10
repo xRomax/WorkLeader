@@ -53,13 +53,11 @@ class MainController extends Controller {
 
 	public function contactAction() {
 		if (!empty($_POST)) {
-			if (!$this->model->contactValidate()) {
+			if (!$this->model->contactValidate($_POST)) {
 				$this->view->message('error', $this->model->error, 'Упс. Что то не так');
 			}
 			$this->view->message('success', 'Сообщение отправлено Администратору', 'Отлично!');
 			mail('workleader0@gmail.com', $this->model->messageTitle, $this->model->messageBody);
-			
 		}
 	}
-
 }

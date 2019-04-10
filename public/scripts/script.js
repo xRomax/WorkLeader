@@ -110,7 +110,6 @@ $(document).ready(function(){
      $(".bottomForm").submit();
   });
 
-
   $('.ajax').submit(function(event) {
     var json;
     event.preventDefault();
@@ -129,8 +128,10 @@ $(document).ready(function(){
           text: json.message,
         });
         $("body").css("padding-right","0px");
-        $('.modal').modal('close');
-        if (json.status == "success") $("input").val("").trigger('reset');
+        if (json.status == "success") {
+          $('.modal').modal('close');
+          $("input[type=reset]").trigger("click");
+        }
       },
     });
   });

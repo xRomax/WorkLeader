@@ -10,29 +10,27 @@ class Main extends Model {
 	public $messageTitle;
 	public $messageBody;
 
-	public function contactValidate() {
-		$this->error = "Непредвиденная ошибка";
-
-		switch($_POST["type"]) {
+	public function contactValidate($post) {
+		switch($post["type"]) {
 			case "modalForm": 
-				if ($this->contactModalForm()) return true;
+				if ($this->contactModalForm($post)) return true;
 			break;
 			case "sideForm":
-				if ($this->contactSideForm()) return true;
+				if ($this->contactSideForm($post)) return true;
 			break;
 			case "bottomForm":
-				if ($this->contactBottomForm()) return true;
+				if ($this->contactBottomForm($post)) return true;
 			break;
 		}
 	}
 
-	public function contactModalForm() {
-		$nameLen = iconv_strlen($_POST['name']);
-		$textLen = iconv_strlen($_POST['text']);
+	public function contactModalForm($post) {
+		$nameLen = iconv_strlen($post['name']);
+		$textLen = iconv_strlen($post['text']);
 		if ($nameLen < 3 or $nameLen > 20) {
 			$this->error = 'Имя должно содержать от 3 до 25 символов';
 			return false;
-		} elseif (!$_POST["phone"]) {
+		} elseif (!$post["phone"]) {
 			$this->error = 'Телефон указан неверно';
 			return false;
 		} elseif ($textLen < 10 or $textLen > 500) {
@@ -40,41 +38,40 @@ class Main extends Model {
 			return false;
 		}
 		$this->messageTitle = "Вопрос от клиента | Сообщение из сайта";
-		$this->messageBody = "Имя клиента:".$_POST["name"]."\nТелефон:".$_POST["phone"]."\nСообщение: ".$_POST["text"];
+		$this->messageBody = "Имя клиента:".$post["name"]."\nТелефон:".$post["phone"]."\nСообщение: ".$post["text"];
 		return true;
 	}
 
-	public function contactSideForm() {
-		$nameLen = iconv_strlen($_POST['name']);
+	public function contactSideForm($post) {
+		$nameLen = iconv_strlen($post['name']);
 		if ($nameLen < 3 or $nameLen > 25) {
 			$this->error = 'Имя должно содержать от 3 до 25 символов';
 			return false;
-		} elseif (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+		} elseif (!filter_var($post['email'], FILTER_VALIDATE_EMAIL)) {
 			$this->error = 'E-mail указан неверно';
 			return false;
-		} elseif (!$_POST["phone"]) {
+		} elseif (!$post["phone"]) {
 			$this->error = 'Телефон указан неверно';
 			return false;
 		}
 		$this->messageTitle = "Заказ консультации | Сообщение из сайта";
-		$this->messageBody = "Имя клиента:".$_POST["name"]."\nПочта:".$_POST["email"]."\nТелефон: ".$_POST["phone"];
+		$this->messageBody = "Имя клиента:".$post["name"]."\nПочта:".$post["email"]."\nТелефон: ".$post["phone"];
 		return true;
 	}
 
-	public function contactBottomForm() {
-		$nameLen = iconv_strlen($_POST['name']);
+	public function contactBottomForm($post) {
+		$nameLen = iconv_strlen($post['name']);
 		if ($nameLen < 3 or $nameLen > 25) {
 			$this->error = 'Имя должно содержать от 3 до 25 символов';
 			return false;
-		} elseif (!$_POST["phone"]) {
+		} elseif (!$post["phone"]) {
 			$this->error = 'Телефон указан неверно';
 			return false;
 		}
 		$this->messageTitle = "Заказ срочного звонка | Сообщение из сайта";
-		$this->messageBody = "Имя клиента:".$_POST["name"]."\nТелефон:".$_POST["phone"];
+		$this->messageBody = "Имя клиента:".$post["name"]."\nТелефон:".$post["phone"];
 		return true;
 	}
-
 }
 
 ?>

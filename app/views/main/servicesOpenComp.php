@@ -27,6 +27,7 @@
       <p>Введите данные и менеджер свяжется с вами в ближайшее время.</p>
 
       <form action="/services/open_company" method="post" class="sideForm ajax">
+      <input style="position:fixed; top:-100000px;" type="reset">
       <input type="hidden" name="type" value="sideForm">
         <div class="row">
           <div class="input-field col l6 s12">
@@ -112,6 +113,7 @@
 <div style="background: url(/public/images/openComp/towers.png) no-repeat top center;" class="contact-block white-text"><br>
   <h6>Впишите свой номер телефона и мы свяжемся с Вами в ближайшее время</h6><br>
   <form action="/services/find_jobs" method="post" class="bottomForm ajax">
+  <input style="position:fixed; top:-100000px;" type="reset">
   <input type="hidden" name="type" value="bottomForm">
     <div class="row">
       <div class="input-field col l2 offset-l3 m4 offset-m2 s12">

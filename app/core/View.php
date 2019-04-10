@@ -11,7 +11,6 @@ class View {
 	public function __construct($route) {
 		$this->route = $route;
 		$this->path = $route['controller'].'/'.$route['action'];
-		
 	}
 
 	public function render() {
@@ -23,7 +22,6 @@ class View {
 			$content = ob_get_clean();
 			require 'app/views/templates/'.$this->template.'.php';
 		}
-		
 	}
 
 	public function redirect($url) {
@@ -42,10 +40,6 @@ class View {
 
 	public function message($status, $message, $title) {
 		exit(json_encode(['status' => $status, 'message' => $message, 'title' => $title]));
-	}
-
-	public function location($url) {
-		exit(json_encode(['url' => $url]));
 	}
 
 }	
