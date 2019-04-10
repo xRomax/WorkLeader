@@ -3,14 +3,16 @@
   <div class="row">
 
   <div style="margin-top:15px;" class="col m3 s12 jobs-form">
+  <br>
     <b>Спроси нас о вакансии</b>
-    <form action="">
+    <form action="/jobs/med_sestra" method="post" class="modalForm ajax">
+    <input type="hidden" name="type" value="modalForm">
       <div class="col s12">
         <div class="row">
           <div class="input-field col s12">
             <i class="material-icons prefix">account_circle</i>
-            <input type="text" id="input1" class="">
-            <label for="input1">Имя</label>
+            <input type="text" id="name" name="name">
+            <label for="name">Имя</label>
           </div>
         </div>
       </div>
@@ -19,8 +21,8 @@
           <div class="row">
             <div class="input-field col s12">
               <i class="material-icons prefix">email</i>
-              <input type="text" id="input2" class="">
-              <label for="input2">Email</label>
+              <input type="text" id="icon_telephone" name="phone">
+              <label for="icon_telephone">Телефон</label>
             </div>
           </div>
         </div>
@@ -28,27 +30,16 @@
           <div class="row">
             <div class="input-field col s12">
               <i class="material-icons prefix">textsms</i>
-              <input type="text" id="input3" class="">
-              <label for="input3">Ваш вопрос</label>
+              <input type="text" id="text" name="text">
+              <label for="text">Ваш вопрос</label>
             </div>
           </div>
         </div>
         <div class="col s12">
-            <div class="file-field input-field">
-              <div class="btn">
-                <span>Загрузить</span>
-                <input type="file" multiple>
-              </div>
-              <div class="file-path-wrapper">
-                <input class="file-path validate" type="text" placeholder="Файлы">
-              </div>
-            </div>
-        </div>
-        <div class="col s12">
           <div class="row center">
-            <button class="btn waves-effect waves-light" type="submit" name="action">Отправать
-                <i class="material-icons right">send</i>
-              </button>
+            <button class="btn waves-effect waves-light" type="submit">Отправать
+              <i class="material-icons right">send</i>
+            </button>
           </div>
         </div>
       </form>

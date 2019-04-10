@@ -11,7 +11,7 @@ class Main extends Model {
 	public $messageBody;
 
 	public function contactValidate($post) {
-		$this->error = "Какая то ошибка";
+		$this->error = "Непредвиденная ошибка";
 		switch($post["type"]) {
 			case "modalForm": 
 				if ($this->contactModalForm($post)) return true;

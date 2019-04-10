@@ -2,7 +2,7 @@
 <div id="hellopreloader"><div id="hellopreloader_preload"></div><p><a href="http://hello-site.ru">Hello-Site.ru. Бесплатный конструктор сайтов.</a></p></div>
 <script type="text/javascript">var hellopreloader = document.getElementById("hellopreloader_preload");function fadeOutnojquery(el){el.style.opacity = 1;var interhellopreloader = setInterval(function(){el.style.opacity = el.style.opacity - 0.05;if (el.style.opacity <=0.05){ clearInterval(interhellopreloader);hellopreloader.style.display = "none";}},16);}window.onload = function(){setTimeout(function(){fadeOutnojquery(hellopreloader);},1500);};</script> -->
 
-  <div class="carousel carousel-slider baner">
+  <div class="carousel carousel-slider banner">
     <a class="carousel-item" href="#!"><img src="/public/images/banner/1.jpg"></a>
     <a class="carousel-item" href="#!"><img src="/public/images/banner/2.jpg"></a>
     <a class="carousel-item" href="#!"><img src="/public/images/banner/3.jpg"></a>
@@ -220,7 +220,7 @@
         </div>
       </div>
     </div>
-    <div class="parallax"><img src="public/images/parallax/bg-pol.jpg"></div>
+    <div class="parallax"><img src="public/images/parallax/bg-pol1.jpg"></div>
   </div>
 
   <br><br>

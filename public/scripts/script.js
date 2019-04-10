@@ -14,6 +14,13 @@ $(document).ready(function(){
     hover: false
   });
 
+  var swiper = new Swiper('.swiper-container', {
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
   $('.sidenav').sidenav();
 
   $('.parallax').parallax();
@@ -63,8 +70,11 @@ $(document).ready(function(){
       padding: -50,
       duration: 800,
     });
-    $('#tel-number').css("display","none");
   };
+
+  if ($(window).width() <= '1000'){
+    $('#tel-number').css("display","none");
+  }
 
   $('.scrollspy').scrollSpy({
     activeClass: 'active',
@@ -75,7 +85,7 @@ $(document).ready(function(){
   });
 
   setInterval(function() {
-    $('.baner').carousel('next');
+    $('.banner').carousel('next');
   }, 5000);
 
   $('.baner').height(200);
@@ -100,6 +110,7 @@ $(document).ready(function(){
      $(".bottomForm").submit();
   });
 
+
   $('.ajax').submit(function(event) {
     var json;
     event.preventDefault();
@@ -117,6 +128,7 @@ $(document).ready(function(){
         } else {
           alert(json.status + ' - ' + json.message);
         }
+        if (json.status == "success") $("input").val("").trigger('reset');
       },
     });
   });

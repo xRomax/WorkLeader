@@ -40,6 +40,14 @@ p {
   border-radius: 10px; 
 }
 
+.currency {
+  border: 2px solid #81d4fa  ;
+}
+.currency > p {
+  text-align: center;
+  font-weight: bold;
+}
+
 .sticky-block {
   z-index:996;
   height: 20%;
@@ -139,18 +147,56 @@ footer.page-footer {
 }
 /* Текст поверх картинки */
 .image {
-	position: relative;
-	/* width: 100%; */
+  position: relative;
+}
+.image > img {
+  width: 100%;
 }
 
-h4 {
-	position: absolute;
-	top: 200px;
-	left: 0;
-  width: 100%;
-  vertical-align: center;
+.image > h3 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+
+.image > h5 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 /* ---------------- */
+
+/* Блок отзывов */
+
+.mask {
+  position: absolute;
+  width: 50%;
+  height: 5px;
+  background-color:#fff;
+  right:-1px;
+}
+#maskTop {
+  top:-5px;
+}
+#maskBottom {
+  bottom:-5px;
+}
+.feedback {
+  padding: 0;
+  position: relative;
+  border: 5px solid #64B5F6;
+  border-right: 0px solid white;
+  border-bottom: 1px solid white;
+}
+.feedback > img {
+  position: absolute;
+  width: 80%;
+}
+
+/* ------------- */
 
 /* Блок контактов */
 .contact-block {
@@ -158,10 +204,14 @@ h4 {
   text-align: center;
   background-size: cover;
 }
-.contact-block > input {
-  border-left: 2x solid white;
-  border-top: 2x solid white;
-  border-right: 2x solid white;
+.info-block {
+  position: relative;
+  text-align: center;
+  background-size: cover;
+}
+.info-block {
+  padding: 4px 0 4px 0;
+  margin: 10px 0 10px 0;
 }
 /* ------------------ */
 

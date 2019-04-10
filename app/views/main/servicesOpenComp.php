@@ -1,8 +1,14 @@
-<div class="carousel carousel-slider baner">
-  <a class="carousel-item"><img src="/public/images/OpenComp/topPoland.png" alt="Открытие фирмы в польше"></a>
+<div class="image hide-on-med-and-down show-on-large">
+  <img src="/public/images/openComp/top.png">
+  <h3 class="white-text center">Открытие компании в Польше</h3>
 </div>
-<!-- <img src="/public/images/OpenComp/topPoland.png" alt="Открытие фирмы в польше"> -->
-<br>
+
+<div class="image hide-on-large-only show-on-medium-and-down center">
+  <img src="/public/images/openComp/topMobile.png">
+  <h5 class="center-align white-text hide-on-medium-only">Открытие компании в Польше</h5>
+</div>
+
+<br><br>
 <div class="container">
   <div class="row">
     <div class="col l6 s12"><br>
@@ -108,15 +114,15 @@
   <form action="/services/find_jobs" method="post" class="bottomForm ajax">
   <input type="hidden" name="type" value="bottomForm">
     <div class="row">
-      <div class="input-field col l2 offset-l3 s12">
+      <div class="input-field col l2 offset-l3 m4 offset-m2 s12">
         <input id="bottomName" name="name" type="text" class="validate white-text">
         <label class="white-text" for="bottomName">Имя</label>
       </div>
-      <div class="input-field col l2 s12">
+      <div class="input-field col l2 m4 s12">
         <input id="phone" name="phone" type="text" class="validate white-text">
         <label class="white-text" for="phone">Телефон</label>
       </div>
-      <div class="col l2 s12">
+      <div class="col l2 m12 s12">
         <a class="btn waves-effect waves-light btn-large blue lighten-2 sendBottomForm">Узнать больше!
           <i class="material-icons right">send</i>
         </a>
