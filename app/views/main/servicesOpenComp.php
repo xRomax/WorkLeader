@@ -72,11 +72,6 @@
             <p style="margin: 0 2px 0 2px;" class="center white-text">Срок открытия фирмы в Польше до 20 дней</p>
           </div>
         </div>
-        <!-- <div class="col s12">
-          <div style="text-align:center;" class="blue lighten-1">
-            <p style="margin: 0 2px 0 2px;" class="center white-text">Срок открытия фирмы в Польше до 20 дней</p>
-          </div>
-        </div> -->
       </div>
     </div>
   </div>
@@ -88,11 +83,11 @@
   <input style="position:fixed; top:-100000px;" type="reset">
   <input type="hidden" name="type" value="bottomForm">
     <div class="row">
-      <div class="input-field col l2 offset-l3 m4 offset-m2 s12">
+      <div class="input-field col l2 offset-l3 m4 offset-m2 s6">
         <input id="bottomName" name="name" type="text" class="validate white-text">
         <label class="white-text" for="bottomName">Имя</label>
       </div>
-      <div class="input-field col l2 m4 s12">
+      <div class="input-field col l2 m4 s6">
         <input id="phone" name="phone" type="text" class="validate white-text">
         <label class="white-text" for="phone">Телефон</label>
       </div>
@@ -105,4 +100,3 @@
   </form>
   </div>
 </div>
-<!-- <img src="/public/images/OpenComp/towers.png" alt="towers"> -->

@@ -2,7 +2,7 @@
 <div class="container">
   <div class="row">
     <div class="col s12 l5">
-      <div class="card">
+      <div class="card hoverable">
         <div class="card-image">
           <img src="/public/images/services/1.png">
           <a href="/services/job_in_poland" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">chevron_right</i></a>
@@ -17,7 +17,7 @@
       </div>
     </div>
     <div class="col s12 l5 offset-l1">
-      <div class="card">
+      <div class="card hoverable">
         <div class="card-image">
           <img src="/public/images/services/5.png">
           <a href="/services/open_company" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">chevron_right</i></a>
@@ -37,7 +37,7 @@
 
   <div class="row">
     <div class="col s12 l5">
-      <div class="card">
+      <div class="card hoverable">
         <div class="card-image">
           <img src="/public/images/services/3.png">
           <a href="/services/find_jobs" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">chevron_right</i></a>
@@ -50,7 +50,7 @@
       </div>
     </div>
     <div class="col s12 l5 offset-l1">
-      <div class="card">
+      <div class="card hoverable">
         <div class="card-image">
           <img src="/public/images/services/2.png">
         </div>
@@ -66,7 +66,7 @@
 
   <div class="row">
     <div class="col s12 l5">
-      <div class="card">
+      <div class="card hoverable">
         <div class="card-image">
           <img src="/public/images/services/6.png">
         </div>
@@ -80,7 +80,7 @@
       </div>
     </div>
     <div class="col s12 l5 offset-l1">
-      <div class="card">
+      <div class="card hoverable">
         <div class="card-image">
           <img src="/public/images/services/4.png">
         </div>

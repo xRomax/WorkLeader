@@ -1,6 +1,5 @@
 html, body {
   font-family: Arial, Helvetica, sans-serif;
-  overflow-x:hidden;
   overflow-y:hidden;
 }
 .nicescroll-rails-hr {
@@ -25,27 +24,15 @@ p {
   font-weight: bold;
   padding: 0px;
 }
-.hot-work>.text-work {
+.hot-work> span {
   margin: 0px;
   border: 1px solid black;
   border-radius: 5px;
 }
 
-.carousel-hot-work>a>img {
-  width: 400px;
-}
-
 .jobs-form {
   border: 2px solid #81d4fa  ;
   border-radius: 10px; 
-}
-
-.currency {
-  border: 2px solid #81d4fa  ;
-}
-.currency > p {
-  text-align: center;
-  font-weight: bold;
 }
 
 .sticky-block {
@@ -80,6 +67,9 @@ p {
     position: absolute;
     top: 40%;
   }
+  .ukraine-img {
+    width: 70%;
+  }
 }
 
 @media only screen and (max-width : 992px) {
@@ -90,17 +80,15 @@ p {
   #index-banner .section {
     top: 10%;
   }
-  .flag-block img {
-    width: 100px;
+  .mobile-image {
+    margin: 10px 0;
+    width: 100%;
   }
 }
 
 @media only screen and (max-width : 600px) {
   #index-banner .section {
     top: 0;
-  }
-  .flag-block img {
-    width: 70px;
   }
   .carousel .indicators {
     display: none;
@@ -115,8 +103,10 @@ p {
   }
 }
 
-.card {
-  max-height: 502px;
+.naprav-item img {
+  width: 100px;
+  border: 5px solid rgba(141,200,255,.50);
+  border-radius: 17px;
 }
 
 .icon-block {

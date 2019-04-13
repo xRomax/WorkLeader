@@ -47,11 +47,6 @@ $(document).ready(function(){
     dist: -40,
   });
 
-  $('.carousel.carousel-hot-work').carousel({
-    duration: 500,
-    padding: 300,
-  });
-
   $('.carousel.carousel-slider').carousel({
     fullWidth: true,
     indicators: true,
@@ -89,9 +84,6 @@ $(document).ready(function(){
     $('.banner').carousel('next');
   }, 5000);
 
-  setInterval(function() {
-    $('.carousel-hot-work').carousel('next');
-  }, 6000);
 
   $("#services").click(function() {
     $("#services_dropdown").width(150);

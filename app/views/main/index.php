@@ -96,34 +96,38 @@
   <div class="no-pad-bot section scrollspy" id="country-flag">
     <div class="container">
       <div class="row center">
-        <div class="">
-          <h4>Наши направления</h4>
-            <div class="carousel carousel-country">
-              <a class="carousel-item" href="#!" target="_blank"><img src="public/images/flag/cze.png"><h4 style="color: white">Работа в Чехии</h4></a>
-              <a class="carousel-item" href="#!" target="_blank"><img src="public/images/flag/ger.png"><h4 style="color: white">Работа в Германии</h4></a>
-              <a class="carousel-item" href="#!" target="_blank"><img src="public/images/flag/pol.png"><h4 style="color: white">Работа в Польше</h4></a>
-              <a class="carousel-item" href="#!" target="_blank"><img src="public/images/flag/nor.png"><h4 style="color: white">Работа в Норвегии</h4></a>
-              <a class="carousel-item" href="#!" target="_blank"><img src="public/images/flag/ukr.png"><h4 style="color: white">Работа в Украине</h4></a>
-              <a class="carousel-item" href="#!" target="_blank"><img src="public/images/flag/lith.png"><h4 style="color: white">Работа в Литве</h4></a>
-              <a class="carousel-item" href="#!" target="_blank"><img src="public/images/flag/est.png"><h4 style="color: white">Работа в Эстонии</h4></a>
-              </div>
-          </div>
+        <h4>Наши направления</h4>
+        <div class="carousel carousel-country">
+          <a class="carousel-item  naprav-item" href="#!" target="_blank"><img src="public/images/flag/cze.png"><h4 style="color: white">Работа в Чехии</h4></a>
+          <a class="carousel-item  naprav-item" href="#!" target="_blank"><img src="public/images/flag/ger.png"><h4 style="color: white">Работа в Германии</h4></a>
+          <a class="carousel-item  naprav-item" href="#!" target="_blank"><img src="public/images/flag/pol.png"><h4 style="color: white">Работа в Польше</h4></a>
+          <a class="carousel-item  naprav-item" href="#!" target="_blank"><img src="public/images/flag/nor.png"><h4 style="color: white">Работа в Норвегии</h4></a>
+          <a class="carousel-item  naprav-item" href="#!" target="_blank"><img src="public/images/flag/ukr.png"><h4 style="color: white">Работа в Украине</h4></a>
+          <a class="carousel-item  naprav-item" href="#!" target="_blank"><img src="public/images/flag/lith.png"><h4 style="color: white">Работа в Литве</h4></a>
+          <a class="carousel-item  naprav-item" href="#!" target="_blank"><img src="public/images/flag/est.png"><h4 style="color: white">Работа в Эстонии</h4></a>
+        </div>
       </div>
     </div>
   </div>
   <div class="parallax"><img src="public/images/parallax/bg-ger.jpg"></div>
 </div>
 
-<div class="hide-on-large-only show-on-medium-and-down center">
-  <h4>Наши направления</h4>
-  <div class="carousel carousel-country-medium-and-down flag-block row">
-    <a class="carousel-item col s6" href="#!" target="_blank"><img src="public/images/flag/cze.png"><h6>Работа в Чехии</h6></a>
-    <a class="carousel-item col s6" href="#!" target="_blank"><img src="public/images/flag/ger.png"><h6>Работа в Германии</h6></a>
-    <a class="carousel-item col s6" href="#!" target="_blank"><img src="public/images/flag/pol.png"><h6>Работа в Польше</h6></a>
-    <a class="carousel-item col s6" href="#!" target="_blank"><img src="public/images/flag/nor.png"><h6>Работа в Норвегии</h6></a>
-    <a class="carousel-item col s6" href="#!" target="_blank"><img src="public/images/flag/ukr.png"><h6>Работа в Украине</h6></a>
-    <a class="carousel-item col s6" href="#!" target="_blank"><img src="public/images/flag/lith.png"><h6>Работа в Литве</h6></a>
-    <a class="carousel-item col s6" href="#!" target="_blank"><img src="public/images/flag/est.png"><h6>Работа в Эстонии</h6></a>
+<div class="container naprav hide-on-large-only show-on-medium-and-down center">
+  <h4>Наши направления</h4><br>
+  <div class="row">
+    <div class="col s6 naprav-item"><a href="/jobs/" target="_blank"><img src="public/images/flag/cze.png"><h6>Работа в Чехии</h6></a></div>
+    <div class="col s6 naprav-item"><a href="/jobs/" target="_blank"><img src="public/images/flag/ger.png"><h6>Работа в Германии</h6></a></div>
+  </div>
+  <div class="row">
+    <div class="col s6 naprav-item"><a href="/jobs/" target="_blank"><img src="public/images/flag/pol.png"><h6>Работа в Польше</h6></a></div>
+    <div class="col s6 naprav-item"><a href="/jobs/" target="_blank"><img src="public/images/flag/nor.png"><h6>Работа в Норвегии</h6></a></div>
+  </div>
+  <div class="row">
+    <div class="col s6 naprav-item"><a href="/jobs/" target="_blank"><img src="public/images/flag/ukr.png"><h6>Работа в Украине</h6></a></div>
+    <div class="col s6 naprav-item"><a href="/jobs/" target="_blank"><img src="public/images/flag/lith.png"><h6>Работа в Литве</h6></a></div>
+  </div>
+  <div class="row">
+    <div class="col s6 offset-s3 naprav-item center"><a href="/jobs/" target="_blank"><img src="public/images/flag/est.png"><h6>Работа в Эстонии</h6></a></div>
   </div>
 </div>
 
@@ -170,9 +174,9 @@
 <div class="parallax-container valign-wrapper hide-on-med-and-down show-on-large">
   <div class="section scrollspy no-pad-bot" id="hot-vacancii">
     <div class="container">
-      <h5 class="header col s12 hot-work">
-        <span class="text-work">
-          <span class="red-text accent-4 blue-grey lighten-3">ГОРЯЧИЕ</span><span class="">ВАКАНСИИ</span>
+      <h5 class="col s12 hot-work">
+        <span>
+          <span class="red-text accent-4 blue-grey lighten-3">ГОРЯЧИЕ</span> ВАКАНСИИ
         </span>
       </h5>
       <div class="row">
@@ -225,13 +229,11 @@
       </div>
     </div>
   </div>
-  <div class="parallax"><img src="public/images/parallax/bg-pol1.jpg"></div>
+  <div class="parallax"><img src="public/images/parallax/bg-cze.jpg"></div>
 </div>
-
-<br><br>
 
 <div class="container center">
   <a href="https://goo.gl/maps/ZP6oaMw2cUM2" target="_blank">
-    <img src="public/images/ukraine.jpg" alt="Карта Украины" style="width:70%;">
+    <img class="mobile-image ukraine-img" src="public/images/ukraine.jpg" alt="Карта Украины">
   </a>
 </div>

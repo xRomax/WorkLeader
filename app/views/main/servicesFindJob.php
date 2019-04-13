@@ -28,7 +28,7 @@
   <br><br>
   <div class="row">
     <div class="col l6 s12">
-      <img style="width:90%;" src="/public/images/FindJobs/mehanik.png" alt="">
+      <img style="width:90%;" class="mobile-image" src="/public/images/FindJobs/mehanik.png" alt="">
     </div>
 
     <div class="col l6 s12">
@@ -44,7 +44,7 @@
   <br><br>
   <div class="row">
     <div class="col l5 s12">
-      <img src="/public/images/FindJobs/zavod.png" alt="Завод">
+      <img class="mobile-image" src="/public/images/FindJobs/zavod.png" alt="Завод">
         <h6 style="text-indent:1.5em;">Неквалифицированные работники</h6>
         <span>Трудоустройство без квалификации осуществляется на заводы, крупные предприятия и фабрики. 
           Требуются фасовщики, упаковщики, заводские специалисты.
@@ -56,7 +56,7 @@
     </div>
 
     <div class="col l5 offset-l1 s12">
-      <img src="/public/images/FindJobs/stanok.png" alt="Швейная машинка">
+      <img class="mobile-image" src="/public/images/FindJobs/stanok.png" alt="Швейная машинка">
         <h6 style="text-indent:1.5em;">Квалифицированные специалисты</h6>
         <span>Вакансии для квалифицированных специалистов: повара, пекари, кондитеры, швеи, строители. 
           Предусмотрено проживание за счет работодателя.</span>
@@ -85,7 +85,7 @@
 
   <div class="row">
     <div class="col l6 s12">
-      <img src="/public/images/FindJobs/konsultac.png" alt="Консультант">
+      <img class="mobile-image" src="/public/images/FindJobs/konsultac.png" alt="Консультант">
     </div>
 
     <div class="col l6 s12">
@@ -104,11 +104,11 @@
   <input style="position:fixed; top:-100000px;" type="reset">
   <input type="hidden" name="type" value="bottomForm">
     <div class="row">
-      <div class="input-field col l2 offset-l3 m4 offset-m2 s12">
+      <div class="input-field col l2 offset-l3 m4 offset-m2 s6">
         <input id="bottomName" name="name" type="text" class="validate white-text">
         <label class="white-text" for="bottomName">Имя</label>
       </div>
-      <div class="input-field col l2 m4 s12">
+      <div class="input-field col l2 m4 s6">
         <input id="phone" name="phone" type="text" class="validate white-text">
         <label class="white-text" for="phone">Телефон</label>
       </div>

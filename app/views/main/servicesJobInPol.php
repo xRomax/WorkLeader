@@ -72,14 +72,14 @@
       Мы предлагаем работу в Европе для женщин, мужчин и семейных пар без опыта работы и знания языка, а также работу для квалифицированных специалистов. 
     </div>
     <div class="col l6 s12">
-      <img src="/public/images/JobInPol/ruchka.png" alt="glek">
+      <img class="mobile-image" src="/public/images/JobInPol/ruchka.png" alt="glek">
     </div>
   </div>
   
   <br><br>
 
   <div class="row">
-    <table class="striped highlight">
+    <table class="striped responsive-table">
       <thead >
         <div style="text-align:center;" class="blue lighten-2">
           <p style="margin:5px 0 5px 0; font-size:20px;" class="center white-text">Услуги</p>
@@ -129,11 +129,11 @@
   <input style="position:fixed; top:-100000px;" type="reset">
   <input type="hidden" name="type" value="bottomForm">
     <div class="row">
-      <div class="input-field col l2 offset-l3 m4 offset-m2 s12">
+      <div class="input-field col l2 offset-l3 m4 offset-m2 s6">
         <input id="bottomName" name="name" type="text" class="validate white-text">
         <label class="white-text" for="bottomName">Имя</label>
       </div>
-      <div class="input-field col l2 m4 s12">
+      <div class="input-field col l2 m4 s6">
         <input id="phone" name="phone" type="tel" class="validate white-text">
         <label class="white-text" for="phone">Телефон</label>
       </div>
@@ -150,7 +150,6 @@
 <div class="container">
   <div class="swiper-container">
     <div class="swiper-wrapper">
-
       <div class="swiper-slide">
         <div class="row feedback">
           <div id="maskTop" class="mask"></div><div id="maskBottom" class="mask"></div>
@@ -241,10 +240,6 @@
 
   <div class="row">
     <div class="col s12 l3 offset-l9">
-      <!-- <div class="currency">
-        <p>Курс валют сегодня:</p>
-        <p>1PLN = 7.02 UAH</p>
-      </div> -->
       <a href="https://ru.ratesviewer.com/chart/pln-uah/year/" target="_blank" title="Курс Польского злотого к Украинской гривне"><img src="https://w.ratesviewer.com/ru/default/blue/pln/uah" alt="Информер курса Польского злотого к Украинской гривне"></a>
     </div>
   </div>
