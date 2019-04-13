@@ -6,7 +6,7 @@
   <input style="position:fixed; top:-100000px;" type="reset">
   <div class="row">
     <div class="input-field col l6 s12">
-      <input id="name" name="name" type="text" class="validate">
+      <input id="name" name="name" type="text" class="validate" data-length="25">
       <label for="name">Имя</label>
     </div>
 

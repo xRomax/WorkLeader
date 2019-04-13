@@ -3,7 +3,7 @@
   <div class="row">
 
   <div style="margin-top:15px;" class="col m3 s12 jobs-form">
-  <br>
+    <br>
     <b>Спроси нас о вакансии</b>
     <form action="/jobs/med_sestra" method="post" class="modalForm ajax">
     <input style="position:fixed; top:-100000px;" type="reset">
@@ -80,12 +80,29 @@
       <p>Условия проживания:<br> Предоставляется бесплатно в пансионате</p>
       <p>Зарплата: <br>PLN= 2400-2600 <br> UAH=15000-25000 <br> USD = 750 - 1200 <br> EUR = 950 - 1800</p>
     </div>
-
-    <br>
   </div>
+  <br><br>
 
-  <div class="row contact-block">
-    
+  <div class="feedback-block white-text">
+    <h6 style="padding-top:20px;" class="center">Введите Ваши данные и наш менеджер свяжется с вами!</h6>
+    <form action="/services/job_in_poland" method="post" class="bottomForm ajax">
+    <input style="position:fixed; top:-100000px;" type="reset">
+    <input type="hidden" name="type" value="bottomForm">
+      <div class="row">
+        <div class="input-field col l2 offset-l3 m4 offset-m2 s6">
+          <input id="bottomName" name="name" type="text" class="validate white-text">
+          <label class="white-text" for="bottomName">Имя</label>
+        </div>
+        <div class="input-field col l2 m4 s6">
+          <input id="phone" name="phone" type="tel" class="validate white-text">
+          <label class="white-text" for="phone">Телефон</label>
+        </div>
+        <div class="col l2 m12 s6 offset-s2">
+          <a class="btn waves-effect waves-light btn-large blue lighten-2 sendBottomForm" style="border-radius:10px;">Отправить</a>
+        </div>
+      </div>
+    </form>
   </div>
+  <br><br><br>
 
 </div>

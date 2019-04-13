@@ -137,7 +137,7 @@
   <div class="section scrollspy"  id="how-we-work">
     <div class="row">
       <div class="col s12 center">
-          <h2 class="teal-text text-lighten-2">Как мы работаем</h2>
+          <h3 class="teal-text text-lighten-2">Как мы работаем</h3>
           <ul class="collapsible popout">
               <li class="active">
                 <div class="collapsible-header"><i class="fas fa-phone fa-3x"></i>Шаг первый: звонок, заявка</div>
@@ -167,9 +167,30 @@
       </div>
     </div>
   </div>
+  <br><br><br><br>
+  <div class="feedback-block white-text">
+    <h6 style="padding-top:20px;" class="center">Введите Ваши данные и наш менеджер свяжется с вами!</h6>
+    <form action="/services/job_in_poland" method="post" class="bottomForm ajax">
+    <input style="position:fixed; top:-100000px;" type="reset">
+    <input type="hidden" name="type" value="bottomForm">
+      <div class="row">
+        <div class="input-field col l2 offset-l3 m4 offset-m2 s6">
+          <input id="bottomName" name="name" type="text" class="validate white-text">
+          <label class="white-text" for="bottomName">Имя</label>
+        </div>
+        <div class="input-field col l2 m4 s6">
+          <input id="phone" name="phone" type="tel" class="validate white-text">
+          <label class="white-text" for="phone">Телефон</label>
+        </div>
+        <div class="col l2 m12 s6 offset-s2">
+          <a class="btn waves-effect waves-light btn-large blue lighten-2 sendBottomForm" style="border-radius:10px;">Отправить</a>
+        </div>
+      </div>
+    </form>
+  </div>
 </div>
 
-<br><br>
+<br><br><br>
 
 <div class="parallax-container valign-wrapper hide-on-med-and-down show-on-large">
   <div class="section scrollspy no-pad-bot" id="hot-vacancii">
@@ -231,8 +252,56 @@
   </div>
   <div class="parallax"><img src="public/images/parallax/bg-cze.jpg"></div>
 </div>
-
+<br><br>
 <div class="container center">
+<h3 class="teal-text text-lighten-2">Отзывы о нас</h3>
+  <ul class="collection feedback-main">
+    <li class="collection-item">
+      <span class="title">Владимир Иванов</span>
+      <p><img src="/public/images/JobInPol/otziv.png" class="circle"> Огромное спасибо! Очень доволен сроками и качеством работы. 
+        Одной из ведущих компаний по трудоустройству за границей 
+        уже весемь лет является компания WorkLeader. 
+        Все соответствующие документы есть в свободном доступе.</p>
+      <div class="secondary-content center">
+        <a><i class="material-icons">grade</i></a>
+        <a><i class="material-icons">grade</i></a>
+        <a><i class="material-icons">grade</i></a>
+        <a><i class="material-icons">grade</i></a>
+        <a><i class="material-icons">grade</i></a>
+      </div>
+    </li>
+    <li class="collection-item">
+      <span class="title">Наталья Иванова</span>
+      <p><img src="/public/images/JobInPol/otziv1.png" class="circle">Вот и у нас наконец выдалась минутка написать отзыв. Мы уже неделю как в Польше. 
+        Скажу сразу, что этой компании можно доверять на 200%! Все честно! Вакансию хоть и ждали месяц, но не зря. 
+        Мы с мужем работаем в Барлинеке, пока все нравится(конечно не обошлось без маленьких нюансов)
+        но все благополучно решилось! Еще раз спасибо WorkLeader!</p>
+        <div class="secondary-content center">
+        <a><i class="material-icons">grade</i></a>
+        <a><i class="material-icons">grade</i></a>
+        <a><i class="material-icons">grade</i></a>
+        <a><i class="material-icons">grade</i></a>
+      </div>
+    </li>
+    <li class="collection-item">
+    
+      <span class="title">Владимир Иванов</span>
+      <p><img src="/public/images/JobInPol/otziv2.png" class="circle">Спасибо большое компании WorkLeader, на работу еще не устроился, но визу уже получил.
+        Говорили 3-4 месяца будут делать, а через 2 виза уже у меня. Очень понравилось обслуживание, 
+        много полезной информации, получил ответы на все поставленные вопросы, никаких подводных камней, 
+        надеюсь, что с работой тоже будет все ок.</p>
+      <div class="secondary-content center">
+        <a><i class="material-icons">grade</i></a>
+        <a><i class="material-icons">grade</i></a>
+        <a><i class="material-icons">grade</i></a>
+        <a><i class="material-icons">grade</i></a>
+        <a><i class="material-icons">grade</i></a>
+      </div>
+    </li>
+  </ul>
+  <a href="#!" style="border-radius:20px;" class="btn waves-effect waves-light center">Смотреть все</a>
+  <br><br><br>
+  <h3 class="teal-text text-lighten-2">Наши отделения</h3>
   <a href="https://goo.gl/maps/ZP6oaMw2cUM2" target="_blank">
     <img class="mobile-image ukraine-img" src="public/images/ukraine.jpg" alt="Карта Украины">
   </a>

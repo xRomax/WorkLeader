@@ -11,12 +11,12 @@
         <p><label><input type="checkbox" name="country" value="lit"><span>Литва</span></label></p>
         <p><label><input type="checkbox" name="country" value="lat"><span>Латвия</span></label></p>
         <h6>Проживание:</h6>
-        <p>
-          <div class="switch">
-            <label>Без<input type="checkbox" name="house" value="true"><span class="lever"></span>Включено</label>
-          </div>
-        </p>
-        <button class="btn waves-effect waves-light" type="submit" name="action">Фильтровать</button>
+        <div class="switch">
+          <label>Без<input type="checkbox" name="house" value="true"><span class="lever"></span>Включено</label>
+        </div><br>
+        <h6>Зарплата:</h6>
+        <div id="salary-slider"></div>
+        <button class="btn waves-effect waves-light" type="submit">Фильтровать</button>
       </form>
     </div>
 

@@ -8,10 +8,10 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-	<link rel="stylesheet" href="/public/styles/materialize.css">
+  <link rel="stylesheet" href="/public/styles/materialize.css">
   <link rel="stylesheet" href="/public/styles/swiper.css">
-
   <link rel="stylesheet" href="/public/styles/sweetalert2.css">
+  <link rel="stylesheet" href="/public/styles/nouislider.css">
 
 	<link rel="stylesheet" href="/public/styles/style.css">
 	<link rel="shortcut icon" href="/public/images/favicon.png" type="image/x-icon">
@@ -25,6 +25,7 @@
   <script src="/public/scripts/materialize.js"></script>
   <script src="/public/scripts/nicescroll.js"></script>
   <script src="/public/scripts/swiper.js"></script>
+  <script src="/public/scripts/nouislider.js"></script>
 
   <script src="/public/scripts/script.js"></script>
   
@@ -33,7 +34,7 @@
 </head>
 <body>
   <div class="navbar-fixed">
-    <ul id="services_dropdown" class="dropdown-content" style="width: 144px;">
+    <ul id="services_dropdown" class="dropdown-content" style="width: 140px;">
       <li style="height:64px;"><a style="height:100%;" href="/services"><h6>Услуги</h6></a></li>
       <li class="divider"></li>
       <li><a href="/services/job_in_poland">Трудоустройство в Польше</a></li>
@@ -42,7 +43,8 @@
     </ul>
     <nav class="white" role="navigation">
         <div class="nav-wrapper">
-          <a id="logo-container" href="/" class="brand-logo">WorkLeader</a>
+          <a style="height:100%;" id="logo-container" href="/" class="brand-logo hide-on-med-and-down show-on-large"><img style="padding: 6px;" height="64" src="/public/images/logo.png" alt="WorkLeader"></a>
+          <a style="height:100%;" id="logo-container" href="/" class="brand-logo hide-on-large-only show-on-medium-and-down"><img style="padding: 6px;" height="55" src="/public/images/logo.png" alt="WorkLeader"></a>
           <a id="tel-number" class="brand-logo center teal-text text-lighten-2" href="tel:0684331027">+38(068)433-10-27</a>
           <ul class="right hide-on-med-and-down">
             <li id='index'><a href="/">Главная</a></li>

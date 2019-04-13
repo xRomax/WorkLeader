@@ -94,6 +94,7 @@ p {
     display: none;
   }
   
+
   #hellopreloader_preload {
     position: absolute;
     width: 4000px;
@@ -129,7 +130,11 @@ footer.page-footer {
 	border-radius: 5px; 
 	z-index: 2; 
 }
-
+.center-el {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .v-line { 
   border-left: 4px solid #00c0e3;
   margin-left: 30px;
@@ -146,6 +151,9 @@ footer.page-footer {
 }
 .font-icons {
   margin-right: 4px;
+}
+.secondary-content {
+  float: none;
 }
 /* Текст поверх картинки */
 .image {
@@ -198,6 +206,12 @@ footer.page-footer {
   width: 80%;
 }
 
+.feedback-main img{
+  position:relative;
+  float:left;
+  width:100px;
+}
+
 /* ------------- */
 
 /* Блок контактов */
@@ -210,10 +224,30 @@ footer.page-footer {
   position: relative;
   text-align: center;
   background-size: cover;
-}
-.info-block {
   padding: 4px 0 4px 0;
   margin: 10px 0 10px 0;
+}
+.feedback-block {
+  background: linear-gradient(to right, rgba(30,87,153,1) 0%,rgba(32,124,202,1) 36%,rgba(32,124,202,1) 36%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 56%,rgba(125,185,232,1) 100%);
+  border-radius: 10px;
+  max-height: 210px;
+  position: relative;
+}
+.feedback-block::before {
+  position: absolute;
+  /* float: left; */
+  top: -114px;
+  /* left: 5px; */
+  display: inline-block;
+  width: 189px;
+  height: 243px;
+  content: ' ';
+  background: url(/public/images/consultant1.png) no-repeat top center;
+}
+@media only screen and (max-width : 992px) {
+  .feedback-block::before {
+    display: none;
+  }
 }
 /* ------------------ */
 
