@@ -12,49 +12,16 @@
 <div class="container">
   <div class="row">
     <div class="col l6 s12"><br>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt 
-      ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-      ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-      in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
-      non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis
-      unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
-      eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-      Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur 
-      magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum 
-      quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut 
-      labore et dolore magnam aliquam quaerat voluptatem.
+      Сегодня крупнейшим рынком труда в Евросоюзе для украинцев является Польша.
+      По данным польского агентства по трудоустройство иностранцев , в 2014 году среди всех легальных иностранных рабочих в Польше 90%
+      составляли украинцы. Этому способствует географическая и культурная близость, а также более либеральные польские законы.
+      После вступления Польши в Евросоюз граждане страны получили возможность работать на всей территории Шенгена.
+      Этим они и воспользовались, уехав в страны с гораздо большей оплатой труда, как например, в Германии и Британии.
+      Соответственно образовался дефицит трудовых ресурсов. Нехватку рабочих рук стали заполнять работники из стран восточной Европы, в том числе из Украины.
     </div>
 
     <div class="col l5 offset-l1 s12 v-line">
-      <h5>Хотите бесплатную консультацию?</h5>
-      <p>Введите данные и менеджер свяжется с вами в ближайшее время.</p>
-
-      <form action="/services/job_in_poland" method="post" class="sideForm ajax">
-      <input type="hidden" name="type" value="sideForm">
-      <input style="position:fixed; top:-100000px;" type="reset">
-        <div class="row">
-          <div class="input-field col l6 s12">
-            <input id="name" name="name" type="text" class="validate">
-            <label for="name">Имя</label>
-          </div>
-  
-          <div class="input-field col l6 s12 ">
-            <input id="email" name="email" type="text" class="validate">
-            <label for="email">Email</label>
-          </div>
-          
-          <div class="input-field col l6 s12">
-            <input id="telephone" name="phone" type="text" class="validate">
-            <label for="telephone">Телефон</label>
-          </div>
-  
-          <div class="col l6 s12">
-            <button class="btn waves-effect waves-light" type="submit">Отправить
-              <i class="material-icons right">send</i>
-            </button>
-          </div>
-        </div>
-      </form>
+      <?php require_once('sideForm.php'); ?>
     </div>
   </div>
 
@@ -62,7 +29,13 @@
 
   <div class="row">
     <div class="col s12">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+      Минимальная зарплата в Польше около 420 евро, средняя – около 880 евро.
+      Самые низкие оклады получают официанты, кассиры, , средняя зарплата которых 430-550 евро.
+      А самые высокие у адвокатов – от 800 до 10 000 евро.
+
+      Стоит отметить, что украинцам платят на уровне с полякам, а иногда и больше за аналогичную работу.
+      Многие работодатели предоставляют своим сотрудникам общежития за счет компании. 
+      График работы в Польше – 8-12 часов в день, один или два выходных в неделю.
     </div>
   </div>
 
@@ -74,7 +47,13 @@
     </div>
 
     <div class="col l6 s12">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+      Уровень заработной платы во многом зависит от специализации соискателя, а так же личных качеств, наиболее востребованны работники в сфере строительства, которые могут
+      обеспечить высокий уровень работы и продуктивности.
+      Так же на рынке трудоустройства есть высокая потребность в разнорабочих, для наших соискателей мы предлагаем трудоустройство в таких гигантах рынка как : LG, Samsung,
+      Karfur, Biedrenka, H&M, Zara, Frotex, Poczta Polska и многие другие.
+      Рабочий график на польских предприятиях более гибкий и удобный, чем в Украине, как минимум потому, что у сотрудников есть возможность его корректировать. 
+      Часто приезжих соискателей пугает языковой барьер, но бояться не стоит – польский,
+      украинский и русский языки во многом похожи и понять новых коллег не составит труда.
     </div>
   </div>
 
@@ -82,7 +61,15 @@
   
   <div class="row">
     <div class="col l6 s12">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+      Опираясь на все преимущества жизни и работы в Польше, существует факторы которые останавливают многих украинцев сделать первый шаг.
+      Одним из них является страх , что сбор необходимых документов затянется на долгие месяцы.
+      Более того, есть риск потратить деньги на оформление паспорта и визы впустую.
+      Боязнь оставить семью и близких на родине 
+      и при этом самому в чужой стране остаться ни с чем – ещё одна причина нерешительности потенциальных кандидатов. Многие слышат негативные отзывы
+      от своих знакомых, у которых был неудачный опыт работы за границей. 
+      Компания Work Leader Наша компания на протяжении 8 лет успешно работает в сфере трудоустройства граждан Украины за рубежом.
+      На нашем счету уже более 3000 довольных клиентов, которые получили хорошую работу и достойную зарплату.
+      Мы предлагаем работу в Европе для женщин, мужчин и семейных пар без опыта работы и знания языка, а также работу для квалифицированных специалистов. 
     </div>
     <div class="col l6 s12">
       <img src="/public/images/JobInPol/ruchka.png" alt="glek">
@@ -224,20 +211,33 @@
   <div class="row">
     <div class="col s12">
       <div style="background: url(/public/images/JobInPol/cr-ceni.png) no-repeat top center;" class="info-block white-text">
-        <h6>Средние цены на аренду жилья</h6>
+        <h6>Аренда квартиры (апартаментов) на месяц - <b>1823 PLN</b>
+        <span class="right" style="font-size:13px; margin-right: 5px;">
+          <a class="white-text" href="https://3pulse.com/ru/geo/poland/prices" target="_blank"><u>Подробнее...</u> </a>
+        </span>
+      </h6>
       </div>
     </div>
     <div class="col s12">
       <div style="background: url(/public/images/JobInPol/cr-prod.png) no-repeat top center;" class="info-block white-text">
-        <h6>Средние цены на продукты</h6>
+        <h6>Средний счет в дешевом кафе для местных - <b>26,66 PLN</b>
+        <span class="right" style="font-size:13px; margin-right: 5px;">
+          <a class="white-text" href="https://3pulse.com/ru/geo/poland/prices" target="_blank"><u>Подробнее...</u> </a>
+        </span>
+      </h6>
       </div>
     </div>
     <div class="col s12">
       <div style="background: url(/public/images/JobInPol/cr-proezd.png) no-repeat top center;" class="info-block white-text">
-        <h6>Средние цены на проезд в общественном транспорте</h6>
+        <h6>Стоимость общественного транспорта в месяц - <b>93,91 PLN</b>
+        <span class="right" style="font-size:13px; margin-right: 5px;">
+          <a class="white-text" href="https://3pulse.com/ru/geo/poland/prices" target="_blank"><u>Подробнее...</u> </a>
+        </span>
+      </h6>
       </div>
     </div>
   </div>
+
 
   <div class="row">
     <div class="col s12 l3 offset-l9">

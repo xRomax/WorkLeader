@@ -43,8 +43,7 @@
     <nav class="white" role="navigation">
         <div class="nav-wrapper">
           <a id="logo-container" href="/" class="brand-logo">WorkLeader</a>
-          <a id="tel-number" class="brand-logo center teal-text text-lighten-2" href="tel:0985847073">+38(098)-584-70-73</a>
-          <a href="tel:0685551526">+38(068)-555-15-26</a>
+          <a id="tel-number" class="brand-logo center teal-text text-lighten-2" href="tel:0684331027">+38(068)433-10-27</a>
           <ul class="right hide-on-med-and-down">
             <li id='index'><a href="/">Главная</a></li>
             <li id='services' class="dropdown-trigger" data-target="services_dropdown"><a href="/services">Услуги<i class="material-icons right">arrow_drop_down</i></a></li>
@@ -77,10 +76,9 @@
           <div class="col l3 offset-l1 s12">
               <h5 class="white-text">Контакты</h5>
               <ul>
-                <li><a class="white-text" href="tel:0985847073"><i class="fas fa-phone font-icons"></i>098 584 70 73</a></li>
-                <li><a class="white-text" href="tel:0685551526"><i class="fas fa-phone font-icons"></i>068 555 15 26</a></li>
-                <li><a class="white-text" href="mailto:workleaderandco@gmail.com"><i class="fas fa-envelope font-icons"></i>workleaderandco@gmail.com</a></li>
-                <li><a class="white-text" href="mailto:johnsonhayes123@gmail.com"><i class="fas fa-envelope font-icons"></i>johnsonhayes123@gmail.com</a></li>
+                <li><a class="white-text" href="tel:0509468428"><i class="fas fa-phone font-icons"></i>+38(050)946-84-28</a></li>
+                <li><a class="white-text" href="tel:0684331027"><i class="fas fa-phone font-icons"></i>+38(068)433-10-27</a></li>
+                <li><a class="white-text" href="mailto:workleadereurope@gmail.com"><i class="fas fa-envelope font-icons"></i>workleadereurope@gmail.com</a></li>
                 </ul>
               <h5 class="white-text">Документы</h5>
               <ul>
@@ -88,7 +86,8 @@
                 </ul>
           </div>
           <div class="col l3 offset-l1 s12">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.1065868911778!2d35.055717300566364!3d48.45773694038088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1b7637877a2bf153!2z0JrQvtGA0L_Rg9GBIOKEljMg0JTQndCjINGW0Lwg0J4u0JPQvtC90YfQsNGA0LAsINCk0LDQutGD0LvRjNGC0LXRgiDQn9GA0LjQutC70LDQtNC90L7RlyDQvNCw0YLQtdC80LDRgtC40LrQuA!5e0!3m2!1sru!2sua!4v1550962120097" width="300px;" height="300px;" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2645.468859599942!2d35.04444321566057!3d48.46671967925099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe2e7d931b4f9%3A0xab5b588df09991d0!2z0YPQuy4g0JPQu9C40L3QutC4LCAyMCwg0JTQvdC40L_RgNC-LCDQlNC90LXQv9GA0L7Qv9C10YLRgNC-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNDkwMDA!5e0!3m2!1sru!2sua!4v1555155405537!5m2!1sru!2sua" width="300px" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.1065868911778!2d35.055717300566364!3d48.45773694038088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1b7637877a2bf153!2z0JrQvtGA0L_Rg9GBIOKEljMg0JTQndCjINGW0Lwg0J4u0JPQvtC90YfQsNGA0LAsINCk0LDQutGD0LvRjNGC0LXRgiDQn9GA0LjQutC70LDQtNC90L7RlyDQvNCw0YLQtdC80LDRgtC40LrQuA!5e0!3m2!1sru!2sua!4v1550962120097" width="300" height="300" frameborder="0" style="border:0" allowfullscreen></iframe> -->
           </div>
         </div>
       </div>

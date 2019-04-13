@@ -105,6 +105,18 @@ p {
   .carousel .indicators {
     display: none;
   }
+  
+  #hellopreloader_preload {
+    position: absolute;
+    width: 4000px;
+    height: 4000px;
+    left:50%;
+    transform: translate(-32%, -30%);
+  }
+}
+
+.card {
+  max-height: 502px;
 }
 
 .icon-block {

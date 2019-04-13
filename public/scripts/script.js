@@ -70,6 +70,7 @@ $(document).ready(function(){
       padding: -50,
       duration: 800,
     });
+    $(".banner").height(200);
   };
 
   if ($(window).width() <= '1000'){
@@ -87,8 +88,6 @@ $(document).ready(function(){
   setInterval(function() {
     $('.banner').carousel('next');
   }, 5000);
-
-  $('.baner').height(200);
 
   setInterval(function() {
     $('.carousel-hot-work').carousel('next');
