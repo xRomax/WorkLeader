@@ -10,7 +10,7 @@ class View {
 
 	public function __construct($route) {
 		$this->route = $route;
-		$this->path = $route['controller'].'/'.$route['action'];
+		$this->path = $route["path"];
 	}
 
 	public function render() {
@@ -20,6 +20,7 @@ class View {
 			ob_start();
 			require $path;
 			$content = ob_get_clean();
+			if ($this->route["action"] != 'login ')
 			require 'app/views/templates/'.$this->template.'.php';
 		}
 	}

@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="/public/styles/materialize.css">
   <link rel="stylesheet" href="/public/styles/swiper.css">
   <link rel="stylesheet" href="/public/styles/sweetalert2.css">
-  <link rel="stylesheet" href="/public/styles/nouislider.css">
 
 	<link rel="stylesheet" href="/public/styles/style.css">
 	<link rel="shortcut icon" href="/public/images/favicon.png" type="image/x-icon">
@@ -25,7 +24,6 @@
   <script src="/public/scripts/materialize.js"></script>
   <script src="/public/scripts/nicescroll.js"></script>
   <script src="/public/scripts/swiper.js"></script>
-  <script src="/public/scripts/nouislider.js"></script>
 
   <script src="/public/scripts/script.js"></script>
   

@@ -27,10 +27,6 @@ $(document).ready(function(){
 
   $('.collapsible').collapsible();
 
-  $('.collapsible.jobs').collapsible({
-    according: false,
-  });
-
   $('.modal').modal();
 
   $('.fixed-action-btn').floatingActionButton({
