@@ -14,11 +14,12 @@
 </div>
 
 <div class="col hide-on-small-only m3 l2 sticky-block teal lighten-2">
-  <ul class="section table-of-contents" style="margin-left:10px;">
+  <ul style="padding: 0 0 0 7px;" class="section table-of-contents" style="margin-left:10px;">
     <li><a href="#why-we">Почему мы</a></li>
     <li><a href="#country-flag">Наши направления</a></li>
     <li><a href="#how-we-work">Как мы работаем</a></li>
     <li><a href="#hot-vacancii">Горячие вакансии</a></li>
+    <li><a href="#feedback">Отзывы</a></li>
     <li><a href="#contacts">Контакты</a></li>
   </ul>
 </div>
@@ -182,7 +183,7 @@
           <input id="phone" name="phone" type="tel" class="validate white-text">
           <label class="white-text" for="phone">Телефон</label>
         </div>
-        <div class="col l2 m12 s6 offset-s2">
+        <div class="col l2 m12 s6 offset-s3">
           <a class="btn waves-effect waves-light btn-large blue lighten-2 sendBottomForm" style="border-radius:10px;">Отправить</a>
         </div>
       </div>
@@ -253,16 +254,18 @@
   <div class="parallax"><img src="public/images/parallax/bg-cze.jpg"></div>
 </div>
 <br><br>
-<div class="container center">
-<h3 class="teal-text text-lighten-2">Отзывы о нас</h3>
+<div class="container center scrollspy" id="feedback">
+  <h3 class="teal-text text-lighten-2">Отзывы о нас</h3>
   <ul class="collection feedback-main">
     <li class="collection-item">
       <span class="title">Владимир Иванов</span>
-      <p><img src="/public/images/JobInPol/otziv.png" class="circle"> Огромное спасибо! Очень доволен сроками и качеством работы. 
+      <img src="/public/images/JobInPol/otziv.png" class="circle">
+      <p>Огромное спасибо! Очень доволен сроками и качеством работы. 
         Одной из ведущих компаний по трудоустройству за границей 
         уже весемь лет является компания WorkLeader. 
         Все соответствующие документы есть в свободном доступе.</p>
       <div class="secondary-content center">
+        <span class="right">20.03.18</span>
         <a><i class="material-icons">grade</i></a>
         <a><i class="material-icons">grade</i></a>
         <a><i class="material-icons">grade</i></a>
@@ -272,11 +275,13 @@
     </li>
     <li class="collection-item">
       <span class="title">Наталья Иванова</span>
-      <p><img src="/public/images/JobInPol/otziv1.png" class="circle">Вот и у нас наконец выдалась минутка написать отзыв. Мы уже неделю как в Польше. 
+      <img src="/public/images/JobInPol/otziv1.png" class="circle">
+      <p>Вот и у нас наконец выдалась минутка написать отзыв. Мы уже неделю как в Польше. 
         Скажу сразу, что этой компании можно доверять на 200%! Все честно! Вакансию хоть и ждали месяц, но не зря. 
         Мы с мужем работаем в Барлинеке, пока все нравится(конечно не обошлось без маленьких нюансов)
         но все благополучно решилось! Еще раз спасибо WorkLeader!</p>
-        <div class="secondary-content center">
+      <div class="secondary-content center">
+        <span class="right">10.01.19</span>
         <a><i class="material-icons">grade</i></a>
         <a><i class="material-icons">grade</i></a>
         <a><i class="material-icons">grade</i></a>
@@ -284,13 +289,14 @@
       </div>
     </li>
     <li class="collection-item">
-    
       <span class="title">Владимир Иванов</span>
-      <p><img src="/public/images/JobInPol/otziv2.png" class="circle">Спасибо большое компании WorkLeader, на работу еще не устроился, но визу уже получил.
+      <img src="/public/images/JobInPol/otziv2.png" class="circle">
+      <p>Спасибо большое компании WorkLeader, на работу еще не устроился, но визу уже получил.
         Говорили 3-4 месяца будут делать, а через 2 виза уже у меня. Очень понравилось обслуживание, 
         много полезной информации, получил ответы на все поставленные вопросы, никаких подводных камней, 
         надеюсь, что с работой тоже будет все ок.</p>
       <div class="secondary-content center">
+      <span class="right">13.09.18</span>
         <a><i class="material-icons">grade</i></a>
         <a><i class="material-icons">grade</i></a>
         <a><i class="material-icons">grade</i></a>

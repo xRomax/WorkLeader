@@ -38,7 +38,7 @@ p {
 .sticky-block {
   z-index:996;
   height: 20%;
-  min-height: 167px;
+  min-height: 186px;
   width: 170px;
   position: fixed;
   right: 0; top: 40%;
@@ -100,7 +100,7 @@ p {
     width: 4000px;
     height: 4000px;
     left:50%;
-    transform: translate(-32%, -30%);
+    transform: translate(-32%, 0%);
   }
 }
 
