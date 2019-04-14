@@ -22,7 +22,7 @@ class AdminController extends Controller {
 				$this->view->message('error', $this->model->error, 'Ошибка');
 			}
 			$_SESSION['admin'] = true;
-			$this->view->redirect('admin');
+			$this->view->location('admin');
 		}
 		
 		$this->view->render();

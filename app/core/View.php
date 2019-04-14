@@ -20,7 +20,6 @@ class View {
 			ob_start();
 			require $path;
 			$content = ob_get_clean();
-			if ($this->route["action"] != 'login ')
 			require 'app/views/templates/'.$this->template.'.php';
 		}
 	}
@@ -41,6 +40,10 @@ class View {
 
 	public function message($status, $message, $title) {
 		exit(json_encode(['status' => $status, 'message' => $message, 'title' => $title]));
+	}
+	
+	public function location($url) {
+		exit(json_encode(['url' => $url]));
 	}
 
 }	
