@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col l3 m3 s12 offset-s1 offset-l1 offset-m1">
       <h4>Фильтр вакансий</h4>
-      <form action="/jobs" method="GET">
+      <form action="/jobs" method="GET" class="ajax">
         <h6>Старана:</h6>
         <p><label><input type="checkbox" name="country" value="cze"><span>Чехия</span></label></p>
         <p><label><input type="checkbox" name="country" value="pol"><span>Польша</span></label></p>
@@ -14,10 +14,10 @@
         <div class="switch">
           <label>Без<input type="checkbox" name="house" value="true"><span class="lever"></span>Включено</label>
         </div><br>
-        <h6>Зарплата:</h6>
-        <div id="salary-slider"></div><br>
-        <input type="text" id="min-salary" name="min-salary">
-        <input type="text" id="max-salary" name="max-salary">
+        <h6>Зарплата (PLN):</h6>
+        <div id="salary-slider" style="max-width:250px;"></div><br>
+        <input style="position:fixed; top:-100000px;" type="text" id="min-salary" name="minSalary">
+        <input style="position:fixed; top:-100000px;" type="text" id="max-salary" name="maxsalary">
         <button class="btn waves-effect waves-light" type="submit">Фильтровать</button>
       </form>
     </div>

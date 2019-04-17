@@ -12,17 +12,6 @@ $(document).ready(function(){
     $("body").niceScroll();
   }
 
-  // var slider = document.getElementById('salary-slider');
-  // noUiSlider.create(slider, {
-  //   start: [3000, 5000],
-  //   step: 100,
-  //   connect: true,
-  //   range: {
-  //     'min': [2200],
-  //     'max': [6000]
-  //   },
-  //   tooltips: true,
-  // });
   var slider = document.getElementById('salary-slider');
   noUiSlider.create(slider, {
    start: [2900, 5000],
@@ -34,9 +23,16 @@ $(document).ready(function(){
      'max': 6000
    },
    format: wNumb({
-     decimals: 0
+     decimals: 0,
    })
   });
+
+  setInterval(function() {
+    let salary = slider.noUiSlider.get();
+    let Salary = Array.from(salary);
+    $("#min-salary").val(Salary[0]);
+    $("#max-salary").val(Salary[1]);
+  }, 100);
 
 
   $(".dropdown-trigger").dropdown({
