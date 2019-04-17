@@ -15,6 +15,7 @@ class AdminController extends Controller {
 	public function mainAction() {
 		$this->view->render();
 	}
+
 	public function loginAction() {
 		if (isset($_SESSION['admin'])) $this->view->redirect('admin');
 		if (!empty($_POST)) {
@@ -36,5 +37,15 @@ class AdminController extends Controller {
 		if ($this->route["action"] != 'login') {
 			if (empty($_SESSION["admin"])) $this->view->redirect('admin/login');
 		}
+	}
+
+	public function jobsListAction() {
+		$this->view->render();
+	}
+	public function jobsAddAction() {
+		$this->view->render();
+	}
+	public function jobsEditAction() {
+		$this->view->render();
 	}
 }

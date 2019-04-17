@@ -37,8 +37,8 @@
         <li class="bold"><a class="collapsible-header waves-effect waves-light"><i class="fas fa-user fa-1x"></i>Вакансии</a>
           <div class="collapsible-body">
             <ul>
-              <li><a href="#!">Список</a></li>
-              <li><a href="#!">Добавить</a></li>
+              <li><a href="/admin/jobsList">Список</a></li>
+              <li><a href="/admin/jobsAdd">Добавить</a></li>
             </ul>
           </div>
         </li>
@@ -59,13 +59,7 @@
 <?php endif; ?>
 
 <main>
-  <div class="container">
-    <div class="row">
-      <div class="col s12 m8 offset-m1 xl7 offset-xl1">
-        <?php echo $content; ?>
-      </div>
-    </div>
-  </div>
+  <?php echo $content; ?>
 </main>
   
 </body>

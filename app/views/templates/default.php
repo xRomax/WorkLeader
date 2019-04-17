@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
   <link rel="stylesheet" href="/public/styles/materialize.css">
+  <link rel="stylesheet" href="https://materializecss.com/extras/noUiSlider/nouislider.css">
   <link rel="stylesheet" href="/public/styles/swiper.css">
   <link rel="stylesheet" href="/public/styles/sweetalert2.css">
 
@@ -17,11 +18,12 @@
 
   <script src="/public/scripts/jquery.js"></script>
   <script src="/public/scripts/jquery.maskedinput.js"></script>
-
+  
   <script src="/public/scripts/sweetalert2.js"></script>
   <script src="/public/scripts/sweetalert2.all.js"></script>
-
+  
   <script src="/public/scripts/materialize.js"></script>
+  <script src="https://materializecss.com/extras/noUiSlider/nouislider.js"></script>
   <script src="/public/scripts/nicescroll.js"></script>
   <script src="/public/scripts/swiper.js"></script>
 

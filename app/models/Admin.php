@@ -19,4 +19,16 @@ class Admin extends Model {
     }
 		return true;
 	}
+
+	public function jobsValidate($post, $type) {
+		$nameLen = iconv_strlen($post['name']);
+		$urlLen = iconv_strlen($post['url']);
+		if ($nameLen < 3 or $nameLen > 40) {
+			$this->error = 'Название должно содержать от 3 до 40 символов';
+			return false;
+		} elseif ($urlLen < 5 or $urlLen > 20) {
+			$this->error = 'URL должен содержать от 5 до 40 символов';
+			return false;
+		}
+	}
 }

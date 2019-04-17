@@ -1,12 +1,12 @@
 html, body {
   font-family: Arial, Helvetica, sans-serif;
-  overflow-y:hidden;
+  /* overflow-y:hidden; */
 }
 .nicescroll-rails-hr {
   display: none;
 }
 
-.kubik_forma{ 
+.auth_form { 
 	width: 400px; 
 	text-align: center; 
   border-radius: 5px; 
@@ -20,27 +20,49 @@ html, body {
   border-radius: .25rem;
 }
 @media only screen and (max-width : 600px) {
-  .kubik_forma {
+  .auth_form {
     width: 90%;
   }
 }
-
-.kubik_forma > .head {
+.auth_form > .head {
   background-color: rgba(0,0,0,.1);
   padding: .75rem 1.25rem;
   margin-bottom: 0;
   background-color: rgba(0,0,0,.03);
   border-bottom: 1px solid rgba(0,0,0,.125);
 }
-.kubik_forma > .body {
+.auth_form > .body {
   padding: 1.25rem;
 }
-.kubik_forma > .body > input {
+.auth_form > .body > input {
   border: 1px solid rgba(0,0,0,.15);
   border-radius: 5px;
   padding: 3px;
 }
 
+.jobs_form { 
+  border-radius: 5px; 
+  margin: 10px;
+  /* position: relative;
+  display: flex; */
+  flex-direction: column;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+}
+
+.jobs_form > .head {
+  background-color: rgba(0,0,0,.1);
+  padding: .75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: rgba(0,0,0,.03);
+  border-bottom: 1px solid rgba(0,0,0,.125);
+}
+.jobs_form > .body {
+  padding: 0 1.25rem;
+}
 .center-el {
   position: absolute;
   top: 50%;
@@ -69,7 +91,4 @@ main {
 }
 .sidenav .collapsible-body {
   background-color: #343a403b;
-}
-i.fas {
-  margin-right: 15px;
 }

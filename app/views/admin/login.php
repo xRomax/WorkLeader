@@ -4,7 +4,7 @@
 		background-color: #343a40;
 	}
 </style>
-<div class="kubik_forma center-el">
+<div class="auth_form center-el">
 	<div class="head">Вход в панель администратора</div>
 	<div class="body">
 		<form action="/admin/login" method="post" class="ajax">

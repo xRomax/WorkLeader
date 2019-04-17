@@ -12,6 +12,33 @@ $(document).ready(function(){
     $("body").niceScroll();
   }
 
+  // var slider = document.getElementById('salary-slider');
+  // noUiSlider.create(slider, {
+  //   start: [3000, 5000],
+  //   step: 100,
+  //   connect: true,
+  //   range: {
+  //     'min': [2200],
+  //     'max': [6000]
+  //   },
+  //   tooltips: true,
+  // });
+  var slider = document.getElementById('salary-slider');
+  noUiSlider.create(slider, {
+   start: [2900, 5000],
+   connect: true,
+   step: 100,
+   orientation: 'horizontal',
+   range: {
+     'min': 2200,
+     'max': 6000
+   },
+   format: wNumb({
+     decimals: 0
+   })
+  });
+
+
   $(".dropdown-trigger").dropdown({
     hover: false
   });

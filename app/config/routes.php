@@ -63,4 +63,19 @@ return [
 		'action' => 'logout',
 		'path' => 'admin/logout'
 	],
+	'admin/jobsList' => [
+		'controller' => 'admin',
+		'action' => 'main',
+		'path' => 'admin/jobsList'
+	],
+	'admin/jobsAdd' => [
+		'controller' => 'admin',
+		'action' => 'jobsAdd',
+		'path' => 'admin/jobsAdd'
+	],
+	'admin/jobsEdit' => [
+		'controller' => 'admin',
+		'action' => 'jobsEdit',
+		'path' => 'admin/jobsEdit'
+	],
 ];
