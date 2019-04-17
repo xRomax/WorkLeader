@@ -78,4 +78,9 @@ return [
 		'action' => 'jobsEdit',
 		'path' => 'admin/jobsEdit'
 	],
+	'admin/jobsDelete/{id:\D+}' => [
+		'controller' => 'admin',
+		'action' => 'jobsDelete',
+		'path' => 'admin/jobsDelete'
+	],
 ];

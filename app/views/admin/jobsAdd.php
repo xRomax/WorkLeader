@@ -11,19 +11,34 @@
         <label for="url">URL адресс</label>
       </div>
       <div class="input-field">
-        <input id="country" type="text" name="country" class="validate">
-        <label for="country">Страна</label>
+        <select name="country">
+          <option value="" disabled selected>Выберите страницу</option>
+          <option value="pol">Польша</option>
+          <option value="cze">Чехия</option>
+          <option value="ger">Германия</option>
+          <option value="lith">Литва</option>
+          <option value="est">Эстония</option>
+          <option value="nor">Норвегия</option>
+          <option value="ukr">Украина</option>
+        </select>
+      <label>Страна</label>
       </div>
-      <p>
-        <label>
-          <input class="with-gap" name="sex" value="male" type="radio"  />
-          <span>Мужской</span>
-        </label>
-        <label>
-          <input class="with-gap" name="sex" value="female" type="radio"  />
-          <span>Женский</span>
-        </label>
-      </p>
+      <div class="input-field">
+        <p>
+          <label>Пол</label>
+        </p>
+        <p>
+          <label>
+            <input class="with-gap" name="sex" value="male" type="radio"  />
+            <span>Мужской</span>
+          </label>
+          <label>
+            <input class="with-gap" name="sex" value="female" type="radio"  />
+            <span>Женский</span>
+          </label>
+        </p>
+
+      </div>
       <!-- <div class="input-field">
         <input id="age" type="text" name="age" class="validate">
         <label for="age">Возраст</label>
@@ -45,8 +60,8 @@
         <label for="accommodations">Условия проживания</label>
       </div> -->
       <div class="input-field">
-        <input id="sallary" type="text" name="sallary" class="validate">
-        <label for="sallary">Зарплата (PLN)</label>
+        <input id="salary" type="text" name="salary" class="validate">
+        <label for="salary">Зарплата (PLN)</label>
       </div>
       <!-- <input type="file" name="img" class="validate"> -->
 			<button style="width:100%;" class="btn waves-effect light-blue darken-4" type="submit">Добавить</button>

@@ -29,6 +29,30 @@ class Admin extends Model {
 		} elseif ($urlLen < 5 or $urlLen > 20) {
 			$this->error = 'URL должен содержать от 5 до 40 символов';
 			return false;
+		} elseif (empty($post["country"])) {
+			$this->error = 'Выберите страну';
+			return false;
+		} elseif (empty($post["sex"])) {
+			$this->error = 'Выберите пол';
+			return false;
+		} elseif (empty($post["salary"])) {
+			$this->error = 'Введите зарплату (PLN)';
+			return false;
 		}
+		return true;
+	}
+
+	public function jobAdd($post) {
+		$count = $this->countTabs('jobs1');
+		$params = [
+			'id' => "$count",
+			'name' => $post["name"],
+			'url' => $post["url"],
+			'country' => $post["country"],
+			'sex' => $post["sex"],
+			'salary' => $post["salary"],
+		];
+		$sql = "INSERT INTO jobs1 (id, name, url, country, sex, salary) VALUES (:id, :name, :url, :country, :sex, :salary)";
+		$this->db->query($sql,$params);
 	}
 }

@@ -4,6 +4,8 @@ $(document).ready(function(){
 
   $('.sidenav').sidenav();
 
+  $('select').formSelect();
+
   $('.ajax').submit(function(event) {
     var json;
     event.preventDefault();

@@ -42,10 +42,24 @@ class AdminController extends Controller {
 	public function jobsListAction() {
 		$this->view->render();
 	}
+
 	public function jobsAddAction() {
+		if (!empty($_POST)) {
+			if (!$this->model->jobsValidate($_POST,'add')) {
+				$this->view->message('error', $this->model->error, 'Ошибка!');
+			}
+			$this->model->jobAdd($_POST);
+			$this->view->message('success','Вакансия добавлена','Успешно!');
+		}
 		$this->view->render();
 	}
+
 	public function jobsEditAction() {
 		$this->view->render();
+	}
+
+	public function jobsDeleteAction() {
+		debug($this->route);
+		exit("Удаление");
 	}
 }

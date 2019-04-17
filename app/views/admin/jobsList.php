@@ -13,12 +13,12 @@
         <tr>
           <td>Сварщик на предприятие</td>
           <td><a href="/admin/jobsEdit" class="waves-effect waves-light btn blue">Редактировать</a></td>
-          <td><a href="" class="waves-effect waves-light btn red">Удалить</a></td>
+          <td><a href="/admin/jobsDelete/sdf" class="waves-effect waves-light btn red">Удалить</a></td>
         </tr>
         <tr>
           <td>В пансионат по уходу за пожилыми людьми требуеться медсестра</td>
           <td><a href="/admin/jobsEdit" class="waves-effect waves-light btn blue">Редактировать</a></td>
-          <td><a href="" class="waves-effect waves-light btn red">Удалить</a></td>
+          <td><a href="/admin/jobsDelete/fsd" class="waves-effect waves-light btn red">Удалить</a></td>
         </tr>
       </tbody>
     </table>

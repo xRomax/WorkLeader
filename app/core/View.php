@@ -29,6 +29,10 @@ class View {
 		exit;
 	}
 
+	public function location($url) {
+		exit(json_encode(['url' => $url]));
+	}
+	
 	public static function errorCode($code) {
 		http_response_code($code);
 		$path = 'app/views/errors/'.$code.'.php';
@@ -41,9 +45,4 @@ class View {
 	public function message($status, $message, $title) {
 		exit(json_encode(['status' => $status, 'message' => $message, 'title' => $title]));
 	}
-	
-	public function location($url) {
-		exit(json_encode(['url' => $url]));
-	}
-
 }	
