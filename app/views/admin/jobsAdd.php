@@ -1,7 +1,7 @@
 <div class="jobs_form">
 	<div class="head">Добавить новую вакансию</div>
 	<div class="body">
-    <form action="/admin/jobsAdd" enctype="multipart/form-data" method="post" class="">
+    <form action="/admin/jobsAdd" enctype="multipart/form-data" method="post" class="ajax">
       <div class="input-field">
         <input id="name" type="text" name="name" class="validate">
         <label for="name">Название</label>

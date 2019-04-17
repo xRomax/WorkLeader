@@ -49,7 +49,8 @@ class AdminController extends Controller {
 				$this->view->message('error', $this->model->error, 'Ошибка!');
 			}
 			$this->model->jobAdd($_POST);
-			$this->view->message('success','Вакансия добавлена','Успешно!');
+			// $this->view->message('success','Вакансия добавлена','Успешно!');
+			$this->view->location('admin/jobsList');
 		}
 		$this->view->render();
 	}

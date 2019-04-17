@@ -43,7 +43,7 @@ class Admin extends Model {
 	}
 
 	public function jobAdd($post) {
-		$count = $this->countTabs('jobs1');
+		$count = $this->db->countTabs('jobs1');
 		$params = [
 			'id' => "$count",
 			'name' => $post["name"],
