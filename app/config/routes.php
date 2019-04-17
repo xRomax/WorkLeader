@@ -20,7 +20,7 @@ return [
 	'services' => [
 		'controller' => 'main',
 		'action' => 'services',
-		'path' => 'main/services'
+		'path' => 'main/services/services'
 	],
 	'services/job_in_poland' => [
 		'controller' => 'main',
@@ -39,13 +39,13 @@ return [
 	],
 	'jobs' => [
 		'controller' => 'main',
-		'action' => 'jobs',
+		'action' => 'jobsList',
 		'path' => 'main/jobs'
 	],
-	'jobs/med_sestra' => [
+	'jobs/{name:\D+}' => [
 		'controller' => 'main',
-		'action' => 'jobsMed',
-		'path' => 'main/jobsMed'
+		'action' => 'job',
+		'path' => 'main/jobs/Med'
 	],
 	// AdminController
 	'admin' => [

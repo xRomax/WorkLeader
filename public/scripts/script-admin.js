@@ -2,6 +2,8 @@ $(document).ready(function(){
 
   $('.collapsible').collapsible();
 
+  $('.sidenav').sidenav();
+
   $('.ajax').submit(function(event) {
     var json;
     event.preventDefault();

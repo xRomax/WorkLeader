@@ -1,16 +1,16 @@
 function activeLink () {
   var URL = window.location.href;
   var URL_mas = URL.split('/');
-  alert(URL_mas[2]);
   URL_mas = URL_mas[3].split('.');
   var URI = URL_mas[0];
   if (URI == '') URI = 'index'; 
   $("#" + URI).addClass('active');
 }
-activeLink();
 
 $(document).ready(function(){
-  $("body").niceScroll();
+  if ($(window).width() >= '993'){
+    $("body").niceScroll();
+  }
 
   $(".dropdown-trigger").dropdown({
     hover: false

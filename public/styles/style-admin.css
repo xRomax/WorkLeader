@@ -7,7 +7,7 @@ html, body {
 }
 
 .kubik_forma{ 
-	max-width: 400px; 
+	width: 400px; 
 	text-align: center; 
   border-radius: 5px; 
   position: relative;
@@ -18,6 +18,11 @@ html, body {
   background-clip: border-box;
   border: 1px solid rgba(0,0,0,.125);
   border-radius: .25rem;
+}
+@media only screen and (max-width : 600px) {
+  .kubik_forma {
+    width: 90%;
+  }
 }
 
 .kubik_forma > .head {
@@ -41,4 +46,30 @@ html, body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -70%);
+}
+main {
+  padding-left: 300px;
+}
+@media only screen and (max-width: 992px) {
+  main {
+    padding-left: 0;
+  }
+}
+.sidenav {
+  background-color: #343a40;
+}
+
+.sidenav > li > a,
+.sidenav > li > ul > li > a {
+  padding: 0 16px;
+  color: #a6acb1;
+}
+.sidenav .collapsible-body > ul > li > a {
+  color: #868e96;
+}
+.sidenav .collapsible-body {
+  background-color: #343a403b;
+}
+i.fas {
+  margin-right: 15px;
 }
