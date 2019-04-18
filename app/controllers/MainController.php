@@ -12,13 +12,23 @@ class MainController extends Controller {
 	}
 
 	public function jobsListAction() {
+		$vars = [
+			'pagination' => '',
+			'list' => $this->model->jobsList($this->route),
+		];
 		$this->contactAction();
-		$this->view->render();
+		$this->view->render($vars);
 	}
 
 	public function jobAction() {
+		if (!$this->model->isJobExists('jobs','url',$this->route['url'])) {
+			$this->view->errorCode(404);
+		}
+		$vars = [
+			'data' => $this->model->jobData($this->route['url']),
+		];
 		$this->contactAction();
-		$this->view->render();
+		$this->view->render($vars);
 	}
 
 	public function aboutAction() {

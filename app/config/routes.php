@@ -42,10 +42,10 @@ return [
 		'action' => 'jobsList',
 		'path' => 'main/jobs'
 	],
-	'jobs/{name:\D+}' => [
+	'jobs/{url:\D+}' => [
 		'controller' => 'main',
 		'action' => 'job',
-		'path' => 'main/jobs/Med'
+		'path' => 'main/jobs/job'
 	],
 	// AdminController
 	'admin' => [
@@ -65,7 +65,7 @@ return [
 	],
 	'admin/jobsList' => [
 		'controller' => 'admin',
-		'action' => 'main',
+		'action' => 'jobsList',
 		'path' => 'admin/jobsList'
 	],
 	'admin/jobsAdd' => [

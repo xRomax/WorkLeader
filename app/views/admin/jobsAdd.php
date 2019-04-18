@@ -1,7 +1,7 @@
 <div class="jobs_form">
 	<div class="head">Добавить новую вакансию</div>
 	<div class="body">
-    <form action="/admin/jobsAdd" enctype="multipart/form-data" method="post" class="ajax">
+    <form action="/admin/jobsAdd" enctype="multipart/form-data" method="post" class="">
       <div class="input-field">
         <input id="name" type="text" name="name" class="validate">
         <label for="name">Название</label>
@@ -36,10 +36,14 @@
             <input class="with-gap" name="sex" value="female" type="radio"  />
             <span>Женский</span>
           </label>
+          <label>
+            <input class="with-gap" name="sex" value="all" type="radio"  />
+            <span>Любой</span>
+          </label>
         </p>
 
       </div>
-      <!-- <div class="input-field">
+      <div class="input-field">
         <input id="age" type="text" name="age" class="validate">
         <label for="age">Возраст</label>
       </div>
@@ -58,7 +62,7 @@
       <div class="input-field">
         <input id="accommodations" type="text" name="accommodations" class="validate">
         <label for="accommodations">Условия проживания</label>
-      </div> -->
+      </div>
       <div class="input-field">
         <input id="salary" type="text" name="salary" class="validate">
         <label for="salary">Зарплата (PLN)</label>

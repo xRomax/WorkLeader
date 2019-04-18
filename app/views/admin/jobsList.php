@@ -1,3 +1,6 @@
+<?php 
+// debug($list);
+?>
 <div class="jobs_form">
   <div class="head">Список вакансий</div>
   <div class="body">
@@ -10,16 +13,17 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Сварщик на предприятие</td>
-          <td><a href="/admin/jobsEdit" class="waves-effect waves-light btn blue">Редактировать</a></td>
-          <td><a href="/admin/jobsDelete/sdf" class="waves-effect waves-light btn red">Удалить</a></td>
-        </tr>
-        <tr>
-          <td>В пансионат по уходу за пожилыми людьми требуеться медсестра</td>
-          <td><a href="/admin/jobsEdit" class="waves-effect waves-light btn blue">Редактировать</a></td>
-          <td><a href="/admin/jobsDelete/fsd" class="waves-effect waves-light btn red">Удалить</a></td>
-        </tr>
+        <?php if (empty($list)): ?>
+          <p>Список постов пуст</p>
+        <?php else: ?>
+          <?php foreach ($list as $val): ?>
+            <tr>
+              <td><?php echo $val["name"] ?></td>
+              <td><a href="/admin/jobsEdit/<?php echo $val["id"] ?>" class="waves-effect waves-light btn blue">Редактировать</a></td>
+              <td><a href="/admin/jobsDelete/<?php echo $val["id"] ?>" class="waves-effect waves-light btn red">Удалить</a></td>
+            </tr>
+          <?php endforeach; ?>
+        <?php endif; ?>
       </tbody>
     </table>
   </div>

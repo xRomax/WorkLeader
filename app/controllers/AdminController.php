@@ -40,7 +40,11 @@ class AdminController extends Controller {
 	}
 
 	public function jobsListAction() {
-		$this->view->render();
+		$vars = [
+			'pagination' => '',
+			'list' => $this->model->jobsList($this->route),
+		];
+		$this->view->render($vars);
 	}
 
 	public function jobsAddAction() {
@@ -60,7 +64,7 @@ class AdminController extends Controller {
 	}
 
 	public function jobsEditAction() {
-		if (!$this->model->isJobsExists('jobs1','id',$this->route['id'])) {
+		if (!$this->model->isJobsExists('jobs','id',$this->route['id'])) {
 			$this->view->errorCode(404);
 		}
 		if (!empty($_POST)) {
@@ -71,8 +75,8 @@ class AdminController extends Controller {
 				$this->model->jobsUploadImage($_FILES['img']['tmp_name'], $this->route['id']);
 			}
 			$this->model->jobsEdit($_POST,$this->route['id']);
-			// $this->view->location('admin/jobsList');
-			$this->view->message('success', 'Новые данные сохранены','Успешно!');
+			$this->view->location('admin/jobsList');
+			// $this->view->message('success', 'Новые данные сохранены','Успешно!');
 		}
 		$vars = [
 			'data' => $this->model->jobsData($this->route['id'])[0],
@@ -81,7 +85,7 @@ class AdminController extends Controller {
 	}
 
 	public function jobsDeleteAction() {
-		if (!$this->model->isJobsExists('jobs1','id',$this->route['id'])) {
+		if (!$this->model->isJobsExists('jobs','id',$this->route['id'])) {
 			$this->view->errorCode(404);
 		}
 		$this->model->jobsDelete($this->route['id']);

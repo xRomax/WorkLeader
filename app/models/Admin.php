@@ -24,17 +24,32 @@ class Admin extends Model {
 	public function jobsValidate($post, $type) {
 		$nameLen = iconv_strlen($post['name']);
 		$urlLen = iconv_strlen($post['url']);
-		if ($nameLen < 3 or $nameLen > 40) {
-			$this->error = 'Название должно содержать от 3 до 40 символов';
+		if ($nameLen < 3 or $nameLen > 60) {
+			$this->error = 'Название должно содержать от 3 до 60 символов';
 			return false;
-		} elseif ($urlLen < 5 or $urlLen > 20) {
-			$this->error = 'URL должен содержать от 5 до 40 символов';
+		} elseif ($urlLen < 5 or $urlLen > 30) {
+			$this->error = 'URL должен содержать от 5 до 30 символов';
 			return false;
 		} elseif (empty($post["country"])) {
 			$this->error = 'Выберите страну';
 			return false;
 		} elseif (empty($post["sex"])) {
 			$this->error = 'Выберите пол';
+			return false;
+		} elseif (empty($post["age"])) {
+			$this->error = 'Введите возраст';
+			return false;
+		} elseif (empty($post["experience"])) {
+			$this->error = 'Введите опыт работы';
+			return false;
+		} elseif (empty($post["responsibility"])) {
+			$this->error = 'Введите обязаности';
+			return false;
+		} elseif (empty($post["employment_conditions"])) {
+			$this->error = 'Введите условия трудоустройства';
+			return false;
+		} elseif (empty($post["accommodations"])) {
+			$this->error = 'Введите условия проживания';
 			return false;
 		} elseif (empty($post["salary"])) {
 			$this->error = 'Введите зарплату (PLN)';
@@ -48,16 +63,21 @@ class Admin extends Model {
 	}
 
 	public function jobsAdd($post) {
-		$count = $this->db->countTabs('jobs1');
+		$count = $this->db->countTabs('jobs');
 		$params = [
 			'id' => $count,
 			'name' => $post["name"],
 			'url' => $post["url"],
 			'country' => $post["country"],
 			'sex' => $post["sex"],
+			'age' => $post["age"],
+			'experience' => $post["experience"],
+			'responsibility' => $post["responsibility"],
+			'employment_conditions' => $post["employment_conditions"],
+			'accommodations' => $post["accommodations"],
 			'salary' => $post["salary"],
 		];
-		$sql = "INSERT INTO jobs1 (id, name, url, country, sex, salary) VALUES (:id, :name, :url, :country, :sex, :salary)";
+		$sql = "INSERT INTO jobs (id, name, url, country, sex, age, experience, responsibility, employment_conditions, accommodations, salary) VALUES (:id, :name, :url, :country, :sex, :age, :experience, :responsibility, :employment_conditions, :accommodations, :salary)";
 		$this->db->query($sql,$params);
 		return $this->db->lastInsertId();
 	}
@@ -69,9 +89,14 @@ class Admin extends Model {
 			'url' => $post["url"],
 			'country' => $post["country"],
 			'sex' => $post["sex"],
+			'age' => $post["age"],
+			'experience' => $post["experience"],
+			'responsibility' => $post["responsibility"],
+			'employment_conditions' => $post["employment_conditions"],
+			'accommodations' => $post["accommodations"],
 			'salary' => $post["salary"],
 		];
-		$sql = "UPDATE `jobs1` SET `name` = :name, `url` = :url, `country` = :country, `sex` = :sex, `salary` = :salary WHERE `id` = :id";
+		$sql = "UPDATE jobs SET name = :name, url = :url, country = :country, sex = :sex, age = :age, experience = :experience, responsibility  = :responsibility , employment_conditions = :employment_conditions, accommodations  = :accommodations, salary = :salary WHERE id = :id";
 		$this->db->query($sql,$params);
 	}
 
@@ -79,7 +104,7 @@ class Admin extends Model {
 		$params = [
 			"id" => $id,
 		];
-		$this->db->query("DELETE FROM jobs1 WHERE id = :id", $params);
+		$this->db->query("DELETE FROM jobs WHERE id = :id", $params);
 		unlink('public/images/jobs/'.$id.'.jpg');
 	}
 
@@ -94,7 +119,7 @@ class Admin extends Model {
 		$params = [
 			"id" => $id,
 		];
-		return $this->db->row("SELECT * FROM `jobs1` WHERE id = :id",$params);
+		return $this->db->row("SELECT * FROM `jobs` WHERE id = :id",$params);
 	}
 
 	public function jobsUploadImage($path, $id) {

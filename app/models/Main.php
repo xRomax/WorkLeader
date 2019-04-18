@@ -72,6 +72,20 @@ class Main extends Model {
 		$this->messageBody = "Имя клиента:".$post["name"]."\nТелефон:".$post["phone"];
 		return true;
 	}
+
+	public function isJobExists($table,$url,$val) {
+		$params = [
+			$url => $val,
+		];
+		return $this->db->column("SELECT url FROM $table WHERE $url = :$url", $params);
+	}
+
+	public function jobData($url){
+		$params = [
+			"url" => $url,
+		];
+		return $this->db->row("SELECT * FROM `jobs` WHERE url = :url",$params);
+	}
 }
 
 ?>
