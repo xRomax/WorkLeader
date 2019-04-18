@@ -48,19 +48,43 @@ class AdminController extends Controller {
 			if (!$this->model->jobsValidate($_POST,'add')) {
 				$this->view->message('error', $this->model->error, 'Ошибка!');
 			}
-			$this->model->jobAdd($_POST);
-			// $this->view->message('success','Вакансия добавлена','Успешно!');
-			$this->view->location('admin/jobsList');
+			$id = $this->model->jobsAdd($_POST);
+			if (!$id)	{ 
+				$this->view->message('success', 'Ошибка обработки запроса', 'Ошибка!');
+			}
+			$this->model->jobsUploadImage($_FILES['img']['tmp_name'], $id);
+			// $this->view->location('admin/jobsList');
+			$this->view->message('success','Вакансия добавлена','Успешно!');
 		}
 		$this->view->render();
 	}
 
 	public function jobsEditAction() {
-		$this->view->render();
+		if (!$this->model->isJobsExists('jobs1','id',$this->route['id'])) {
+			$this->view->errorCode(404);
+		}
+		if (!empty($_POST)) {
+			if (!$this->model->jobsValidate($_POST,'edit')) {
+				$this->view->message('error', $this->model->error, 'Ошибка!');
+			}
+			if ($_FILES['img']['tmp_name']) {
+				$this->model->jobsUploadImage($_FILES['img']['tmp_name'], $this->route['id']);
+			}
+			$this->model->jobsEdit($_POST,$this->route['id']);
+			// $this->view->location('admin/jobsList');
+			$this->view->message('success', 'Новые данные сохранены','Успешно!');
+		}
+		$vars = [
+			'data' => $this->model->jobsData($this->route['id'])[0],
+		];
+		$this->view->render($vars);
 	}
 
 	public function jobsDeleteAction() {
-		debug($this->route);
-		exit("Удаление");
+		if (!$this->model->isJobsExists('jobs1','id',$this->route['id'])) {
+			$this->view->errorCode(404);
+		}
+		$this->model->jobsDelete($this->route['id']);
+		$this->view->redirect('admin/jobsList');
 	}
 }

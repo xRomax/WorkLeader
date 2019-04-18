@@ -73,12 +73,12 @@ return [
 		'action' => 'jobsAdd',
 		'path' => 'admin/jobsAdd'
 	],
-	'admin/jobsEdit' => [
+	'admin/jobsEdit/{id:\d+}' => [
 		'controller' => 'admin',
 		'action' => 'jobsEdit',
 		'path' => 'admin/jobsEdit'
 	],
-	'admin/jobsDelete/{id:\D+}' => [
+	'admin/jobsDelete/{id:\d+}' => [
 		'controller' => 'admin',
 		'action' => 'jobsDelete',
 		'path' => 'admin/jobsDelete'

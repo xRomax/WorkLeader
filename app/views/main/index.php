@@ -98,7 +98,7 @@
     <div class="container">
       <div class="row center">
         <h4>Наши направления</h4>
-        <div class="carousel carousel-country">
+        <!-- <div class="carousel carousel-country">
           <a class="carousel-item  naprav-item" href="#!" target="_blank"><img src="public/images/flag/cze.png"><h4 style="color: white">Работа в Чехии</h4></a>
           <a class="carousel-item  naprav-item" href="#!" target="_blank"><img src="public/images/flag/ger.png"><h4 style="color: white">Работа в Германии</h4></a>
           <a class="carousel-item  naprav-item" href="#!" target="_blank"><img src="public/images/flag/pol.png"><h4 style="color: white">Работа в Польше</h4></a>
@@ -106,6 +106,17 @@
           <a class="carousel-item  naprav-item" href="#!" target="_blank"><img src="public/images/flag/ukr.png"><h4 style="color: white">Работа в Украине</h4></a>
           <a class="carousel-item  naprav-item" href="#!" target="_blank"><img src="public/images/flag/lith.png"><h4 style="color: white">Работа в Литве</h4></a>
           <a class="carousel-item  naprav-item" href="#!" target="_blank"><img src="public/images/flag/est.png"><h4 style="color: white">Работа в Эстонии</h4></a>
+        </div> -->
+        <div class="row">
+          <div class="col l3 naprav-item"><a href="/jobs/" target="_blank"><img src="public/images/flag/cze.png"><h6>Работа в Чехии</h6></a></div>
+          <div class="col l3 naprav-item"><a href="/jobs/" target="_blank"><img src="public/images/flag/ger.png"><h6>Работа в Германии</h6></a></div>
+          <div class="col l3 naprav-item"><a href="/jobs/" target="_blank"><img src="public/images/flag/pol.png"><h6>Работа в Польше</h6></a></div>
+          <div class="col l3 naprav-item"><a href="/jobs/" target="_blank"><img src="public/images/flag/nor.png"><h6>Работа в Норвегии</h6></a></div>
+        </div>
+        <div class="row">
+          <div class="col l3 offset-l1 naprav-item"><a href="/jobs/" target="_blank"><img src="public/images/flag/ukr.png"><h6>Работа в Украине</h6></a></div>
+          <div class="col l3 naprav-item"><a href="/jobs/" target="_blank"><img src="public/images/flag/est.png"><h6>Работа в Эстонии</h6></a></div>
+          <div class="col l3 naprav-item"><a href="/jobs/" target="_blank"><img src="public/images/flag/lith.png"><h6>Работа в Литве</h6></a></div>
         </div>
       </div>
     </div>

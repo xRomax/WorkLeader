@@ -63,7 +63,7 @@
         <input id="salary" type="text" name="salary" class="validate">
         <label for="salary">Зарплата (PLN)</label>
       </div>
-      <!-- <input type="file" name="img" class="validate"> -->
+      <input type="file" name="img" class="validate">
 			<button style="width:100%;" class="btn waves-effect light-blue darken-4" type="submit">Добавить</button>
 		</form>
 	</div>
