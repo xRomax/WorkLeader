@@ -105,7 +105,7 @@ class Main extends Model {
 		$amoun_pages = ceil($count / $step);
 		$html = '<ul class="pagination center">';
 		if ($page == 1) {
-			$html .= '<li class="waves-effect waves-teal disabled"><a href="/jobs/'.$page.'"><i class="material-icons">chevron_left</i></a></li>';
+			$html .= '<li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>';
 		} else {
 			$html .= '<li class="waves-effect waves-teal"><a href="/jobs/'.$left.'"><i class="material-icons">chevron_left</i></a></li>';
 		}
@@ -117,7 +117,7 @@ class Main extends Model {
 			}
 		}
 		if ($page == $amoun_pages) {
-			$html .= '<li class="waves-effect waves-teal disabled"><a href="/jobs/'.$page.'"><i class="material-icons">chevron_right</i></a></li>';
+			$html .= '<li class="disabled"><a href="#!"><i class="material-icons">chevron_right</i></a></li>';
 		} else {
 			$html .= '<li class="waves-effect waves-teal"><a href="/jobs/'.$right.'"><i class="material-icons">chevron_right</i></a></li>';
 		}
