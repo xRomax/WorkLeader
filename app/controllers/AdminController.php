@@ -25,7 +25,6 @@ class AdminController extends Controller {
 			$_SESSION['admin'] = true;
 			$this->view->location('admin');
 		}
-		
 		$this->view->render();
 	}
 	public function logoutAction() {
@@ -57,8 +56,8 @@ class AdminController extends Controller {
 				$this->view->message('success', 'Ошибка обработки запроса', 'Ошибка!');
 			}
 			$this->model->jobsUploadImage($_FILES['img']['tmp_name'], $id);
-			// $this->view->location('admin/jobsList');
-			$this->view->message('success','Вакансия добавлена','Успешно!');
+			$this->view->location('admin/jobsList');
+			// $this->view->message('success','Вакансия добавлена','Успешно!');
 		}
 		$this->view->render();
 	}
@@ -89,6 +88,11 @@ class AdminController extends Controller {
 			$this->view->errorCode(404);
 		}
 		$this->model->jobsDelete($this->route['id']);
+		$this->view->redirect('admin/jobsList');
+	}
+
+	public function jobsStatusAction() {
+		$this->model->jobsStatus($this->route['id']);
 		$this->view->redirect('admin/jobsList');
 	}
 }

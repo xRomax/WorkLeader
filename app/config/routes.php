@@ -40,7 +40,12 @@ return [
 	'jobs' => [
 		'controller' => 'main',
 		'action' => 'jobsList',
-		'path' => 'main/jobs'
+		'path' => 'main/jobs/jobs'
+	],
+	'jobs/{page:\d+}' => [
+		'controller' => 'main',
+		'action' => 'jobsList',
+		'path' => 'main/jobs/jobs'
 	],
 	'jobs/{url:\D+}' => [
 		'controller' => 'main',
@@ -81,6 +86,11 @@ return [
 	'admin/jobsDelete/{id:\d+}' => [
 		'controller' => 'admin',
 		'action' => 'jobsDelete',
-		'path' => 'admin/jobsDelete'
+		'path' => ''
+	],
+	'admin/jobsStatus/{id:\d+}' => [
+		'controller' => 'admin',
+		'action' => 'jobsStatus',
+		'path' => ''
 	],
 ];

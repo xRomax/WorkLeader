@@ -65,6 +65,10 @@
         <input id="salary" type="text" name="salary" value="<?php echo $data['salary']; ?>" class="validate">
         <label for="salary">Зарплата (PLN)</label>
       </div>
+      <div class="input-field">
+        <input id="salary_desc" type="text" name="salary_desc" value="<?php echo $data['salary_desc']; ?>" class="validate">
+        <label for="salary_desc">Зарплата подробное описание</label>
+      </div>
       <input type="file" name="img" class="validate">
 			<button style="width:100%;" class="btn waves-effect light-blue darken-4" type="submit">Сохранить изминения</button>
 		</form>

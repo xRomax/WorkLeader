@@ -11,8 +11,8 @@ require_once('app/config/mas.php');
   <div class="row">
     <?php require_once('FormTop.php') ?>
 
-    <div style="margin-top:15px;" class="col m7  offset-m1 s12 jobs-form hide-on-med-and-down show-on-large">
-    <h6>В пансионат по уходу за пожилыми людьми требуеться медсестра</h6>
+    <div style="margin-top:15px;" class="col m7 offset-m1 s12 jobs-form hide-on-med-and-down show-on-large">
+    <h6><?php echo $data[0]["name"]; ?></h6>
       <table>
         <tr>
           <td>Страна:</td>
@@ -44,7 +44,7 @@ require_once('app/config/mas.php');
         </tr>
         <tr>
           <td>Зарплата:</td>
-          <td><?php echo $data[0]["salary"]; ?> PLN</td>
+          <td><?php echo $data[0]["salary_desc"]; ?></td>
         </tr>
       </table>
     </div>
@@ -58,8 +58,7 @@ require_once('app/config/mas.php');
       <p>Обязаности:<br> <?php echo $data[0]["responsibility"]; ?></p>
       <p>Условия трудоустройства:<br> <?php echo $data[0]["employment_conditions"]; ?></p>
       <p>Условия проживания:<br> <?php echo $data[0]["accommodations"]; ?></p>
-      <p>Зарплата: PLN = <?php echo $data[0]["salary"]; ?>
-        <!-- <br>PLN= 2400-2600 <br> UAH=15000-25000 <br> USD = 750 - 1200 <br> EUR = 950 - 1800 -->
+      <p>Зарплата: <?php echo $data[0]["salary_desc"]; ?>
       </p>
     </div>
   </div>

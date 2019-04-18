@@ -73,7 +73,7 @@
       <div class="row section scrollspy" id="contacts">
         <div class="col l4 s12">
           <h5 class="white-text">Работа и виза - наша специализация</h5>
-          <p class="grey-text text-lighten-4">Обратившись в нашу компанию вы получаете качественный сервис, наш консультант ответит вам в любое время 24/7, абсолютно полное ведение до результата, пунктуальные сроки получения документов на руки, бесплатные консультации по каждому аспекту жизни в польше, начиная от экономии финансов до покупки авто и аренды жилья.</p>
+          <p class="grey-text text-lighten-4">Обратившись в нашу компанию вы получаете качественный сервис, наш консультант ответит вам в любое время 24/7, абсолютно полное ведение до результата, пунктуальные сроки получения документов на руки, бесплатные консультации по каждому аспекту.</p>
         </div>
         <div class="col l3 offset-l1 s12">
           <h5 class="white-text">Контакты</h5>
@@ -88,7 +88,7 @@
           </ul>
         </div>
         <div class="col l3 offset-l1 s12">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2645.468859599942!2d35.04444321566057!3d48.46671967925099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe2e7d931b4f9%3A0xab5b588df09991d0!2z0YPQuy4g0JPQu9C40L3QutC4LCAyMCwg0JTQvdC40L_RgNC-LCDQlNC90LXQv9GA0L7Qv9C10YLRgNC-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNDkwMDA!5e0!3m2!1sru!2sua!4v1555155405537!5m2!1sru!2sua" width="300px" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2645.468859599942!2d35.04444321566057!3d48.46671967925099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe2e7d931b4f9%3A0xab5b588df09991d0!2z0YPQuy4g0JPQu9C40L3QutC4LCAyMCwg0JTQvdC40L_RgNC-LCDQlNC90LXQv9GA0L7Qv9C10YLRgNC-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNDkwMDA!5e0!3m2!1sru!2sua!4v1555155405537!5m2!1sru!2sua" width="230px" height="230" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
       </div>
     </div>

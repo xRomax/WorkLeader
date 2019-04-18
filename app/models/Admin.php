@@ -24,8 +24,8 @@ class Admin extends Model {
 	public function jobsValidate($post, $type) {
 		$nameLen = iconv_strlen($post['name']);
 		$urlLen = iconv_strlen($post['url']);
-		if ($nameLen < 3 or $nameLen > 60) {
-			$this->error = 'Название должно содержать от 3 до 60 символов';
+		if ($nameLen < 3 or $nameLen > 100) {
+			$this->error = 'Название должно содержать от 3 до 100 символов';
 			return false;
 		} elseif ($urlLen < 5 or $urlLen > 30) {
 			$this->error = 'URL должен содержать от 5 до 30 символов';
@@ -54,6 +54,9 @@ class Admin extends Model {
 		} elseif (empty($post["salary"])) {
 			$this->error = 'Введите зарплату (PLN)';
 			return false;
+		} elseif (empty($post["salary_desc"])) {
+			$this->error = 'Введите описание зарплаты';
+			return false;
 		}
 		if (empty($_FILES['img']['tmp_name']) and $type == 'add') {
 			$this->error = 'Изображение не выбрано';
@@ -63,9 +66,7 @@ class Admin extends Model {
 	}
 
 	public function jobsAdd($post) {
-		$count = $this->db->countTabs('jobs');
 		$params = [
-			'id' => $count,
 			'name' => $post["name"],
 			'url' => $post["url"],
 			'country' => $post["country"],
@@ -76,8 +77,10 @@ class Admin extends Model {
 			'employment_conditions' => $post["employment_conditions"],
 			'accommodations' => $post["accommodations"],
 			'salary' => $post["salary"],
+			'salary_desc' => $post["salary_desc"],
+			'status' => 'active',
 		];
-		$sql = "INSERT INTO jobs (id, name, url, country, sex, age, experience, responsibility, employment_conditions, accommodations, salary) VALUES (:id, :name, :url, :country, :sex, :age, :experience, :responsibility, :employment_conditions, :accommodations, :salary)";
+		$sql = "INSERT INTO jobs (name, url, country, sex, age, experience, responsibility, employment_conditions, accommodations, salary, salary_desc, status) VALUES (:name, :url, :country, :sex, :age, :experience, :responsibility, :employment_conditions, :accommodations, :salary, :salary_desc, :status)";
 		$this->db->query($sql,$params);
 		return $this->db->lastInsertId();
 	}
@@ -95,8 +98,9 @@ class Admin extends Model {
 			'employment_conditions' => $post["employment_conditions"],
 			'accommodations' => $post["accommodations"],
 			'salary' => $post["salary"],
+			'salary_desc' => $post["salary_desc"],
 		];
-		$sql = "UPDATE jobs SET name = :name, url = :url, country = :country, sex = :sex, age = :age, experience = :experience, responsibility  = :responsibility , employment_conditions = :employment_conditions, accommodations  = :accommodations, salary = :salary WHERE id = :id";
+		$sql = "UPDATE jobs SET name = :name, url = :url, country = :country, sex = :sex, age = :age, experience = :experience, responsibility  = :responsibility , employment_conditions = :employment_conditions, accommodations  = :accommodations, salary = :salary, salary_desc = :salary_desc WHERE id = :id";
 		$this->db->query($sql,$params);
 	}
 
@@ -106,6 +110,25 @@ class Admin extends Model {
 		];
 		$this->db->query("DELETE FROM jobs WHERE id = :id", $params);
 		unlink('public/images/jobs/'.$id.'.jpg');
+	}
+
+	public function jobsStatus($id) {
+		$params = [
+			"id" => $id,
+		];
+		$result = $this->db->row("SELECT * FROM `jobs` WHERE id = :id", $params);
+		if ($result[0]["status"] == 'active') {
+			$params = [
+				"id" => $id,
+				'status' => 'deactive',
+			];
+		} else {
+			$params = [
+				"id" => $id,
+				'status' => 'active',
+			];
+		}
+		$this->db->query("UPDATE jobs SET status = :status WHERE id = :id", $params);
 	}
 
 	public function isJobsExists($table,$key,$val) {
@@ -120,6 +143,10 @@ class Admin extends Model {
 			"id" => $id,
 		];
 		return $this->db->row("SELECT * FROM `jobs` WHERE id = :id",$params);
+	}
+	
+	public function jobsList() {
+		return $this->db->row('SELECT * FROM jobs ORDER BY id ASC');
 	}
 
 	public function jobsUploadImage($path, $id) {

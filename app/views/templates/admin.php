@@ -33,8 +33,8 @@
     <li class="logo"><img style="padding: 6px;" src="/public/images/logo.png" alt="WorkLeader" height="64"></li>
     <li class="bold"><a href="/admin" class="waves-effect waves-light"><i class="fas fa-home fa-2x"></i>Главная</a></li>
     <li class="no-padding">
-      <ul class="collapsible collapsible-accordion">
-        <li class="bold"><a class="collapsible-header waves-effect waves-light"><i class="fas fa-user fa-1x"></i>Вакансии</a>
+      <ul class="collapsible expandable">
+        <li class="bold active"><a class="collapsible-header waves-effect waves-light"><i class="fas fa-user fa-1x"></i>Вакансии</a>
           <div class="collapsible-body">
             <ul>
               <li><a href="/admin/jobsList">Список</a></li>
@@ -43,7 +43,7 @@
           </div>
         </li>
         
-        <li class="bold"><a class="collapsible-header waves-effect waves-light" ><i class="fas fa-filter fa-1x"></i>Фильтры</a>
+        <li class="bold active"><a class="collapsible-header waves-effect waves-light" ><i class="fas fa-filter fa-1x"></i>Фильтры</a>
           <div class="collapsible-body">
             <ul>
               <li><a href="#!">Список</a></li>

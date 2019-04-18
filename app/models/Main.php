@@ -86,6 +86,51 @@ class Main extends Model {
 		];
 		return $this->db->row("SELECT * FROM `jobs` WHERE url = :url",$params);
 	}
-}
 
+	public function jobsList($page) {
+		$step = 5;
+		$position = --$page * $step;
+		$params = [
+			'status' => 'active',
+			'position' => (int) $position,
+			'step' =>(int) $step
+		];
+		return $this->db->row('SELECT * FROM `jobs` WHERE status = :status ORDER BY id ASC LIMIT :position, :step', $params);
+	}
+
+	public function pagination($page) {
+		$left = $page - 1; $right = $page + 1;
+		$step = 5;
+		$count = $this->countTabs('jobs');
+		$amoun_pages = ceil($count / $step);
+		$html = '<ul class="pagination center">';
+		if ($page == 1) {
+			$html .= '<li class="waves-effect waves-teal disabled"><a href="/jobs/'.$page.'"><i class="material-icons">chevron_left</i></a></li>';
+		} else {
+			$html .= '<li class="waves-effect waves-teal"><a href="/jobs/'.$left.'"><i class="material-icons">chevron_left</i></a></li>';
+		}
+		for ($i = 1; $i <= $amoun_pages; $i++) {
+			if ($i == $page) {
+				$html.= '<li class="waves-effect waves-teal active"><a href="/jobs/'.$page.'">'.$page.'</a></li>';
+			} else {
+				$html.= '<li class="waves-effect waves-teal"><a href="/jobs/'.$i.'">'.$i.'</a></li>';
+			}
+		}
+		if ($page == $amoun_pages) {
+			$html .= '<li class="waves-effect waves-teal disabled"><a href="/jobs/'.$page.'"><i class="material-icons">chevron_right</i></a></li>';
+		} else {
+			$html .= '<li class="waves-effect waves-teal"><a href="/jobs/'.$right.'"><i class="material-icons">chevron_right</i></a></li>';
+		}
+		return $html;
+	}
+
+	public function countTabs($table) {
+		$params = [
+			'status' => 'active',
+		];
+		$select = $this->db->query("SELECT * FROM $table WHERE status = :status", $params);
+		$count = $select->rowCount();
+		return $count;
+	}
+}
 ?>

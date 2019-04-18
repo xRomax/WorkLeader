@@ -12,9 +12,12 @@ class MainController extends Controller {
 	}
 
 	public function jobsListAction() {
+		if (array_key_exists('page',$this->route)) {
+			$page = (int) $this->route["page"];
+		} else $page = 1;
 		$vars = [
-			'pagination' => '',
-			'list' => $this->model->jobsList($this->route),
+			'pagination' => $this->model->pagination($page),
+			'list' => $this->model->jobsList($page),
 		];
 		$this->contactAction();
 		$this->view->render($vars);
