@@ -73,15 +73,15 @@ return [
 		'action' => 'jobsList',
 		'path' => 'admin/jobsList'
 	],
-	'admin/hotJobs' => [
+	'admin/jobsHot' => [
 		'controller' => 'admin',
-		'action' => 'hotJobs',
-		'path' => 'admin/hotJobs'
+		'action' => 'jobsHot',
+		'path' => 'admin/jobsHot'
 	],
-	'admin/hotJobs/{id:\d+}' => [
+	'admin/jobsHot/{id:\d+}' => [
 		'controller' => 'admin',
-		'action' => 'hotJobs',
-		'path' => 'admin/hotJobs'
+		'action' => 'jobsHot',
+		'path' => 'admin/jobsHot'
 	],
 	'admin/jobsAdd' => [
 		'controller' => 'admin',

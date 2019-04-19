@@ -35,12 +35,12 @@
     <!-- <li class="bold"><a href="/admin" class="waves-effect waves-light"><i class="fas fa-home fa-2x"></i>Главная</a></li> -->
     <li class="no-padding">
       <ul class="collapsible expandable">
-        <li class="bold <?php if($active == '/admin/jobsList' or $active == '/admin/jobsAdd') echo 'active'; ?>"><a class="collapsible-header waves-effect waves-light"><i class="fas fa-user fa-1x"></i>Вакансии</a>
+        <li class="bold <?php if($active == '/admin/jobsList' or $active == '/admin/jobsAdd' or $active = '/admin/jobsHot') echo 'active'; ?>"><a class="collapsible-header waves-effect waves-light"><i class="fas fa-user fa-1x"></i>Вакансии</a>
           <div class="collapsible-body">
             <ul>
               <li><a href="/admin/jobsAdd">Добавить</a></li>
               <li><a href="/admin/jobsList">Список</a></li>
-              <li><a href="/admin/hotJobs">Горячие вакансии</a></li>
+              <li><a href="/admin/jobsHot">Горячие вакансии</a></li>
             </ul>
           </div>
         </li>

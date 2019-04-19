@@ -196,68 +196,39 @@
   
 </div>
 
+<?php if (!empty($hot)): ?>
 <br><br><br>
-
-<div class="parallax-container valign-wrapper">
-  <div class="section scrollspy no-pad-bot" id="hot-vacancii">
-    <div class="container">
-      <h5 class="col s12 hot-work">
-        <span>
-          <span class="red-text accent-4 blue-grey lighten-3">ГОРЯЧИЕ</span><span>ВАКАНСИИ</span>
-        </span>
-      </h5>
-
-      <div class="row">
-        <div class="col l4 s12">
-          <div class="card">
-            <div class="card-image">
-              <img src="/public/images/jobs/med.jpg">
-              <span class="card-title">Медсестра</span>
+  <div class="parallax-container valign-wrapper">
+    <div class="section scrollspy no-pad-bot" id="hot-vacancii">
+      <div class="container">
+        <h5 class="col s12 hot-work">
+          <span>
+            <span style="padding:0 4px;" class="red-text accent-4 blue-grey lighten-3">ГОРЯЧИЕ</span><span style="padding:0 4px;">ВАКАНСИИ</span>
+          </span>
+        </h5>
+        <div class="row">
+          <?php foreach ($hot as $val): ?>
+            <div class="col l4 s12">
+              <div class="card">
+                <div class="card-image">
+                  <img src="/public/images/jobs/<?php echo $val["id"]; ?>.jpg">
+                  <span class="card-title truncate"><?php echo $val["name"]; ?></span>
+                </div>
+                <div class="card-content black-text">
+                  <p class="truncate"><?php echo $val["responsibility"]; ?></p>
+                </div>
+                <div class="card-action">
+                  <a href="/jobs/<?php echo $val["url"]; ?>">Узнать больше..</a>
+                </div>
+              </div>
             </div>
-            <div class="card-content black-text">
-              <p>Требуется мед сестра в пансионат для ухода за пожилыми людьми.</p>
-            </div>
-            <div class="card-action">
-              <a href="/jobs/med_sestra">Узнать больше..</a>
-            </div>
-          </div>
+          <?php endforeach; ?>
         </div>
-
-        <div class="col l4 s12">
-          <div class="card">
-            <div class="card-image">
-              <img src="/public/images/jobs/upak.jpeg">
-              <span class="card-title">Упаковщик</span>
-            </div>
-            <div class="card-content black-text">
-              <p>Работа упаковщиком подойщёт любому человеку который желает заработать.</p>
-            </div>
-            <div class="card-action">
-              <a href="/jobs/upak">Узнать больше..</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col l4 s12">
-          <div class="card">
-            <div class="card-image">
-              <img src="/public/images/jobs/swar.jpeg">
-              <span class="card-title">Сварщик</span>
-            </div>
-            <div class="card-content black-text">
-              <p>Требуется сварщик какого то разряда и т.д.</p>
-            </div>
-            <div class="card-action">
-              <a href="/jobs/swarchik">Узнать больше..</a>
-            </div>
-          </div>
-        </div>
-        
       </div>
     </div>
+    <div class="parallax"><img src="public/images/parallax/parallax2.jpg"></div>
   </div>
-  <div class="parallax"><img src="public/images/parallax/parallax2.jpg"></div>
-</div>
+<?php endif; ?>
 
 <br><br>
 

@@ -94,13 +94,13 @@ class AdminController extends Controller {
 		$this->view->redirect('admin/jobsList');
 	}
 
-	public function hotJobsAction() {
+	public function jobsHotAction() {
 		if (array_key_exists('id',$this->route)) {
-			$this->model->hotJobs($this->route['id']);
-			$this->view->redirect('admin/hotJobs');
+			$this->model->jobsHot($this->route['id']);
+			$this->view->redirect('admin/jobsHot');
 		} else {
 			$vars = [
-				'amount' => $this->model->amountHotJobs(),
+				'amount' => $this->model->amountjobsHot(),
 				'list' => $this->model->jobsList($this->route),
 			];
 			$this->view->render($vars);

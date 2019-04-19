@@ -132,7 +132,7 @@ class Admin extends Model {
 		$this->db->query("UPDATE jobs SET status = :status WHERE id = :id", $params);
 	}
 
-	public function hotJobs($id) {
+	public function jobsHot($id) {
 		$params = [
 			"id" => $id,
 		];
@@ -151,7 +151,7 @@ class Admin extends Model {
 		$this->db->query("UPDATE jobs SET hot = :hot WHERE id = :id", $params);
 	}
 
-	public function amountHotJobs() {
+	public function amountjobsHot() {
 		$params = [
 			"hot" => 'show',
 		];

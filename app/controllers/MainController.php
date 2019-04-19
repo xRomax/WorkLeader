@@ -9,7 +9,7 @@ class MainController extends Controller {
 	public function indexAction() {
 		$this->contactAction();
 		$vars = [
-			'hot' => $this->model->hotJobs(),
+			'hot' => $this->model->jobsHot(),
 		];
 		$this->view->render($vars);
 	}

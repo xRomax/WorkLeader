@@ -134,7 +134,7 @@ class Main extends Model {
 		return $count;
 	}
 
-	public function hotJobs() {
+	public function jobsHot() {
 		$params = [
 			"hot" => 'show',
 		];
