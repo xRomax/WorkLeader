@@ -10,10 +10,14 @@
         <input id="url" type="text" name="url" class="validate">
         <label for="url">URL адресс</label>
       </div>
-      <div class="input-field col s12">
-          <textarea id="textarea1" class="materialize-textarea"></textarea>
-          <label for="textarea1">Новость</label>
-        </div>
+      <div class="input-field">
+        <textarea id="textarea" class="materialize-textarea" name="text"></textarea>
+        <label for="textarea">Новость</label>
+      </div>
+      <div class="input-field">
+        <input id="source" type="text" name="source" class="validate">
+        <label for="source">Источник</label>
+      </div>
       <div class="file-field input-field">
         <div class="btn">
           <span>File</span>

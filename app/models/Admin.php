@@ -3,7 +3,6 @@
 namespace app\models;
 
 use app\core\Model;
-// use Imagick;
 
 class Admin extends Model {
 
@@ -118,17 +117,10 @@ class Admin extends Model {
 			"id" => $id,
 		];
 		$result = $this->db->row("SELECT * FROM `jobs` WHERE id = :id", $params);
-		if ($result[0]["status"] == 'active') {
-			$params = [
-				"id" => $id,
-				'status' => 'deactive',
-			];
-		} else {
-			$params = [
-				"id" => $id,
-				'status' => 'active',
-			];
-		}
+		if ($result[0]["status"] == 'active') 
+			$params['status'] = 'deactive';
+		else 
+			$params['status'] = 'active';
 		$this->db->query("UPDATE jobs SET status = :status WHERE id = :id", $params);
 	}
 
@@ -137,17 +129,8 @@ class Admin extends Model {
 			"id" => $id,
 		];
 		$result = $this->db->row("SELECT * FROM `jobs` WHERE id = :id", $params);
-		if ($result[0]["hot"] == 'show') {
-			$params = [
-				"id" => $id,
-				'hot' => 'hide',
-			];
-		} else {
-			$params = [
-				"id" => $id,
-				'hot' => 'show',
-			];
-		}
+		if ($result[0]["hot"] == 'show') $params['hot'] = 'hide';
+		else $params['hot'] = 'show';
 		$this->db->query("UPDATE jobs SET hot = :hot WHERE id = :id", $params);
 	}
 
@@ -158,7 +141,7 @@ class Admin extends Model {
 		return count($this->db->row("SELECT * FROM `jobs` WHERE hot = :hot",$params));
 	}
 
-	public function isJobsExists($table,$key,$val) {
+	public function isExists($table,$key,$val) {
 		$params = [
 			$key => $val,
 		];
@@ -176,7 +159,58 @@ class Admin extends Model {
 		return $this->db->row('SELECT * FROM jobs ORDER BY id ASC');
 	}
 
-	public function jobsUploadImage($path, $id) {
-		move_uploaded_file($path,'public/images/jobs/'.$id.'.jpg');
+	public function UploadImage($path, $folder, $id) {
+		move_uploaded_file($path,"public/images/$folder/$id.jpg");
+	}
+
+	public function newsValidate($post, $type) {
+		$nameLen = iconv_strlen($post['name']);
+		$urlLen = iconv_strlen($post['url']);
+		if ($nameLen < 3 or $nameLen > 100) {
+			$this->error = 'Название должно содержать от 3 до 100 символов';
+			return false;
+		} elseif ($urlLen < 5 or $urlLen > 30) {
+			$this->error = 'URL должен содержать от 5 до 30 символов';
+			return false;
+		} elseif (empty($post["text"])) {
+			$this->error = 'Введите текст новости';
+			return false;
+		} elseif (empty($post["source"])) {
+			$this->error = 'Введите источник';
+			return false;
+		}
+		if (empty($_FILES['img']['tmp_name']) and $type == 'add') {
+			$this->error = 'Изображение не выбрано';
+			return false;
+		}
+		return true;
+	}
+
+	public function newsAdd($post) {
+		$params = [
+			'name' => $post["name"],
+			'url' => $post["url"],
+			'text' => $post["text"],
+			'source' => $post["source"],
+		];
+		$sql = "INSERT INTO news (name, url, text, source) VALUES (:name, :url, :text, :source)";
+		$this->db->query($sql,$params);
+		return $this->db->lastInsertId();
+	}
+
+	public function newsEdit() {
+
+	}
+
+	public function newsDelete($id) {
+		$params = [
+			"id" => $id,
+		];
+		$this->db->query("DELETE FROM news WHERE id = :id", $params);
+		unlink('public/images/news/'.$id.'.jpg');
+	}
+
+	public function newsList() {
+		return $this->db->row('SELECT * FROM news ORDER BY id ASC');
 	}
 }

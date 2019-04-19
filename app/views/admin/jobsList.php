@@ -12,7 +12,7 @@
       </thead>
       <tbody>
         <?php if (empty($list)): ?>
-          <p>Список постов пуст</p>
+          <p>Список вакансий пуст</p>
         <?php else: ?>
           <?php foreach ($list as $val): ?>
             <tr>
@@ -35,14 +35,12 @@
   <div class="body hide-on-large-only show-on-medium-and-down">
     <table>
       <?php if (empty($list)): ?>
-        <p>Список постов пуст</p>
+        <p>Список вакансий пуст</p>
       <?php else: ?>
         <?php foreach ($list as $val): ?>
           <tr>
             <td>
-              <p>
-                <?php echo $val["name"] ?>
-              </p>
+              <p><?php echo $val["name"]; ?></p>
               <a href="/admin/jobsEdit/<?php echo $val["id"] ?>" class="waves-effect waves-light btn blue">Редактировать</a>
               <?php if ($val["status"] == 'active'):?>
                 <a style="width:130px;" href="/admin/jobsStatus/<?php echo $val["id"] ?>" class="waves-effect waves-light btn green">Включено</a>

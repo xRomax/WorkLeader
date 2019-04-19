@@ -3,12 +3,12 @@
   <div class="row">
     <!-- <div class="col l3 m3 s12 offset-s1 offset-l1 offset-m1">
       <h4>Фильтр вакансий</h4>
-      <form action="/jobs" method="GET" class="ajax">
+      <form action="/jobs" method="GET" class="">
         <h6>Старана:</h6>
-        <p><label><input type="checkbox" name="country[]" value="pol"><span>Польша: Север</span></label></p>
-        <p><label><input type="checkbox" name="country[]" value="pol"><span>Польша: Юг</span></label></p>
-        <p><label><input type="checkbox" name="country[]" value="pol"><span>Польша: Запад</span></label></p>
-        <p><label><input type="checkbox" name="country[]" value="pol"><span>Польша: Восток</span></label></p>
+        <p><label><input type="checkbox" name="country[]" value="pol_north"><span>Польша: Север</span></label></p>
+        <p><label><input type="checkbox" name="country[]" value="pol_south"><span>Польша: Юг</span></label></p>
+        <p><label><input type="checkbox" name="country[]" value="pol_west"><span>Польша: Запад</span></label></p>
+        <p><label><input type="checkbox" name="country[]" value="pol_east"><span>Польша: Восток</span></label></p>
         <p><label><input type="checkbox" name="country[]" value="cze"><span>Чехия</span></label></p>
         <p><label><input type="checkbox" name="country[]" value="ger"><span>Германия</span></label></p>
         <p><label><input type="checkbox" name="country[]" value="nor"><span>Норвегия</span></label></p>
@@ -16,7 +16,7 @@
         <p><label><input type="checkbox" name="country[]" value="lat"><span>Латвия</span></label></p>
         <h6>Зарплата (PLN):</h6>
         <div id="salary-slider" style="max-width:250px;"></div><br>
-        <input style="position:fixed; top:-100000px;" type="text" id="min-salary" name="minSalary">
+        <input style="position:fixed; top:-100000px;" type="text" id="min-salary" name="minsalary">
         <input style="position:fixed; top:-100000px;" type="text" id="max-salary" name="maxsalary">
         <button class="btn waves-effect waves-light" type="submit">Фильтровать</button>
       </form>

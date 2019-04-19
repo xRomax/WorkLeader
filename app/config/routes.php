@@ -105,13 +105,23 @@ return [
 	],
 	'admin/newsList' => [
 		'controller' => 'admin',
-		'action' => 'main',
+		'action' => 'newsList',
 		'path' => 'admin/newsList'
 	],
 	'admin/newsAdd' => [
 		'controller' => 'admin',
-		'action' => 'main',
+		'action' => 'newsAdd',
 		'path' => 'admin/newsAdd'
+	],
+	'admin/newsEdit/{id:\d+}' => [
+		'controller' => 'admin',
+		'action' => 'newsEdit',
+		'path' => 'admin/newsEdit'
+	],
+	'admin/newsDelete/{id:\d+}' => [
+		'controller' => 'admin',
+		'action' => 'newsDelete',
+		'path' => ''
 	],
 	'admin/reviewsValidate' => [
 		'controller' => 'admin',

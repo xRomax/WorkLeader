@@ -13,6 +13,12 @@
       <div class="input-field">
         <select name="country">
           <option value="" disabled selected>Выберите страницу</option>
+          <!-- <optgroup label="Регионы Польши">
+            <option value="pol_north">Польша Север</option>
+            <option value="pol_south">Польша Юг</option>
+            <option value="pol_west">Польша Запад</option>
+            <option value="pol_east">Польша Восток</option>
+          </optgroup> -->
           <option value="pol">Польша</option>
           <option value="cze">Чехия</option>
           <option value="ger">Германия</option>

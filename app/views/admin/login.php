@@ -1,4 +1,3 @@
-<title>Авторизация в ПА</title>
 <style>
 	body {
 		background-color: #343a40;

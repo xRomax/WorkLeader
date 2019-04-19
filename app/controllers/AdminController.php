@@ -27,6 +27,7 @@ class AdminController extends Controller {
 		}
 		$this->view->render();
 	}
+
 	public function logoutAction() {
 		unset($_SESSION['admin']);
 		$this->view->redirect('admin/login');
@@ -55,14 +56,14 @@ class AdminController extends Controller {
 			if (!$id)	{ 
 				$this->view->message('success', 'Ошибка обработки запроса', 'Ошибка!');
 			}
-			$this->model->jobsUploadImage($_FILES['img']['tmp_name'], $id);
+			$this->model->UploadImage($_FILES['img']['tmp_name'], 'jobs', $id);
 			$this->view->location('admin/jobsList');
 		}
 		$this->view->render();
 	}
 
 	public function jobsEditAction() {
-		if (!$this->model->isJobsExists('jobs','id',$this->route['id'])) {
+		if (!$this->model->isExists('jobs','id',$this->route['id'])) {
 			$this->view->errorCode(404);
 		}
 		if (!empty($_POST)) {
@@ -70,7 +71,7 @@ class AdminController extends Controller {
 				$this->view->message('error', $this->model->error, 'Ошибка!');
 			}
 			if ($_FILES['img']['tmp_name']) {
-				$this->model->jobsUploadImage($_FILES['img']['tmp_name'], $this->route['id']);
+				$this->model->UploadImage($_FILES['img']['tmp_name'], 'jobs', $this->route['id']);
 			}
 			$this->model->jobsEdit($_POST,$this->route['id']);
 			$this->view->location('admin/jobsList');
@@ -82,7 +83,7 @@ class AdminController extends Controller {
 	}
 
 	public function jobsDeleteAction() {
-		if (!$this->model->isJobsExists('jobs','id',$this->route['id'])) {
+		if (!$this->model->isExists('jobs','id',$this->route['id'])) {
 			$this->view->errorCode(404);
 		}
 		$this->model->jobsDelete($this->route['id']);
@@ -105,5 +106,56 @@ class AdminController extends Controller {
 			];
 			$this->view->render($vars);
 		}
+	}
+
+	public function newsListAction() {
+		$vars = [
+			'pagination' => '',
+			'list' => $this->model->newsList($this->route),
+		];
+		$this->view->render($vars);
+	}
+
+	public function newsAddAction() {
+		if (!empty($_POST)) {
+			if (!$this->model->newsValidate($_POST,'add')) {
+				$this->view->message('error', $this->model->error, 'Ошибка!');
+			}
+			$id = $this->model->newsAdd($_POST);
+			if (!$id)	{ 
+				$this->view->message('success', 'Ошибка обработки запроса', 'Ошибка!');
+			}
+			$this->model->UploadImage($_FILES['img']['tmp_name'], 'news', $id);
+			$this->view->location('admin/newsList');
+		}
+		$this->view->render();
+	}
+
+	public function newsEditAction() {
+		if (!$this->model->isExists('news','id',$this->route['id'])) {
+			$this->view->errorCode(404);
+		}
+		if (!empty($_POST)) {
+			if (!$this->model->newsValidate($_POST,'edit')) {
+				$this->view->message('error', $this->model->error, 'Ошибка!');
+			}
+			if ($_FILES['img']['tmp_name']) {
+				$this->model->UploadImage($_FILES['img']['tmp_name'], 'news', $this->route['id']);
+			}
+			$this->model->newsEdit($_POST,$this->route['id']);
+			$this->view->location('admin/newsList');
+		}
+		$vars = [
+			'data' => $this->model->jobsData($this->route['id'])[0],
+		];
+		$this->view->render($vars);
+	}
+
+	public function newsDeleteAction() {
+		if (!$this->model->isExists('news','id',$this->route['id'])) {
+			$this->view->errorCode(404);
+		}
+		$this->model->newsDelete($this->route['id']);
+		$this->view->redirect('admin/newsList');
 	}
 }

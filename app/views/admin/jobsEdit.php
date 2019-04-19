@@ -1,3 +1,4 @@
+<title>Редактировать вакансию | Панель Администратора</title>
 <div class="jobs_form">
 	<div class="head">Редактировать вакансию "<?php echo $data['name']; ?>"</div>
 	<div class="body">
@@ -21,7 +22,7 @@
           <option value="nor" <?php if($data["country"] == 'nor') echo 'selected' ?>>Норвегия</option>
           <option value="ukr" <?php if($data["country"] == 'ukr') echo 'selected' ?>>Украина</option>
         </select>
-      <label>Страна</label>
+        <label>Страна</label>
       </div>
       
       <div class="input-field">
@@ -69,7 +70,15 @@
         <input id="salary_desc" type="text" name="salary_desc" value="<?php echo $data['salary_desc']; ?>" class="validate">
         <label for="salary_desc">Зарплата подробное описание</label>
       </div>
-      <input type="file" name="img" class="validate">
+      <div class="file-field input-field">
+        <div class="btn">
+          <span>File</span>
+          <input type="file" name="img">
+        </div>
+        <div class="file-path-wrapper">
+          <input class="file-path validate" type="text">
+        </div>
+      </div>
 			<button style="width:100%;" class="btn waves-effect light-blue darken-4" type="submit">Сохранить изминения</button>
 		</form>
 	</div>
