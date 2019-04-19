@@ -11,6 +11,9 @@
     max-width: 600px;
     width: 100%;
     text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   p {
     color: #828282;

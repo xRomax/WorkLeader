@@ -26,34 +26,44 @@
 </head>
 <body>
 <?php if ($this->route["action"] != "login"): ?>
+<?php $active = $_SERVER["REQUEST_URI"]; ?>
   <div class="section hide-on-large-only" style="background-color: #343a40; padding: 1px;">
     <a href="#" data-target="nav-mobile" class="top-nav sidenav-trigger full hide-on-large-only"><i class="material-icons medium">menu</i></a>
   </div>
   <ul id="nav-mobile" class="sidenav sidenav-fixed">
     <li class="logo"><img style="padding: 6px;" src="/public/images/logo.png" alt="WorkLeader" height="64"></li>
-    <li class="bold"><a href="/admin" class="waves-effect waves-light"><i class="fas fa-home fa-2x"></i>Главная</a></li>
+    <!-- <li class="bold"><a href="/admin" class="waves-effect waves-light"><i class="fas fa-home fa-2x"></i>Главная</a></li> -->
     <li class="no-padding">
       <ul class="collapsible expandable">
-        <li class="bold active"><a class="collapsible-header waves-effect waves-light"><i class="fas fa-user fa-1x"></i>Вакансии</a>
+        <li class="bold <?php if($active == '/admin/jobsList' or $active == '/admin/jobsAdd') echo 'active'; ?>"><a class="collapsible-header waves-effect waves-light"><i class="fas fa-user fa-1x"></i>Вакансии</a>
           <div class="collapsible-body">
             <ul>
-              <li><a href="/admin/jobsList">Список</a></li>
               <li><a href="/admin/jobsAdd">Добавить</a></li>
+              <li><a href="/admin/jobsList">Список</a></li>
+              <li><a href="/admin/hotJobs">Горячие вакансии</a></li>
             </ul>
           </div>
         </li>
         
-        <li class="bold active"><a class="collapsible-header waves-effect waves-light" ><i class="fas fa-filter fa-1x"></i>Фильтры</a>
+        <li class="bold <?php if($active == '/admin/newsList' or $active == '/admin/newsAdd') echo 'active'; ?>"><a class="collapsible-header waves-effect waves-light" ><i class="fas fa-filter fa-1x"></i>Новости</a>
           <div class="collapsible-body">
             <ul>
-              <li><a href="#!">Список</a></li>
-              <li><a href="#!">Добавить</a></li>
+              <li><a href="/admin/newsAdd">Добавить</a></li>
+              <li><a href="/admin/newsList">Список</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="bold <?php if($active == '/admin/reviewsValidate' or $active == '/admin/reviewsList') echo 'active'; ?>"><a class="collapsible-header waves-effect waves-light" ><i class="fas fa-comments fa-1x"></i>Отзывы</a>
+          <div class="collapsible-body">
+            <ul>
+              <li><a href="/admin/reviewsValidate">Модерация</a></li>
+              <li><a href="/admin/reviewsList">Список</a></li>
             </ul>
           </div>
         </li>
       </ul>
     </li>
-    <li class="bold"><a href="/logout" class="waves-effect waves-light"><i class="fas fa-sign-out-alt fa-2x"></i>Выход</a></li>
+    <li class="bold"><a href="/admin/logout" class="waves-effect waves-light"><i class="fas fa-sign-out-alt fa-2x"></i>Выход</a></li>
   </ul>
 
 <?php endif; ?>

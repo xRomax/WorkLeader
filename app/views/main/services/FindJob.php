@@ -1,10 +1,10 @@
 <div class="image hide-on-med-and-down show-on-large">
-  <img src="/public/images/FindJobs/top.png">
+  <img src="/public/images/services/FindJobs/top.png">
   <h3 class="white-text center">Поиск вакансий</h3>
 </div>
 
 <div class="image hide-on-large-only show-on-medium-and-down center">
-  <img src="/public/images/FindJobs/topMobile.png">
+  <img src="/public/images/services/FindJobs/topMobile.png">
   <h5 class="center-align white-text hide-on-medium-only">Поиск вакансий</h5>
 </div>
 
@@ -28,7 +28,7 @@
   <br><br>
   <div class="row">
     <div class="col l6 s12">
-      <img style="width:90%;" class="mobile-image" src="/public/images/FindJobs/mehanik.png" alt="">
+      <img style="width:90%;" class="mobile-image" src="/public/images/services/FindJobs/mehanik.png" alt="">
     </div>
 
     <div class="col l6 s12">
@@ -44,7 +44,7 @@
   <br><br>
   <div class="row">
     <div class="col l5 s12">
-      <img class="mobile-image" src="/public/images/FindJobs/zavod.png" alt="Завод">
+      <img class="mobile-image" src="/public/images/services/FindJobs/zavod.png" alt="Завод">
         <h6 style="text-indent:1.5em;">Неквалифицированные работники</h6>
         <span>Трудоустройство без квалификации осуществляется на заводы, крупные предприятия и фабрики. 
           Требуются фасовщики, упаковщики, заводские специалисты.
@@ -56,7 +56,7 @@
     </div>
 
     <div class="col l5 offset-l1 s12">
-      <img class="mobile-image" src="/public/images/FindJobs/stanok.png" alt="Швейная машинка">
+      <img class="mobile-image" src="/public/images/services/FindJobs/stanok.png" alt="Швейная машинка">
         <h6 style="text-indent:1.5em;">Квалифицированные специалисты</h6>
         <span>Вакансии для квалифицированных специалистов: повара, пекари, кондитеры, швеи, строители. 
           Предусмотрено проживание за счет работодателя.</span>
@@ -85,7 +85,7 @@
 
   <div class="row">
     <div class="col l6 s12">
-      <img class="mobile-image" src="/public/images/FindJobs/konsultac.png" alt="Консультант">
+      <img class="mobile-image" src="/public/images/services/FindJobs/konsultac.png" alt="Консультант">
     </div>
 
     <div class="col l6 s12">
@@ -98,7 +98,7 @@
   <br><br>
 </div>
 
-<div style="background: url(/public/images/FindJobs/1.png) no-repeat top center;" class="contact-block white-text"><br>
+<div style="background: url(/public/images/services/FindJobs/1.png) no-repeat top center;" class="contact-block white-text"><br>
   <h6>Впишите свой номер телефона и мы свяжемся с Вами в ближайшее время</h6><br>
   <form action="/services/find_jobs" method="post" class="bottomForm ajax">
   <input style="position:fixed; top:-100000px;" type="reset">

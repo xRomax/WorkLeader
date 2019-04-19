@@ -103,6 +103,7 @@ class Main extends Model {
 		$step = 5;
 		$count = $this->countTabs('jobs');
 		$amoun_pages = ceil($count / $step);
+		if ($amoun_pages <= 1) return false;
 		$html = '<ul class="pagination center">';
 		if ($page == 1) {
 			$html .= '<li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>';
@@ -131,6 +132,13 @@ class Main extends Model {
 		$select = $this->db->query("SELECT * FROM $table WHERE status = :status", $params);
 		$count = $select->rowCount();
 		return $count;
+	}
+
+	public function hotJobs() {
+		$params = [
+			"hot" => 'show',
+		];
+		return $this->db->row("SELECT * FROM `jobs` WHERE hot = :hot", $params);
 	}
 }
 ?>

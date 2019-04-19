@@ -63,7 +63,7 @@ return [
 		'action' => 'login',
 		'path' => 'admin/login'
 	],
-	'logout' => [
+	'admin/logout' => [
 		'controller' => 'admin',
 		'action' => 'logout',
 		'path' => 'admin/logout'
@@ -72,6 +72,16 @@ return [
 		'controller' => 'admin',
 		'action' => 'jobsList',
 		'path' => 'admin/jobsList'
+	],
+	'admin/hotJobs' => [
+		'controller' => 'admin',
+		'action' => 'hotJobs',
+		'path' => 'admin/hotJobs'
+	],
+	'admin/hotJobs/{id:\d+}' => [
+		'controller' => 'admin',
+		'action' => 'hotJobs',
+		'path' => 'admin/hotJobs'
 	],
 	'admin/jobsAdd' => [
 		'controller' => 'admin',
@@ -92,5 +102,25 @@ return [
 		'controller' => 'admin',
 		'action' => 'jobsStatus',
 		'path' => ''
+	],
+	'admin/newsList' => [
+		'controller' => 'admin',
+		'action' => 'main',
+		'path' => 'admin/newsList'
+	],
+	'admin/newsAdd' => [
+		'controller' => 'admin',
+		'action' => 'main',
+		'path' => 'admin/newsAdd'
+	],
+	'admin/reviewsValidate' => [
+		'controller' => 'admin',
+		'action' => 'main',
+		'path' => 'admin/reviewsValidate'
+	],
+	'admin/reviewsList' => [
+		'controller' => 'admin',
+		'action' => 'main',
+		'path' => 'admin/reviewsList'
 	],
 ];

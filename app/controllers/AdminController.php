@@ -17,13 +17,13 @@ class AdminController extends Controller {
 	}
 
 	public function loginAction() {
-		if (isset($_SESSION['admin'])) $this->view->redirect('admin');
+		if (isset($_SESSION['admin'])) $this->view->redirect('admin/jobsList');
 		if (!empty($_POST)) {
 			if (!$this->model->loginValidate($_POST)) {
 				$this->view->message('error', $this->model->error, 'Ошибка');
 			}
 			$_SESSION['admin'] = true;
-			$this->view->location('admin');
+			$this->view->location('admin/jobsList');
 		}
 		$this->view->render();
 	}
@@ -57,7 +57,6 @@ class AdminController extends Controller {
 			}
 			$this->model->jobsUploadImage($_FILES['img']['tmp_name'], $id);
 			$this->view->location('admin/jobsList');
-			// $this->view->message('success','Вакансия добавлена','Успешно!');
 		}
 		$this->view->render();
 	}
@@ -75,7 +74,6 @@ class AdminController extends Controller {
 			}
 			$this->model->jobsEdit($_POST,$this->route['id']);
 			$this->view->location('admin/jobsList');
-			// $this->view->message('success', 'Новые данные сохранены','Успешно!');
 		}
 		$vars = [
 			'data' => $this->model->jobsData($this->route['id'])[0],
@@ -94,5 +92,18 @@ class AdminController extends Controller {
 	public function jobsStatusAction() {
 		$this->model->jobsStatus($this->route['id']);
 		$this->view->redirect('admin/jobsList');
+	}
+
+	public function hotJobsAction() {
+		if (array_key_exists('id',$this->route)) {
+			$this->model->hotJobs($this->route['id']);
+			$this->view->redirect('admin/hotJobs');
+		} else {
+			$vars = [
+				'amount' => $this->model->amountHotJobs(),
+				'list' => $this->model->jobsList($this->route),
+			];
+			$this->view->render($vars);
+		}
 	}
 }

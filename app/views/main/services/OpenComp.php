@@ -1,10 +1,10 @@
 <div class="image hide-on-med-and-down show-on-large">
-  <img src="/public/images/openComp/top.png">
+  <img src="/public/images/services/openComp/top.png">
   <h3 class="white-text center">Открытие компании в Польше</h3>
 </div>
 
 <div class="image hide-on-large-only show-on-medium-and-down center">
-  <img src="/public/images/openComp/topMobile.png">
+  <img src="/public/images/services/openComp/topMobile.png">
   <h5 class="center-align white-text hide-on-medium-only">Открытие компании в Польше</h5>
 </div>
 
@@ -37,7 +37,7 @@
 
   <div class="row">
     <div class="col l6 s12">
-      <img style="width:80%;" src="/public/images/openComp/twoWomans.png" alt="Work">
+      <img style="width:80%;" src="/public/images/services/openComp/twoWomans.png" alt="Work">
     </div>
     <div class="col l6 s12">
       <ol class="rounded">
@@ -67,7 +67,7 @@
     <div class="col l6 s12">
       <div class="row">
         <div class="col s12">
-          <img style="width:100%;" src="/public/images/openComp/phone.png" alt="phone">
+          <img style="width:100%;" src="/public/images/services/openComp/phone.png" alt="phone">
           <div style="text-align:center; width:100%;" class="blue lighten-1">
             <p style="margin: 0 2px 0 2px;" class="center white-text">Срок открытия фирмы в Польше до 20 дней</p>
           </div>
@@ -77,7 +77,7 @@
   </div>
 </div>
 
-<div style="background: url(/public/images/openComp/towers.png) no-repeat top center;" class="contact-block white-text"><br>
+<div style="background: url(/public/images/services/openComp/towers.png) no-repeat top center;" class="contact-block white-text"><br>
   <h6>Впишите свой номер телефона и мы свяжемся с Вами в ближайшее время</h6><br>
   <form action="/services/find_jobs" method="post" class="bottomForm ajax">
   <input style="position:fixed; top:-100000px;" type="reset">

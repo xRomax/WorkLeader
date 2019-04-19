@@ -28,10 +28,11 @@ p {
   width: auto;
   font-weight: bold;
   padding: 0px;
+  border-radius: 5px;
 }
 .hot-work> span {
   margin: 0px;
-  border: 1px solid black;
+  border: 3px solid white;
   border-radius: 5px;
 }
 
@@ -111,7 +112,7 @@ p {
 
 .naprav-item img {
   width: 100px;
-  border: 5px solid rgba(141,200,255,.50);
+  border: 5px solid rgba(141,200,255,.80);
   border-radius: 17px;
 }
 #country-flag .naprav-item img {
@@ -120,10 +121,10 @@ p {
 #country-flag .naprav-item a h6{
   font-weight: bold;
   font-size: 20px;
-  border-bottom: 6px solid #36a2d5;
-  border-radius: 6px;
+  /* border-bottom: 6px solid #36a2d5;
+  border-radius: 6px; */
   padding-bottom: 5px;
-  color: white;
+  /* color: white; */
 }
 
 .icon-block {
@@ -173,6 +174,25 @@ footer.page-footer {
   left: 50%;
   transform: translate(-50%, -70%);
 }
+
+.navbar-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-70%, -50%);
+}
+
+.navbar-info > a {
+  color: #009688 !important;
+  margin: 0 10px;
+  font-size: 19px;
+}
+@media only screen and (max-width : 1136px) { 
+  .navbar-info {
+    display: none;
+  }
+}
+
 .v-line { 
   border-left: 4px solid #00c0e3;
   margin-left: 30px;

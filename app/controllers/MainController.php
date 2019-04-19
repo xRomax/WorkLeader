@@ -8,7 +8,10 @@ class MainController extends Controller {
 
 	public function indexAction() {
 		$this->contactAction();
-		$this->view->render();
+		$vars = [
+			'hot' => $this->model->hotJobs(),
+		];
+		$this->view->render($vars);
 	}
 
 	public function jobsListAction() {

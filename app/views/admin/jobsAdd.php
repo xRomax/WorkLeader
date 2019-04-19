@@ -3,7 +3,7 @@
 	<div class="body">
     <form action="/admin/jobsAdd" enctype="multipart/form-data" method="post" class="ajax">
       <div class="input-field">
-        <input id="name" type="text" name="name" class="validate">
+        <input id="name" type="text" name="name" data-length="100" class="validate">
         <label for="name">Название</label>
       </div>
       <div class="input-field">
@@ -68,7 +68,15 @@
         <input id="salary_desc" type="text" name="salary_desc" class="validate">
         <label for="salary_desc">Зарплата подробное описание</label>
       </div>
-      <input type="file" name="img" class="validate">
+      <div class="file-field input-field">
+        <div class="btn">
+          <span>File</span>
+          <input type="file" name="img">
+        </div>
+        <div class="file-path-wrapper">
+          <input class="file-path validate" type="text">
+        </div>
+      </div>
 			<button style="width:100%;" class="btn waves-effect light-blue darken-4" type="submit">Добавить</button>
 		</form>
 	</div>

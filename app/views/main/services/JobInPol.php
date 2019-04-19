@@ -1,10 +1,10 @@
 <div class="image hide-on-med-and-down show-on-large">
-  <img src="/public/images/JobInPol/lublin.png">
+  <img src="/public/images/services/JobInPol/lublin.png">
   <h3 class="white-text center">Трудоустройство в Польше</h3>
 </div>
 
 <div class="image hide-on-large-only show-on-medium-and-down center">
-  <img src="/public/images/JobInPol/lublinMobile.png">
+  <img src="/public/images/services/JobInPol/lublinMobile.png">
   <h5 class="center-align white-text hide-on-medium-only">Трудоустройство в Польше</h5>
 </div>
 
@@ -43,7 +43,7 @@
 
   <div class="row">
     <div class="col l6 s12">
-      <img style="width:90%;" src="/public/images/JobInPol/glek.png" alt="glek">
+      <img style="width:90%;" src="/public/images/services/JobInPol/glek.png" alt="glek">
     </div>
 
     <div class="col l6 s12">
@@ -72,7 +72,7 @@
       Мы предлагаем работу в Европе для женщин, мужчин и семейных пар без опыта работы и знания языка, а также работу для квалифицированных специалистов. 
     </div>
     <div class="col l6 s12">
-      <img class="mobile-image" src="/public/images/JobInPol/ruchka.png" alt="glek">
+      <img class="mobile-image" src="/public/images/services/JobInPol/ruchka.png" alt="glek">
     </div>
   </div>
   
@@ -123,7 +123,7 @@
 
   <br><br>
 </div>
-<div style="background: url(/public/images/JobInPol/chtoto.png) no-repeat top center;" class="contact-block white-text"><br>
+<div style="background: url(/public/images/services/JobInPol/chtoto.png) no-repeat top center;" class="contact-block white-text"><br>
   <h6>Впишите свой номер телефона и мы свяжемся с Вами в ближайшее время</h6><br>
   <form action="/services/job_in_poland" method="post" class="bottomForm ajax">
   <input style="position:fixed; top:-100000px;" type="reset">
@@ -154,7 +154,7 @@
         <div class="row feedback">
           <div id="maskTop" class="mask"></div><div id="maskBottom" class="mask"></div>
           <div class="col s2 offset-s1" style="margin:0px; padding:0px;">
-            <img src="/public/images/JobInPol/otziv.png">
+            <img src="/public/images/services/JobInPol/otziv.png">
           </div>
           <div class="col s7 offset-s1">
             <span>Владимир Иванов</span><span style="position:absolute; right:0;">12.10.2018</span>
@@ -171,7 +171,7 @@
         <div class="row feedback">
           <div id="maskTop" class="mask"></div><div id="maskBottom" class="mask"></div>
           <div class="col s2 offset-s1" style="margin:0px; padding:0px;">
-            <img style="width:205px;" src="/public/images/JobInPol/otziv1.png">
+            <img style="width:205px;" src="/public/images/services/JobInPol/otziv1.png">
           </div>
           <div class="col s7 offset-s1">
             <span>Наталья Иванова</span><span style="position:absolute; right:0;">12.01.2019</span>
@@ -185,7 +185,7 @@
         <div class="row feedback">
           <div id="maskTop" class="mask"></div><div id="maskBottom" class="mask"></div>
           <div class="col s2 offset-s1" style="margin:0px; padding:0px;">
-            <img style="width:205px;" src="/public/images/JobInPol/otziv2.png">
+            <img style="width:205px;" src="/public/images/services/JobInPol/otziv2.png">
           </div>
           <div class="col s7 offset-s1">
             <span>Владимир Иванов</span><span style="position:absolute; right:0;">12.10.2018</span>
@@ -208,7 +208,7 @@
 <div class="container">
   <div class="row">
     <div class="col s12">
-      <div style="background: url(/public/images/JobInPol/cr-ceni.png) no-repeat top center;" class="info-block white-text">
+      <div style="background: url(/public/images/services/JobInPol/cr-ceni.png) no-repeat top center;" class="info-block white-text">
         <h6>Аренда квартиры (апартаментов) на месяц - <b>1823 PLN</b>
         <span class="right" style="font-size:13px; margin-right: 5px;">
           <a class="white-text" href="https://3pulse.com/ru/geo/poland/prices" target="_blank"><u>Подробнее...</u> </a>
@@ -217,7 +217,7 @@
       </div>
     </div>
     <div class="col s12">
-      <div style="background: url(/public/images/JobInPol/cr-prod.png) no-repeat top center;" class="info-block white-text">
+      <div style="background: url(/public/images/services/JobInPol/cr-prod.png) no-repeat top center;" class="info-block white-text">
         <h6>Средний счет в дешевом кафе для местных - <b>26,66 PLN</b>
         <span class="right" style="font-size:13px; margin-right: 5px;">
           <a class="white-text" href="https://3pulse.com/ru/geo/poland/prices" target="_blank"><u>Подробнее...</u> </a>
@@ -226,7 +226,7 @@
       </div>
     </div>
     <div class="col s12">
-      <div style="background: url(/public/images/JobInPol/cr-proezd.png) no-repeat top center;" class="info-block white-text">
+      <div style="background: url(/public/images/services/JobInPol/cr-proezd.png) no-repeat top center;" class="info-block white-text">
         <h6>Стоимость общественного транспорта в месяц - <b>93,91 PLN</b>
         <span class="right" style="font-size:13px; margin-right: 5px;">
           <a class="white-text" href="https://3pulse.com/ru/geo/poland/prices" target="_blank"><u>Подробнее...</u> </a>

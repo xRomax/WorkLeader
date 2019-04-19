@@ -1,7 +1,7 @@
 <?php require_once('app/config/mas.php') ?>
 <div class="section">
   <div class="row">
-    <div class="col l3 m3 s12 offset-s1 offset-l1 offset-m1">
+    <!-- <div class="col l3 m3 s12 offset-s1 offset-l1 offset-m1">
       <h4>Фильтр вакансий</h4>
       <form action="/jobs" method="GET" class="ajax">
         <h6>Старана:</h6>
@@ -20,15 +20,15 @@
         <input style="position:fixed; top:-100000px;" type="text" id="max-salary" name="maxsalary">
         <button class="btn waves-effect waves-light" type="submit">Фильтровать</button>
       </form>
-    </div>
+    </div> -->
 
-    <div class="col l7 m7 s12" style="margin:10px;">
+    <div class="col l7 m7 s12 offset-l3 offset-m2">
       <?php if (empty($list)): ?>
         <h4>Доступный вакансий нет</h4>
         <?php else: ?>
           <h4>Список вакансий</h4>
           <?php foreach ($list as $val): ?>
-            <div class="row jobs-form">
+            <div class="row jobs-form" style="margin: 13px 1px;">
               <div class="col s12">
                 <p><b><?php echo $val["name"]; ?></b></p>
                 <div class="col l4 m6 s12">
@@ -64,7 +64,7 @@
             </div>
           <?php endforeach; ?>
         <?php endif; ?>
-      <?php echo $pagination; ?>
+      <?php if ($pagination) echo $pagination; ?>
       <!-- <ul class="pagination center">
         <li class="waves-effect waves-teal"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
         <li class="waves-effect waves-teal active"><a href="/jobs/1">1</a></li>

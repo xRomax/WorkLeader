@@ -45,7 +45,10 @@
       <div class="nav-wrapper">
         <a style="height:100%;" id="logo-container" href="/" class="brand-logo hide-on-med-and-down show-on-large"><img style="padding: 6px;" height="64" src="/public/images/logo.png" alt="WorkLeader"></a>
         <a style="height:100%;" id="logo-container" href="/" class="brand-logo hide-on-large-only show-on-medium-and-down"><img style="padding: 6px;" height="55" src="/public/images/logo.png" alt="WorkLeader"></a>
-        <a id="tel-number" class="brand-logo center teal-text text-lighten-2" href="tel:0684331027">+38(068)433-10-27</a>
+        <span class="navbar-info teal-text">
+            <a id="tel-number" class="center teal-text text-lighten-2" href="tel:0509468428"><i class="fas fa-1x fa-mobile-alt"></i> +38(050)946-84-28</a>
+            <a id="tel-number" class="center teal-text text-lighten-2" href="tel:0684331027"><i class="fas fa-1x fa-mobile-alt"></i> +38(068)433-10-27</a>
+        </span>
         <ul class="right hide-on-med-and-down">
           <li id='index'><a href="/">Главная</a></li>
           <li id='services' class="dropdown-trigger" data-target="services_dropdown"><a href="/services">Услуги<i class="material-icons right">arrow_drop_down</i></a></li>
@@ -65,7 +68,6 @@
       </div>
     </nav>
   </div>
-
   <?php echo $content; ?>
 
   <footer class="page-footer teal">
@@ -88,7 +90,7 @@
           </ul>
         </div>
         <div class="col l3 offset-l1 s12">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2645.468859599942!2d35.04444321566057!3d48.46671967925099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe2e7d931b4f9%3A0xab5b588df09991d0!2z0YPQuy4g0JPQu9C40L3QutC4LCAyMCwg0JTQvdC40L_RgNC-LCDQlNC90LXQv9GA0L7Qv9C10YLRgNC-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNDkwMDA!5e0!3m2!1sru!2sua!4v1555155405537!5m2!1sru!2sua" width="230px" height="230" frameborder="0" style="border:0" allowfullscreen></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2645.468859599942!2d35.04444321566057!3d48.46671967925099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe2e7d931b4f9%3A0xab5b588df09991d0!2z0YPQuy4g0JPQu9C40L3QutC4LCAyMCwg0JTQvdC40L_RgNC-LCDQlNC90LXQv9GA0L7Qv9C10YLRgNC-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNDkwMDA!5e0!3m2!1sru!2sua!4v1555155405537!5m2!1sru!2sua" width="250" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
       </div>
     </div>

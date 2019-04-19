@@ -97,16 +97,7 @@
   <div class="no-pad-bot section scrollspy" id="country-flag">
     <div class="container">
       <div class="row center">
-        <h4>Наши направления</h4>
-        <!-- <div class="carousel carousel-country">
-          <a class="carousel-item  naprav-item" href="#!" target="_blank"><img src="public/images/flag/cze.png"><h4 style="color: white">Работа в Чехии</h4></a>
-          <a class="carousel-item  naprav-item" href="#!" target="_blank"><img src="public/images/flag/ger.png"><h4 style="color: white">Работа в Германии</h4></a>
-          <a class="carousel-item  naprav-item" href="#!" target="_blank"><img src="public/images/flag/pol.png"><h4 style="color: white">Работа в Польше</h4></a>
-          <a class="carousel-item  naprav-item" href="#!" target="_blank"><img src="public/images/flag/nor.png"><h4 style="color: white">Работа в Норвегии</h4></a>
-          <a class="carousel-item  naprav-item" href="#!" target="_blank"><img src="public/images/flag/ukr.png"><h4 style="color: white">Работа в Украине</h4></a>
-          <a class="carousel-item  naprav-item" href="#!" target="_blank"><img src="public/images/flag/lith.png"><h4 style="color: white">Работа в Литве</h4></a>
-          <a class="carousel-item  naprav-item" href="#!" target="_blank"><img src="public/images/flag/est.png"><h4 style="color: white">Работа в Эстонии</h4></a>
-        </div> -->
+        <h4 class="teal-text">Наши направления</h4><br><br>
         <div class="row">
           <div class="col l3 naprav-item"><a href="/jobs/" target="_blank"><img src="public/images/flag/cze.png"><h6>Работа в Чехии</h6></a></div>
           <div class="col l3 naprav-item"><a href="/jobs/" target="_blank"><img src="public/images/flag/ger.png"><h6>Работа в Германии</h6></a></div>
@@ -121,11 +112,11 @@
       </div>
     </div>
   </div>
-  <div class="parallax"><img src="public/images/parallax/bg-ger.jpg"></div>
+  <!-- <div class="parallax"><img src="public/images/parallax/parallax5.jpg"></div> -->
 </div>
 
 <div class="container naprav hide-on-large-only show-on-medium-and-down center">
-  <h4>Наши направления</h4><br>
+  <h4>Наши направления</h4>
   <div class="row">
     <div class="col s6 naprav-item"><a href="/jobs/" target="_blank"><img src="public/images/flag/cze.png"><h6>Работа в Чехии</h6></a></div>
     <div class="col s6 naprav-item"><a href="/jobs/" target="_blank"><img src="public/images/flag/ger.png"><h6>Работа в Германии</h6></a></div>
@@ -143,43 +134,9 @@
   </div>
 </div>
 
-<br><br>
+<br><br><br><br>
 
 <div class="container">
-  <div class="section scrollspy"  id="how-we-work">
-    <div class="row">
-      <div class="col s12 center">
-          <h3 class="teal-text text-lighten-2">Как мы работаем</h3>
-          <ul class="collapsible popout">
-              <li class="active">
-                <div class="collapsible-header"><i class="fas fa-phone fa-3x"></i>Шаг первый: звонок, заявка</div>
-                <div class="collapsible-body"><span>Вы можете оставить заявку онлайн на нашем сайте либо же связаться лично со специалистами по контактным номерам телефона на нашей странице.</span></div>
-              </li>
-              <li>
-                <div class="collapsible-header"><i class="fas fa-question fa-3x"></i>Шаг второй: консультация специалиста и подбор вакансий</div>
-                <div class="collapsible-body"><span>Компания WorkLeader всегда с радостью ответит на все ваши вопросы по которым Вы можете обратиться к нам, а именно процесс трудоустройства, оформления документов и сопроводительных аспектов. Подбор вакансии становится определителем вашего ближайшего прибывания за границей, а потому что бы сделать его без облачным и учесть все подводные камни, советуем Вам обратиться на прямую в наше агенство чтобы получить только самые актуальные и высокооплачиваемые позиции.</span></div>
-              </li>
-              <li>
-                <div class="collapsible-header"><i class="fas fa-hands-helping fa-3x"></i>Шаг третий: заключение договора</div>
-                <div class="collapsible-body"><span>Наше агенство является лицензированным министерством социальной политики Украины, в свою очередь это позволяет соблюдать прозрачность и открытость нашей деятельности. Мы работаем на официальной основе и с каждым нашим клиентом заключаем договор о предоставлении услуг.</span></div>
-              </li>
-              <li>
-                <div class="collapsible-header"><i class="fas fa-file-alt fa-3x"></i>Шаг четвёртый: Оформление пакета документов</div>
-                <div class="collapsible-body"><span>Оформление пакета документов является основной частью в процессе трудоустройства, во время предоставленная достоверная информация от соискателя часто становиться большим плюсом для быстрого оформления документов и получения визы.</span></div>
-              </li>
-              <li>
-                <div class="collapsible-header"><i class="fas fa-passport fa-3x"></i>Шаг пятый: получение визы</div>
-                <div class="collapsible-body"><span>Как правило получение рабочей визы занимает до 10 дней с момента подачи документов в визовый центр либо же консульство, со своей стороны мы помогаем вам своевременно стать на очередь, для более быстрого получения результата.</span></div>
-              </li>
-              <li>
-                <div class="collapsible-header"><i class="fas fa-plane-departure fa-3x"></i>Шаг шестой: приезд и начало работы</div>
-                <div class="collapsible-body"><span>На всех этапах оформления и работы мы будем является Вашими помощниками, вплоть от трансфера из Украины и до возвращения обратно.</span></div>
-              </li>
-            </ul>                
-      </div>
-    </div>
-  </div>
-  <br><br><br><br>
   <div class="feedback-block white-text">
     <h6 style="padding-top:20px;" class="center">Введите Ваши данные и наш менеджер свяжется с вами!</h6>
     <form action="/services/job_in_poland" method="post" class="bottomForm ajax">
@@ -200,20 +157,57 @@
       </div>
     </form>
   </div>
+
+  <br><br>
+
+  <div class="section scrollspy"  id="how-we-work">
+    <div class="row">
+      <div class="col s12 center">
+        <h3 class="teal-text text-lighten-2">Как мы работаем</h3>
+        <ul class="collapsible popout">
+          <li class="active">
+            <div class="collapsible-header"><i class="fas fa-phone fa-3x"></i>Шаг первый: звонок, заявка</div>
+            <div class="collapsible-body"><span>Вы можете оставить заявку онлайн на нашем сайте либо же связаться лично со специалистами по контактным номерам телефона на нашей странице.</span></div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="fas fa-question fa-3x"></i>Шаг второй: консультация специалиста и подбор вакансий</div>
+            <div class="collapsible-body"><span>Компания WorkLeader всегда с радостью ответит на все ваши вопросы по которым Вы можете обратиться к нам, а именно процесс трудоустройства, оформления документов и сопроводительных аспектов. Подбор вакансии становится определителем вашего ближайшего прибывания за границей, а потому что бы сделать его без облачным и учесть все подводные камни, советуем Вам обратиться на прямую в наше агенство чтобы получить только самые актуальные и высокооплачиваемые позиции.</span></div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="fas fa-hands-helping fa-3x"></i>Шаг третий: заключение договора</div>
+            <div class="collapsible-body"><span>Наше агенство является лицензированным министерством социальной политики Украины, в свою очередь это позволяет соблюдать прозрачность и открытость нашей деятельности. Мы работаем на официальной основе и с каждым нашим клиентом заключаем договор о предоставлении услуг.</span></div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="fas fa-file-alt fa-3x"></i>Шаг четвёртый: Оформление пакета документов</div>
+            <div class="collapsible-body"><span>Оформление пакета документов является основной частью в процессе трудоустройства, во время предоставленная достоверная информация от соискателя часто становиться большим плюсом для быстрого оформления документов и получения визы.</span></div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="fas fa-passport fa-3x"></i>Шаг пятый: получение визы</div>
+            <div class="collapsible-body"><span>Как правило получение рабочей визы занимает до 10 дней с момента подачи документов в визовый центр либо же консульство, со своей стороны мы помогаем вам своевременно стать на очередь, для более быстрого получения результата.</span></div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="fas fa-plane-departure fa-3x"></i>Шаг шестой: приезд и начало работы</div>
+            <div class="collapsible-body"><span>На всех этапах оформления и работы мы будем является Вашими помощниками, вплоть от трансфера из Украины и до возвращения обратно.</span></div>
+          </li>
+        </ul>                
+      </div>
+    </div>
+  </div>
+  
 </div>
 
 <br><br><br>
 
-<div class="parallax-container valign-wrapper hide-on-med-and-down show-on-large">
+<div class="parallax-container valign-wrapper">
   <div class="section scrollspy no-pad-bot" id="hot-vacancii">
     <div class="container">
       <h5 class="col s12 hot-work">
         <span>
-          <span class="red-text accent-4 blue-grey lighten-3">ГОРЯЧИЕ</span> ВАКАНСИИ
+          <span class="red-text accent-4 blue-grey lighten-3">ГОРЯЧИЕ</span><span>ВАКАНСИИ</span>
         </span>
       </h5>
+
       <div class="row">
-        
         <div class="col l4 s12">
           <div class="card">
             <div class="card-image">
@@ -258,19 +252,21 @@
             </div>
           </div>
         </div>
-
+        
       </div>
     </div>
   </div>
-  <div class="parallax"><img src="public/images/parallax/bg-cze.jpg"></div>
+  <div class="parallax"><img src="public/images/parallax/parallax2.jpg"></div>
 </div>
+
 <br><br>
+
 <div class="container center scrollspy" id="feedback">
   <h3 class="teal-text text-lighten-2">Отзывы о нас</h3>
   <ul class="collection feedback-main">
     <li class="collection-item">
       <span class="title">Владимир Иванов</span>
-      <img src="/public/images/JobInPol/otziv.png" class="circle">
+      <img src="/public/images/services/JobInPol/otziv.png" class="circle">
       <p>Огромное спасибо! Очень доволен сроками и качеством работы. 
         Одной из ведущих компаний по трудоустройству за границей 
         уже весемь лет является компания WorkLeader. 
@@ -286,7 +282,7 @@
     </li>
     <li class="collection-item">
       <span class="title">Наталья Иванова</span>
-      <img src="/public/images/JobInPol/otziv1.png" class="circle">
+      <img src="/public/images/services/JobInPol/otziv1.png" class="circle">
       <p>Вот и у нас наконец выдалась минутка написать отзыв. Мы уже неделю как в Польше. 
         Скажу сразу, что этой компании можно доверять на 200%! Все честно! Вакансию хоть и ждали месяц, но не зря. 
         Мы с мужем работаем в Барлинеке, пока все нравится(конечно не обошлось без маленьких нюансов)
@@ -301,7 +297,7 @@
     </li>
     <li class="collection-item">
       <span class="title">Владимир Иванов</span>
-      <img src="/public/images/JobInPol/otziv2.png" class="circle">
+      <img src="/public/images/services/JobInPol/otziv2.png" class="circle">
       <p>Спасибо большое компании WorkLeader, на работу еще не устроился, но визу уже получил.
         Говорили 3-4 месяца будут делать, а через 2 виза уже у меня. Очень понравилось обслуживание, 
         много полезной информации, получил ответы на все поставленные вопросы, никаких подводных камней, 
