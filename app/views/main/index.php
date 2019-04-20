@@ -1,6 +1,6 @@
-<!-- <style type="text/css">#hellopreloader>p{display:none;}#hellopreloader_preload{display: block;position: fixed;z-index: 99999;top: 0;left: 0;width: 100%;height: 100%;min-width: 1000px;background: #19B5FE url(http://hello-site.ru//main/images/preloads/grid.svg) center center no-repeat;background-size:54px;}</style>
+<style type="text/css">#hellopreloader>p{display:none;}#hellopreloader_preload{display: block;position: fixed;z-index: 99999;top: 0;left: 0;width: 100%;height: 100%;min-width: 1000px;background: #19B5FE url(http://hello-site.ru//main/images/preloads/grid.svg) center center no-repeat;background-size:54px;}</style>
 <div id="hellopreloader"><div id="hellopreloader_preload"></div><p><a href="http://hello-site.ru">Hello-Site.ru. Бесплатный конструктор сайтов.</a></p></div>
-<script type="text/javascript">var hellopreloader = document.getElementById("hellopreloader_preload");function fadeOutnojquery(el){el.style.opacity = 1;var interhellopreloader = setInterval(function(){el.style.opacity = el.style.opacity - 0.05;if (el.style.opacity <=0.05){ clearInterval(interhellopreloader);hellopreloader.style.display = "none";}},16);}window.onload = function(){setTimeout(function(){fadeOutnojquery(hellopreloader);},1500);};</script> -->
+<script type="text/javascript">var hellopreloader = document.getElementById("hellopreloader_preload");function fadeOutnojquery(el){el.style.opacity = 1;var interhellopreloader = setInterval(function(){el.style.opacity = el.style.opacity - 0.05;if (el.style.opacity <=0.05){ clearInterval(interhellopreloader);hellopreloader.style.display = "none";}},16);}window.onload = function(){setTimeout(function(){fadeOutnojquery(hellopreloader);},1500);};</script>
 
 <div class="carousel carousel-slider banner hide-on-med-and-down show-on-large">
   <a class="carousel-item" href=""><img src="/public/images/banner/1.jpg"></a>
@@ -96,7 +96,7 @@
 <div class="parallax-container valign-wrapper hide-on-med-and-down show-on-large">
   <div class="no-pad-bot section scrollspy" id="country-flag">
     <div class="container">
-      <h4 class="teal-text">Наши направления</h4><br><br>
+      <h4 class="teal-text center">Наши направления</h4><br><br>
       <div class="row ">
         <div class="row center">
           <div class="col l3 naprav-item"><a href="/jobs?country=cze" target="_blank"><img src="public/images/flag/cze.png"><h6>Работа в Чехии</h6></a></div>
@@ -241,7 +241,7 @@
           <div class="card">
             <div class="card-image">
               <img src="/public/images/jobs/<?php echo $val["id"]; ?>.jpg">
-              <span class="card-title truncate"><?php echo $val["name"]; ?></span>
+              <span class="card-title truncate bold"><?php echo $val["name"]; ?></span>
             </div>
             <div class="card-content black-text">
               <p class="truncate"><?php echo $val["responsibility"]; ?></p>

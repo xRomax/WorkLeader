@@ -1,10 +1,19 @@
 <?php 
 $country_key = $data["country"];
 $sex_key = $data["sex"];
-?>
-<?php 
 require_once('app/config/mas.php'); 
 ?>
+<nav>
+  <div class="nav-wrapper" id="news1">
+    <div class="container">
+      <div class="col s12">
+        <a href="/" class="breadcrumb">Главная</a>
+        <a href="/jobs" class="breadcrumb">Вакансии</a>
+        <a href="/news/<?php echo $data["url"]; ?>#!" class="breadcrumb disabled"><?php echo $data["name"]; ?></a>
+      </div>
+    </div>
+  </div>
+</nav>
 <br>
 <div class="container">
   <div class="row">
