@@ -22,9 +22,13 @@ class MainController extends Controller {
 		if (array_key_exists('page',$this->route)) {
 			$page = (int) $this->route["page"];
 		} else $page = 1;
+
+		if (empty($_GET)) $list = $this->model->jobsList($page);
+		else $list = $this->model->jobsListFilter($page,$_GET);
+
 		$vars = [
-			'pagination' => $this->model->pagination($page),
-			'list' => $this->model->jobsList($page),
+			'pagination' => $this->model->pagination($page,$_GET),
+			'list' => $list,
 		];
 		$this->view->render($vars);
 	}

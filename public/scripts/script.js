@@ -126,26 +126,26 @@ $(document).ready(function(){
   });
 });
 
-$(document).ready(function(){
-  var slider = document.getElementById('salary-slider');
-    noUiSlider.create(slider, {
-     start: [2900, 5000],
-     connect: true,
-     step: 100,
-     orientation: 'horizontal',
-     range: {
-       'min': 2200,
-       'max': 6000
-     },
-     format: wNumb({
-       decimals: 0,
-     })
-    });
+// $(document).ready(function(){
+//   var slider = document.getElementById('salary-slider');
+//     noUiSlider.create(slider, {
+//      start: [2900, 5000],
+//      connect: true,
+//      step: 100,
+//      orientation: 'horizontal',
+//      range: {
+//        'min': 2200,
+//        'max': 6000
+//      },
+//      format: wNumb({
+//        decimals: 0,
+//      })
+//     });
   
-    setInterval(function() {
-      let salary = slider.noUiSlider.get();
-      let Salary = Array.from(salary);
-      $("#min-salary").val(Salary[0]);
-      $("#max-salary").val(Salary[1]);
-    }, 100);
-});
+//     setInterval(function() {
+//       let salary = slider.noUiSlider.get();
+//       let Salary = Array.from(salary);
+//       $("#min-salary").val(Salary[0]);
+//       $("#max-salary").val(Salary[1]);
+//     }, 100);
+// });

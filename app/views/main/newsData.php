@@ -18,7 +18,7 @@
   </div>
   <div class="row">
     <div class="col s12">
-      <img class="leftfoto" style="width:500px;" src="/public/images/news/<?php echo $data["id"]; ?>.jpg">
+      <img class="leftfoto" style="width:50%;" src="/public/images/news/<?php echo $data["id"]; ?>.jpg">
       <?php echo $data["text"]; ?>
     </div>
   </div>

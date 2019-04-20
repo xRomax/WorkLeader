@@ -14,4 +14,13 @@ $sex_mas = [
   "female" => "Женский",
   "all" => "Любой",
 ];
+$currency_mas = [
+  "cze" => "CZK",
+  "est" => "EEK",
+  "ger" => "EUR",
+  "lith" => "LTL",
+  "nor" => "NOK",
+  "pol" => "PLN",
+  "ukr" => "UAH",
+]
 ?>

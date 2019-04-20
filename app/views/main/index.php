@@ -96,18 +96,18 @@
 <div class="parallax-container valign-wrapper hide-on-med-and-down show-on-large">
   <div class="no-pad-bot section scrollspy" id="country-flag">
     <div class="container">
-      <div class="row center">
-        <h4 class="teal-text">Наши направления</h4><br><br>
-        <div class="row">
-          <div class="col l3 naprav-item"><a href="/jobs/" target="_blank"><img src="public/images/flag/cze.png"><h6>Работа в Чехии</h6></a></div>
-          <div class="col l3 naprav-item"><a href="/jobs/" target="_blank"><img src="public/images/flag/ger.png"><h6>Работа в Германии</h6></a></div>
-          <div class="col l3 naprav-item"><a href="/jobs/" target="_blank"><img src="public/images/flag/pol.png"><h6>Работа в Польше</h6></a></div>
-          <div class="col l3 naprav-item"><a href="/jobs/" target="_blank"><img src="public/images/flag/nor.png"><h6>Работа в Норвегии</h6></a></div>
+      <h4 class="teal-text">Наши направления</h4><br><br>
+      <div class="row ">
+        <div class="row center">
+          <div class="col l3 naprav-item"><a href="/jobs?country=cze" target="_blank"><img src="public/images/flag/cze.png"><h6>Работа в Чехии</h6></a></div>
+          <div class="col l3 naprav-item"><a href="/jobs?country=ger" target="_blank"><img src="public/images/flag/ger.png"><h6>Работа в Германии</h6></a></div>
+          <div class="col l3 naprav-item"><a href="/jobs?country=pol" target="_blank"><img src="public/images/flag/pol.png"><h6>Работа в Польше</h6></a></div>
+          <div class="col l3 naprav-item"><a href="/jobs?country=nor" target="_blank"><img src="public/images/flag/nor.png"><h6>Работа в Норвегии</h6></a></div>
         </div>
         <div class="row">
-          <div class="col l3 offset-l1 naprav-item"><a href="/jobs/" target="_blank"><img src="public/images/flag/ukr.png"><h6>Работа в Украине</h6></a></div>
-          <div class="col l3 naprav-item"><a href="/jobs/" target="_blank"><img src="public/images/flag/est.png"><h6>Работа в Эстонии</h6></a></div>
-          <div class="col l3 naprav-item"><a href="/jobs/" target="_blank"><img src="public/images/flag/lith.png"><h6>Работа в Литве</h6></a></div>
+          <div class="col l3 offset-l2 naprav-item"><a href="/jobs?country=ukr" target="_blank"><img src="public/images/flag/ukr.png"><h6>Работа в Украине</h6></a></div>
+          <div class="col l3 naprav-item"><a href="/jobs?country=est" target="_blank"><img src="public/images/flag/est.png"><h6>Работа в Эстонии</h6></a></div>
+          <div class="col l3 naprav-item"><a href="/jobs?country=lith" target="_blank"><img src="public/images/flag/lith.png"><h6>Работа в Литве</h6></a></div>
         </div>
       </div>
     </div>
@@ -198,7 +198,7 @@
 
 <?php if (!empty($hot)): ?>
 <br><br><br>
-  <div class="parallax-container valign-wrapper">
+  <div class="parallax-container valign-wrapper hide-on-med-and-down show-on-large">
     <div class="section scrollspy no-pad-bot" id="hot-vacancii">
       <div class="container">
         <h5 class="col s12 hot-work">
@@ -228,6 +228,32 @@
     </div>
     <div class="parallax"><img src="public/images/parallax/parallax2.jpg"></div>
   </div>
+
+  <div class="container hide-on-large-only show-on-medium-and-down">
+    <h5 class="col s12 hot-work">
+      <span>
+        <span style="padding:0 4px;" class="red-text accent-4 blue-grey lighten-3">ГОРЯЧИЕ</span><span style="padding:0 4px;">ВАКАНСИИ</span>
+      </span>
+    </h5>
+    <div class="row center">
+      <?php foreach ($hot as $val): ?>
+        <div class="col m6 s12">
+          <div class="card">
+            <div class="card-image">
+              <img src="/public/images/jobs/<?php echo $val["id"]; ?>.jpg">
+              <span class="card-title truncate"><?php echo $val["name"]; ?></span>
+            </div>
+            <div class="card-content black-text">
+              <p class="truncate"><?php echo $val["responsibility"]; ?></p>
+            </div>
+            <div class="card-action">
+              <a href="/jobs/<?php echo $val["url"]; ?>">Узнать больше..</a>
+            </div>
+          </div>
+        </div>
+      <?php endforeach; ?>
+    </div>
+  </div>
 <?php endif; ?>
 
 <br><br>
@@ -236,12 +262,9 @@
   <h3 class="teal-text text-lighten-2">Отзывы о нас</h3>
   <ul class="collection feedback-main">
     <li class="collection-item">
-      <span class="title">Владимир Иванов</span>
-      <img src="/public/images/services/JobInPol/otziv.png" class="circle">
-      <p>Огромное спасибо! Очень доволен сроками и качеством работы. 
-        Одной из ведущих компаний по трудоустройству за границей 
-        уже весемь лет является компания WorkLeader. 
-        Все соответствующие документы есть в свободном доступе.</p>
+      <span class="title">Сергей Терещенко</span>
+      <img src="/public/images/review/3.jpg" class="circle">
+      <p>Уехал через Ворк Лидер в Чехию. До этого метался по работам в Киеве. За границей раньше не был. С документами была немного волокита, за 2 мес. от момента подачи заявки выехал! Довоз до места работы со Львова. Попервах было тяжеловато. После ночных сил не было. Что касается работы, то как и везде за хорошие деньги необходимо пахать. Аванс выдали на карту 15 числа около 17000грн. Деньги достойные!</p>
       <div class="secondary-content center">
         <span class="right">20.03.18</span>
         <a><i class="material-icons">grade</i></a>
@@ -252,12 +275,9 @@
       </div>
     </li>
     <li class="collection-item">
-      <span class="title">Наталья Иванова</span>
-      <img src="/public/images/services/JobInPol/otziv1.png" class="circle">
-      <p>Вот и у нас наконец выдалась минутка написать отзыв. Мы уже неделю как в Польше. 
-        Скажу сразу, что этой компании можно доверять на 200%! Все честно! Вакансию хоть и ждали месяц, но не зря. 
-        Мы с мужем работаем в Барлинеке, пока все нравится(конечно не обошлось без маленьких нюансов)
-        но все благополучно решилось! Еще раз спасибо WorkLeader!</p>
+      <span class="title">Владимир Иванов</span>
+      <img src="/public/images/review/1.jpg" class="circle">
+      <p>Добрый день. Было желание попробовать себя за границей. Опыт вождения у меня 18 лет. Обратился в агентство за помощью в официальном трудоустройстве. Пошел на курсы польского. Визу оформили за 1 мес. Полгода отработал в городе Мысловице на городских маршрутках, посменно 9 часов/день. Отношение к украинцам отличное! Спасибо за помощь</p>
       <div class="secondary-content center">
         <span class="right">10.01.19</span>
         <a><i class="material-icons">grade</i></a>
@@ -267,11 +287,11 @@
       </div>
     </li>
     <li class="collection-item">
-      <span class="title">Владимир Иванов</span>
-      <img src="/public/images/services/JobInPol/otziv2.png" class="circle">
-      <p>Спасибо большое компании WorkLeader, на работу еще не устроился, но визу уже получил.
+      <span class="title">Наталья Явлинская</span>
+      <img src="/public/images/review/2.png" class="circle">
+      <p>Спасибо большое компании WorkLeader, на работу еще не устроилась, но визу уже получила.
         Говорили 3-4 месяца будут делать, а через 2 виза уже у меня. Очень понравилось обслуживание, 
-        много полезной информации, получил ответы на все поставленные вопросы, никаких подводных камней, 
+        много полезной информации, получила ответы на все поставленные вопросы, никаких подводных камней, 
         надеюсь, что с работой тоже будет все ок.</p>
       <div class="secondary-content center">
       <span class="right">13.09.18</span>

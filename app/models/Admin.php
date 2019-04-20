@@ -27,8 +27,8 @@ class Admin extends Model {
 		if ($nameLen < 3 or $nameLen > 100) {
 			$this->error = 'Название должно содержать от 3 до 100 символов';
 			return false;
-		} elseif ($urlLen < 5 or $urlLen > 30) {
-			$this->error = 'URL должен содержать от 5 до 30 символов';
+		} elseif ($urlLen < 5 or $urlLen > 50) {
+			$this->error = 'URL должен содержать от 5 до 50 символов';
 			return false;
 		} elseif (empty($post["country"])) {
 			$this->error = 'Выберите страну';

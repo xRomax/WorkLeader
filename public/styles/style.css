@@ -32,7 +32,7 @@ p {
 }
 .hot-work> span {
   margin: 0px;
-  border: 3px solid white;
+  border: 3px solid rgba(141,200,255,.80);;
   border-radius: 5px;
 }
 

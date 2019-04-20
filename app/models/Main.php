@@ -9,6 +9,7 @@ class Main extends Model {
 	public $error;
 	public $messageTitle;
 	public $messageBody;
+	public $page;
 
 	public function contactValidate($post) {
 		switch($post["type"]) {
@@ -113,13 +114,37 @@ class Main extends Model {
 			'position' => (int) $position,
 			'step' =>(int) $step
 		];
-		return $this->db->row('SELECT * FROM `jobs` WHERE status = :status ORDER BY id ASC LIMIT :position, :step', $params);
+		$sql = "SELECT * FROM jobs WHERE status = :status ORDER BY id ASC LIMIT :position, :step";
+		return $this->db->row($sql, $params);
 	}
 
-	public function pagination($page) {
-		if (!empty($_GET)) {
+	public function jobsListFilter($page,$get) {
+		$step = 5; $position = --$page * $step;
+		$params = [
+			'status' => 'active',
+			'position' => (int) $position,
+			'step' => (int) $step,
+			'minsalary' => (int) $get['minsalary'],
+			'maxsalary' => (int) $get['maxsalary']
+		];
+		$sql = "SELECT * FROM jobs WHERE status = :status and salary >= :minsalary and salary <= :maxsalary ORDER BY id ASC LIMIT :position, :step";
+		return $this->db->row($sql, $params);
+	}
+
+	public function jobsListFilterCount($get) {
+		$params = [
+			'status' => 'active',
+			'minsalary' => (int) $get['minsalary'],
+			'maxsalary' => (int) $get['maxsalary']
+		];
+		$sql = "SELECT * FROM jobs WHERE status = :status and salary >= :minsalary and salary <= :maxsalary ORDER BY id ASC";
+		return $this->db->row($sql, $params);
+	}
+
+	public function pagination($page,$get) {
+		if (!empty($get)) {
 			$filter = '?';
-			foreach ($_GET as $key => $value) {
+			foreach ($get as $key => $value) {
 				if (is_array($value)) {
 					foreach ($value as $val) {
 						$filter .= $key.'[]='.$val;
@@ -131,10 +156,13 @@ class Main extends Model {
 				}
 			}
 			$filter = rtrim($filter,'&');
-		} else $filter = NULL;
+			$count = (int) count($this->jobsListFilterCount($_GET));
+		} else {
+			$filter = NULL;
+			$count = $this->db->query("SELECT * FROM jobs WHERE status = 'active'")->rowCount();
+		}
 		$left = $page - 1; $right = $page + 1; $step = 5;
-		$count = $this->countTabs('jobs');
-		$amoun_pages = ceil($count / $step);
+		$amoun_pages = ceil( $count / $step);
 		if ($amoun_pages <= 1) return false;
 		$html = '<ul class="pagination center">';
 		if ($page == 1) {
@@ -155,15 +183,6 @@ class Main extends Model {
 			$html .= '<li class="waves-effect waves-teal"><a href="/jobs/'.$right.$filter.'"><i class="material-icons">chevron_right</i></a></li>';
 		}
 		return $html;
-	}
-
-	public function countTabs($table) {
-		$params = [
-			'status' => 'active',
-		];
-		$select = $this->db->query("SELECT * FROM $table WHERE status = :status", $params);
-		$count = $select->rowCount();
-		return $count;
 	}
 
 	public function jobsHot() {

@@ -68,7 +68,7 @@
       </div>
       <div class="input-field">
         <input id="salary" type="text" name="salary" class="validate">
-        <label for="salary">Зарплата (PLN)</label>
+        <label for="salary">Зарплата (примерное число)</label>
       </div>
       <div class="input-field">
         <input id="salary_desc" type="text" name="salary_desc" class="validate">
