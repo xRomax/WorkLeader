@@ -6,8 +6,12 @@ use app\core\Controller;
 
 class MainController extends Controller {
 
-	public function indexAction() {
+	public function __construct($route) {
+		parent::__construct($route);
 		$this->contactAction();
+	}
+
+	public function indexAction() {
 		$vars = [
 			'hot' => $this->model->jobsHot(),
 		];
@@ -22,33 +26,38 @@ class MainController extends Controller {
 			'pagination' => $this->model->pagination($page),
 			'list' => $this->model->jobsList($page),
 		];
-		$this->contactAction();
 		$this->view->render($vars);
 	}
 
-	public function jobAction() {
+	public function jobDataAction() {
 		if (!$this->model->isJobExists('jobs','url',$this->route['url'])) {
 			$this->view->errorCode(404);
 		}
 		$vars = [
-			'data' => $this->model->jobData($this->route['url']),
+			'data' => $this->model->dataPost($this->route['url'],'jobs')[0],
 		];
-		$this->contactAction();
 		$this->view->render($vars);
 	}
 
 	public function aboutAction() {
-		$this->contactAction();
 		$this->view->render();
 	}
 
-	public function newsAction() {
-		$this->contactAction();
-		$this->view->render();
+	public function newsListAction() {
+		$vars = [
+			'list' => $this->model->dataList('news'),
+		];
+		$this->view->render($vars);
+	}
+
+	public function newsDataAction() {
+		$vars = [
+			'data' => $this->model->dataPost($this->route['url'],'news')[0],
+		];
+		$this->view->render($vars);
 	}
 	
 	public function servicesAction() {
-		$this->contactAction();
 		$this->view->render();
 	}
 
@@ -59,6 +68,7 @@ class MainController extends Controller {
 			}
 			mail('romadeamon@gmail.com', $this->model->messageTitle, $this->model->messageBody);
 			$this->view->message('success', 'Сообщение отправлено Администратору', 'Отлично!');
+			$this->model->addClient($_POST);
 		}
 	}
 }

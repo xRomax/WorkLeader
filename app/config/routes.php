@@ -14,8 +14,13 @@ return [
 	],
 	'news' => [
 		'controller' => 'main',
-		'action' => 'news',
-		'path' => 'main/news'
+		'action' => 'newsList',
+		'path' => 'main/newsList'
+	],
+	'news/{url:\D+}' => [
+		'controller' => 'main',
+		'action' => 'newsData',
+		'path' => 'main/newsData'
 	],
 	'services' => [
 		'controller' => 'main',
@@ -49,7 +54,7 @@ return [
 	],
 	'jobs/{url:\D+}' => [
 		'controller' => 'main',
-		'action' => 'job',
+		'action' => 'jobData',
 		'path' => 'main/jobs/job'
 	],
 	// AdminController

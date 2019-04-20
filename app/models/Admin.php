@@ -104,14 +104,6 @@ class Admin extends Model {
 		$this->db->query($sql,$params);
 	}
 
-	public function jobsDelete($id) {
-		$params = [
-			"id" => $id,
-		];
-		$this->db->query("DELETE FROM jobs WHERE id = :id", $params);
-		unlink('public/images/jobs/'.$id.'.jpg');
-	}
-
 	public function jobsStatus($id) {
 		$params = [
 			"id" => $id,
@@ -134,7 +126,7 @@ class Admin extends Model {
 		$this->db->query("UPDATE jobs SET hot = :hot WHERE id = :id", $params);
 	}
 
-	public function amountjobsHot() {
+	public function jobsHotAmount() {
 		$params = [
 			"hot" => 'show',
 		];
@@ -148,15 +140,23 @@ class Admin extends Model {
 		return $this->db->column("SELECT id FROM $table WHERE $key = :$key", $params);
 	}
 
-	public function jobsData($id) {
+	public function dataPost($id,$table) {
+		$params = [
+			"id" => (int) $id,
+		];
+		return $this->db->row("SELECT * FROM $table WHERE id = :id",$params);
+	}
+	
+	public function dataList($table) {
+		return $this->db->row("SELECT * FROM $table ORDER BY id ASC");
+	}
+
+	public function deletePost($id,$table) {
 		$params = [
 			"id" => $id,
 		];
-		return $this->db->row("SELECT * FROM `jobs` WHERE id = :id",$params);
-	}
-	
-	public function jobsList() {
-		return $this->db->row('SELECT * FROM jobs ORDER BY id ASC');
+		$this->db->query("DELETE FROM $table WHERE id = :id", $params);
+		unlink("public/images/$table/$id.jpg");
 	}
 
 	public function UploadImage($path, $folder, $id) {
@@ -166,6 +166,7 @@ class Admin extends Model {
 	public function newsValidate($post, $type) {
 		$nameLen = iconv_strlen($post['name']);
 		$urlLen = iconv_strlen($post['url']);
+		$descLen = iconv_strlen($post['description']);
 		if ($nameLen < 3 or $nameLen > 100) {
 			$this->error = 'Название должно содержать от 3 до 100 символов';
 			return false;
@@ -174,6 +175,9 @@ class Admin extends Model {
 			return false;
 		} elseif (empty($post["text"])) {
 			$this->error = 'Введите текст новости';
+			return false;
+		} elseif ($descLen < 30 or $descLen > 250) {
+			$this->error = 'Описание должно содержать от 30 до 250 символов';
 			return false;
 		} elseif (empty($post["source"])) {
 			$this->error = 'Введите источник';
@@ -191,26 +195,24 @@ class Admin extends Model {
 			'name' => $post["name"],
 			'url' => $post["url"],
 			'text' => $post["text"],
+			'description' => $post["description"],
 			'source' => $post["source"],
 		];
-		$sql = "INSERT INTO news (name, url, text, source) VALUES (:name, :url, :text, :source)";
+		$sql = "INSERT INTO news (name, url, text, description, source) VALUES (:name, :url, :text, :description, :source)";
 		$this->db->query($sql,$params);
 		return $this->db->lastInsertId();
 	}
 
-	public function newsEdit() {
-
-	}
-
-	public function newsDelete($id) {
+	public function newsEdit($post,$id) {
 		$params = [
-			"id" => $id,
+			'id' => $id,
+			'name' => $post["name"],
+			'url' => $post["url"],
+			'text' => $post["text"],
+			'description' => $post["description"],
+			'source' => $post["source"],
 		];
-		$this->db->query("DELETE FROM news WHERE id = :id", $params);
-		unlink('public/images/news/'.$id.'.jpg');
-	}
-
-	public function newsList() {
-		return $this->db->row('SELECT * FROM news ORDER BY id ASC');
+		$sql = "UPDATE news SET name = :name, url = :url, text = :text, source = :source, description = :description WHERE id = :id";
+		$this->db->query($sql,$params);
 	}
 }

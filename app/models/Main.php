@@ -27,8 +27,8 @@ class Main extends Model {
 	public function contactModalForm($post) {
 		$nameLen = iconv_strlen($post['name']);
 		$textLen = iconv_strlen($post['text']);
-		if ($nameLen < 3 or $nameLen > 20) {
-			$this->error = 'Имя должно содержать от 3 до 25 символов';
+		if ($nameLen < 3 or $nameLen > 30) {
+			$this->error = 'Имя должно содержать от 3 до 30 символов';
 			return false;
 		} elseif (!$post["phone"]) {
 			$this->error = 'Телефон указан неверно';
@@ -44,8 +44,8 @@ class Main extends Model {
 
 	public function contactSideForm($post) {
 		$nameLen = iconv_strlen($post['name']);
-		if ($nameLen < 3 or $nameLen > 25) {
-			$this->error = 'Имя должно содержать от 3 до 25 символов';
+		if ($nameLen < 3 or $nameLen > 30) {
+			$this->error = 'Имя должно содержать от 3 до 30 символов';
 			return false;
 		} elseif (!filter_var($post['email'], FILTER_VALIDATE_EMAIL)) {
 			$this->error = 'E-mail указан неверно';
@@ -61,8 +61,8 @@ class Main extends Model {
 
 	public function contactBottomForm($post) {
 		$nameLen = iconv_strlen($post['name']);
-		if ($nameLen < 3 or $nameLen > 25) {
-			$this->error = 'Имя должно содержать от 3 до 25 символов';
+		if ($nameLen < 3 or $nameLen > 30) {
+			$this->error = 'Имя должно содержать от 3 до 30 символов';
 			return false;
 		} elseif (!$post["phone"]) {
 			$this->error = 'Телефон указан неверно';
@@ -73,6 +73,24 @@ class Main extends Model {
 		return true;
 	}
 
+	public function addClient($post) {
+		if ($post["type"] == 'sideForm') {
+			$params = [
+				'name' => $post['name'],
+				'phone' => $post['phone'],
+				'email' => $post['email'],
+			];
+			$sql ="INSERT INTO clients (name, phone, email) VALUES (:name, :phone, :email)";
+		} else {
+			$params = [
+				'name' => $post['name'],
+				'phone' => $post['phone'],
+			];
+			$sql ="INSERT INTO clients (name, phone) VALUES (:name, :phone)";
+		}
+		$this->db->query($sql,$params);
+	}
+
 	public function isJobExists($table,$url,$val) {
 		$params = [
 			$url => $val,
@@ -80,11 +98,11 @@ class Main extends Model {
 		return $this->db->column("SELECT url FROM $table WHERE $url = :$url", $params);
 	}
 
-	public function jobData($url){
+	public function dataPost($url, $table){
 		$params = [
 			"url" => $url,
 		];
-		return $this->db->row("SELECT * FROM `jobs` WHERE url = :url",$params);
+		return $this->db->row("SELECT * FROM $table WHERE url = :url",$params);
 	}
 
 	public function jobsList($page) {
@@ -99,8 +117,22 @@ class Main extends Model {
 	}
 
 	public function pagination($page) {
-		$left = $page - 1; $right = $page + 1;
-		$step = 5;
+		if (!empty($_GET)) {
+			$filter = '?';
+			foreach ($_GET as $key => $value) {
+				if (is_array($value)) {
+					foreach ($value as $val) {
+						$filter .= $key.'[]='.$val;
+						$filter .= '&';
+					}
+				} else {
+					$filter .= $key.'='.$value;
+					$filter .= '&';
+				}
+			}
+			$filter = rtrim($filter,'&');
+		} else $filter = NULL;
+		$left = $page - 1; $right = $page + 1; $step = 5;
 		$count = $this->countTabs('jobs');
 		$amoun_pages = ceil($count / $step);
 		if ($amoun_pages <= 1) return false;
@@ -108,19 +140,19 @@ class Main extends Model {
 		if ($page == 1) {
 			$html .= '<li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>';
 		} else {
-			$html .= '<li class="waves-effect waves-teal"><a href="/jobs/'.$left.'"><i class="material-icons">chevron_left</i></a></li>';
+			$html .= '<li class="waves-effect waves-teal"><a href="/jobs/'.$left.$filter.'"><i class="material-icons">chevron_left</i></a></li>';
 		}
 		for ($i = 1; $i <= $amoun_pages; $i++) {
 			if ($i == $page) {
-				$html.= '<li class="waves-effect waves-teal active"><a href="/jobs/'.$page.'">'.$page.'</a></li>';
+				$html.= '<li class="waves-effect waves-teal active"><a href="/jobs/'.$page.$filter.'">'.$page.'</a></li>';
 			} else {
-				$html.= '<li class="waves-effect waves-teal"><a href="/jobs/'.$i.'">'.$i.'</a></li>';
+				$html.= '<li class="waves-effect waves-teal"><a href="/jobs/'.$i.$filter.'">'.$i.'</a></li>';
 			}
 		}
 		if ($page == $amoun_pages) {
 			$html .= '<li class="disabled"><a href="#!"><i class="material-icons">chevron_right</i></a></li>';
 		} else {
-			$html .= '<li class="waves-effect waves-teal"><a href="/jobs/'.$right.'"><i class="material-icons">chevron_right</i></a></li>';
+			$html .= '<li class="waves-effect waves-teal"><a href="/jobs/'.$right.$filter.'"><i class="material-icons">chevron_right</i></a></li>';
 		}
 		return $html;
 	}
@@ -140,5 +172,10 @@ class Main extends Model {
 		];
 		return $this->db->row("SELECT * FROM `jobs` WHERE hot = :hot", $params);
 	}
+
+	public function dataList($table) {
+		return $this->db->row("SELECT * FROM $table ORDER BY id ASC");
+	}
+
 }
 ?>

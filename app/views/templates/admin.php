@@ -62,6 +62,14 @@
         </li>
       </ul>
     </li>
+    <li class="bold"><a class="waves-effect waves-light"><i class="fas fa-user-friends fa-2x"></i>Клиенты</a>
+      <div class="collapsible-body">
+        <ul>
+          <li><a href="/admin/clientsList">Список</a></li>
+          <li><a href="/admin/sendMessage">Рассылка</a></li>
+        </ul>
+      </div>
+    </li>
     <li class="bold"><a href="/admin/logout" class="waves-effect waves-light"><i class="fas fa-sign-out-alt fa-2x"></i>Выход</a></li>
   </ul>
 

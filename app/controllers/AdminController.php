@@ -42,7 +42,7 @@ class AdminController extends Controller {
 	public function jobsListAction() {
 		$vars = [
 			'pagination' => '',
-			'list' => $this->model->jobsList($this->route),
+			'list' => $this->model->dataList('jobs'),
 		];
 		$this->view->render($vars);
 	}
@@ -77,7 +77,7 @@ class AdminController extends Controller {
 			$this->view->location('admin/jobsList');
 		}
 		$vars = [
-			'data' => $this->model->jobsData($this->route['id'])[0],
+			'data' => $this->model->dataPost($this->route['id'],'jobs')[0],
 		];
 		$this->view->render($vars);
 	}
@@ -86,7 +86,7 @@ class AdminController extends Controller {
 		if (!$this->model->isExists('jobs','id',$this->route['id'])) {
 			$this->view->errorCode(404);
 		}
-		$this->model->jobsDelete($this->route['id']);
+		$this->model->deletePost($this->route['id'],'jobs');
 		$this->view->redirect('admin/jobsList');
 	}
 
@@ -101,8 +101,8 @@ class AdminController extends Controller {
 			$this->view->redirect('admin/jobsHot');
 		} else {
 			$vars = [
-				'amount' => $this->model->amountjobsHot(),
-				'list' => $this->model->jobsList($this->route),
+				'amount' => $this->model->jobsHotAmount(),
+				'list' => $this->model->dataList('jobs'),
 			];
 			$this->view->render($vars);
 		}
@@ -111,7 +111,7 @@ class AdminController extends Controller {
 	public function newsListAction() {
 		$vars = [
 			'pagination' => '',
-			'list' => $this->model->newsList($this->route),
+			'list' => $this->model->dataList('news'),
 		];
 		$this->view->render($vars);
 	}
@@ -146,7 +146,7 @@ class AdminController extends Controller {
 			$this->view->location('admin/newsList');
 		}
 		$vars = [
-			'data' => $this->model->jobsData($this->route['id'])[0],
+			'data' => $this->model->dataPost($this->route['id'],'news')[0],
 		];
 		$this->view->render($vars);
 	}
@@ -155,7 +155,7 @@ class AdminController extends Controller {
 		if (!$this->model->isExists('news','id',$this->route['id'])) {
 			$this->view->errorCode(404);
 		}
-		$this->model->newsDelete($this->route['id']);
+		$this->model->deletePost($this->route['id'],'news');
 		$this->view->redirect('admin/newsList');
 	}
 }

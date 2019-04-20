@@ -15,6 +15,10 @@
         <label for="textarea">Новость</label>
       </div>
       <div class="input-field">
+        <textarea id="textarea1" class="materialize-textarea" name="description"></textarea>
+        <label for="textarea1">Краткое описание</label>
+      </div>
+      <div class="input-field">
         <input id="source" type="text" name="source" class="validate">
         <label for="source">Источник</label>
       </div>

@@ -1,6 +1,4 @@
-<?php
-if (!empty($_GET)) var_dump($_GET);
-?>
+<?php if (!empty($_GET)) var_dump($_GET); ?>
 <?php require_once('app/config/mas.php') ?>
 <div class="section">
   <div class="row">

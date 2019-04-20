@@ -41,7 +41,7 @@
               <?php if ($val["hot"] == 'show'):?>
                   <a style="width:130px;" href="/admin/jobsHot/<?php echo $val["id"] ?>" class="waves-effect waves-light btn green">SHOW</a>
                 <?php else: ?>
-                  <a style="width:130px;" href="/admin/jobsHot/<?php echo $val["id"] ?>" class="waves-effect waves-light btn red">HIDE</a>
+                  <a style="width:130px;" href="/admin/jobsHot/<?php echo $val["id"] ?>" class="waves-effect waves-light btn red <? if ($amount >= 3 ) echo 'disabled'; ?>">HIDE</a>
                 <?php endif; ?>
             </td>
           </tr>

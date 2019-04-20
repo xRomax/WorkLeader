@@ -308,6 +308,30 @@ footer.page-footer {
   }
 }
 /* ------------------ */
+/* Новости */
+#news1 {
+  background-color: #009688 !important;
+}
+.news-form {
+  margin: 10px 0;
+  border: 2px solid rgba(0, 0, 0, .2);
+  border-radius: 5px;
+}
+.news-form h5 {
+  margin: 10px 15px;
+}
+.news-form img {
+  width: 100%;
+  margin-left: 10px;
+}
+.news-form p > a {
+  text-decoration: underline;
+}
+.leftfoto{
+  float:left;
+  margin: 5px 10px 5px 0;
+  }
+/* -------- */
 
 /* bottomForm */
 .bottomForm input{
