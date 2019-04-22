@@ -26,9 +26,8 @@
           <option value="lit">Литва</option>
           <option value="est">Эстония</option>
           <option value="nor">Норвегия</option>
-          <option value="ukr">Украина</option>
         </select>
-      <label>Страна</label>
+        <label>Страна</label>
       </div>
       <div class="input-field">
         <p><label>Пол</label></p>

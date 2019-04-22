@@ -90,6 +90,14 @@ $(document).ready(function(){
                 <div class="col l3 m6 s6">
                   <span class="red-text"><b>Зарплата:</b></span>
                   <p>EUR≈<?php echo $val["salary"]; ?></p>
+                  <?php
+                  $currency_key = $val['country'];
+                  $currency_code = $country_to_currency[$currency_key];
+                    if ($currency_code != 'EUR') {
+                      $result = ceil($val['salary'] * $currency->$currency_code);
+                      echo "<p>$currency_code"."≈$result</p>";
+                    }
+                  ?>
                 </div>
                 <div class="col l4 hide-on-med-and-down show-on-large">
                   <img style="width:120%; " src="/public/images/jobs/<?php echo $val["id"]; ?>.jpg" alt="">

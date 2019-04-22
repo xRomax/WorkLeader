@@ -35,6 +35,7 @@
               <li><a href="/admin/jobsAdd">Добавить</a></li>
               <li><a href="/admin/jobsList">Список</a></li>
               <li><a href="/admin/jobsHot">Горячие вакансии</a></li>
+              <li><a href="/admin/currency">Курс валют</a></li>
             </ul>
           </div>
         </li>

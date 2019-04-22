@@ -6,7 +6,6 @@ $country_mas = [
   "lit" => "Литва",
   "nor" => "Норвегия",
   "pol" => "Польша",
-  "ukr" => "Украина",
 ];
 
 $sex_mas = [
@@ -16,12 +15,10 @@ $sex_mas = [
 ];
 $country_to_currency = [
   "cze" => "CZK",
-  "est" => "EEK",
+  "est" => "EUR",
   "ger" => "EUR",
-  "lit" => "LTL",
+  "lit" => "EUR",
   "nor" => "NOK",
   "pol" => "PLN",
-  "ukr" => "UAH",
 ]
-
 ?>

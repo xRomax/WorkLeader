@@ -128,6 +128,16 @@ return [
 		'action' => 'newsDelete',
 		'path' => ''
 	],
+	'admin/currency' => [
+		'controller' => 'admin',
+		'action' => 'currency',
+		'path' => 'admin/currency'
+	],
+	'admin/currency/{code:\D+}' => [
+		'controller' => 'admin',
+		'action' => 'currency',
+		'path' => 'admin/currency'
+	],
 	'admin/reviewsValidate' => [
 		'controller' => 'admin',
 		'action' => 'main',

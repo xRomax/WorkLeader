@@ -158,4 +158,11 @@ class AdminController extends Controller {
 		$this->model->deletePost($this->route['id'],'news');
 		$this->view->redirect('admin/newsList');
 	}
+
+	public function currencyAction() {
+		$vars = [
+			'currency' => $this->model->getCurrency('https://api.exchangeratesapi.io/latest')->rates,
+		];
+		$this->view->render($vars);
+	}
 }

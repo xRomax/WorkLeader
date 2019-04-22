@@ -30,6 +30,7 @@ class MainController extends Controller {
 			'pagination' => $this->model->pagination($page,$_GET),
 			'salary' => $this->model->getSalary(),
 			'list' => $list,
+			'currency' => $this->model->getCurrency('https://api.exchangeratesapi.io/latest')->rates,
 		];
 		$this->view->render($vars);
 	}

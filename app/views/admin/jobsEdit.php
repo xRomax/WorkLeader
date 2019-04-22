@@ -20,7 +20,6 @@
           <option value="lit" <?php if($data["country"] == 'lit') echo 'selected' ?>>Литва</option>
           <option value="est" <?php if($data["country"] == 'est') echo 'selected' ?>>Эстония</option>
           <option value="nor" <?php if($data["country"] == 'nor') echo 'selected' ?>>Норвегия</option>
-          <option value="ukr" <?php if($data["country"] == 'ukr') echo 'selected' ?>>Украина</option>
         </select>
         <label>Страна</label>
       </div>
