@@ -99,14 +99,14 @@
   <div class="no-pad-bot section scrollspy" id="country-flag">
     <div class="container">
       <div class="row center">
-        <div class="col l4 naprav-item"><a href="/jobs?country[]=cze&min=500&max=4000" target="_blank"><img src="public/images/flag/cze.png"><h6>Работа в Чехии</h6></a></div>
-        <div class="col l4 naprav-item"><a href="/jobs?country[]=ger&min=500&max=4000" target="_blank"><img src="public/images/flag/ger.png"><h6>Работа в Германии</h6></a></div>
-        <div class="col l4 naprav-item"><a href="/jobs?country[]=pol&min=500&max=4000" target="_blank"><img src="public/images/flag/pol.png"><h6>Работа в Польше</h6></a></div>
+        <div class="col l4 naprav-item"><a href="/jobs?country[]=cze" target="_blank"><img src="public/images/flag/cze.png"><h6>Работа в Чехии</h6></a></div>
+        <div class="col l4 naprav-item"><a href="/jobs?country[]=ger" target="_blank"><img src="public/images/flag/ger.png"><h6>Работа в Германии</h6></a></div>
+        <div class="col l4 naprav-item"><a href="/jobs?country[]=pol" target="_blank"><img src="public/images/flag/pol.png"><h6>Работа в Польше</h6></a></div>
       </div>
       <div class="row center">
-        <div class="col l4 naprav-item"><a href="/jobs?country[]=nor&min=500&max=4000" target="_blank"><img src="public/images/flag/nor.png"><h6>Работа в Норвегии</h6></a></div>
-        <div class="col l4 naprav-item"><a href="/jobs?country[]=est&min=500&max=4000" target="_blank"><img src="public/images/flag/est.png"><h6>Работа в Эстонии</h6></a></div>
-        <div class="col l4 naprav-item"><a href="/jobs?country[]=lit&min=500&max=4000" target="_blank"><img src="public/images/flag/lit.png"><h6>Работа в Литве</h6></a></div>
+        <div class="col l4 naprav-item"><a href="/jobs?country[]=nor" target="_blank"><img src="public/images/flag/nor.png"><h6>Работа в Норвегии</h6></a></div>
+        <div class="col l4 naprav-item"><a href="/jobs?country[]=est" target="_blank"><img src="public/images/flag/est.png"><h6>Работа в Эстонии</h6></a></div>
+        <div class="col l4 naprav-item"><a href="/jobs?country[]=lit" target="_blank"><img src="public/images/flag/lit.png"><h6>Работа в Литве</h6></a></div>
       </div>
     </div>
   </div>
@@ -116,43 +116,22 @@
 <div class="container naprav hide-on-large-only show-on-medium-and-down center">
   <h4 class="teal-text center">Наши направления</h4>
   <div class="row">
-    <div class="col s6 naprav-item"><a href="/jobs?country[]=cze&min=500&max=4000" target="_blank"><img src="public/images/flag/cze.png"><h6>Работа в Чехии</h6></a></div>
-    <div class="col s6 naprav-item"><a href="/jobs?country[]=ger&min=500&max=4000" target="_blank"><img src="public/images/flag/ger.png"><h6>Работа в Германии</h6></a></div>
+    <div class="col s6 naprav-item"><a href="/jobs?country[]=cze" target="_blank"><img src="public/images/flag/cze.png"><h6>Работа в Чехии</h6></a></div>
+    <div class="col s6 naprav-item"><a href="/jobs?country[]=ger" target="_blank"><img src="public/images/flag/ger.png"><h6>Работа в Германии</h6></a></div>
   </div>
   <div class="row">
-    <div class="col s6 naprav-item"><a href="/jobs?country[]=pol&min=500&max=4000" target="_blank"><img src="public/images/flag/pol.png"><h6>Работа в Польше</h6></a></div>
-    <div class="col s6 naprav-item"><a href="/jobs?country[]=nor&min=500&max=4000" target="_blank"><img src="public/images/flag/nor.png"><h6>Работа в Норвегии</h6></a></div>
+    <div class="col s6 naprav-item"><a href="/jobs?country[]=pol" target="_blank"><img src="public/images/flag/pol.png"><h6>Работа в Польше</h6></a></div>
+    <div class="col s6 naprav-item"><a href="/jobs?country[]=nor" target="_blank"><img src="public/images/flag/nor.png"><h6>Работа в Норвегии</h6></a></div>
   </div>
   <div class="row">
-    <div class="col s6 naprav-item"><a href="/jobs?country[]=est&min=500&max=4000" target="_blank"><img src="public/images/flag/est.png"><h6>Работа в Эстонии</h6></a></div>
-    <div class="col s6 naprav-item"><a href="/jobs?country[]=lit&min=500&max=4000" target="_blank"><img src="public/images/flag/lit.png"><h6>Работа в Литве</h6></a></div>
+    <div class="col s6 naprav-item"><a href="/jobs?country[]=est" target="_blank"><img src="public/images/flag/est.png"><h6>Работа в Эстонии</h6></a></div>
+    <div class="col s6 naprav-item"><a href="/jobs?country[]=lit" target="_blank"><img src="public/images/flag/lit.png"><h6>Работа в Литве</h6></a></div>
   </div>
 </div>
 
 <br><br><br><br>
 
 <div class="container">
-  <!-- <div class="feedback-block white-text">
-    <h6 style="padding-top:20px;" class="center">Введите Ваши данные и наш менеджер свяжется с вами!</h6>
-    <form action="/" method="post" class="bottomForm ajax">
-    <input style="position:fixed; top:-100000px;" type="reset">
-    <input type="hidden" name="type" value="bottomForm">
-      <div class="row">
-        <div class="input-field col l2 offset-l3 m4 offset-m2 s6">
-          <input id="bottomName" name="name" type="text" class="validate white-text">
-          <label class="white-text" for="bottomName">Имя</label>
-        </div>
-        <div class="input-field col l2 m4 s6">
-          <input id="phone" name="phone" type="tel" class="validate white-text">
-          <label class="white-text" for="phone">Телефон</label>
-        </div>
-        <div class="col l2 m12 s6 offset-s3">
-          <a class="btn waves-effect waves-light btn-large blue lighten-2 sendBottomForm" style="border-radius:10px;">Отправить</a>
-        </div>
-      </div>
-    </form>
-  </div> -->
-  
   <?php require_once("jobs/FormBottom.php"); ?>
 
   <br><br>

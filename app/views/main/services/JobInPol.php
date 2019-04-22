@@ -144,62 +144,6 @@
 
 <br><br>
 
-<!-- <div class="container">
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
-      
-      <div class="swiper-slide">
-        <div class="row feedback">
-          <div id="maskTop" class="mask"></div><div id="maskBottom" class="mask"></div>
-          <div class="col s2 offset-s1" style="margin:0px; padding:0px;">
-            <img src="/public/images/services/JobInPol/otziv.png">
-          </div>
-          <div class="col s7 offset-s1">
-            <span>Владимир Иванов</span><span style="position:absolute; right:0;">12.10.2018</span>
-            <p>Огромное спасибо! Очень доволен сроками и качеством работы. 
-              Одной из ведущих компаний по трудоустройству за границей 
-              уже весемь лет является компания WorkLeader. 
-              Все соответствующие документы есть в свободном доступе.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="swiper-slide">
-        <div class="row feedback">
-          <div id="maskTop" class="mask"></div><div id="maskBottom" class="mask"></div>
-          <div class="col s2 offset-s1" style="margin:0px; padding:0px;">
-            <img style="width:205px;" src="/public/images/services/JobInPol/otziv1.png">
-          </div>
-          <div class="col s7 offset-s1">
-            <span>Наталья Иванова</span><span style="position:absolute; right:0;">12.01.2019</span>
-            <p>
-              Вот и у нас наконец выдалась минутка написать отзыв. Мы уже неделю как в Польше. Скажу сразу, что этой компании можно доверять на 200%! Все честно! Отдельное спасибо Анечке!!! Вакансию хоть и ждали месяц, но не зря. Мы с мужем работаем в Барлинеке, пока все нравится(конечно не обошлось без маленьких нюансов) но все благополучно решилось! Еще раз спасибо WorkLeader! Позже скину фотографии))) По любым вопросам обращайтесь в личку, с удовольствием отвечу!         </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="swiper-slide">
-        <div class="row feedback">
-          <div id="maskTop" class="mask"></div><div id="maskBottom" class="mask"></div>
-          <div class="col s2 offset-s1" style="margin:0px; padding:0px;">
-            <img style="width:205px;" src="/public/images/services/JobInPol/otziv2.png">
-          </div>
-          <div class="col s7 offset-s1">
-            <span>Владимир Иванов</span><span style="position:absolute; right:0;">12.10.2018</span>
-            <p>
-              Спасибо большое компании WorkLeader, на работу еще не устроился, но визу уже получил. Говорили 3-4 месяца будут делать, а через 2 виза уже у меня. Очень понравилось обслуживание, много полезной информации, получил ответы на все поставленные вопросы, никаких подводных камней, надеюсь, что с работой тоже будет все ок.	
-            </p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-  </div>
-</div> -->
-
 <div class="container">
   <div class="swiper-container">
     <div class="swiper-wrapper">
@@ -216,7 +160,6 @@
                 С документами была немного волокита, за 2 мес. от момента подачи заявки выехал! Довоз до места работы со Львова. 
                 Попервах было тяжеловато. После ночных сил не было. Что касается работы, то как и везде за хорошие деньги необходимо пахать.
                 Аванс выдали на карту 15 числа около 17000грн. Деньги достойные!
-                <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis mollitia libero, porro neque, eaque deserunt quo blanditiis repellendus dolorum adipisci enim suscipit tenetur. Expedita, maxime et tempore at asperiores fugiat explicabo aliquam optio atque aspernatur vero hic reprehenderit cum reiciendis doloremque eligendi, quos corrupti voluptatum officia possimus. Incidunt commodi voluptate ad porro repellat maxime, quia, voluptas aliquam, architecto officiis corrupti. Quos eos nam vero, cupiditate enim rerum cum animi perferendis. Dolore consectetur sapiente qui pariatur quo ipsum dolores maxime ipsa esse mollitia vero totam quam eius, itaque dolorum nihil cum eligendi, veritatis nesciunt impedit similique. Ad inventore unde est quibusdam. Tempore deleniti quidem aspernatur esse explicabo, delectus ipsam voluptatibus temporibus! Aut, iusto explicabo eaque temporibus soluta dolore quaerat dolores voluptatibus inventore dicta aliquid obcaecati necessitatibus autem doloribus saepe aspernatur eius consectetur dignissimos quo officiis voluptas libero deleniti iste ea. Deserunt consectetur exercitationem mollitia doloribus voluptatibus sunt enim expedita nihil autem illo quo eveniet tempora pariatur provident delectus velit itaque, cum temporibus facere aperiam libero nobis cupiditate! Aperiam commodi iure incidunt possimus quod, nulla tempore nihil recusandae cumque placeat porro vitae aliquam! Sapiente placeat nihil facilis similique quis, qui, quidem repellendus sit quam necessitatibus in voluptates illum ex voluptatibus! Blanditiis, quisquam! -->
               </span>
             </p>
           </div>

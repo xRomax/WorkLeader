@@ -1,16 +1,24 @@
 function activeLink () {
-  var URL = window.location.href;
-  var URL_mas = URL.split('/');
-  URL_mas = URL_mas[3].split('.');
-  var URI = URL_mas[0];
-  if (URI == '') URI = 'index'; 
-  $("#" + URI).addClass('active');
+  let url = parseUrl(window.location.href).pathname;
+  let URI_MAS = url.split('/');
+  let URI = URI_MAS[1].split(',');
+  if (URI[0] == '') URI = 'index'; 
+  $("#" + URI[0]).addClass('active');
+}
+function parseUrl(url) {
+  let a = document.createElement('a');
+  a.href = url;
+  return a;
 }
 
 $(document).ready(function(){
   if ($(window).width() >= '993'){
     $("body").niceScroll();
     $("html body").css('overflow-y','hidden');
+  };
+
+  if ($(window).width() < '993'){
+    $("html body").css('overflow-x','hidden');
   }
 
   $(".dropdown-trigger").dropdown({
@@ -28,7 +36,9 @@ $(document).ready(function(){
 
   $('.parallax').parallax();
 
-  $('.collapsible').collapsible();
+  $('.collapsible').collapsible({
+    accordion: false,
+  });
 
   $('.modal').modal();
 
@@ -79,6 +89,7 @@ $(document).ready(function(){
 
   $('.ajax').submit(function(event) {
     var json;
+    let path = $(this).attr('action');
     event.preventDefault();
     $.ajax({
       type: $(this).attr('method'),
@@ -88,6 +99,9 @@ $(document).ready(function(){
       cache: false,
       processData: false,
       success: function(result) {
+        // if (path == '/jobs') {
+        //   $("html").html(result);
+        // }
         json = jQuery.parseJSON(result);
         Swal.fire({
           type: json.status,
@@ -103,27 +117,3 @@ $(document).ready(function(){
     });
   });
 });
-
-// $(document).ready(function(){
-//   var slider = document.getElementById('salary-slider');
-//     noUiSlider.create(slider, {
-//      start: [2900, 5000],
-//      connect: true,
-//      step: 100,
-//      orientation: 'horizontal',
-//      range: {
-//        'min': 2200,
-//        'max': 6000
-//      },
-//      format: wNumb({
-//        decimals: 0,
-//      })
-//     });
-  
-//     setInterval(function() {
-//       let salary = slider.noUiSlider.get();
-//       let Salary = Array.from(salary);
-//       $("#min-salary").val(Salary[0]);
-//       $("#max-salary").val(Salary[1]);
-//     }, 100);
-// });

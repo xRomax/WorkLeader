@@ -24,10 +24,11 @@ class MainController extends Controller {
 		} else $page = 1;
 
 		if (empty($_GET)) $list = $this->model->jobsList($page);
-		else $list = $this->model->jobsListFilter($page,$_GET);
+		else $list = $this->model->jobsListFilter($page,$_GET,'limit');
 
 		$vars = [
 			'pagination' => $this->model->pagination($page,$_GET),
+			'salary' => $this->model->getSalary(),
 			'list' => $list,
 		];
 		$this->view->render($vars);
@@ -49,7 +50,7 @@ class MainController extends Controller {
 
 	public function newsListAction() {
 		$vars = [
-			'list' => $this->model->dataList('news'),
+			'list' => $this->model->dataList('news','DESC'),
 		];
 		$this->view->render($vars);
 	}

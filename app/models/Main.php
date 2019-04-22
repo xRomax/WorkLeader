@@ -106,6 +106,10 @@ class Main extends Model {
 		return $this->db->row("SELECT * FROM $table WHERE url = :url",$params);
 	}
 
+	public function dataList($table, $type) {
+		return $this->db->row("SELECT * FROM $table ORDER BY id $type");
+	}
+
 	public function jobsList($page) {
 		$step = 5;
 		$position = --$page * $step;
@@ -118,39 +122,45 @@ class Main extends Model {
 		return $this->db->row($sql, $params);
 	}
 
-	public function jobsListFilter($page,$get) {
-		$step = 5; $position = --$page * $step;
+	public function jobsHot() {
 		$params = [
-			'status' => 'active',
-			'position' => (int) $position,
-			'step' => (int) $step,
-			'min' => (int) $get['min'],
-			'max' => (int) $get['max']
+			"hot" => 'show',
 		];
-		$country_filter = ''; $i = 1;
-		if (!empty($get['country'])) {
-			$country_filter = 'and (';
-			foreach($get['country'] as $value) {
-				$params["country$i"] = $value;
-				$country_filter .= "country = :country$i or "; 
-				$i++;
-			}
-			$country_filter = substr($country_filter,0,-4);
-			$country_filter .= ')';
-		}
-		$sql = "SELECT * FROM jobs WHERE status = :status and (salary >= :min and salary <= :max) $country_filter ORDER BY id ASC LIMIT :position, :step";
-		return $this->db->row($sql, $params);
+		return $this->db->row("SELECT * FROM `jobs` WHERE hot = :hot", $params);
 	}
 
-	public function jobsListFilterCount($get) {
-		$params = [
-			'status' => 'active',
-			'min' => (int) $get['min'],
-			'max' => (int) $get['max']
-		];
-		$country_filter = ''; $i = 1;
+	public function jobsListFilter($page, $get, $type) {
+		$params['status'] = 'active';
+		extract($this->jobsListFilterCheckType($page,$type));
+		if (!empty($params1)) $params = array_merge($params, $params1);
+
+		extract($this->jobsListFilterCountry($get));
+		if (!empty($params2)) $params = array_merge($params, $params2);
+
+		extract($this->jobsListFilterSalary($get));
+		if (!empty($params3)) $params = array_merge($params, $params3);
+
+		$sql = "SELECT * FROM jobs WHERE status = :status $salary $country_filter ORDER BY id ASC $limit";
+		return $this->db->row($sql, $params);
+	}
+	
+	public function jobsListFilterCheckType($page, $type) {
+		if ($type == 'limit') {
+			$step = 5; $position = --$page * $step;
+			$limit = 'LIMIT :position, :step';
+			$params['position'] = (int) $position;
+			$params['step'] = (int) $step;
+		} else if ($type == 'count') {
+			$limit = '';
+			$params = [];
+		}
+		return array('params1' => $params, 'limit' => $limit);
+	}
+
+	public function jobsListFilterCountry($get) {
+		$country_filter = ''; $params = [];
 		if (!empty($get['country'])) {
-			$country_filter = 'and (';
+			$country_filter = 'and ('; $i = 1;
 			foreach($get['country'] as $value) {
 				$params["country$i"] = $value;
 				$country_filter .= "country = :country$i or "; 
@@ -159,30 +169,21 @@ class Main extends Model {
 			$country_filter = substr($country_filter,0,-4);
 			$country_filter .= ')';
 		}
-		$sql = "SELECT * FROM jobs WHERE status = :status and (salary >= :min and salary <= :max) $country_filter ORDER BY id ASC";
-		return $this->db->row($sql, $params);
+		return array('params2' => $params, 'country_filter' => $country_filter);
+	}
+
+	public function jobsListFilterSalary($get) {
+		$salary = ''; $params = [];
+		if (!empty($get['min']) and !empty($get['max'])) {
+			$params['min'] = (int) $get['min'];
+			$params['max'] = (int) $get['max'];
+			$salary = 'and (salary >= :min and salary <= :max)';
+		}
+		return array('params3' => $params, 'salary' => $salary);
 	}
 
 	public function pagination($page,$get) {
-		if (!empty($get)) {
-			$filter = '?';
-			foreach ($get as $key => $value) {
-				if (is_array($value)) {
-					foreach ($value as $val) {
-						$filter .= $key.'[]='.$val;
-						$filter .= '&';
-					}
-				} else {
-					$filter .= $key.'='.$value;
-					$filter .= '&';
-				}
-			}
-			$filter = rtrim($filter,'&');
-			$count = (int) count($this->jobsListFilterCount($_GET));
-		} else {
-			$filter = NULL;
-			$count = $this->db->query("SELECT * FROM jobs WHERE status = 'active'")->rowCount();
-		}
+		extract($this->paginationFilter($page,$get));
 		$left = $page - 1; $right = $page + 1; $step = 5;
 		$amoun_pages = ceil( $count / $step);
 		if ($amoun_pages <= 1) return false;
@@ -207,15 +208,40 @@ class Main extends Model {
 		return $html;
 	}
 
-	public function jobsHot() {
-		$params = [
-			"hot" => 'show',
-		];
-		return $this->db->row("SELECT * FROM `jobs` WHERE hot = :hot", $params);
+	public function paginationFilter($page, $get) {
+		if (!empty($get)) {
+			$filter = '?';
+			foreach ($get as $key => $value) {
+				if (is_array($value)) {
+					foreach ($value as $val) {
+						$filter .= $key.'[]='.$val;
+						$filter .= '&';
+					}
+				} else {
+					$filter .= $key.'='.$value;
+					$filter .= '&';
+				}
+			}
+			$filter = rtrim($filter,'&');
+			$count = count($this->jobsListFilter($page,$get,'count'));
+		} else {
+			$filter = NULL;
+			$count = $this->db->query("SELECT * FROM jobs WHERE status = 'active'")->rowCount();
+		}
+		return array('filter' => $filter, 'count' => $count);
 	}
 
-	public function dataList($table) {
-		return $this->db->row("SELECT * FROM $table ORDER BY id ASC");
+	public function getSalary () {
+		$min = 99999999999999;
+		$max = 0;
+		$result = $this->db->row("SELECT * FROM jobs WHERE status = 'active'");
+		foreach ($result as $key => $value) {
+			if ($value['salary'] < $min) $min = $value['salary'];
+		}
+		foreach ($result as $key => $value) {
+			if ($value['salary'] > $max) $max = $value['salary'];
+		}
+		return array('max' => $max, 'min' => $min);
 	}
 
 }
