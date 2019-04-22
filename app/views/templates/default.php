@@ -8,30 +8,22 @@
 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
   <link rel="stylesheet" href="/public/styles/materialize.css">
   <link rel="stylesheet" href="https://materializecss.com/extras/noUiSlider/nouislider.css">
   <link rel="stylesheet" href="/public/styles/swiper.css">
   <link rel="stylesheet" href="/public/styles/sweetalert2.css">
-
 	<link rel="stylesheet" href="/public/styles/style.css">
-	<link rel="shortcut icon" href="/public/images/favicon.png" type="image/x-icon">
-
+  <link rel="shortcut icon" href="/public/images/favicon.png" type="image/x-icon">
+  
   <script src="/public/scripts/jquery.js"></script>
   <script src="/public/scripts/jquery.maskedinput.js"></script>
-  
   <script src="/public/scripts/sweetalert2.js"></script>
   <script src="/public/scripts/sweetalert2.all.js"></script>
-  
   <script src="/public/scripts/materialize.js"></script>
   <script src="https://materializecss.com/extras/noUiSlider/nouislider.js"></script>
   <script src="/public/scripts/nicescroll.js"></script>
   <script src="/public/scripts/swiper.js"></script>
-
   <script src="/public/scripts/script.js"></script>
-  
-
-	<title>WorkLeader | Работа в Европейских странах</title>
 </head>
 <body>
   <div class="navbar-fixed">
@@ -47,8 +39,11 @@
         <a style="height:100%;" id="logo-container" href="/" class="brand-logo hide-on-med-and-down show-on-large"><img style="padding: 6px;" height="64" src="/public/images/logo.png" alt="WorkLeader"></a>
         <a style="height:100%;" id="logo-container" href="/" class="brand-logo hide-on-large-only show-on-medium-and-down"><img style="padding: 6px;" height="55" src="/public/images/logo.png" alt="WorkLeader"></a>
         <span class="navbar-info teal-text">
+          <p>
             <a id="tel-number" class="center teal-text text-lighten-2" href="tel:0509468428"><i class="fas fa-1x fa-mobile-alt"></i> +38(050)946-84-28</a>
             <a id="tel-number" class="center teal-text text-lighten-2" href="tel:0684331027"><i class="fas fa-1x fa-mobile-alt"></i> +38(068)433-10-27</a>
+            <a id="tel-number" class="center teal-text text-lighten-2" href="https://goo.gl/maps/ZP6oaMw2cUM2" target="_blank"><i class="fas fa-1x fa-map-marked"></i> г.Днепр, ул. Глинки 20</a>
+          </p>
         </span>
         <ul class="right hide-on-med-and-down">
           <li id='index'><a href="/">Главная</a></li>
@@ -56,7 +51,7 @@
           <li id='jobs'><a href="/jobs">Вакансии</a></li>
           <li id='about'><a href="/about">О нас</a></li>
           <li id='news'><a href="/news">Новости</a></li>
-          </ul>
+        </ul>
         
         <ul id="nav-mobile" class="sidenav">
           <li id='index'><a href="/">Главная</a></li>
@@ -64,7 +59,7 @@
           <li id='services'><a href="/services">Услуги</a></li>
           <li id='about'><a href="/about">О нас</a></li>
           <li id='news'><a href="/news">Новости</a></li>
-          </ul>
+        </ul>
         <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       </div>
     </nav>

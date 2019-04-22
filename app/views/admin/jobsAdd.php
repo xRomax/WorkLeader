@@ -1,3 +1,4 @@
+<title>Добавить новую вакансию | Панель Администратора</title>
 <div class="jobs_form">
 	<div class="head">Добавить новую вакансию</div>
 	<div class="body">
@@ -22,7 +23,7 @@
           <option value="pol">Польша</option>
           <option value="cze">Чехия</option>
           <option value="ger">Германия</option>
-          <option value="lith">Литва</option>
+          <option value="lit">Литва</option>
           <option value="est">Эстония</option>
           <option value="nor">Норвегия</option>
           <option value="ukr">Украина</option>

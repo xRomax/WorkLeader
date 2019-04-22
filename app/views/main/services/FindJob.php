@@ -1,8 +1,8 @@
+<title>Услуга "Поиск вакансий" от компании WorkLeader | Работа в Европейских странах</title>
 <div class="image hide-on-med-and-down show-on-large">
   <img src="/public/images/services/FindJobs/top.png">
   <h3 class="white-text center">Поиск вакансий</h3>
 </div>
-
 <div class="image hide-on-large-only show-on-medium-and-down center">
   <img src="/public/images/services/FindJobs/topMobile.png">
   <h5 class="center-align white-text hide-on-medium-only">Поиск вакансий</h5>
@@ -20,18 +20,18 @@
       которые востребованы в польском государстве. Обращайте внимание на трудовые условия работы и на сколько
       высокооплачиваемая должность и вакансия в Европе.
     </div>
-
     <div class="col l5 offset-l1 s12 v-line">
       <?php require_once('sideForm.php'); ?>
     </div>
   </div>
-  <br><br>
-  <div class="row">
-    <div class="col l6 s12">
-      <img style="width:90%;" class="mobile-image" src="/public/images/services/FindJobs/mehanik.png" alt="">
-    </div>
 
-    <div class="col l6 s12">
+  <br><br>
+
+  <div class="row">
+    <div class="col l6 m6 s12">
+      <img style="width:100%;" class="mobile-image" src="/public/images/services/FindJobs/mehanik.png" alt="">
+    </div>
+    <div class="col l6 m6 s12">
       Будет не тяжело найти работу в Польше, если у соискателя будет определенный возраст, 
       желательным является для мужчин и женщин в промежутке от 20-50 лет, на это обращают внимание различные польские фирмы и агентства. 
       Хорошие перспективы будут иметь работники, которые имеют навыки и умеют общаться на польском языке. 
@@ -41,10 +41,12 @@
        на сборочные конвейеры разнорабочим BMW, Audi , Skoda и другие.
     </div>
   </div>
+
   <br><br>
+
   <div class="row">
-    <div class="col l5 s12">
-      <img class="mobile-image" src="/public/images/services/FindJobs/zavod.png" alt="Завод">
+    <div class="col l6 m6 s12">
+      <img style="width:100%;" class="mobile-image" src="/public/images/services/FindJobs/zavod.png" alt="Завод">
         <h6 style="text-indent:1.5em;">Неквалифицированные работники</h6>
         <span>Трудоустройство без квалификации осуществляется на заводы, крупные предприятия и фабрики. 
           Требуются фасовщики, упаковщики, заводские специалисты.
@@ -54,9 +56,8 @@
           <b>Зарплата от 10.50 злт/час</b>
         </div>
     </div>
-
-    <div class="col l5 offset-l1 s12">
-      <img class="mobile-image" src="/public/images/services/FindJobs/stanok.png" alt="Швейная машинка">
+    <div class="col l6 m6 s12">
+      <img style="width:100%;" class="mobile-image" src="/public/images/services/FindJobs/stanok.png" alt="Швейная машинка">
         <h6 style="text-indent:1.5em;">Квалифицированные специалисты</h6>
         <span>Вакансии для квалифицированных специалистов: повара, пекари, кондитеры, швеи, строители. 
           Предусмотрено проживание за счет работодателя.</span>
@@ -66,7 +67,9 @@
         </div>
     </div>
   </div>
+
   <br><br>
+
   <div class="row">
     <div class="col s12">
       <div style="text-align:center;" class="blue lighten-1">
@@ -84,25 +87,25 @@
   <br><br>
 
   <div class="row">
-    <div class="col l6 s12">
-      <img class="mobile-image" src="/public/images/services/FindJobs/konsultac.png" alt="Консультант">
+    <div class="col l6 m5 s12">
+      <img style="width:100%;" class="mobile-image" src="/public/images/services/FindJobs/konsultac.png" alt="Консультант">
     </div>
-
-    <div class="col l6 s12">
+    <div class="col l6 m6 s12">
       Компания «WorkLeader» имеет довольно много предложений для желающих работать в строительстве, медицине, торговле, 
       преподавать языки как взрослым, так и детям, работать бухгалтером, торговым агентом и т.п. Но в Польше нуждаются и в работниках без квалификации.
       Итак, просмотрите размещенные на нашем сайте предложения, и если что-то соответствуем Вашим запросам – 
       менеджеры компании подберут для Вас вакансии и детально проконсультируют.
     </div>
   </div>
-  <br><br>
 </div>
+
+<br><br>
 
 <div style="background: url(/public/images/services/FindJobs/1.png) no-repeat top center;" class="contact-block white-text"><br>
   <h6>Впишите свой номер телефона и мы свяжемся с Вами в ближайшее время</h6><br>
   <form action="/services/find_jobs" method="post" class="bottomForm ajax">
-  <input style="position:fixed; top:-100000px;" type="reset">
-  <input type="hidden" name="type" value="bottomForm">
+    <input style="position:fixed; top:-100000px;" type="reset">
+    <input type="hidden" name="type" value="bottomForm">
     <div class="row">
       <div class="input-field col l2 offset-l3 m4 offset-m2 s6">
         <input id="bottomName" name="name" type="text" class="validate white-text">
@@ -113,9 +116,7 @@
         <label class="white-text" for="phone">Телефон</label>
       </div>
       <div class="col l2 m12 s12">
-        <a class="btn waves-effect waves-light btn-large blue lighten-2 sendBottomForm">Узнать больше!
-          <i class="material-icons right">send</i>
-        </a>
+        <a class="btn waves-effect waves-light btn-large blue lighten-2 sendBottomForm">Узнать больше!<i class="material-icons right">send</i></a>
       </div>
     </div>
   </form>

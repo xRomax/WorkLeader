@@ -1,4 +1,4 @@
-<title>Доступ запрещён</title>
+<title>Доступ запрещён | Ошибка 403</title>
 <style>
   body {
     background: #f1f1f1;

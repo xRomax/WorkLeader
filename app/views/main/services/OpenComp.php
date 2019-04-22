@@ -1,8 +1,8 @@
+<title>Услуга "Открытие фирмы в Польше" от компании WorkLeader | Работа в Европейских странах</title>
 <div class="image hide-on-med-and-down show-on-large">
   <img src="/public/images/services/openComp/top.png">
   <h3 class="white-text center">Открытие компании в Польше</h3>
 </div>
-
 <div class="image hide-on-large-only show-on-medium-and-down center">
   <img src="/public/images/services/openComp/topMobile.png">
   <h5 class="center-align white-text hide-on-medium-only">Открытие компании в Польше</h5>
@@ -21,7 +21,6 @@
       Среди доступных форм компании наиболее интересным является общество с 
       ограниченной ответственностью (Spolka z o.o).
     </div>
-
     <div class="col l5 offset-l1 s12 v-line">
       <?php require_once('sideForm.php'); ?>
     </div>
@@ -34,7 +33,6 @@
     которые имеют квалификацию в этом вопросе, которые прошли весь путь самостоятельно и успешно регистрируют компании 
     в Польше на протяжении 4 лет.
   </div>
-
   <div class="row">
     <div class="col l6 s12">
       <img style="width:80%;" src="/public/images/services/openComp/twoWomans.png" alt="Work">
@@ -48,7 +46,9 @@
       </ol>
     </div>
   </div>
+
 <br><br>
+
   <div class="row">
     <div class="col l6 s12">
       <h5>Стоимость открытия компании в Польше составляет 600 евро и включает в себя:</h5>
@@ -63,7 +63,6 @@
         <li><a>открытие расчетного счета в банке и закрепление за бухгалтером;</a></li>
       </ul>
     </div>
-
     <div class="col l6 s12">
       <div class="row">
         <div class="col s12">
@@ -80,8 +79,8 @@
 <div style="background: url(/public/images/services/openComp/towers.png) no-repeat top center;" class="contact-block white-text"><br>
   <h6>Впишите свой номер телефона и мы свяжемся с Вами в ближайшее время</h6><br>
   <form action="/services/find_jobs" method="post" class="bottomForm ajax">
-  <input style="position:fixed; top:-100000px;" type="reset">
-  <input type="hidden" name="type" value="bottomForm">
+    <input style="position:fixed; top:-100000px;" type="reset">
+    <input type="hidden" name="type" value="bottomForm">
     <div class="row">
       <div class="input-field col l2 offset-l3 m4 offset-m2 s6">
         <input id="bottomName" name="name" type="text" class="validate white-text">
@@ -92,9 +91,7 @@
         <label class="white-text" for="phone">Телефон</label>
       </div>
       <div class="col l2 m12 s12">
-        <a class="btn waves-effect waves-light btn-large blue lighten-2 sendBottomForm">Узнать больше!
-          <i class="material-icons right">send</i>
-        </a>
+        <a class="btn waves-effect waves-light btn-large blue lighten-2 sendBottomForm">Узнать больше!<i class="material-icons right">send</i></a>
       </div>
     </div>
   </form>

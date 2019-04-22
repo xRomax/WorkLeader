@@ -1,3 +1,4 @@
+<title>Список новостей | WorkLeader | Работа в Европейских странах</title>
 <div class="container">
   <?php if(empty($list)): ?>
     <h4 class="center teal-text">Новости отсутствуют</h4>

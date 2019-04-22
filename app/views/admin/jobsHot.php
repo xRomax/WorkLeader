@@ -1,3 +1,4 @@
+<title>Горячие вакансии редактировать раздел | Панель Администратора</title>
 <div class="jobs_form">
   <div class="head">Список вакансий</div>
   <div class="body hide-on-med-and-down show-on-large">

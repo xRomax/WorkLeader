@@ -7,7 +7,6 @@
   
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
   <link rel="stylesheet" href="/public/styles/materialize.css">
   <link rel="stylesheet" href="/public/styles/sweetalert2.css">
 	<link rel="stylesheet" href="/public/styles/style-admin.css">
@@ -15,14 +14,10 @@
 
   <script src="/public/scripts/jquery.js"></script>
   <script src="/public/scripts/jquery.maskedinput.js"></script>
-
   <script src="/public/scripts/sweetalert2.js"></script>
   <script src="/public/scripts/sweetalert2.all.js"></script>
-
   <script src="/public/scripts/materialize.js"></script>
   <script src="/public/scripts/script-admin.js"></script>
-
-	<title>Панель администратора</title>
 </head>
 <body>
 <?php if ($this->route["action"] != "login"): ?>

@@ -1,3 +1,4 @@
+<title>Редактировать вакансию "<?php echo $data['name']; ?>" | Панель Администратора</title>
 <div class="jobs_form">
 	<div class="head">Редактировать вакансию "<?php echo $data['name']; ?>"</div>
 	<div class="body">
@@ -16,7 +17,7 @@
           <option value="pol" <?php if($data["country"] == 'pol') echo 'selected' ?>>Польша</option>
           <option value="cze" <?php if($data["country"] == 'cze') echo 'selected' ?>>Чехия</option>
           <option value="ger" <?php if($data["country"] == 'ger') echo 'selected' ?>>Германия</option>
-          <option value="lith" <?php if($data["country"] == 'lith') echo 'selected' ?>>Литва</option>
+          <option value="lit" <?php if($data["country"] == 'lit') echo 'selected' ?>>Литва</option>
           <option value="est" <?php if($data["country"] == 'est') echo 'selected' ?>>Эстония</option>
           <option value="nor" <?php if($data["country"] == 'nor') echo 'selected' ?>>Норвегия</option>
           <option value="ukr" <?php if($data["country"] == 'ukr') echo 'selected' ?>>Украина</option>

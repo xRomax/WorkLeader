@@ -1,3 +1,4 @@
+<title>Вакансия "<?php echo $data["name"]; ?>" | WorkLeader | Работа в Европейских странах</title>
 <?php 
 $country_key = $data["country"];
 $sex_key = $data["sex"];
@@ -9,7 +10,7 @@ require_once('app/config/mas.php');
       <div class="col s12">
         <a href="/" class="breadcrumb">Главная</a>
         <a href="/jobs" class="breadcrumb">Вакансии</a>
-        <a href="/news/<?php echo $data["url"]; ?>#!" class="breadcrumb disabled"><?php echo $data["name"]; ?></a>
+        <a href="/jobs/<?php echo $data["url"]; ?>#!" class="breadcrumb hide-on-med-and-down"><?php echo $data["name"]; ?></a>
       </div>
     </div>
   </div>

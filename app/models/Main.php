@@ -124,8 +124,8 @@ class Main extends Model {
 			'status' => 'active',
 			'position' => (int) $position,
 			'step' => (int) $step,
-			'minsalary' => (int) $get['minsalary'],
-			'maxsalary' => (int) $get['maxsalary']
+			'min' => (int) $get['min'],
+			'max' => (int) $get['max']
 		];
 		$country_filter = ''; $i = 1;
 		if (!empty($get['country'])) {
@@ -138,15 +138,15 @@ class Main extends Model {
 			$country_filter = substr($country_filter,0,-4);
 			$country_filter .= ')';
 		}
-		$sql = "SELECT * FROM jobs WHERE status = :status and (salary >= :minsalary and salary <= :maxsalary) $country_filter ORDER BY id ASC LIMIT :position, :step";
+		$sql = "SELECT * FROM jobs WHERE status = :status and (salary >= :min and salary <= :max) $country_filter ORDER BY id ASC LIMIT :position, :step";
 		return $this->db->row($sql, $params);
 	}
 
 	public function jobsListFilterCount($get) {
 		$params = [
 			'status' => 'active',
-			'minsalary' => (int) $get['minsalary'],
-			'maxsalary' => (int) $get['maxsalary']
+			'min' => (int) $get['min'],
+			'max' => (int) $get['max']
 		];
 		$country_filter = ''; $i = 1;
 		if (!empty($get['country'])) {
@@ -159,7 +159,7 @@ class Main extends Model {
 			$country_filter = substr($country_filter,0,-4);
 			$country_filter .= ')';
 		}
-		$sql = "SELECT * FROM jobs WHERE status = :status and (salary >= :minsalary and salary <= :maxsalary) $country_filter ORDER BY id ASC";
+		$sql = "SELECT * FROM jobs WHERE status = :status and (salary >= :min and salary <= :max) $country_filter ORDER BY id ASC";
 		return $this->db->row($sql, $params);
 	}
 

@@ -1,3 +1,4 @@
+<title>Редактировать новость "<?php echo $data['name']; ?>" | Панель Администратора</title>
 <div class="jobs_form">
 	<div class="head">Редактировать новость "<?php echo $data['name']; ?>"</div>
 	<div class="body">

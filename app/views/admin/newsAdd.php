@@ -1,3 +1,4 @@
+<title>Добавить новую новость | Панель Администратора</title>
 <div class="jobs_form">
 	<div class="head">Добавить новость</div>
 	<div class="body">

@@ -1,18 +1,8 @@
 html, body {
   font-family: Arial, Helvetica, sans-serif;
 }
-@media only screen and (min-width : 993px) {
-  html, body {
-    overflow-y:hidden;
-  }
-}
 
-.nicescroll-rails-hr {
-  display: none;
-}
-
-nav ul a,
-nav .brand-logo {
+nav ul a {
   color: #444;
 }
 
@@ -64,26 +54,9 @@ p {
   width: 100%;
 }
 
-.jobs-img {
-  width: 230px;
-}
-
-@media only screen and (min-width : 993px) {
-  .parallax-container .country-flag {
-    position: absolute;
-    top: 40%;
-  }
-  .ukraine-img {
-    width: 70%;
-  }
-}
-
 @media only screen and (max-width : 992px) {
   .parallax-container .section {
     position: absolute;
-    top: 10%;
-  }
-  #index-banner .section {
     top: 10%;
   }
   .mobile-image {
@@ -93,14 +66,9 @@ p {
 }
 
 @media only screen and (max-width : 600px) {
-  #index-banner .section {
-    top: 0;
-  }
   .carousel .indicators {
     display: none;
   }
-  
-
   #hellopreloader_preload {
     position: absolute;
     width: 4000px;
@@ -121,10 +89,7 @@ p {
 #country-flag .naprav-item a h6{
   font-weight: bold;
   font-size: 20px;
-  /* border-bottom: 6px solid #36a2d5;
-  border-radius: 6px; */
   padding-bottom: 5px;
-  /* color: white; */
 }
 
 .icon-block {
@@ -168,6 +133,18 @@ footer.page-footer {
   padding: 3px;
 }
 
+#reviewsImg {
+  float:left;
+  margin:0 8px 2px 0;
+  width:15%;
+}
+@media only screen and (max-width: 993px) {
+  #reviewsImg {
+    width:35%;
+  }
+}
+
+
 .center-el {
   position: absolute;
   top: 50%;
@@ -179,18 +156,13 @@ footer.page-footer {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-70%, -50%);
+  transform: translate(-67%, -50%);
 }
 
-.navbar-info > a {
+.navbar-info  a {
   color: #009688 !important;
   margin: 0 10px;
-  font-size: 19px;
-}
-@media only screen and (max-width : 1136px) { 
-  .navbar-info {
-    display: none;
-  }
+  font-size: 15px;
 }
 
 .v-line { 
@@ -234,11 +206,9 @@ footer.page-footer {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 /* ---------------- */
 
 /* Блок отзывов */
-
 .mask {
   position: absolute;
   width: 50%;
@@ -269,7 +239,6 @@ footer.page-footer {
   float:left;
   width:100px;
 }
-
 /* ------------- */
 
 /* Блок контактов */
@@ -293,9 +262,7 @@ footer.page-footer {
 }
 .feedback-block::before {
   position: absolute;
-  /* float: left; */
   top: -114px;
-  /* left: 5px; */
   display: inline-block;
   width: 189px;
   height: 243px;
@@ -308,6 +275,7 @@ footer.page-footer {
   }
 }
 /* ------------------ */
+
 /* Новости */
 #news1 {
   background-color: #009688 !important;
@@ -330,7 +298,9 @@ footer.page-footer {
 .leftfoto{
   float:left;
   margin: 5px 10px 5px 0;
-  }
+}
+
+
 /* -------- */
 
 /* bottomForm */

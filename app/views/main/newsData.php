@@ -1,3 +1,4 @@
+<title><?php echo $data["name"]; ?> | WorkLeader | Работа в Европейских странах</title>
 <nav>
   <div class="nav-wrapper" id="news1">
     <div class="container">

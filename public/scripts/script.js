@@ -10,6 +10,7 @@ function activeLink () {
 $(document).ready(function(){
   if ($(window).width() >= '993'){
     $("body").niceScroll();
+    $("html body").css('overflow-y','hidden');
   }
 
   $(".dropdown-trigger").dropdown({
@@ -38,36 +39,13 @@ $(document).ready(function(){
 
   $('.carousel').carousel();
 
-  $('.carousel.carousel-country').carousel({
-    duration: 500,
-    padding: 50,
-    numVisible: 7,
-    dist: -40,
-  });
-
   $('.carousel.carousel-slider').carousel({
     fullWidth: true,
     indicators: true,
   });
 
-  $('.carousel.carousel-country-medium-and-down').carousel({
-    fullWidth: true,
-    indicators: true,
-    numVisible: 3,
-  });
-
-  if ($(window).width() <= '720'){
-    $('.carousel-country-medium-and-down').carousel({
-      indicators: false,
-      numVisible: 3,
-      padding: -50,
-      duration: 800,
-    });
-    $(".banner").height(200);
-  };
-
-  if ($(window).width() <= '1000'){
-    $('#tel-number').css("display","none");
+  if ($(window).width() <= '1258'){
+    $('.navbar-info').css("display","none");
   }
 
   $('.scrollspy').scrollSpy({
@@ -79,7 +57,7 @@ $(document).ready(function(){
   });
 
   setInterval(function() {
-    $('.banner').carousel('next');
+    $('.carousel').carousel('next');
   }, 5000);
 
 

@@ -3,7 +3,7 @@ $country_mas = [
   "cze" => "Чехия",
   "est" => "Эстония",
   "ger" => "Германия",
-  "lith" => "Литва",
+  "lit" => "Литва",
   "nor" => "Норвегия",
   "pol" => "Польша",
   "ukr" => "Украина",
@@ -14,13 +14,14 @@ $sex_mas = [
   "female" => "Женский",
   "all" => "Любой",
 ];
-$currency_mas = [
+$country_to_currency = [
   "cze" => "CZK",
   "est" => "EEK",
   "ger" => "EUR",
-  "lith" => "LTL",
+  "lit" => "LTL",
   "nor" => "NOK",
   "pol" => "PLN",
   "ukr" => "UAH",
 ]
+
 ?>

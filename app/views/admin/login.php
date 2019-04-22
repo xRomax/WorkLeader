@@ -3,6 +3,7 @@
 		background-color: #343a40;
 	}
 </style>
+<title>Вход в Панель Администратора</title>
 <div class="auth_form center-el">
 	<div class="head">Вход в панель администратора</div>
 	<div class="body">

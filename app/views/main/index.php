@@ -1,16 +1,17 @@
-<style type="text/css">#hellopreloader>p{display:none;}#hellopreloader_preload{display: block;position: fixed;z-index: 99999;top: 0;left: 0;width: 100%;height: 100%;min-width: 1000px;background: #19B5FE url(http://hello-site.ru//main/images/preloads/grid.svg) center center no-repeat;background-size:54px;}</style>
+<title>WorkLeader | Работа в Европейских странах</title>
+<!-- <style type="text/css">#hellopreloader>p{display:none;}#hellopreloader_preload{display: block;position: fixed;z-index: 99999;top: 0;left: 0;width: 100%;height: 100%;min-width: 1000px;background: #19B5FE url(http://hello-site.ru//main/images/preloads/grid.svg) center center no-repeat;background-size:54px;}</style>
 <div id="hellopreloader"><div id="hellopreloader_preload"></div><p><a href="http://hello-site.ru">Hello-Site.ru. Бесплатный конструктор сайтов.</a></p></div>
-<script type="text/javascript">var hellopreloader = document.getElementById("hellopreloader_preload");function fadeOutnojquery(el){el.style.opacity = 1;var interhellopreloader = setInterval(function(){el.style.opacity = el.style.opacity - 0.05;if (el.style.opacity <=0.05){ clearInterval(interhellopreloader);hellopreloader.style.display = "none";}},16);}window.onload = function(){setTimeout(function(){fadeOutnojquery(hellopreloader);},1500);};</script>
+<script type="text/javascript">var hellopreloader = document.getElementById("hellopreloader_preload");function fadeOutnojquery(el){el.style.opacity = 1;var interhellopreloader = setInterval(function(){el.style.opacity = el.style.opacity - 0.05;if (el.style.opacity <=0.05){ clearInterval(interhellopreloader);hellopreloader.style.display = "none";}},16);}window.onload = function(){setTimeout(function(){fadeOutnojquery(hellopreloader);},1500);};</script> -->
 
-<div class="carousel carousel-slider banner hide-on-med-and-down show-on-large">
-  <a class="carousel-item" href=""><img src="/public/images/banner/1.jpg"></a>
-  <a class="carousel-item" href=""><img src="/public/images/banner/2.jpg"></a>
-  <a class="carousel-item" href=""><img src="/public/images/banner/3.jpg"></a>
+<div class="carousel carousel-slider hide-on-med-and-down show-on-large">
+  <a class="carousel-item" href="#!"><img src="/public/images/banner/1.jpg"></a>
+  <a class="carousel-item" href="#!"><img src="/public/images/banner/2.jpg"></a>
+  <a class="carousel-item" href="#!"><img src="/public/images/banner/3.jpg"></a>
 </div>
-<div class="carousel carousel-slider banner hide-on-large-only show-on-medium-and-down">
-  <a class="carousel-item" href=""><img src="/public/images/banner/mobile1.jpg"></a>
-  <a class="carousel-item" href=""><img src="/public/images/banner/mobile2.jpg"></a>
-  <a class="carousel-item" href=""><img src="/public/images/banner/mobile3.jpg"></a>
+<div class="carousel carousel-slider hide-on-large-only show-on-medium-and-down">
+  <a class="carousel-item" href="#!"><img src="/public/images/banner/mobile1.jpg"></a>
+  <a class="carousel-item" href="#!"><img src="/public/images/banner/mobile2.jpg"></a>
+  <a class="carousel-item" href="#!"><img src="/public/images/banner/mobile3.jpg"></a>
 </div>
 
 <div class="col hide-on-small-only m3 l2 sticky-block teal lighten-2">
@@ -28,7 +29,7 @@
   <div class="section scrollspy" id="why-we">
     <div class="row">
       <div class="col s12 center">
-        <h2 class="teal-text text-lighten-2">Почему нужно выбрать нас?</h2>
+        <h2 class="teal-text">Почему нужно выбрать нас?</h2>
       </div>
     </div>
 
@@ -91,24 +92,21 @@
   </div>
 </div>
 
-<br><br>
+<br>
 
 <div class="parallax-container valign-wrapper hide-on-med-and-down show-on-large">
+  <h2 class="teal-text center">Наши направления</h2>
   <div class="no-pad-bot section scrollspy" id="country-flag">
     <div class="container">
-      <h4 class="teal-text center">Наши направления</h4><br><br>
-      <div class="row ">
-        <div class="row center">
-          <div class="col l3 naprav-item"><a href="/jobs?country=cze" target="_blank"><img src="public/images/flag/cze.png"><h6>Работа в Чехии</h6></a></div>
-          <div class="col l3 naprav-item"><a href="/jobs?country=ger" target="_blank"><img src="public/images/flag/ger.png"><h6>Работа в Германии</h6></a></div>
-          <div class="col l3 naprav-item"><a href="/jobs?country=pol" target="_blank"><img src="public/images/flag/pol.png"><h6>Работа в Польше</h6></a></div>
-          <div class="col l3 naprav-item"><a href="/jobs?country=nor" target="_blank"><img src="public/images/flag/nor.png"><h6>Работа в Норвегии</h6></a></div>
-        </div>
-        <div class="row">
-          <div class="col l3 offset-l2 naprav-item"><a href="/jobs?country=ukr" target="_blank"><img src="public/images/flag/ukr.png"><h6>Работа в Украине</h6></a></div>
-          <div class="col l3 naprav-item"><a href="/jobs?country=est" target="_blank"><img src="public/images/flag/est.png"><h6>Работа в Эстонии</h6></a></div>
-          <div class="col l3 naprav-item"><a href="/jobs?country=lith" target="_blank"><img src="public/images/flag/lith.png"><h6>Работа в Литве</h6></a></div>
-        </div>
+      <div class="row center">
+        <div class="col l4 naprav-item"><a href="/jobs?country[]=cze&min=500&max=4000" target="_blank"><img src="public/images/flag/cze.png"><h6>Работа в Чехии</h6></a></div>
+        <div class="col l4 naprav-item"><a href="/jobs?country[]=ger&min=500&max=4000" target="_blank"><img src="public/images/flag/ger.png"><h6>Работа в Германии</h6></a></div>
+        <div class="col l4 naprav-item"><a href="/jobs?country[]=pol&min=500&max=4000" target="_blank"><img src="public/images/flag/pol.png"><h6>Работа в Польше</h6></a></div>
+      </div>
+      <div class="row center">
+        <div class="col l4 naprav-item"><a href="/jobs?country[]=nor&min=500&max=4000" target="_blank"><img src="public/images/flag/nor.png"><h6>Работа в Норвегии</h6></a></div>
+        <div class="col l4 naprav-item"><a href="/jobs?country[]=est&min=500&max=4000" target="_blank"><img src="public/images/flag/est.png"><h6>Работа в Эстонии</h6></a></div>
+        <div class="col l4 naprav-item"><a href="/jobs?country[]=lit&min=500&max=4000" target="_blank"><img src="public/images/flag/lit.png"><h6>Работа в Литве</h6></a></div>
       </div>
     </div>
   </div>
@@ -116,30 +114,27 @@
 </div>
 
 <div class="container naprav hide-on-large-only show-on-medium-and-down center">
-  <h4>Наши направления</h4>
+  <h4 class="teal-text center">Наши направления</h4>
   <div class="row">
-    <div class="col s6 naprav-item"><a href="/jobs/" target="_blank"><img src="public/images/flag/cze.png"><h6>Работа в Чехии</h6></a></div>
-    <div class="col s6 naprav-item"><a href="/jobs/" target="_blank"><img src="public/images/flag/ger.png"><h6>Работа в Германии</h6></a></div>
+    <div class="col s6 naprav-item"><a href="/jobs?country[]=cze&min=500&max=4000" target="_blank"><img src="public/images/flag/cze.png"><h6>Работа в Чехии</h6></a></div>
+    <div class="col s6 naprav-item"><a href="/jobs?country[]=ger&min=500&max=4000" target="_blank"><img src="public/images/flag/ger.png"><h6>Работа в Германии</h6></a></div>
   </div>
   <div class="row">
-    <div class="col s6 naprav-item"><a href="/jobs/" target="_blank"><img src="public/images/flag/pol.png"><h6>Работа в Польше</h6></a></div>
-    <div class="col s6 naprav-item"><a href="/jobs/" target="_blank"><img src="public/images/flag/nor.png"><h6>Работа в Норвегии</h6></a></div>
+    <div class="col s6 naprav-item"><a href="/jobs?country[]=pol&min=500&max=4000" target="_blank"><img src="public/images/flag/pol.png"><h6>Работа в Польше</h6></a></div>
+    <div class="col s6 naprav-item"><a href="/jobs?country[]=nor&min=500&max=4000" target="_blank"><img src="public/images/flag/nor.png"><h6>Работа в Норвегии</h6></a></div>
   </div>
   <div class="row">
-    <div class="col s6 naprav-item"><a href="/jobs/" target="_blank"><img src="public/images/flag/ukr.png"><h6>Работа в Украине</h6></a></div>
-    <div class="col s6 naprav-item"><a href="/jobs/" target="_blank"><img src="public/images/flag/lith.png"><h6>Работа в Литве</h6></a></div>
-  </div>
-  <div class="row">
-    <div class="col s6 offset-s3 naprav-item center"><a href="/jobs/" target="_blank"><img src="public/images/flag/est.png"><h6>Работа в Эстонии</h6></a></div>
+    <div class="col s6 naprav-item"><a href="/jobs?country[]=est&min=500&max=4000" target="_blank"><img src="public/images/flag/est.png"><h6>Работа в Эстонии</h6></a></div>
+    <div class="col s6 naprav-item"><a href="/jobs?country[]=lit&min=500&max=4000" target="_blank"><img src="public/images/flag/lit.png"><h6>Работа в Литве</h6></a></div>
   </div>
 </div>
 
 <br><br><br><br>
 
 <div class="container">
-  <div class="feedback-block white-text">
+  <!-- <div class="feedback-block white-text">
     <h6 style="padding-top:20px;" class="center">Введите Ваши данные и наш менеджер свяжется с вами!</h6>
-    <form action="/services/job_in_poland" method="post" class="bottomForm ajax">
+    <form action="/" method="post" class="bottomForm ajax">
     <input style="position:fixed; top:-100000px;" type="reset">
     <input type="hidden" name="type" value="bottomForm">
       <div class="row">
@@ -156,14 +151,16 @@
         </div>
       </div>
     </form>
-  </div>
+  </div> -->
+  
+  <?php require_once("jobs/FormBottom.php"); ?>
 
   <br><br>
 
   <div class="section scrollspy"  id="how-we-work">
     <div class="row">
       <div class="col s12 center">
-        <h3 class="teal-text text-lighten-2">Как мы работаем</h3>
+        <h3 class="teal-text">Как мы работаем</h3>
         <ul class="collapsible popout">
           <li class="active">
             <div class="collapsible-header"><i class="fas fa-phone fa-3x"></i>Шаг первый: звонок, заявка</div>
@@ -258,55 +255,65 @@
 
 <br><br>
 
-<div class="container center scrollspy" id="feedback">
-  <h3 class="teal-text text-lighten-2">Отзывы о нас</h3>
+<div class="container center">
+  <h3 class="teal-text scrollspy" id="feedback">Отзывы о нас</h3>
   <ul class="collection feedback-main">
     <li class="collection-item">
       <span class="title">Сергей Терещенко</span>
       <img src="/public/images/review/3.jpg" class="circle">
-      <p>Уехал через Ворк Лидер в Чехию. До этого метался по работам в Киеве. За границей раньше не был. С документами была немного волокита, за 2 мес. от момента подачи заявки выехал! Довоз до места работы со Львова. Попервах было тяжеловато. После ночных сил не было. Что касается работы, то как и везде за хорошие деньги необходимо пахать. Аванс выдали на карту 15 числа около 17000грн. Деньги достойные!</p>
+      <p>
+        Уехал через Ворк Лидер в Чехию. До этого метался по работам в Киеве. За границей раньше не был. С документами была немного волокита, 
+        за 2 мес. от момента подачи заявки выехал! Довоз до места работы со Львова. Попервах было тяжеловато. После ночных сил не было. 
+        Что касается работы, то как и везде за хорошие деньги необходимо пахать. Аванс выдали на карту 15 числа около 17000грн. Деньги достойные!
+      </p>
       <div class="secondary-content center">
         <span class="right">20.03.18</span>
-        <a><i class="material-icons">grade</i></a>
-        <a><i class="material-icons">grade</i></a>
-        <a><i class="material-icons">grade</i></a>
-        <a><i class="material-icons">grade</i></a>
-        <a><i class="material-icons">grade</i></a>
+        <a href="#!"><i class="material-icons">grade</i></a>
+        <a href="#!"><i class="material-icons">grade</i></a>
+        <a href="#!"><i class="material-icons">grade</i></a>
+        <a href="#!"><i class="material-icons">grade</i></a>
+        <a href="#!"><i class="material-icons">grade</i></a>
       </div>
     </li>
     <li class="collection-item">
       <span class="title">Владимир Иванов</span>
       <img src="/public/images/review/1.jpg" class="circle">
-      <p>Добрый день. Было желание попробовать себя за границей. Опыт вождения у меня 18 лет. Обратился в агентство за помощью в официальном трудоустройстве. Пошел на курсы польского. Визу оформили за 1 мес. Полгода отработал в городе Мысловице на городских маршрутках, посменно 9 часов/день. Отношение к украинцам отличное! Спасибо за помощь</p>
+      <p>
+        Добрый день. Было желание попробовать себя за границей. Опыт вождения у меня 18 лет. Обратился в агентство за помощью 
+        в официальном трудоустройстве. Пошел на курсы польского. Визу оформили за 1 мес. Полгода отработал в городе Мысловице 
+        на городских маршрутках, посменно 9 часов/день. Отношение к украинцам отличное! Спасибо за помощь
+      </p>
       <div class="secondary-content center">
         <span class="right">10.01.19</span>
-        <a><i class="material-icons">grade</i></a>
-        <a><i class="material-icons">grade</i></a>
-        <a><i class="material-icons">grade</i></a>
-        <a><i class="material-icons">grade</i></a>
+        <a href="#!"><i class="material-icons">grade</i></a>
+        <a href="#!"><i class="material-icons">grade</i></a>
+        <a href="#!"><i class="material-icons">grade</i></a>
+        <a href="#!"><i class="material-icons">grade</i></a>
       </div>
     </li>
     <li class="collection-item">
       <span class="title">Наталья Явлинская</span>
       <img src="/public/images/review/2.png" class="circle">
-      <p>Спасибо большое компании WorkLeader, на работу еще не устроилась, но визу уже получила.
+      <p>
+        Спасибо большое компании WorkLeader, на работу еще не устроилась, но визу уже получила.
         Говорили 3-4 месяца будут делать, а через 2 виза уже у меня. Очень понравилось обслуживание, 
         много полезной информации, получила ответы на все поставленные вопросы, никаких подводных камней, 
-        надеюсь, что с работой тоже будет все ок.</p>
+        надеюсь, что с работой тоже будет все ок.
+      </p>
       <div class="secondary-content center">
       <span class="right">13.09.18</span>
-        <a><i class="material-icons">grade</i></a>
-        <a><i class="material-icons">grade</i></a>
-        <a><i class="material-icons">grade</i></a>
-        <a><i class="material-icons">grade</i></a>
-        <a><i class="material-icons">grade</i></a>
+        <a href="#!"><i class="material-icons">grade</i></a>
+        <a href="#!"><i class="material-icons">grade</i></a>
+        <a href="#!"><i class="material-icons">grade</i></a>
+        <a href="#!"><i class="material-icons">grade</i></a>
+        <a href="#!"><i class="material-icons">grade</i></a>
       </div>
     </li>
   </ul>
   <a href="#!" style="border-radius:20px;" class="btn waves-effect waves-light center">Смотреть все</a>
   <br><br><br>
-  <h3 class="teal-text text-lighten-2">Наши отделения</h3>
+  <h3 class="teal-text">Наши отделения</h3>
   <a href="https://goo.gl/maps/ZP6oaMw2cUM2" target="_blank">
-    <img class="mobile-image ukraine-img" src="public/images/ukraine.jpg" alt="Карта Украины">
+    <img style="width: 70%;" class="mobile-image" src="public/images/ukraine.jpg" alt="Карта Украины">
   </a>
 </div>

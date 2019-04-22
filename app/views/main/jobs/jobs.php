@@ -1,9 +1,8 @@
-
+<title>Список вакансий от компании WorkLeader | Работа в Европейских странах</title>
 <?php require_once('app/config/mas.php');
-
-$start_min = 2200; $start_max = 6000;
-if (!empty($_GET['minsalary'])) $start_min = $_GET['minsalary'];
-if (!empty($_GET['maxsalary'])) $start_max = $_GET['maxsalary'];
+$start_min = 500; $start_max = 4000;
+if (!empty($_GET['min'])) $start_min = $_GET['min'];
+if (!empty($_GET['max'])) $start_max = $_GET['max'];
 ?>
 
 <script>
@@ -15,8 +14,8 @@ $(document).ready(function(){
      step: 100,
      orientation: 'horizontal',
      range: {
-       'min': 2200,
-       'max': 6000
+       'min': 500,
+       'max': 4000
      },
      format: wNumb({
        decimals: 0,
@@ -33,7 +32,7 @@ $(document).ready(function(){
 </script>
 <div class="section">
   <div class="row">
-    <div class="col l3 m3 s12 offset-s1 offset-l1 offset-m1">
+    <div class="col l3 m3 s11 offset-s1 offset-l1 offset-m1">
       <h4>Фильтр вакансий</h4>
       <form action="/jobs" method="GET" class="">
         <h6>Старана:</h6>
@@ -41,13 +40,12 @@ $(document).ready(function(){
         <p><label><input <?php if (!empty($_GET['country'])) if (in_array('cze',$_GET['country'])) echo 'checked="checked"'; ?> type="checkbox" name="country[]" value="cze"><span>Чехия</span></label></p>
         <p><label><input <?php if (!empty($_GET['country'])) if (in_array('ger',$_GET['country'])) echo 'checked="checked"'; ?> type="checkbox" name="country[]" value="ger"><span>Германия</span></label></p>
         <p><label><input <?php if (!empty($_GET['country'])) if (in_array('nor',$_GET['country'])) echo 'checked="checked"'; ?> type="checkbox" name="country[]" value="nor"><span>Норвегия</span></label></p>
-        <p><label><input <?php if (!empty($_GET['country'])) if (in_array('lith',$_GET['country'])) echo 'checked="checked"'; ?> type="checkbox" name="country[]" value="lith"><span>Литва</span></label></p>
+        <p><label><input <?php if (!empty($_GET['country'])) if (in_array('lit',$_GET['country'])) echo 'checked="checked"'; ?> type="checkbox" name="country[]" value="lit"><span>Литва</span></label></p>
         <p><label><input <?php if (!empty($_GET['country'])) if (in_array('est',$_GET['country'])) echo 'checked="checked"'; ?> type="checkbox" name="country[]" value="est"><span>Эстония</span></label></p>
-        <p><label><input <?php if (!empty($_GET['country'])) if (in_array('ukr',$_GET['country'])) echo 'checked="checked"'; ?> type="checkbox" name="country[]" value="ukr"><span>Украина</span></label></p>
         <h6>Зарплата (EUR):</h6>
         <div id="salary-slider" style="max-width:250px;"></div><br>
-        <input style="position:fixed; top:-100000px;" type="text" id="min-salary" name="minsalary">
-        <input style="position:fixed; top:-100000px;" type="text" id="max-salary" name="maxsalary">
+        <input style="position:fixed; top:-100000px;" type="text" id="min-salary" name="min">
+        <input style="position:fixed; top:-100000px;" type="text" id="max-salary" name="max">
         <button class="btn waves-effect waves-light" type="submit">Фильтровать</button>
       </form>
     </div>
@@ -58,14 +56,10 @@ $(document).ready(function(){
         <?php else: ?>
           <h4>Список вакансий</h4>
           <?php foreach ($list as $val): ?>
+            <?php $country_key = $val["country"]; $sex_key = $val["sex"]; ?>
             <div class="row jobs-form" style="margin: 13px 1px;">
-              <div class="col s12">
                 <p><b><?php echo $val["name"]; ?></b></p>
                 <div class="col l4 m6 s12">
-                  <?php
-                  $country_key = $val["country"];
-                  $sex_key = $val["sex"];
-                  ?>
                   <img class="z-depth-2" src="/public/images/flag/<?php echo $val["country"]; ?>.png" alt="Польша" style="width:20px;"> <?php echo $country_mas[$country_key]; ?>
                   <div class="row">
                     <div class="col s6">
@@ -80,17 +74,16 @@ $(document).ready(function(){
                     </div>
                   </div>
                 </div>
-                <div class="col l4 m6 s6">
+                <div class="col l3 m6 s6">
                   <span class="red-text"><b>Зарплата:</b></span>
                   <p>EUR≈<?php echo $val["salary"]; ?></p>
                 </div>
-                <div class="col l4 m12 s12 hide-on-med-and-down show-on-large">
-                  <img style="width:230px;" src="/public/images/jobs/<?php echo $val["id"]; ?>.jpg" alt="">
+                <div class="col l4 hide-on-med-and-down show-on-large">
+                  <img style="width:120%; " src="/public/images/jobs/<?php echo $val["id"]; ?>.jpg" alt="">
                 </div>
-                <div class="col l12 m12 s12">
-                  <a href="/jobs/<?php echo $val["url"]; ?>" class="btn waves-effect waves-light light-blue lighten-1d">Подробнее</a>
+                <div class="col l12 m6 s6">
+                  <a target="_blank" href="/jobs/<?php echo $val["url"]; ?>" class="btn waves-effect waves-light light-blue lighten-1d">Подробнее</a>
                 </div>
-              </div>
             </div>
           <?php endforeach; ?>
         <?php endif; ?>
