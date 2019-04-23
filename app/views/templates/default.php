@@ -8,21 +8,19 @@
 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="/public/styles/materialize.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="https://materializecss.com/extras/noUiSlider/nouislider.css">
-  <link rel="stylesheet" href="/public/styles/swiper.css">
-  <link rel="stylesheet" href="/public/styles/sweetalert2.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.css">
 	<link rel="stylesheet" href="/public/styles/style.css">
   <link rel="shortcut icon" href="/public/images/favicon.png" type="image/x-icon">
   
-  <script src="/public/scripts/jquery.js"></script>
-  <script src="/public/scripts/jquery.maskedinput.js"></script>
-  <script src="/public/scripts/sweetalert2.js"></script>
-  <script src="/public/scripts/sweetalert2.all.js"></script>
-  <script src="/public/scripts/materialize.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="https://materializecss.com/extras/noUiSlider/nouislider.js"></script>
-  <script src="/public/scripts/nicescroll.js"></script>
-  <script src="/public/scripts/swiper.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.js"></script>
   <script src="/public/scripts/script.js"></script>
 </head>
 <body>
