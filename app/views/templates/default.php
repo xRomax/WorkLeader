@@ -133,7 +133,7 @@
 	<div class="fixed-action-btn ">
 		<a class="btn-floating btn-large red pulse tooltipped" data-position="left" data-tooltip="Связаться с нами"><i class="large material-icons">contacts</i></a>
 		<ul>
-		  <li><a class="btn-floating btn-large waves-effect waves-light blue accent-4"  href="https://www.facebook.com/WorkLeaderandCo/" target="_blank"><i class="fab fa-facebook-square fa-3x"></i></a></li>
+		  <li><a class="btn-floating btn-large waves-effect waves-light blue accent-4"  href="https://www.facebook.com/Leaderofwork" target="_blank"><i class="fab fa-facebook-square fa-3x"></i></a></li>
 		  <!-- <li><a class="btn-floating btn-large waves-effect waves-light pink darken-2"  href="#!"><i class="fab fa-instagram fa-3x"></i></a></li>
       <li><a class="btn-floating btn-large waves-effect waves-light blue darken-2"  href="#!"><i class="fab fa-vk fa-3x"></i></a></li>
       <li><a class="btn-floating btn-large waves-effect waves-light blue lighten-1" href="#!"><i class="fab fa-telegram fa-3x"></i></a></li> -->

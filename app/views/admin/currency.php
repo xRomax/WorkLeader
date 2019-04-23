@@ -1,5 +1,5 @@
 <title>Курс валют | Панель Администратора</title>
-<?php debug($currency); 
+<?php //debug($currencyUAH); 
 ?>
 <div class="jobs_form">
 	<div class="head">Курс валют</div>
@@ -64,6 +64,11 @@
           <?php endif; ?>
         <?php endforeach; ?>
       </tbody>
+      <tr>
+        <td>1 EUR</td>
+        <td><?php echo $currencyUAH->rate; ?></td>
+        <td>UAH</td>
+      </tr>
     </table>
 	</div>
 </div>

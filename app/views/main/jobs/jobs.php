@@ -97,6 +97,8 @@ $(document).ready(function(){
                       $result = ceil($val['salary'] * $currency->$currency_code);
                       echo "<p>$currency_code"."≈$result</p>";
                     }
+                  $result1 = ceil($val['salary'] * $currencyUAH->rate);
+                  echo "<p>UAH≈$result1</p>";
                   ?>
                 </div>
                 <div class="col l4 hide-on-med-and-down show-on-large">

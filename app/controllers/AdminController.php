@@ -160,8 +160,13 @@ class AdminController extends Controller {
 	}
 
 	public function currencyAction() {
+		$currencyUAH = $this->model->getCurrency('https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json','currencyUAH.json');
+		foreach ($currencyUAH as $key => $value ) {
+			if ($value->cc == 'EUR') $currencyUAH = $value;
+		}
 		$vars = [
-			'currency' => $this->model->getCurrency('https://api.exchangeratesapi.io/latest')->rates,
+			'currency' => $this->model->getCurrency('https://api.exchangeratesapi.io/latest','currency.json')->rates,
+			'currencyUAH' => $currencyUAH,
 		];
 		$this->view->render($vars);
 	}

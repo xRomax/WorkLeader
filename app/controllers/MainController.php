@@ -26,11 +26,17 @@ class MainController extends Controller {
 		if (empty($_GET)) $list = $this->model->jobsList($page);
 		else $list = $this->model->jobsListFilter($page,$_GET,'limit');
 
+		$currencyUAH = $this->model->getCurrency('https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json','currencyUAH.json');
+		foreach ($currencyUAH as $key => $value ) {
+			if ($value->cc == 'EUR') $currencyUAH = $value;
+		}
+
 		$vars = [
 			'pagination' => $this->model->pagination($page,$_GET),
 			'salary' => $this->model->getSalary(),
 			'list' => $list,
-			'currency' => $this->model->getCurrency('https://api.exchangeratesapi.io/latest')->rates,
+			'currency' => $this->model->getCurrency('https://api.exchangeratesapi.io/latest','currency.json')->rates,
+			'currencyUAH' => $currencyUAH,
 		];
 		$this->view->render($vars);
 	}
@@ -72,7 +78,7 @@ class MainController extends Controller {
 			if (!$this->model->contactValidate($_POST)) {
 				$this->view->message('error', $this->model->error, 'Упс. Что то не так');
 			}
-			mail('romadeamon@gmail.com', $this->model->messageTitle, $this->model->messageBody);
+			mail('workleadereurope@gmail.com', $this->model->messageTitle, $this->model->messageBody);
 			$this->view->message('success', 'Сообщение отправлено Администратору', 'Отлично!');
 			$this->model->addClient($_POST);
 		}
