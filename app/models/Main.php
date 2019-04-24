@@ -140,7 +140,11 @@ class Main extends Model {
 		extract($this->jobsListFilterSalary($get));
 		if (!empty($params3)) $params = array_merge($params, $params3);
 
-		$sql = "SELECT * FROM jobs WHERE status = :status $salary $country_filter ORDER BY id ASC $limit";
+		extract($this->jobsListFilterSex($get));
+		if (!empty($params4)) $params = array_merge($params, $params4);
+
+		$sql = "SELECT * FROM jobs WHERE status = :status $salary $country_filter $sex ORDER BY id ASC $limit";
+		// return $params;
 		return $this->db->row($sql, $params);
 	}
 	
@@ -180,6 +184,15 @@ class Main extends Model {
 			$salary = 'and (salary >= :min and salary <= :max)';
 		}
 		return array('params3' => $params, 'salary' => $salary);
+	}
+
+	public function jobsListFilterSex($get) {
+		$sex = ''; $params = [];
+		if (!empty($get['sex']) ) {
+			$params['sex'] = $get['sex'];
+			$sex = 'and sex = :sex';
+		}
+		return array('params4' => $params, 'sex' => $sex);
 	}
 
 	public function pagination($page,$get) {
