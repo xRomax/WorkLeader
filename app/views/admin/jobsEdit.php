@@ -14,12 +14,15 @@
       <div class="input-field">
         <select name="country">
           <option value="" disabled>Выберите страницу</option>
-          <option value="pol" <?php if($data["country"] == 'pol') echo 'selected' ?>>Польша</option>
           <option value="cze" <?php if($data["country"] == 'cze') echo 'selected' ?>>Чехия</option>
+          <option value="pol" <?php if($data["country"] == 'pol') echo 'selected' ?>>Польша</option>
           <option value="ger" <?php if($data["country"] == 'ger') echo 'selected' ?>>Германия</option>
-          <option value="lit" <?php if($data["country"] == 'lit') echo 'selected' ?>>Литва</option>
-          <option value="est" <?php if($data["country"] == 'est') echo 'selected' ?>>Эстония</option>
+          <option value="eng" <?php if($data["country"] == 'eng') echo 'selected' ?>>Великобритания</option>
           <option value="nor" <?php if($data["country"] == 'nor') echo 'selected' ?>>Норвегия</option>
+          <option value="fin" <?php if($data["country"] == 'fin') echo 'selected' ?>>Финляндия</option>
+          <option value="lit" <?php if($data["country"] == 'lit') echo 'selected' ?>>Литва</option>
+          <option value="lat" <?php if($data["country"] == 'lat') echo 'selected' ?>>Латвия</option>
+          <option value="est" <?php if($data["country"] == 'est') echo 'selected' ?>>Эстония</option>
         </select>
         <label>Страна</label>
       </div>

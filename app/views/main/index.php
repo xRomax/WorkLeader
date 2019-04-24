@@ -99,14 +99,19 @@
   <div class="no-pad-bot section scrollspy" id="country-flag">
     <div class="container">
       <div class="row center">
+        <div class="col l4 naprav-item"><a href="/jobs?country[]=pol" target="_blank"><img src="public/images/flag/pol.png"><h6>Работа в Польше</h6></a></div>
         <div class="col l4 naprav-item"><a href="/jobs?country[]=cze" target="_blank"><img src="public/images/flag/cze.png"><h6>Работа в Чехии</h6></a></div>
         <div class="col l4 naprav-item"><a href="/jobs?country[]=ger" target="_blank"><img src="public/images/flag/ger.png"><h6>Работа в Германии</h6></a></div>
-        <div class="col l4 naprav-item"><a href="/jobs?country[]=pol" target="_blank"><img src="public/images/flag/pol.png"><h6>Работа в Польше</h6></a></div>
       </div>
       <div class="row center">
+        <div class="col l4 naprav-item"><a href="/jobs?country[]=eng" target="_blank"><img src="public/images/flag/eng.png"><h6>Работа в Великобритании</h6></a></div>
         <div class="col l4 naprav-item"><a href="/jobs?country[]=nor" target="_blank"><img src="public/images/flag/nor.png"><h6>Работа в Норвегии</h6></a></div>
-        <div class="col l4 naprav-item"><a href="/jobs?country[]=est" target="_blank"><img src="public/images/flag/est.png"><h6>Работа в Эстонии</h6></a></div>
+        <div class="col l4 naprav-item"><a href="/jobs?country[]=fin" target="_blank"><img src="public/images/flag/fin.png"><h6>Работа в Финляндии</h6></a></div>
+      </div>
+      <div class="row center">
         <div class="col l4 naprav-item"><a href="/jobs?country[]=lit" target="_blank"><img src="public/images/flag/lit.png"><h6>Работа в Литве</h6></a></div>
+        <div class="col l4 naprav-item"><a href="/jobs?country[]=lat" target="_blank"><img src="public/images/flag/lat.png"><h6>Работа в Латвии</h6></a></div>
+        <div class="col l4 naprav-item"><a href="/jobs?country[]=est" target="_blank"><img src="public/images/flag/est.png"><h6>Работа в Эстонии</h6></a></div>
       </div>
     </div>
   </div>
@@ -117,15 +122,24 @@
   <h4 class="teal-text center">Наши направления</h4>
   <div class="row">
     <div class="col s6 naprav-item"><a href="/jobs?country[]=cze" target="_blank"><img src="public/images/flag/cze.png"><h6>Работа в Чехии</h6></a></div>
-    <div class="col s6 naprav-item"><a href="/jobs?country[]=ger" target="_blank"><img src="public/images/flag/ger.png"><h6>Работа в Германии</h6></a></div>
-  </div>
-  <div class="row">
     <div class="col s6 naprav-item"><a href="/jobs?country[]=pol" target="_blank"><img src="public/images/flag/pol.png"><h6>Работа в Польше</h6></a></div>
-    <div class="col s6 naprav-item"><a href="/jobs?country[]=nor" target="_blank"><img src="public/images/flag/nor.png"><h6>Работа в Норвегии</h6></a></div>
   </div>
   <div class="row">
-    <div class="col s6 naprav-item"><a href="/jobs?country[]=est" target="_blank"><img src="public/images/flag/est.png"><h6>Работа в Эстонии</h6></a></div>
+    <div class="col s6 naprav-item"><a href="/jobs?country[]=ger" target="_blank"><img src="public/images/flag/ger.png"><h6>Работа в Германии</h6></a></div>
+    <div class="col s6 naprav-item"><a href="/jobs?country[]=eng" target="_blank"><img src="public/images/flag/eng.png"><h6>Работа в Великобритании</h6></a></div>
+  </div>
+  
+  <div class="row">
+    <div class="col s6 naprav-item"><a href="/jobs?country[]=nor" target="_blank"><img src="public/images/flag/nor.png"><h6>Работа в Норвегии</h6></a></div>
+    <div class="col s6 naprav-item"><a href="/jobs?country[]=fin" target="_blank"><img src="public/images/flag/fin.png"><h6>Работа в Финляндии</h6></a></div>
+  </div>
+
+  <div class="row">
     <div class="col s6 naprav-item"><a href="/jobs?country[]=lit" target="_blank"><img src="public/images/flag/lit.png"><h6>Работа в Литве</h6></a></div>
+    <div class="col s6 naprav-item"><a href="/jobs?country[]=lat" target="_blank"><img src="public/images/flag/lat.png"><h6>Работа в Латвии</h6></a></div>
+  </div>
+  <div class="row">
+    <div class="col s6 offset-s3 naprav-item"><a href="/jobs?country[]=est" target="_blank"><img src="public/images/flag/est.png"><h6>Работа в Эстонии</h6></a></div>
   </div>
 </div>
 

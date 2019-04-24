@@ -21,6 +21,8 @@ $(document).ready(function(){
     $("html body").css('overflow-x','hidden');
   }
 
+  $("#scroll-country-body").niceScroll();
+
   $(".dropdown-trigger").dropdown({
     hover: false
   });
@@ -99,9 +101,6 @@ $(document).ready(function(){
       cache: false,
       processData: false,
       success: function(result) {
-        // if (path == '/jobs') {
-        //   $("html").html(result);
-        // }
         json = jQuery.parseJSON(result);
         Swal.fire({
           type: json.status,
