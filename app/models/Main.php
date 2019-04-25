@@ -143,7 +143,13 @@ class Main extends Model {
 		extract($this->jobsListFilterSex($get));
 		if (!empty($params4)) $params = array_merge($params, $params4);
 
-		$sql = "SELECT * FROM jobs WHERE status = :status $salary $country_filter $sex ORDER BY id ASC $limit";
+		extract($this->jobsListFilterAge($get));
+		if (!empty($params5)) $params = array_merge($params, $params5);
+
+		extract($this->jobsListFilterAccommodation($get));
+		if (!empty($params6)) $params = array_merge($params, $params6);
+		
+		$sql = "SELECT * FROM jobs WHERE status = :status $salary $country_filter $sex $age $accommodation ORDER BY id ASC $limit";
 		// return $params;
 		return $this->db->row($sql, $params);
 	}
@@ -193,6 +199,25 @@ class Main extends Model {
 			$sex = 'and sex = :sex';
 		}
 		return array('params4' => $params, 'sex' => $sex);
+	}
+
+	public function jobsListFilterAge($get) {
+		$age = ''; $params = [];
+		if (!empty($get['age_min']) and !empty($get['age_max'])) {
+			$params['age_min'] = (int) $get['age_min'];
+			$params['age_max'] = (int) $get['age_max'];
+			$age = 'and (age_min >= :age_min and age_max <= :age_max )';
+		}
+		return array('params5' => $params, 'age' => $age);
+	}
+
+	public function jobsListFilterAccommodation($get) {
+		$accommodation = ''; $params = [];
+		if (!empty($get['accommodation'])) {
+			$params['accommodation'] = $get['accommodation'];
+			$accommodation = 'and accommodation = :accommodation';
+		}
+		return array('params6' => $params, 'accommodation' => $accommodation);
 	}
 
 	public function pagination($page,$get) {

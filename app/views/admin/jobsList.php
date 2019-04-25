@@ -1,6 +1,7 @@
 <title>Список вакансий | Панель Администратора</title>
 <div class="jobs_form">
   <div class="head">Список вакансий</div>
+  
   <div class="body hide-on-med-and-down show-on-large">
     <table>
       <thead>
@@ -33,6 +34,7 @@
       </tbody>
     </table>
   </div>
+
   <div class="body hide-on-large-only show-on-medium-and-down">
     <table>
       <?php if (empty($list)): ?>

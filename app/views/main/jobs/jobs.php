@@ -3,9 +3,12 @@
 ?>
 <title>Список вакансий от компании WorkLeader | Работа в Европейских странах</title>
 <?php require_once('app/config/mas.php');
-$start_min = $salary['min']; $start_max = $salary["max"];
-if (!empty($_GET['min'])) $start_min = $_GET['min'];
-if (!empty($_GET['max'])) $start_max = $_GET['max'];
+  $start_min = $salary['min']; $start_max = $salary["max"];
+  $start_age_min = 18; $start_age_max = 65;
+  if (!empty($_GET['min'])) $start_min = $_GET['min'];
+  if (!empty($_GET['max'])) $start_max = $_GET['max'];
+  if (!empty($_GET['age_min'])) $start_age_min = $_GET['age_min'];
+  if (!empty($_GET['age_max'])) $start_age_max = $_GET['age_max'];
 ?>
 
 <script>
@@ -25,13 +28,32 @@ $(document).ready(function(){
     })
   });
 
+  var slider_age = document.getElementById('age-slider');
+  noUiSlider.create(slider_age, {
+    start: [<?php echo $start_age_min; ?>, <?php echo $start_age_max; ?>],
+    connect: true,
+    step: 1,
+    orientation: 'horizontal',
+    range: {
+      'min': 18,
+      'max': 65
+    },
+    format: wNumb({
+      decimals: 1,
+    }),
+  });
+
   setInterval(function() {
     let salary = slider.noUiSlider.get();
     let Salary = Array.from(salary);
     $("#min-salary").val(Salary[0]);
     $("#max-salary").val(Salary[1]);
-  }, 100);
 
+    let age = slider_age.noUiSlider.get();
+    let Age = Array.from(age);
+    $("#min-age").val(Age[0]);
+    $("#max-age").val(Age[1]);
+  }, 100);
 
 });
 </script>
@@ -72,6 +94,27 @@ $(document).ready(function(){
               </label>
             </div>
           </li>
+          <li <?php if (isset($_GET['accommodation'])) echo "class='active'" ?>>
+            <div class="collapsible-header"><i class="fas fa-home"></i>Проживание:</div>
+            <div class="collapsible-body">
+              <label>
+                <input class="with-gap" name="accommodation" value="free" type="radio" <?php if (!empty($_GET['accommodation'])) if ($_GET["accommodation"] == 'free') echo 'checked' ?> />
+                <span>Бесплатно</span>
+              </label>
+              <label>
+                <input class="with-gap" name="accommodation" value="paid" type="radio" <?php if (!empty($_GET['accommodation'])) if ($_GET["accommodation"] == 'paid') echo 'checked' ?> />
+                <span>Платно</span>
+              </label>
+            </div>
+          </li>
+          <li <?php if (isset($_GET['age_min']) or isset($_GET['age_max'])) echo "class='active'" ?>>
+            <div class="collapsible-header"><i class="fas fa-user-clock"></i>Возраст:</div>
+            <div class="collapsible-body">
+              <div id="age-slider" style="margin-top:12px;"></div>
+              <input style="position:fixed; top:-100000px;" type="text" id="min-age" name="age_min">
+              <input style="position:fixed; top:-100000px;" type="text" id="max-age" name="age_max">
+            </div>
+          </li>
           <li <?php if (isset($_GET['min']) or isset($_GET['max'])) echo "class='active'" ?>>
             <div class="collapsible-header"><i class="fas fa-euro-sign"></i>Зарплата (EUR):</div>
             <div class="collapsible-body">
@@ -82,11 +125,11 @@ $(document).ready(function(){
           </li>
         </ul>
         <div class="row">
-          <div class="col l6 m6 s12">
-            <button class="btn waves-effect waves-light" type="submit">Фильтровать</button>
+          <div class="col s6">
+            <button style="width:100%;" class="btn waves-effect waves-light" type="submit">Фильтровать</button>
           </div>
-          <div class="col l6 m6 s12">
-            <a class="btn waves-effect waves-light" href="/jobs/">Сбросить фильтр</a>
+          <div class="col s6">
+            <a style="width:100%;" class="btn waves-effect waves-light" href="/jobs/">Сбросить фильтр</a>
           </div>
 
         </div>
@@ -112,7 +155,7 @@ $(document).ready(function(){
                   </div>
                   <div class="col s6">
                     <p><b><?php echo $sex_mas[$sex_key]; ?></b></p>
-                    <p><b><?php echo $val["age"]; ?></b></p>
+                    <p><b><?php echo "От ".$val["age_min"]." до ".$val["age_max"]; ?></b></p>
                     <p><b><?php echo $val["experience"]; ?></b></p>
                   </div>
                 </div>

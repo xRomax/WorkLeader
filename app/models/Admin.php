@@ -27,17 +27,17 @@ class Admin extends Model {
 		if ($nameLen < 3 or $nameLen > 100) {
 			$this->error = 'Название должно содержать от 3 до 100 символов';
 			return false;
-		} elseif ($urlLen < 5 or $urlLen > 50) {
-			$this->error = 'URL должен содержать от 5 до 50 символов';
+		} elseif ($urlLen < 5 or $urlLen > 60) {
+			$this->error = 'URL должен содержать от 5 до 60 символов';
+			return false;
+		} elseif (!$this->checkUrl($post['url'])) {
+			$this->error = 'Такой URL уже существует!';
 			return false;
 		} elseif (empty($post["country"])) {
 			$this->error = 'Выберите страну';
 			return false;
 		} elseif (empty($post["sex"])) {
 			$this->error = 'Выберите пол';
-			return false;
-		} elseif (empty($post["age"])) {
-			$this->error = 'Введите возраст';
 			return false;
 		} elseif (empty($post["experience"])) {
 			$this->error = 'Введите опыт работы';
@@ -47,6 +47,9 @@ class Admin extends Model {
 			return false;
 		} elseif (empty($post["employment_conditions"])) {
 			$this->error = 'Введите условия трудоустройства';
+			return false;
+		} elseif (empty($post["accommodation"])) {
+			$this->error = 'Выберите платное или бесплатное проживание';
 			return false;
 		} elseif (empty($post["accommodations"])) {
 			$this->error = 'Введите условия проживания';
@@ -62,7 +65,13 @@ class Admin extends Model {
 			$this->error = 'Изображение не выбрано';
 			return false;
 		}
-		return true;
+	}
+
+	public function checkUrl($url) {
+		$params = [
+			'url' => $url,
+		];
+		if ($this->db->query("SELECT * FROM jobs WHERE url = :url",$params)) return false;
 	}
 
 	public function jobsAdd($post) {
@@ -71,16 +80,18 @@ class Admin extends Model {
 			'url' => $post["url"],
 			'country' => $post["country"],
 			'sex' => $post["sex"],
-			'age' => $post["age"],
+			'age_min' => (int) $post["age_min"],
+			'age_max' => (int) $post["age_max"],
 			'experience' => $post["experience"],
 			'responsibility' => $post["responsibility"],
 			'employment_conditions' => $post["employment_conditions"],
+			'accommodation' => $post["accommodation"],
 			'accommodations' => $post["accommodations"],
 			'salary' => $post["salary"],
 			'salary_desc' => $post["salary_desc"],
 			'status' => 'active',
 		];
-		$sql = "INSERT INTO jobs (name, url, country, sex, age, experience, responsibility, employment_conditions, accommodations, salary, salary_desc, status) VALUES (:name, :url, :country, :sex, :age, :experience, :responsibility, :employment_conditions, :accommodations, :salary, :salary_desc, :status)";
+		$sql = "INSERT INTO jobs (name, url, country, sex, age_min, age_max, experience, responsibility, employment_conditions, accommodation, accommodations, salary, salary_desc, status) VALUES (:name, :url, :country, :sex, :age_min, :age_max, :experience, :responsibility, :employment_conditions, :accommodation, :accommodations, :salary, :salary_desc, :status)";
 		$this->db->query($sql,$params);
 		return $this->db->lastInsertId();
 	}
@@ -92,15 +103,17 @@ class Admin extends Model {
 			'url' => $post["url"],
 			'country' => $post["country"],
 			'sex' => $post["sex"],
-			'age' => $post["age"],
+			'age_min' => (int) $post["age_min"],
+			'age_max' => (int) $post["age_max"],
 			'experience' => $post["experience"],
 			'responsibility' => $post["responsibility"],
 			'employment_conditions' => $post["employment_conditions"],
+			'accommodation' => $post["accommodation"],
 			'accommodations' => $post["accommodations"],
 			'salary' => $post["salary"],
 			'salary_desc' => $post["salary_desc"],
 		];
-		$sql = "UPDATE jobs SET name = :name, url = :url, country = :country, sex = :sex, age = :age, experience = :experience, responsibility  = :responsibility , employment_conditions = :employment_conditions, accommodations  = :accommodations, salary = :salary, salary_desc = :salary_desc WHERE id = :id";
+		$sql = "UPDATE jobs SET name = :name, url = :url, country = :country, sex = :sex, age_min = :age_min, age_max = :age_max, experience = :experience, responsibility  = :responsibility , employment_conditions = :employment_conditions, accommodation = :accommodation, accommodations  = :accommodations, salary = :salary, salary_desc = :salary_desc WHERE id = :id";
 		$this->db->query($sql,$params);
 	}
 

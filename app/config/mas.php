@@ -11,17 +11,22 @@ $country_mas = [
   "est" => "Эстония",
 ];
 
+$country_to_currency = [
+  "cze" => "CZK",
+  "pol" => "PLN",
+  "ger" => "EUR",
+  "eng" => "GBP",
+  "nor" => "NOK",
+  "fin" => "EUR",
+  "lit" => "EUR",
+  "lat" => "EUR",
+  "est" => "EUR",
+];
+
 $sex_mas = [
   "male" => "Мужской",
   "female" => "Женский",
   "all" => "Любой",
 ];
-$country_to_currency = [
-  "cze" => "CZK",
-  "est" => "EUR",
-  "ger" => "EUR",
-  "lit" => "EUR",
-  "nor" => "NOK",
-  "pol" => "PLN",
-]
+
 ?>

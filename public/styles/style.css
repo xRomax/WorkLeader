@@ -1,7 +1,9 @@
 html, body {
   font-family: Arial, Helvetica, sans-serif;
 }
-
+.sidenav-overlay {
+  z-index: 996;
+}
 nav ul a {
   color: #444;
 }

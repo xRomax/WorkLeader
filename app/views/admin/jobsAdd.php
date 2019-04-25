@@ -1,3 +1,28 @@
+<script>
+  $(document).ready(function(){
+    var slider_age = document.getElementById('age-slider');
+    noUiSlider.create(slider_age, {
+      start: [18, 65],
+      connect: true,
+      step: 1,
+      orientation: 'horizontal',
+      range: {
+        'min': 18,
+        'max': 65
+      },
+      format: wNumb({
+        decimals: 1,
+      }),
+    });
+
+    setInterval(function() {
+      let age = slider_age.noUiSlider.get();
+      let Age = Array.from(age);
+      $("#min-age").val(Age[0]);
+      $("#max-age").val(Age[1]);
+    }, 100);
+  });
+</script>
 <title>Добавить новую вакансию | Панель Администратора</title>
 <div class="jobs_form">
 	<div class="head">Добавить новую вакансию</div>
@@ -43,9 +68,11 @@
           </label>
         </p>
       </div>
-      <div class="input-field">
-        <input id="age" type="text" name="age" class="validate">
-        <label for="age">Возраст</label>
+      <div class="input-field" style="width:95%;">
+        <p><label>Возраст</label></p>
+        <div id="age-slider" style="margin-top:12px;"></div>
+        <input style="position:fixed; top:-100000px;" type="text" id="min-age" name="age_min">
+        <input style="position:fixed; top:-100000px;" type="text" id="max-age" name="age_max">
       </div>
       <div class="input-field">
         <input id="experience" type="text" name="experience" class="validate">
@@ -60,12 +87,25 @@
         <label for="employment_conditions">Условия трудоустройства</label>
       </div>
       <div class="input-field">
+        <p><label>Проживание:</label></p>
+        <p>
+          <label>
+            <input class="with-gap" name="accommodation" value="free" type="radio" />
+            <span>Бесплатно</span>
+          </label>
+          <label>
+            <input class="with-gap" name="accommodation" value="paid" type="radio" />
+            <span>Платно</span>
+          </label>
+        </p>
+      </div>
+      <div class="input-field">
         <input id="accommodations" type="text" name="accommodations" class="validate">
-        <label for="accommodations">Условия проживания</label>
+        <label for="accommodations">Условия проживания (описание)</label>
       </div>
       <div class="input-field">
         <input id="salary" type="text" name="salary" class="validate">
-        <label for="salary">Зарплата (примерное число)</label>
+        <label for="salary">Зарплата (примерное число в Евро)</label>
       </div>
       <div class="input-field">
         <input id="salary_desc" type="text" name="salary_desc" class="validate">

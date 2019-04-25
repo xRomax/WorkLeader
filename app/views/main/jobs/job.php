@@ -33,7 +33,7 @@ require_once('app/config/mas.php');
         </tr>
         <tr>
           <td>Возраст:</td>
-          <td><?php echo $data["age"]; ?></td>
+          <td><?php echo "От ".$data["age_min"]." до ".$data["age_max"]; ?></td>
         </tr>
         <tr>
           <td>Опыт работы:</td>
