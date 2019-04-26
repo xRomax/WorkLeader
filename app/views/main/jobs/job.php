@@ -58,11 +58,10 @@ require_once('app/config/mas.php');
       </table>
     </div>
 
-
     <div style="margin-top:15px;" class="col s12 jobs-form hide-on-large-only show-on-medium-and-down">
       <p>Страна: <img class="z-depth-2" src="/public/images/flag/<?php echo $data["country"]; ?>.png" alt="Польша" style="width:20px;"> <?php echo $country_mas[$country_key]; ?></p>
       <p>Пол: <?php echo $sex_mas[$sex_key]; ?></p>
-      <p>Возраст: <?php echo $data["age"]; ?></p>
+      <p>Возраст: <?php echo "От ".$data["age_min"]." до ".$data["age_max"]; ?></p>
       <p>Опыт работы: <?php echo $data["experience"]; ?></p>
       <p>Обязаности:<br> <?php echo $data["responsibility"]; ?></p>
       <p>Условия трудоустройства:<br> <?php echo $data["employment_conditions"]; ?></p>

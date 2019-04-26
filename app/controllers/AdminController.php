@@ -6,6 +6,8 @@ use app\core\Controller;
 
 class AdminController extends Controller {
 
+	public $reviewsPage;
+
 	public function __construct($route) {
 		parent::__construct($route);
 		$this->view->template = 'admin';
@@ -170,4 +172,64 @@ class AdminController extends Controller {
 		];
 		$this->view->render($vars);
 	}
+
+	public function reviewsModerationListAction() {
+		$vars = [
+			'list' => $this->model->reviewsList('moderation'),
+		];
+		$this->view->render($vars);
+	}
+	
+	public function reviewsModerationDataAction() {
+		if (!$this->model->isExists('jobs','id',$this->route['id'])) {
+			$this->view->errorCode(404);
+		}
+
+		if (!empty($_POST)) {
+			if (!$this->model->reviewsValidate($_POST)) {
+				$this->view->message('error', $this->model->error, 'Ошибка!');
+			}
+			if ($_FILES['img']['tmp_name']) {
+				$this->model->UploadImage($_FILES['img']['tmp_name'], 'reviews', $this->route['id']);
+			}
+			$this->model->reviewsModeration($_POST,$this->route['id']);
+			$this->view->location('admin/reviewsModerationList');
+		}
+		$vars = [
+			'data' => $this->model->dataPost($this->route['id'],'reviews')[0],
+		];
+		$this->view->render($vars);
+	}
+
+	public function reviewsListAction() {
+		$vars = [
+			'amount' => $this->model->reviewsDisplayAmount(),
+			'list' => $this->model->reviewsList('active'),
+		];
+		$this->view->render($vars);
+	}
+
+	public function reviewsDisplayAction() {
+		$this->model->reviewsDisplay($this->route['id']);
+		$this->view->redirect('admin/reviewsList');
+	}
+
+	public function reviewsDeleteAction() {
+		if (!$this->model->isExists('reviews','id',$this->route['id'])) {
+			$this->view->errorCode(404);
+		} else {
+			$this->model->deletePost($this->route['id'],'reviews');
+			$this->view->redirect('admin/reviewsModerationList');
+		}
+	}
+
+	public function reviewsDelAction() {
+		if (!$this->model->isExists('reviews','id',$this->route['id'])) {
+			$this->view->errorCode(404);
+		} else {
+			$this->model->deletePost($this->route['id'],'reviews');
+			$this->view->redirect('admin/reviewsList');
+		}
+	}
+
 }

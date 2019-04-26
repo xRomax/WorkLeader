@@ -50,7 +50,7 @@
         <li class="bold"><a class="collapsible-header waves-effect waves-light" ><i class="fas fa-comments fa-1x"></i>Отзывы</a>
           <div class="collapsible-body">
             <ul>
-              <li><a href="/admin/reviewsValidate">Модерация</a></li>
+              <li><a href="/admin/reviewsModerationList">Модерация</a></li>
               <li><a href="/admin/reviewsList">Список</a></li>
             </ul>
           </div>

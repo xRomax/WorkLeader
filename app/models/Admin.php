@@ -169,7 +169,8 @@ class Admin extends Model {
 			"id" => $id,
 		];
 		$this->db->query("DELETE FROM $table WHERE id = :id", $params);
-		unlink("public/images/$table/$id.jpg");
+		$path = "public/images/$table/$id.jpg";
+		unlink($path);
 	}
 
 	public function UploadImage($path, $folder, $id) {
@@ -227,5 +228,62 @@ class Admin extends Model {
 		];
 		$sql = "UPDATE news SET name = :name, url = :url, text = :text, source = :source, description = :description WHERE id = :id";
 		$this->db->query($sql,$params);
+	}
+
+	public function reviewsValidate($post) {
+		$nameLen = iconv_strlen($post['name']);
+		$textLen = iconv_strlen($post['text']);
+		if ($nameLen < 3 or $nameLen > 30) {
+			$this->error = 'Имя должно содержать от 3 до 30 символов';
+			return false;
+		} elseif (empty($post["country"])) {
+			$this->error = 'Введите свой город';
+			return false;
+		} elseif (empty($post["rating"])) {
+			$this->error = 'Выберите оценку';
+			return false;
+		} elseif ($textLen < 10 or $textLen > 1000) {
+			$this->error = 'Сообщение должно содержать от 10 до 1000 символов';
+			return false;
+		}
+		return true;
+	}
+
+	public function reviewsModeration($post, $id) {
+		$params = [
+			'id' => $id,
+			'name' => $post["name"],
+			'country' => $post["country"],
+			'rating' => $post["rating"],
+			'text' => $post["text"],
+			'social' => $post["social"],
+			'status' => 'active'
+		];
+		$sql = "UPDATE reviews SET name = :name, country = :country, rating = :rating, text = :text, social = :social, status = :status WHERE id = :id";
+		$this->db->query($sql,$params);
+	}
+
+	public function reviewsList($status) {
+		$params = [
+			'status' => $status,
+		];
+		return $this->db->row("SELECT * FROM reviews WHERE status = :status",$params);
+	}
+
+	public function reviewsDisplay($id) {
+		$params = [
+			"id" => $id,
+		];
+		$result = $this->db->row("SELECT * FROM `reviews` WHERE id = :id", $params);
+		if ($result[0]["display"] == 'show') $params['display'] = 'hide';
+		else $params['display'] = 'show';
+		$this->db->query("UPDATE reviews SET display = :display WHERE id = :id", $params);
+	}
+	
+	public function reviewsDisplayAmount() {
+		$params = [
+			"display" => 'show',
+		];
+		return count($this->db->row("SELECT * FROM `reviews` WHERE display = :display",$params));
 	}
 }

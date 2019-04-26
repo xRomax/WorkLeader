@@ -57,6 +57,11 @@ return [
 		'action' => 'jobData',
 		'path' => 'main/jobs/job'
 	],
+	'reviews' => [
+		'controller' => 'main',
+		'action' => 'reviews',
+		'path' => 'main/reviews'
+	],
 	// AdminController
 	'admin' => [
 		'controller' => 'admin',
@@ -138,14 +143,34 @@ return [
 		'action' => 'currency',
 		'path' => 'admin/currency'
 	],
-	'admin/reviewsValidate' => [
+	'admin/reviewsModerationList' => [
 		'controller' => 'admin',
-		'action' => 'main',
-		'path' => 'admin/reviewsValidate'
+		'action' => 'reviewsModerationList',
+		'path' => 'admin/reviewsModerationList'
+	],
+	'admin/reviewsModerationData/{id:\d+}' => [
+		'controller' => 'admin',
+		'action' => 'reviewsModerationData',
+		'path' => 'admin/reviewsModerationData'
+	],
+	'admin/reviewsDisplay/{id:\d+}' => [
+		'controller' => 'admin',
+		'action' => 'reviewsDisplay',
+		'path' => ''
 	],
 	'admin/reviewsList' => [
 		'controller' => 'admin',
-		'action' => 'main',
+		'action' => 'reviewsList',
 		'path' => 'admin/reviewsList'
+	],
+	'admin/reviewsDelete/{id:\d+}' => [
+		'controller' => 'admin',
+		'action' => 'reviewsDelete',
+		'path' => ''
+	],
+	'admin/reviewsDel/{id:\d+}' => [
+		'controller' => 'admin',
+		'action' => 'reviewsDel',
+		'path' => ''
 	],
 ];

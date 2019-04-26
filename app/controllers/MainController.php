@@ -13,6 +13,7 @@ class MainController extends Controller {
 
 	public function indexAction() {
 		$vars = [
+			'reviews' => $this->model->reviewsList(),
 			'hot' => $this->model->jobsHot(),
 		];
 		$this->view->render($vars);
@@ -32,7 +33,7 @@ class MainController extends Controller {
 		}
 
 		$vars = [
-			'pagination' => $this->model->pagination($page,$_GET),
+			'pagination' => $this->model->pagination($page,$_GET,'jobs'),
 			'salary' => $this->model->getSalary(),
 			'list' => $list,
 			'currency' => $this->model->getCurrency('https://api.exchangeratesapi.io/latest','currency.json')->rates,
@@ -73,8 +74,23 @@ class MainController extends Controller {
 		$this->view->render();
 	}
 
-	public function contactAction() {
+	public function reviewsAction() {
 		if (!empty($_POST)) {
+			if (!$this->model->reviewsValidate($_POST)) {
+				$this->view->message('error', $this->model->error, 'Упс. Что то не так');
+			}
+			$id = $this->model->addReview($_POST);
+			$this->model->UploadImage($_FILES['image']['tmp_name'], 'reviews', $id);
+			$this->view->message('success', 'Отзыв отправлен на модерацию', 'Спасибо за вашу оценку!');
+		}
+		$vars = [
+			'list' => $this->model->reviewsListMain(),
+		];
+		$this->view->render($vars);
+	}
+
+	public function contactAction() {
+		if (!empty($_POST["type"])) {
 			if (!$this->model->contactValidate($_POST)) {
 				$this->view->message('error', $this->model->error, 'Упс. Что то не так');
 			}

@@ -249,61 +249,28 @@
 <br><br>
 
 <div class="container center">
-  <h3 class="teal-text scrollspy" id="feedback">Отзывы о нас</h3>
-  <ul class="collection feedback-main">
-    <li class="collection-item">
-      <span class="title">Сергей Терещенко</span>
-      <img src="/public/images/review/3.jpg" class="circle">
-      <p>
-        Уехал через Ворк Лидер в Чехию. До этого метался по работам в Киеве. За границей раньше не был. С документами была немного волокита, 
-        за 2 мес. от момента подачи заявки выехал! Довоз до места работы со Львова. Попервах было тяжеловато. После ночных сил не было. 
-        Что касается работы, то как и везде за хорошие деньги необходимо пахать. Аванс выдали на карту 15 числа около 17000грн. Деньги достойные!
-      </p>
-      <div class="secondary-content center">
-        <span class="right">20.03.18</span>
-        <a href="#!"><i class="material-icons">grade</i></a>
-        <a href="#!"><i class="material-icons">grade</i></a>
-        <a href="#!"><i class="material-icons">grade</i></a>
-        <a href="#!"><i class="material-icons">grade</i></a>
-        <a href="#!"><i class="material-icons">grade</i></a>
-      </div>
-    </li>
-    <li class="collection-item">
-      <span class="title">Владимир Иванов</span>
-      <img src="/public/images/review/1.jpg" class="circle">
-      <p>
-        Добрый день. Было желание попробовать себя за границей. Опыт вождения у меня 18 лет. Обратился в агентство за помощью 
-        в официальном трудоустройстве. Пошел на курсы польского. Визу оформили за 1 мес. Полгода отработал в городе Мысловице 
-        на городских маршрутках, посменно 9 часов/день. Отношение к украинцам отличное! Спасибо за помощь
-      </p>
-      <div class="secondary-content center">
-        <span class="right">10.01.19</span>
-        <a href="#!"><i class="material-icons">grade</i></a>
-        <a href="#!"><i class="material-icons">grade</i></a>
-        <a href="#!"><i class="material-icons">grade</i></a>
-        <a href="#!"><i class="material-icons">grade</i></a>
-      </div>
-    </li>
-    <li class="collection-item">
-      <span class="title">Наталья Явлинская</span>
-      <img src="/public/images/review/2.png" class="circle">
-      <p>
-        Спасибо большое компании WorkLeader, на работу еще не устроилась, но визу уже получила.
-        Говорили 3-4 месяца будут делать, а через 2 виза уже у меня. Очень понравилось обслуживание, 
-        много полезной информации, получила ответы на все поставленные вопросы, никаких подводных камней, 
-        надеюсь, что с работой тоже будет все ок.
-      </p>
-      <div class="secondary-content center">
-      <span class="right">13.09.18</span>
-        <a href="#!"><i class="material-icons">grade</i></a>
-        <a href="#!"><i class="material-icons">grade</i></a>
-        <a href="#!"><i class="material-icons">grade</i></a>
-        <a href="#!"><i class="material-icons">grade</i></a>
-        <a href="#!"><i class="material-icons">grade</i></a>
-      </div>
-    </li>
-  </ul>
-  <a href="#!" style="border-radius:20px;" class="btn waves-effect waves-light center">Смотреть все</a>
+  <?php if (!empty($reviews)): ?>
+    <h3 class="teal-text scrollspy" id="feedback">Отзывы о нас</h3>
+    <ul class="collection feedback-main">
+      <?php foreach ($reviews as $val): ?>
+        <li class="collection-item">
+          <span class="title">
+            <?php echo $val['name']; ?>
+            <span class="right teal-text"><i class="fas fa-map-pin"></i> <?php echo $val['country']; ?></span>
+          </span>
+          <img src="/public/images/reviews/<?php echo $val['id']; ?>.jpg" class="circle">
+          <p><?php echo $val['text']; ?></p>
+          <div class="secondary-content center">
+            <span class="right"><?php echo $val['date']; ?></span>
+            <?php for ($i=1;$i<=$val['rating'];$i++) 
+              echo '<a href="#!"><i class="material-icons">grade</i></a>'; 
+            ?>
+          </div>
+        </li>
+      <?php endforeach; ?>
+    </ul>
+  <?php endif; ?>
+  <a href="/reviews" style="border-radius:20px;" class="btn waves-effect waves-light center">Смотреть все</a>
   <br><br><br>
   <h3 class="teal-text">Наши отделения</h3>
   <a href="https://goo.gl/maps/ZP6oaMw2cUM2" target="_blank">

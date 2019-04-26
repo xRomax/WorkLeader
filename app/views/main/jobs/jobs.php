@@ -1,6 +1,3 @@
-<?php 
-  // debug($list); 
-?>
 <title>Список вакансий от компании WorkLeader | Работа в Европейских странах</title>
 <?php require_once('app/config/mas.php');
   $start_min = $salary['min']; $start_max = $salary["max"];
@@ -12,50 +9,50 @@
 ?>
 
 <script>
-$(document).ready(function(){
-  var slider = document.getElementById('salary-slider');
-  noUiSlider.create(slider, {
-    start: [<?php echo $start_min; ?>, <?php echo $start_max; ?>],
-    connect: true,
-    step: 100,
-    orientation: 'horizontal',
-    range: {
-      'min': <?php echo $salary['min']; ?>,
-      'max': <?php echo $salary['max']; ?>
-    },
-    format: wNumb({
-      decimals: 0,
-    })
+  $(document).ready(function(){
+    var slider = document.getElementById('salary-slider');
+    noUiSlider.create(slider, {
+      start: [<?php echo $start_min; ?>, <?php echo $start_max; ?>],
+      connect: true,
+      step: 100,
+      orientation: 'horizontal',
+      range: {
+        'min': <?php echo $salary['min']; ?>,
+        'max': <?php echo $salary['max']; ?>
+      },
+      format: wNumb({
+        decimals: 0,
+      })
+    });
+
+    var slider_age = document.getElementById('age-slider');
+    noUiSlider.create(slider_age, {
+      start: [<?php echo $start_age_min; ?>, <?php echo $start_age_max; ?>],
+      connect: true,
+      step: 1,
+      orientation: 'horizontal',
+      range: {
+        'min': 18,
+        'max': 65
+      },
+      format: wNumb({
+        decimals: 1,
+      }),
+    });
+
+    setInterval(function() {
+      let salary = slider.noUiSlider.get();
+      let Salary = Array.from(salary);
+      $("#min-salary").val(Salary[0]);
+      $("#max-salary").val(Salary[1]);
+
+      let age = slider_age.noUiSlider.get();
+      let Age = Array.from(age);
+      $("#min-age").val(Age[0]);
+      $("#max-age").val(Age[1]);
+    }, 100);
+
   });
-
-  var slider_age = document.getElementById('age-slider');
-  noUiSlider.create(slider_age, {
-    start: [<?php echo $start_age_min; ?>, <?php echo $start_age_max; ?>],
-    connect: true,
-    step: 1,
-    orientation: 'horizontal',
-    range: {
-      'min': 18,
-      'max': 65
-    },
-    format: wNumb({
-      decimals: 1,
-    }),
-  });
-
-  setInterval(function() {
-    let salary = slider.noUiSlider.get();
-    let Salary = Array.from(salary);
-    $("#min-salary").val(Salary[0]);
-    $("#max-salary").val(Salary[1]);
-
-    let age = slider_age.noUiSlider.get();
-    let Age = Array.from(age);
-    $("#min-age").val(Age[0]);
-    $("#max-age").val(Age[1]);
-  }, 100);
-
-});
 </script>
 <div class="section">
   <div class="row">
@@ -151,11 +148,13 @@ $(document).ready(function(){
                   <div class="col s6">
                     <p>Пол:</p>
                     <p>Возраст:</p>
+                    <p>Проживание:</p>
                     <p>Опыт работы:</p>
                   </div>
                   <div class="col s6">
                     <p><b><?php echo $sex_mas[$sex_key]; ?></b></p>
                     <p><b><?php echo "От ".$val["age_min"]." до ".$val["age_max"]; ?></b></p>
+                    <p><b><?php if ($val["accommodation"] == 'free') echo '<i class="fas fa-check green-text"></i>'; else echo '<i class="fas fa-times red-text"></i>'; ?></b></p>
                     <p><b><?php echo $val["experience"]; ?></b></p>
                   </div>
                 </div>

@@ -241,7 +241,8 @@ footer.page-footer {
 .feedback-main img{
   position:relative;
   float:left;
-  width:100px;
+  width: 120px;
+  padding: 0 10px;
 }
 /* ------------- */
 

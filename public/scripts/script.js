@@ -38,6 +38,8 @@ $(document).ready(function(){
 
   $('.parallax').parallax();
 
+  $('select').formSelect();
+
   $('.collapsible').collapsible({
     accordion: false,
   });
