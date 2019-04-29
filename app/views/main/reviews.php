@@ -20,10 +20,10 @@ if (!empty($test)) debug($test)
         ?> 
         <li class="collection-item">
           <span class="title">
-            <a target="_blank" href="<?php echo $url; ?>"><?php echo $val['name']; ?></a>
+            <a href="<?php echo $url; ?>"><?php echo $val['name']; ?></a>
             <span class="right teal-text"><i class="fas fa-map-pin"></i> <?php echo $val['country']; ?></span>
           </span>
-          <a target="_blank"  href="<?php echo $url; ?>"><img src="/public/images/reviews/<?php echo $val['id']; ?>.jpg" class="circle"></a>
+          <a href="<?php echo $url; ?>"><img src="/public/images/reviews/<?php echo $val['id']; ?>.jpg" class="circle"></a>
           <p><?php echo $val['text']; ?></p>
           <div class="secondary-content center">
             <span class="right"><?php echo $val['date']; ?></span>
