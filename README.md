@@ -1,2 +1,1 @@
-http://php.agrosicheslav.com.ua/
-http://php.agrosicheslav.com.ua/admin/login admin:12345
+https://workleader.com.ua https://workleader.com.ua/admin/login admin:test123
