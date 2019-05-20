@@ -30,9 +30,9 @@ class Admin extends Model {
 		} elseif ($urlLen < 5 or $urlLen > 60) {
 			$this->error = 'URL должен содержать от 5 до 60 символов';
 			return false;
-		} elseif (!$this->checkUrl($post['url'])) {
-			$this->error = 'Такой URL уже существует!';
-			return false;
+		// } elseif (!$this->checkUrl($post['url'])) {
+		// 	$this->error = 'Такой URL уже существует!';
+		// 	return false;
 		} elseif (empty($post["country"])) {
 			$this->error = 'Выберите страну';
 			return false;
@@ -60,18 +60,21 @@ class Admin extends Model {
 		} elseif (empty($post["salary_desc"])) {
 			$this->error = 'Введите описание зарплаты';
 			return false;
-		}
-		if (empty($_FILES['img']['tmp_name']) and $type == 'add') {
+		} elseif (empty($_FILES['img']['tmp_name']) and $type == 'add') {
 			$this->error = 'Изображение не выбрано';
 			return false;
-		}
+		} else 
+			return true;
 	}
 
 	public function checkUrl($url) {
 		$params = [
 			'url' => $url,
 		];
-		if ($this->db->query("SELECT * FROM jobs WHERE url = :url",$params)) return false;
+		if ($this->db->query("SELECT * FROM jobs WHERE url = :url",$params)) 
+			return false;
+		else 
+			return true;
 	}
 
 	public function jobsAdd($post) {
