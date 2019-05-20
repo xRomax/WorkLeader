@@ -1,9 +1,11 @@
-<title>Вакансия "<?php echo $data["name"]; ?>" | WorkLeader | Работа в Европейских странах</title>
-<?php 
+<?php
+if ($data["status"] == 'deactive')
+  $this->errorCode(404);
 $country_key = $data["country"];
 $sex_key = $data["sex"];
 require_once('app/config/mas.php'); 
 ?>
+<title>Вакансия "<?php echo $data["name"]; ?>" | WorkLeader | Работа в Европейских странах</title>
 <nav>
   <div class="nav-wrapper" id="news1">
     <div class="container">
