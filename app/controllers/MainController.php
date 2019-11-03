@@ -113,4 +113,5 @@ class MainController extends Controller {
 	public function articleDataAction() {
 		$this->view->render();
 	}
+
 }

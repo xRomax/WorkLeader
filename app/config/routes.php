@@ -62,6 +62,7 @@ return [
 		'action' => 'reviews',
 		'path' => 'main/reviews'
 	],
+
 	'articles' => [
 		'controller' => 'main',
 		'action' => 'articlesList',
@@ -77,6 +78,7 @@ return [
 		'action' => 'articleData',
 		'path' => 'main/article'
 	],
+
 	// AdminController
 	'admin' => [
 		'controller' => 'admin',

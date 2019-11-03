@@ -38,6 +38,7 @@
             </ul>
           </div>
         </li>
+<<<<<<< HEAD
 
         <li class="bold"><a class="collapsible-header waves-effect waves-light"><i class="fas fa-book fa-1x"></i>Статьи</a>
           <div class="collapsible-body">
@@ -47,6 +48,8 @@
             </ul>
           </div>
         </li>
+=======
+>>>>>>> master
         
         <li class="bold"><a class="collapsible-header waves-effect waves-light" ><i class="fas fa-newspaper fa-1x"></i>Новости</a>
           <div class="collapsible-body">
