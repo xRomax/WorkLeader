@@ -99,12 +99,4 @@ class MainController extends Controller {
 			$this->model->addClient($_POST);
 		}
 	}
-
-	public function articleAction() {
-		$this->view->render();
-	}
-
-	public function articlesAction() {
-		$this->view->render();
-	}
 }

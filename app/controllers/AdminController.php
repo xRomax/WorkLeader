@@ -232,28 +232,4 @@ class AdminController extends Controller {
 		}
 	}
 
-	public function articlesListAction() {
-		$vars = [
-			
-		];
-		$this->view->render($vars);
-	}
-
-	public function articlesAddAction() {
-		$vars = [
-			
-		];
-		$this->view->render($vars);
-	}
-
-	public function articlesEditAction() {
-		$vars = [
-			
-		];
-		$this->view->render($vars);
-	}
-
-	public function articlesDelAction() {
-		
-	}
 }
