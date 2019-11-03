@@ -20,7 +20,7 @@ $(document).ready(function(){
         json = jQuery.parseJSON(result);
         if (json.url) {
           window.location.href = '/' + json.url;
-				} else {
+		} else {
           Swal.fire({
             type: json.status,
             title: json.title,

@@ -1,26 +1,26 @@
-<title>Редактировать новость "<?php echo $data['name']; ?>" | Панель Администратора</title>
+<title>Редактировать новость "<?= $data['name']; ?>" | Панель Администратора</title>
 <div class="jobs_form">
-	<div class="head">Редактировать новость "<?php echo $data['name']; ?>"</div>
+	<div class="head">Редактировать новость "<?= $data['name']; ?>"</div>
 	<div class="body">
-    <form action="/admin/newsEdit/<?php echo $data['id']; ?>" enctype="multipart/form-data" method="post" class="ajax">
+    <form action="/admin/newsEdit/<?= $data['id']; ?>" enctype="multipart/form-data" method="post" class="ajax">
       <div class="input-field">
-        <input id="name" type="text" name="name" value="<?php echo $data['name']; ?>" class="validate">
+        <input id="name" type="text" name="name" value="<?= $data['name']; ?>" class="validate">
         <label for="name">Название</label>
       </div>
       <div class="input-field">
-        <input id="url" type="text" name="url" value="<?php echo $data['url']; ?>" class="validate">
+        <input id="url" type="text" name="url" value="<?= $data['url']; ?>" class="validate">
         <label for="url">URL адресс</label>
       </div>
       <div class="input-field">
-        <textarea id="textarea" class="materialize-textarea" name="text"><?php echo $data['text']; ?></textarea>
+        <textarea id="textarea" class="materialize-textarea" name="text"><?= $data['text']; ?></textarea>
         <label for="textarea">Новость</label>
       </div>
       <div class="input-field">
-        <textarea id="textarea1" class="materialize-textarea" name="description"><?php echo $data['description']; ?></textarea>
+        <textarea id="textarea1" class="materialize-textarea" name="description"><?= $data['description']; ?></textarea>
         <label for="textarea1">Краткое описание</label>
       </div>
       <div class="input-field">
-        <input id="source" type="text" name="source" value="<?php echo $data['source']; ?>" class="validate">
+        <input id="source" type="text" name="source" value="<?= $data['source']; ?>" class="validate">
         <label for="source">Источник</label>
       </div>
 

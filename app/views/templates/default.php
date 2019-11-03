@@ -65,7 +65,7 @@
     </nav>
   </div>
 
-  <?php echo $content; ?>
+  <?= $content; ?>
 
   <footer class="page-footer teal">
     <div class="container">

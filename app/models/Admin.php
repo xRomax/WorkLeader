@@ -173,7 +173,9 @@ class Admin extends Model {
 		];
 		$this->db->query("DELETE FROM $table WHERE id = :id", $params);
 		$path = "public/images/$table/$id.jpg";
-		unlink($path);
+		if (file_exists($path)) {
+			unlink($path);
+		}
 	}
 
 	public function UploadImage($path, $folder, $id) {
@@ -288,5 +290,40 @@ class Admin extends Model {
 			"display" => 'show',
 		];
 		return count($this->db->row("SELECT * FROM `reviews` WHERE display = :display",$params));
+	}
+
+	public function articlesValidate($post) {
+		$nameLen = iconv_strlen($post['name']);
+		$urlLen = iconv_strlen($post['url']);
+		if ($nameLen < 3 or $nameLen > 200) {
+			$this->error = 'Имя должно содержать от 3 до 200 символов';
+			return false;
+		} elseif ($urlLen < 3 or $urlLen > 100) {
+			$this->error = 'URL должно содержать от 3 до 100 символов';
+			return false;
+		}
+		return true;
+	}
+
+	public function articlesAdd($post) {
+		$params = [
+			'name' => $post["name"],
+			'text' => $post["text"],
+			'url' => $post["url"],
+		];
+		$sql = "INSERT INTO articles (name, text, url) VALUES (:name, :text, :url)";
+		$this->db->query($sql,$params);
+		return $this->db->lastInsertId();
+	}
+
+	public function articlesEdit($post, $id) {
+		$params = [
+			'id' => $id,
+			'name' => $post["name"],
+			'text' => $post["text"],
+			'url' => $post["url"],
+		];
+		$sql = "UPDATE articles SET name = :name, text = :text, url = :url WHERE id = :id";
+		$this->db->query($sql,$params);
 	}
 }

@@ -18,17 +18,17 @@
         <?php else: ?>
           <?php foreach ($list as $val): ?>
             <tr>
-              <td><?php echo $val["name"] ?></td>
-              <td><p class="truncate" style="max-width:300px;"><?php echo $val["text"] ?></p></td>
-              <th><?php echo $val["rating"] ?></th>
+              <td><?= $val["name"] ?></td>
+              <td><p class="truncate" style="max-width:300px;"><?= $val["text"] ?></p></td>
+              <th><?= $val["rating"] ?></th>
               <td>
                 <?php if ($val["display"] == 'show'):?>
-                  <a style="width:130px;" href="/admin/reviewsDisplay/<?php echo $val["id"] ?>" class="waves-effect waves-light btn green">SHOW</a>
+                  <a style="width:130px;" href="/admin/reviewsDisplay/<?= $val["id"] ?>" class="waves-effect waves-light btn green">SHOW</a>
                 <?php else: ?>
-                  <a style="width:130px;" href="/admin/reviewsDisplay/<?php echo $val["id"] ?>" class="waves-effect waves-light btn red <? if ($amount >= 3 ) echo 'disabled'; ?>">HIDE</a>
+                  <a style="width:130px;" href="/admin/reviewsDisplay/<?= $val["id"] ?>" class="waves-effect waves-light btn red <? if ($amount >= 3 ) echo 'disabled'; ?>">HIDE</a>
                 <?php endif; ?>
               </td>
-              <td><a href="/admin/reviewsDel/<?php echo $val["id"] ?>" class="waves-effect waves-light btn red">Удалить</a></td>
+              <td><a href="/admin/reviewsDel/<?= $val["id"] ?>" class="waves-effect waves-light btn red">Удалить</a></td>
             </tr>
           <?php endforeach; ?>
         <?php endif; ?>
@@ -44,13 +44,13 @@
         <?php foreach ($list as $val): ?>
           <tr>
             <td>
-              <p><?php echo $val["name"]; ?></p>
+              <p><?= $val["name"]; ?></p>
               <?php if ($val["display"] == 'show'):?>
-                  <a style="width:130px;" href="/admin/reviewsDisplay/<?php echo $val["id"] ?>" class="waves-effect waves-light btn green">SHOW</a>
+                  <a style="width:130px;" href="/admin/reviewsDisplay/<?= $val["id"] ?>" class="waves-effect waves-light btn green">SHOW</a>
                 <?php else: ?>
-                  <a style="width:130px;" href="/admin/reviewsDisplay/<?php echo $val["id"] ?>" class="waves-effect waves-light btn red <? if ($amount >= 3 ) echo 'disabled'; ?>">HIDE</a>
+                  <a style="width:130px;" href="/admin/reviewsDisplay/<?= $val["id"] ?>" class="waves-effect waves-light btn red <? if ($amount >= 3 ) echo 'disabled'; ?>">HIDE</a>
               <?php endif; ?>
-              <p><a href="/admin/reviewsDel/<?php echo $val["id"] ?>" class="waves-effect waves-light btn red">Удалить</a></p>
+              <p><a href="/admin/reviewsDel/<?= $val["id"] ?>" class="waves-effect waves-light btn red">Удалить</a></p>
             </td>
           </tr>
         <?php endforeach; ?>

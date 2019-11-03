@@ -1,6 +1,6 @@
 <div class="feedback-block white-text">
   <h6 style="padding-top:20px;" class="center">Введите Ваши данные и наш менеджер свяжется с вами!</h6>
-  <form action="<?php echo $_SERVER["REQUEST_URI"]; ?>" method="post" class="bottomForm ajax">
+  <form action="<?= $_SERVER["REQUEST_URI"]; ?>" method="post" class="bottomForm ajax">
   <input style="position:fixed; top:-100000px;" type="reset">
   <input type="hidden" name="type" value="bottomForm">
     <div class="row">

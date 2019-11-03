@@ -20,13 +20,13 @@ if (!empty($test)) debug($test)
         ?> 
         <li class="collection-item">
           <span class="title">
-            <a href="<?php echo $url; ?>"><?php echo $val['name']; ?></a>
-            <span class="right teal-text"><i class="fas fa-map-pin"></i> <?php echo $val['country']; ?></span>
+            <a href="<?= $url; ?>"><?= $val['name']; ?></a>
+            <span class="right teal-text"><i class="fas fa-map-pin"></i> <?= $val['country']; ?></span>
           </span>
-          <a href="<?php echo $url; ?>"><img src="/public/images/reviews/<?php echo $val['id']; ?>.jpg" class="circle"></a>
-          <p><?php echo $val['text']; ?></p>
+          <a href="<?= $url; ?>"><img src="/public/images/reviews/<?= $val['id']; ?>.jpg" class="circle"></a>
+          <p><?= $val['text']; ?></p>
           <div class="secondary-content center">
-            <span class="right"><?php echo $val['date']; ?></span>
+            <span class="right"><?= $val['date']; ?></span>
             <?php for ($i=1;$i<=$val['rating'];$i++) 
               echo '<a href="#!"><i class="material-icons">grade</i></a>'; 
             ?>
@@ -40,7 +40,7 @@ if (!empty($test)) debug($test)
 <div class="container">
   <div class="jobs-form">
     <h5>Добавить отзыв</h5>
-    <form action="<?php echo $_SERVER["REQUEST_URI"]; ?>" enctype="multipart/form-data" method="post" class="ajax">
+    <form action="<?= $_SERVER["REQUEST_URI"]; ?>" enctype="multipart/form-data" method="post" class="ajax">
       <input style="position:fixed; top:-100000px;" type="reset">
       <div class="row">
         <div class="col m6 s12 input-field">

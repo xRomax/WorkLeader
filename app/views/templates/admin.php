@@ -39,7 +39,7 @@
           </div>
         </li>
 
-        <li class="bold"><a class="collapsible-header waves-effect waves-light"><i class="fas fa-user fa-1x"></i>Статьи</a>
+        <li class="bold"><a class="collapsible-header waves-effect waves-light"><i class="fas fa-book fa-1x"></i>Статьи</a>
           <div class="collapsible-body">
             <ul>
               <li><a href="/admin/articlesAdd">Добавить</a></li>
@@ -48,7 +48,7 @@
           </div>
         </li>
         
-        <li class="bold"><a class="collapsible-header waves-effect waves-light" ><i class="fas fa-filter fa-1x"></i>Новости</a>
+        <li class="bold"><a class="collapsible-header waves-effect waves-light" ><i class="fas fa-newspaper fa-1x"></i>Новости</a>
           <div class="collapsible-body">
             <ul>
               <li><a href="/admin/newsAdd">Добавить</a></li>
@@ -72,7 +72,7 @@
 <?php endif; ?>
 
 <main>
-  <?php echo $content; ?>
+  <?= $content; ?>
 </main>
   
 </body>

@@ -234,26 +234,57 @@ class AdminController extends Controller {
 
 	public function articlesListAction() {
 		$vars = [
-			
+			'pagination' => '',
+			'list' => $this->model->dataList('articles'),
+		];
+		$this->view->render($vars);
+	}
+
+	public function articlesViewAction() {
+		$vars = [
+			'pagination' => '',
+			'data' => $this->model->dataPost($this->route['id'], 'articles')[0],
 		];
 		$this->view->render($vars);
 	}
 
 	public function articlesAddAction() {
-		$vars = [
-			
-		];
-		$this->view->render($vars);
+		if (!empty($_POST)) {
+			if (!$this->model->articlesValidate($_POST,'add')) {
+				$this->view->message('error', $this->model->error, 'Ошибка!');
+			}
+			$id = $this->model->articlesAdd($_POST);
+			if (!$id)	{ 
+				$this->view->message('success', 'Ошибка обработки запроса', 'Ошибка!');
+			}
+			$this->view->location('admin/articlesList');
+		}
+		$this->view->render();
 	}
 
 	public function articlesEditAction() {
+		if (!$this->model->isExists('articles','id',$this->route['id'])) {
+			$this->view->errorCode(404);
+		}
+		if (!empty($_POST)) {
+			if (!$this->model->articlesValidate($_POST)) {
+				$this->view->message('error', $this->model->error, 'Ошибка!');
+			}
+			$this->model->articlesEdit($_POST,$this->route['id']);
+			$this->view->redirect('admin/articlesList');
+		}
 		$vars = [
-			
+			'data' => $this->model->dataPost($this->route['id'],'articles')[0],
 		];
 		$this->view->render($vars);
 	}
 
-	public function articlesDelAction() {
-		
+	public function articlesDeleteAction() {
+		if (!$this->model->isExists('articles','id',$this->route['id'])) {
+			$this->view->errorCode(404);
+		} else {
+			$this->model->deletePost($this->route['id'],'articles');
+			$this->view->redirect('admin/articlesList');
+		}
 	}
 }

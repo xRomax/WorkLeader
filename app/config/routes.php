@@ -197,7 +197,7 @@ return [
 	'admin/articlesAdd' => [
 		'controller' => 'admin',
 		'action' => 'articlesAdd',
-		'path' => 'admin/articlessAdd'
+		'path' => 'admin/articlesAdd'
 	],
 	'admin/articlesEdit/{id:\d+}' => [
 		'controller' => 'admin',
@@ -208,5 +208,10 @@ return [
 		'controller' => 'admin',
 		'action' => 'articlesDelete',
 		'path' => ''
+	],
+	'admin/articlesView/{id:\d+}' => [
+		'controller' => 'admin',
+		'action' => 'articlesView',
+		'path' => 'admin/articlesView'
 	],
 ];

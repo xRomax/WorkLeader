@@ -201,14 +201,14 @@
             <div class="col l4 s12">
               <div class="card">
                 <div class="card-image">
-                  <img src="/public/images/jobs/<?php echo $val["id"]; ?>.jpg">
-                  <span class="card-title truncate"><?php echo $val["name"]; ?></span>
+                  <img src="/public/images/jobs/<?= $val["id"]; ?>.jpg">
+                  <span class="card-title truncate"><?= $val["name"]; ?></span>
                 </div>
                 <div class="card-content black-text">
-                  <p class="truncate"><?php echo $val["responsibility"]; ?></p>
+                  <p class="truncate"><?= $val["responsibility"]; ?></p>
                 </div>
                 <div class="card-action">
-                  <a href="/jobs/<?php echo $val["url"]; ?>">Узнать больше..</a>
+                  <a href="/jobs/<?= $val["url"]; ?>">Узнать больше..</a>
                 </div>
               </div>
             </div>
@@ -230,14 +230,14 @@
         <div class="col m6 s12">
           <div class="card">
             <div class="card-image">
-              <img src="/public/images/jobs/<?php echo $val["id"]; ?>.jpg">
-              <span class="card-title truncate bold"><?php echo $val["name"]; ?></span>
+              <img src="/public/images/jobs/<?= $val["id"]; ?>.jpg">
+              <span class="card-title truncate bold"><?= $val["name"]; ?></span>
             </div>
             <div class="card-content black-text">
-              <p class="truncate"><?php echo $val["responsibility"]; ?></p>
+              <p class="truncate"><?= $val["responsibility"]; ?></p>
             </div>
             <div class="card-action">
-              <a href="/jobs/<?php echo $val["url"]; ?>">Узнать больше..</a>
+              <a href="/jobs/<?= $val["url"]; ?>">Узнать больше..</a>
             </div>
           </div>
         </div>
@@ -255,13 +255,13 @@
       <?php foreach ($reviews as $val): ?>
         <li class="collection-item">
           <span class="title">
-            <?php echo $val['name']; ?>
-            <span class="right teal-text"><i class="fas fa-map-pin"></i> <?php echo $val['country']; ?></span>
+            <?= $val['name']; ?>
+            <span class="right teal-text"><i class="fas fa-map-pin"></i> <?= $val['country']; ?></span>
           </span>
-          <img src="/public/images/reviews/<?php echo $val['id']; ?>.jpg" class="circle">
-          <p><?php echo $val['text']; ?></p>
+          <img src="/public/images/reviews/<?= $val['id']; ?>.jpg" class="circle">
+          <p><?= $val['text']; ?></p>
           <div class="secondary-content center">
-            <span class="right"><?php echo $val['date']; ?></span>
+            <span class="right"><?= $val['date']; ?></span>
             <?php for ($i=1;$i<=$val['rating'];$i++) 
               echo '<a href="#!"><i class="material-icons">grade</i></a>'; 
             ?>

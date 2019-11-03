@@ -1,6 +1,6 @@
 <div style="margin-top:15px;" class="col l3 m12 s12 jobs-form"><br>
   <b>Спроси нас о вакансии</b>
-  <form action="<?php echo $_SERVER["REQUEST_URI"]; ?>" method="post" class="modalForm ajax">
+  <form action="<?= $_SERVER["REQUEST_URI"]; ?>" method="post" class="modalForm ajax">
     <input style="position:fixed; top:-100000px;" type="reset">
     <input type="hidden" name="type" value="modalForm">
     <div class="col l12 m6 s6">
