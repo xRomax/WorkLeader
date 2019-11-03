@@ -38,6 +38,15 @@
             </ul>
           </div>
         </li>
+
+        <li class="bold"><a class="collapsible-header waves-effect waves-light"><i class="fas fa-user fa-1x"></i>Статьи</a>
+          <div class="collapsible-body">
+            <ul>
+              <li><a href="/admin/articlesAdd">Добавить</a></li>
+              <li><a href="/admin/articlesList">Список</a></li>
+            </ul>
+          </div>
+        </li>
         
         <li class="bold"><a class="collapsible-header waves-effect waves-light" ><i class="fas fa-filter fa-1x"></i>Новости</a>
           <div class="collapsible-body">
