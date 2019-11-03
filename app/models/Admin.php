@@ -292,7 +292,7 @@ class Admin extends Model {
 		return count($this->db->row("SELECT * FROM `reviews` WHERE display = :display",$params));
 	}
 
-	public function articlesValidate($post) {
+	public function articlesValidate($post, $type = 'add') {
 		$nameLen = iconv_strlen($post['name']);
 		$urlLen = iconv_strlen($post['url']);
 		if ($nameLen < 3 or $nameLen > 200) {
@@ -300,6 +300,10 @@ class Admin extends Model {
 			return false;
 		} elseif ($urlLen < 3 or $urlLen > 100) {
 			$this->error = 'URL должно содержать от 3 до 100 символов';
+			return false;
+		}
+		if (empty($_FILES['img']['tmp_name']) and $type == 'add') {
+			$this->error = 'Изображение не выбрано';
 			return false;
 		}
 		return true;

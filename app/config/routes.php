@@ -64,19 +64,19 @@ return [
 	],
 	'articles' => [
 		'controller' => 'main',
-		'action' => 'articles',
+		'action' => 'articlesList',
 		'path' => 'main/articles'
 	],
-	// 'articles/{page:\d+}' => [
-	// 	'controller' => 'main',
-	// 	'action' => 'articles',
-	// 	'path' => 'main/articles'
-	// ],
-	// 'articles/{url:\D+}' => [
-	// 	'controller' => 'main',
-	// 	'action' => 'article',
-	// 	'path' => 'main/article'
-	// ],
+	'articles/{page:\d+}' => [
+		'controller' => 'main',
+		'action' => 'articlesList',
+		'path' => 'main/articles'
+	],
+	'articles/{url:\D+}' => [
+		'controller' => 'main',
+		'action' => 'articleData',
+		'path' => 'main/article'
+	],
 	// AdminController
 	'admin' => [
 		'controller' => 'admin',

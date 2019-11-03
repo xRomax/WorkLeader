@@ -257,6 +257,7 @@ class AdminController extends Controller {
 			if (!$id)	{ 
 				$this->view->message('success', 'Ошибка обработки запроса', 'Ошибка!');
 			}
+			$this->model->UploadImage($_FILES['img']['tmp_name'], 'articles', $id);
 			$this->view->location('admin/articlesList');
 		}
 		$this->view->render();
@@ -267,8 +268,11 @@ class AdminController extends Controller {
 			$this->view->errorCode(404);
 		}
 		if (!empty($_POST)) {
-			if (!$this->model->articlesValidate($_POST)) {
+			if (!$this->model->articlesValidate($_POST, 'edit')) {
 				$this->view->message('error', $this->model->error, 'Ошибка!');
+			}
+			if ($_FILES['img']['tmp_name']) {
+				$this->model->UploadImage($_FILES['img']['tmp_name'], 'articles', $this->route['id']);
 			}
 			$this->model->articlesEdit($_POST,$this->route['id']);
 			$this->view->redirect('admin/articlesList');

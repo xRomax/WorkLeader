@@ -11,9 +11,17 @@
                 <input id="url" type="text" name="url" class="validate" value="<?= $data['url'] ?>">
                 <label for="url">URL адресс</label>
             </div>
+            <div class="file-field input-field">
+                <div class="btn">
+                    <span>File</span>
+                    <input type="file" name="img">
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text">
+                </div>
+            </div>
             <div class="input-field">
                 <textarea id="editor" class="materialize-textarea" name="text"><?= $data['text'] ?></textarea>
-                <!-- <label for="text">Текст</label> -->
             </div>
             <button style="width:100%;" class="btn waves-effect light-blue darken-4" type="submit">Сохранить изминения</button>
         </form>

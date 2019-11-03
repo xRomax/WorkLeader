@@ -100,11 +100,17 @@ class MainController extends Controller {
 		}
 	}
 
-	public function articleAction() {
-		$this->view->render();
+	public function articlesListAction() {
+		$page = array_key_exists('page', $this->route) ? $page = (int) $this->route["page"] : 1;
+
+		$vars = [
+			'pagination' => $this->model->pagination($page, $_GET, 'articles'),
+			'list' => $this->model->articlesList($page),
+		];
+		$this->view->render($vars);
 	}
 
-	public function articlesAction() {
+	public function articleDataAction() {
 		$this->view->render();
 	}
 }

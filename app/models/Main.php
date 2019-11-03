@@ -122,6 +122,17 @@ class Main extends Model {
 		return $this->db->row($sql, $params);
 	}
 
+	public function articlesList($page) {
+		$step = 5;
+		$position = --$page * $step;
+		$params = [
+			'position' => (int) $position,
+			'step' =>(int) $step
+		];
+		$sql = "SELECT * FROM articles ORDER BY id ASC LIMIT :position, :step";
+		return $this->db->row($sql, $params);
+	}
+
 	public function jobsHot() {
 		$params = [
 			"hot" => 'show',
@@ -220,8 +231,8 @@ class Main extends Model {
 		return array('params6' => $params, 'accommodation' => $accommodation);
 	}
 
-	public function pagination($page,$get,$path) {
-		extract($this->paginationFilter($page,$get));
+	public function pagination($page, $get, $path) {
+		extract($this->paginationFilter($page, $get, $path));
 		$left = $page - 1; $right = $page + 1; $step = 5;
 		$amoun_pages = ceil( $count / $step);
 		if ($amoun_pages <= 1) return false;
@@ -246,7 +257,7 @@ class Main extends Model {
 		return $html;
 	}
 
-	public function paginationFilter($page, $get) {
+	public function paginationFilter($page, $get, $path) {
 		if (!empty($get)) {
 			$filter = '?';
 			foreach ($get as $key => $value) {
@@ -264,7 +275,8 @@ class Main extends Model {
 			$count = count($this->jobsListFilter($page,$get,'count'));
 		} else {
 			$filter = NULL;
-			$count = $this->db->query("SELECT * FROM jobs WHERE status = 'active'")->rowCount();
+			$where = $path === 'jobs' ? " WHERE status = 'active'" : "";
+			$count = $this->db->query("SELECT * FROM $path".$where)->rowCount();
 		}
 		return array('filter' => $filter, 'count' => $count);
 	}
