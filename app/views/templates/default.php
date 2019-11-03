@@ -62,12 +62,8 @@
       </div>
     </nav>
   </div>
-<<<<<<< HEAD
 
   <?= $content; ?>
-=======
-  <?php echo $content; ?>
->>>>>>> master
 
   <footer class="page-footer teal">
     <div class="container">
