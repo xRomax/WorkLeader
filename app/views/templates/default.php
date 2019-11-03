@@ -47,14 +47,16 @@
           <li id='index'><a href="/">Главная</a></li>
           <li id='services' class="dropdown-trigger" data-target="services_dropdown"><a href="/services">Услуги<i class="material-icons right">arrow_drop_down</i></a></li>
           <li id='jobs'><a href="/jobs">Вакансии</a></li>
+          <li id='articles'><a href="/articles">Статьи</a></li>
           <li id='about'><a href="/about">О нас</a></li>
           <li id='news'><a href="/news">Новости</a></li>
         </ul>
         
         <ul id="nav-mobile" class="sidenav">
           <li id='index'><a href="/">Главная</a></li>
-          <li id='jobs'><a href="/jobs">Вакансии</a></li>
           <li id='services'><a href="/services">Услуги</a></li>
+          <li id='jobs'><a href="/jobs">Вакансии</a></li>
+          <li id='articles'><a href="/articles">Статьи</a></li>
           <li id='about'><a href="/about">О нас</a></li>
           <li id='news'><a href="/news">Новости</a></li>
         </ul>
@@ -62,6 +64,7 @@
       </div>
     </nav>
   </div>
+
   <?php echo $content; ?>
 
   <footer class="page-footer teal">
