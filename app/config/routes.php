@@ -66,17 +66,17 @@ return [
 	'articles' => [
 		'controller' => 'main',
 		'action' => 'articlesList',
-		'path' => 'main/articles'
+		'path' => 'main/articlesList'
 	],
 	'articles/{page:\d+}' => [
 		'controller' => 'main',
 		'action' => 'articlesList',
-		'path' => 'main/articles'
+		'path' => 'main/articlesList'
 	],
 	'articles/{url:\D+}' => [
 		'controller' => 'main',
 		'action' => 'articleData',
-		'path' => 'main/article'
+		'path' => 'main/articleData'
 	],
 
 	// AdminController

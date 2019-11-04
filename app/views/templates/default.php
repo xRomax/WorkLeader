@@ -38,14 +38,15 @@
         <a style="height:100%;" id="logo-container" href="/" class="brand-logo hide-on-large-only show-on-medium-and-down"><img style="padding: 6px;" height="55" src="/public/images/logo.png" alt="WorkLeader"></a>
         <span class="navbar-info teal-text">
           <p>
-            <a id="tel-number" class="center teal-text text-lighten-2" href="tel:0509468428"><i class="fas fa-1x fa-mobile-alt"></i> +38(050)946-84-28</a>
-            <a id="tel-number" class="center teal-text text-lighten-2" href="tel:0684331027"><i class="fas fa-1x fa-mobile-alt"></i> +38(068)433-10-27</a>
-            <a id="tel-number" class="center teal-text text-lighten-2" href="https://goo.gl/maps/ZP6oaMw2cUM2" target="_blank"><i class="fas fa-1x fa-map-marked"></i> г.Днепр, ул. Глинки 20</a>
+            <a id="tel-number" class="center teal-text text-lighten-2" href="tel:0509468428"><i class="fas fa-1x fa-mobile-alt"></i> +38(068)555-15-26</a>
+            <a id="tel-number" class="center teal-text text-lighten-2" href="tel:0684331027"><i class="fas fa-1x fa-mobile-alt"></i> +38(068)889-74-51</a>
+            <!-- <a id="tel-number" class="center teal-text text-lighten-2" href="https://goo.gl/maps/ZP6oaMw2cUM2" target="_blank"><i class="fas fa-1x fa-map-marked"></i> г.Днепр, ул. Глинки 20</a> -->
           </p>
         </span>
         <ul class="right hide-on-med-and-down">
           <li id='index'><a href="/">Главная</a></li>
           <li id='services' class="dropdown-trigger" data-target="services_dropdown"><a href="/services">Услуги<i class="material-icons right">arrow_drop_down</i></a></li>
+          <li id='jobs'><a href="/articles">Статьи</a></li>
           <li id='jobs'><a href="/jobs">Вакансии</a></li>
           <li id='about'><a href="/about">О нас</a></li>
           <li id='news'><a href="/news">Новости</a></li>
@@ -54,6 +55,7 @@
         <ul id="nav-mobile" class="sidenav">
           <li id='index'><a href="/">Главная</a></li>
           <li id='jobs'><a href="/jobs">Вакансии</a></li>
+          <li id='jobs'><a href="/articles">Статьи</a></li>
           <li id='services'><a href="/services">Услуги</a></li>
           <li id='about'><a href="/about">О нас</a></li>
           <li id='news'><a href="/news">Новости</a></li>
@@ -75,8 +77,8 @@
         <div class="col l3 offset-l1 s12">
           <h5 class="white-text">Контакты</h5>
           <ul>
-            <li><a class="white-text" href="tel:0509468428"><i class="fas fa-phone font-icons"></i>+38(050)946-84-28</a></li>
-            <li><a class="white-text" href="tel:0684331027"><i class="fas fa-phone font-icons"></i>+38(068)433-10-27</a></li>
+            <li><a class="white-text" href="tel:0509468428"><i class="fas fa-phone font-icons"></i>+38(068)555-15-26</a></li>
+            <li><a class="white-text" href="tel:0684331027"><i class="fas fa-phone font-icons"></i>+38(068)889-74-51</a></li>
             <li><a class="white-text" href="mailto:workleadereurope@gmail.com"><i class="fas fa-envelope font-icons"></i>workleadereurope@gmail.com</a></li>
           </ul>
           <h5 class="white-text">Документы</h5>

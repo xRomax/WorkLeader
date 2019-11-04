@@ -2,7 +2,7 @@
 <div class="jobs_form">
 	<div class="head">Добавить статью</div>
 	<div class="body">
-        <form action="/admin/articlesAdd" enctype="multipart/form-data" method="post" class="ajax">
+        <form action="/admin/articlesAdd" enctype="multipart/form-data" method="post" class="">
             <div class="input-field">
                 <input id="name" type="text" name="name" class="validate">
                 <label for="name">Название</label>
@@ -19,6 +19,16 @@
                 <div class="file-path-wrapper">
                     <input class="file-path validate" type="text">
                 </div>
+            </div>
+            <select name="recommend[]" multiple size="3">
+                <option value="" disabled>Рекомендуемые статьи</option>
+                <?php foreach($list as $key => $values): ?>
+                    <option value="<?= $values['id'] ?>"><?= $values['name'] ?></option>
+                <?php endforeach; ?>
+            </select>
+            <div class="input-field">
+                <input id="description" type="text" name="description" class="validate">
+                <label for="description">Краткое описание</label>
             </div>
             <div class="input-field">
                 <textarea id="editor" class="materialize-textarea" name="text"></textarea>

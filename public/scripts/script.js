@@ -58,10 +58,6 @@ $(document).ready(function(){
     indicators: true,
   });
 
-  if ($(window).width() <= '1258'){
-    $('.navbar-info').css("display","none");
-  }
-
   $('.scrollspy').scrollSpy({
     activeClass: 'active',
   });

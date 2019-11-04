@@ -2,7 +2,7 @@
 <div class="jobs_form">
 	<div class="head">Редактировать статью</div>
 	<div class="body">
-        <form action="/admin/articlesEdit/<?= $data['id'] ?>" enctype="multipart/form-data" method="post" class="ajx">
+        <form action="/admin/articlesEdit/<?= $data['id'] ?>" enctype="multipart/form-data" method="post" class="ajax">
             <div class="input-field">
                 <input id="name" type="text" name="name" class="validate" value="<?= $data['name'] ?>">
                 <label for="name">Название</label>
@@ -19,6 +19,22 @@
                 <div class="file-path-wrapper">
                     <input class="file-path validate" type="text">
                 </div>
+            </div>
+            <select name="recommend[]" multiple size="3">
+                <option value="" disabled>Рекомендуемые статьи</option>
+                <?php if($recommend): ?>
+                    <?php foreach($list as $key => $values): ?>
+                        <option value="<?= $values['id'] ?>" <?php if (in_array($values['id'], $recommend)) echo 'selected'; ?> ><?= $values['name'] ?></option>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <?php foreach($list as $key => $values): ?>
+                        <option value="<?= $values['id'] ?>"><?= $values['name'] ?></option>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+            </select>
+            <div class="input-field">
+                <input id="description" type="text" name="description" class="validate" value="<?= $data['description'] ?>">
+                <label for="description">Краткое описание</label>
             </div>
             <div class="input-field">
                 <textarea id="editor" class="materialize-textarea" name="text"><?= $data['text'] ?></textarea>

@@ -250,6 +250,10 @@ class AdminController extends Controller {
 
 	public function articlesAddAction() {
 		if (!empty($_POST)) {
+			if (!isset($_POST['recommend'])) {
+				$_POST['recommend'] = NULL;
+			}
+			// var_dump($_POST);exit;
 			if (!$this->model->articlesValidate($_POST,'add')) {
 				$this->view->message('error', $this->model->error, 'Ошибка!');
 			}
@@ -260,7 +264,10 @@ class AdminController extends Controller {
 			$this->model->UploadImage($_FILES['img']['tmp_name'], 'articles', $id);
 			$this->view->location('admin/articlesList');
 		}
-		$this->view->render();
+		$vars = [
+			'list' => $this->model->dataList('articles')
+		];
+		$this->view->render($vars);
 	}
 
 	public function articlesEditAction() {
@@ -268,6 +275,10 @@ class AdminController extends Controller {
 			$this->view->errorCode(404);
 		}
 		if (!empty($_POST)) {
+			if (!isset($_POST['recommend'])) {
+				$_POST['recommend'] = NULL;
+			}
+			// var_dump($_POST);exit;
 			if (!$this->model->articlesValidate($_POST, 'edit')) {
 				$this->view->message('error', $this->model->error, 'Ошибка!');
 			}
@@ -275,10 +286,16 @@ class AdminController extends Controller {
 				$this->model->UploadImage($_FILES['img']['tmp_name'], 'articles', $this->route['id']);
 			}
 			$this->model->articlesEdit($_POST,$this->route['id']);
-			$this->view->redirect('admin/articlesList');
+			$this->view->location('admin/articlesList');
 		}
+		
+		$data = $this->model->dataPost($this->route['id'],'articles')[0];
+		$recommend = json_decode($data['recommend']);
+
 		$vars = [
-			'data' => $this->model->dataPost($this->route['id'],'articles')[0],
+			'data' => $data,
+			'list' => $this->model->dataList('articles'),
+			'recommend' => $recommend
 		];
 		$this->view->render($vars);
 	}

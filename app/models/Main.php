@@ -123,7 +123,7 @@ class Main extends Model {
 	}
 
 	public function articlesList($page) {
-		$step = 5;
+		$step = 4;
 		$position = --$page * $step;
 		$params = [
 			'position' => (int) $position,
@@ -231,9 +231,9 @@ class Main extends Model {
 		return array('params6' => $params, 'accommodation' => $accommodation);
 	}
 
-	public function pagination($page, $get, $path) {
+	public function pagination($page, $get, $path, $step = 5) {
 		extract($this->paginationFilter($page, $get, $path));
-		$left = $page - 1; $right = $page + 1; $step = 5;
+		$left = $page - 1; $right = $page + 1;
 		$amoun_pages = ceil( $count / $step);
 		if ($amoun_pages <= 1) return false;
 		$html = '<ul class="pagination center">';

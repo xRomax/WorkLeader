@@ -295,11 +295,18 @@ class Admin extends Model {
 	public function articlesValidate($post, $type = 'add') {
 		$nameLen = iconv_strlen($post['name']);
 		$urlLen = iconv_strlen($post['url']);
-		if ($nameLen < 3 or $nameLen > 200) {
-			$this->error = 'Имя должно содержать от 3 до 200 символов';
+		$descLen = iconv_strlen($post['description']);
+		if ($nameLen < 3 or $nameLen > 100) {
+			$this->error = 'Имя должно содержать от 3 до 100 символов';
 			return false;
 		} elseif ($urlLen < 3 or $urlLen > 100) {
 			$this->error = 'URL должно содержать от 3 до 100 символов';
+			return false;
+		} elseif ($descLen < 3 or $descLen > 250) {
+			$this->error = 'Описание должно содержать от 20 до 250 символов';
+			return false;
+		} elseif ($post['recommend'] && count($post['recommend']) > 3 ) {
+			$this->error = 'Максимальное количество рекомендованных статьей не больше трёх!';
 			return false;
 		}
 		if (empty($_FILES['img']['tmp_name']) and $type == 'add') {
@@ -313,9 +320,11 @@ class Admin extends Model {
 		$params = [
 			'name' => $post["name"],
 			'text' => $post["text"],
-			'url' => $post["url"],
+			'description' => $post["description"],
+			'recommend' => json_encode($post['recommend']),
+			'url' => $post["url"]
 		];
-		$sql = "INSERT INTO articles (name, text, url) VALUES (:name, :text, :url)";
+		$sql = "INSERT INTO articles (name, text, description, recommend, url) VALUES (:name, :text, :description, :recommend, :url)";
 		$this->db->query($sql,$params);
 		return $this->db->lastInsertId();
 	}
@@ -325,9 +334,11 @@ class Admin extends Model {
 			'id' => $id,
 			'name' => $post["name"],
 			'text' => $post["text"],
-			'url' => $post["url"],
+			'description' => $post["description"],
+			'recommend' => json_encode($post['recommend']),
+			'url' => $post["url"]
 		];
-		$sql = "UPDATE articles SET name = :name, text = :text, url = :url WHERE id = :id";
+		$sql = "UPDATE articles SET name = :name, text = :text, description = :description, recommend = :recommend, url = :url WHERE id = :id";
 		$this->db->query($sql,$params);
 	}
 }

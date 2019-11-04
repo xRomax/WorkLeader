@@ -1,3 +1,3 @@
 <title>Просмотр статьи | Панель Администратора</title>
-<h3><?= $data['name'] ?></h3>
+<h5 class="tdname"><?= $data['name'] ?></h5>
 <?= $data['text'] ?>

@@ -5,7 +5,7 @@
       <div class="col s12">
         <a href="/" class="breadcrumb">Главная</a>
         <a href="/news" class="breadcrumb">Новости</a>
-        <a href="/news/<?= $data["url"]; ?>#!" class="breadcrumb disabled"><?= $data["name"]; ?></a>
+        <a href="/news/<?= $data["url"]; ?>#!" class="breadcrumb disabled"><?= substr($data['name'], 0, 20).'...' ?></a>
       </div>
     </div>
   </div>

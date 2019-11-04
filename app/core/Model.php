@@ -16,7 +16,7 @@ abstract class Model {
 		$path = "app/config/$name";
     if (!is_file($path) || filemtime($path) < time() - 86400) {
 			if ($data = file_get_contents($url)) {
-				file_put_contents($path, $data);
+				// file_put_contents($path, $data);
 			}
 		}
     return json_decode(file_get_contents($path));
