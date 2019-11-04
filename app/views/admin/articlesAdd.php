@@ -2,7 +2,7 @@
 <div class="jobs_form">
 	<div class="head">Добавить статью</div>
 	<div class="body">
-        <form action="/admin/articlesAdd" enctype="multipart/form-data" method="post" class="">
+        <form action="/admin/articlesAdd" enctype="multipart/form-data" method="post" class="ajax">
             <div class="input-field">
                 <input id="name" type="text" name="name" class="validate">
                 <label for="name">Название</label>
