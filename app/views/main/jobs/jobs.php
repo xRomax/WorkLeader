@@ -12,13 +12,13 @@
   $(document).ready(function(){
     var slider = document.getElementById('salary-slider');
     noUiSlider.create(slider, {
-      start: [<?php echo $start_min; ?>, <?php echo $start_max; ?>],
+      start: [<?= $start_min; ?>, <?= $start_max; ?>],
       connect: true,
       step: 100,
       orientation: 'horizontal',
       range: {
-        'min': <?php echo $salary['min']; ?>,
-        'max': <?php echo $salary['max']; ?>
+        'min': <?= $salary['min']; ?>,
+        'max': <?= $salary['max']; ?>
       },
       format: wNumb({
         decimals: 0,
@@ -27,7 +27,7 @@
 
     var slider_age = document.getElementById('age-slider');
     noUiSlider.create(slider_age, {
-      start: [<?php echo $start_age_min; ?>, <?php echo $start_age_max; ?>],
+      start: [<?= $start_age_min; ?>, <?= $start_age_max; ?>],
       connect: true,
       step: 1,
       orientation: 'horizontal',
@@ -141,9 +141,9 @@
           <?php foreach ($list as $val): ?>
             <?php $country_key = $val["country"]; $sex_key = $val["sex"]; ?>
             <div class="row jobs-form" style="margin: 13px 1px;">
-              <p style="margin-left:10px;"><b><?php echo $val["name"]; ?></b></p>
+              <p style="margin-left:10px;"><b><?= $val["name"]; ?></b></p>
               <div class="col l4 m6 s12">
-                <img class="z-depth-2" src="/public/images/flag/<?php echo $val["country"]; ?>.png" alt="Польша" style="width:20px;"> <?php echo $country_mas[$country_key]; ?>
+                <img class="z-depth-2" src="/public/images/flag/<?= $val["country"]; ?>.png" alt="Польша" style="width:20px;"> <?= $country_mas[$country_key]; ?>
                 <div class="row">
                   <div class="col s6">
                     <p>Пол:</p>
@@ -152,16 +152,16 @@
                     <p>Опыт работы:</p>
                   </div>
                   <div class="col s6">
-                    <p><b><?php echo $sex_mas[$sex_key]; ?></b></p>
-                    <p><b><?php echo "От ".$val["age_min"]." до ".$val["age_max"]; ?></b></p>
+                    <p><b><?= $sex_mas[$sex_key]; ?></b></p>
+                    <p><b><?= "От ".$val["age_min"]." до ".$val["age_max"]; ?></b></p>
                     <p><b><?php if ($val["accommodation"] == 'free') echo '<i class="fas fa-check green-text"></i>'; else echo '<i class="fas fa-times red-text"></i>'; ?></b></p>
-                    <p><b><?php echo $val["experience"]; ?></b></p>
+                    <p><b><?= $val["experience"]; ?></b></p>
                   </div>
                 </div>
               </div>
               <div class="col l3 m6 s6">
                 <span class="red-text"><b>Зарплата:</b></span>
-                <p>EUR≈<?php echo $val["salary"]; ?></p>
+                <p>EUR≈<?= $val["salary"]; ?></p>
                 <?php
                 $currency_key = $val['country'];
                 $currency_code = $country_to_currency[$currency_key];
@@ -174,10 +174,10 @@
                 ?>
               </div>
               <div class="col l4 hide-on-med-and-down show-on-large">
-                <img style="width:120%; " src="/public/images/jobs/<?php echo $val["id"]; ?>.jpg" alt="">
+                <img style="width:120%; " src="/public/images/jobs/<?= $val["id"]; ?>.jpg" alt="">
               </div>
               <div class="col l12 m6 s6">
-                <a target="_blank" href="/jobs/<?php echo $val["url"]; ?>" class="btn waves-effect waves-light light-blue lighten-1d">Подробнее</a>
+                <a target="_blank" href="/jobs/<?= $val["url"]; ?>" class="btn waves-effect waves-light light-blue lighten-1d">Подробнее</a>
               </div>
             </div>
           <?php endforeach; ?>

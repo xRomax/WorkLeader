@@ -1,16 +1,16 @@
 <title>Модерация отзывы | Панель Администратора</title>
 <div class="jobs_form">
-	<div class="head">Модерировать отзыв от "<?php echo $data['name']; ?>"</div>
+	<div class="head">Модерировать отзыв от "<?= $data['name']; ?>"</div>
 	<div class="body">
-    <img width="10%;" src="/public/images/reviews/<?php echo $data['id']; ?>.jpg">
-    <form action="/admin/reviewsModerationData/<?php echo $data['id']; ?>" enctype="multipart/form-data" method="post" class="ajax">
+    <img width="10%;" src="/public/images/reviews/<?= $data['id']; ?>.jpg">
+    <form action="/admin/reviewsModerationData/<?= $data['id']; ?>" enctype="multipart/form-data" method="post" class="ajax">
       <div class="input-field">
-        <input id="name" type="text" name="name" value="<?php echo $data['name']; ?>" class="validate">
+        <input id="name" type="text" name="name" value="<?= $data['name']; ?>" class="validate">
         <label for="name">Имя</label>
       </div>
 
       <div class="input-field">
-        <input id="country" type="text" name="country" value="<?php echo $data['country']; ?>" class="validate">
+        <input id="country" type="text" name="country" value="<?= $data['country']; ?>" class="validate">
         <label for="country">Город</label>
       </div>
 
@@ -27,12 +27,12 @@
       </div>
 
       <div class="input-field">
-        <textarea id="text" class="materialize-textarea" name="text"><?php echo $data['text']; ?></textarea>
+        <textarea id="text" class="materialize-textarea" name="text"><?= $data['text']; ?></textarea>
         <label for="text">Комментарий</label>
       </div>
 
       <div class="input-field">
-        <input id="social" type="text" name="social" value="<?php echo $data['social']; ?>" class="validate">
+        <input id="social" type="text" name="social" value="<?= $data['social']; ?>" class="validate">
         <label for="social">Соц. сеть</label>
       </div>
 
@@ -46,7 +46,7 @@
         </div>
       </div>
       <button style="width:100%;" class="btn waves-effect green" type="submit">Подтвердить</button>
-      <p><a style="width:100%;" href="/admin/reviewsDelete/<?php echo $data["id"] ?>" class="waves-effect waves-light btn red">Отменить</a></p>
+      <p><a style="width:100%;" href="/admin/reviewsDelete/<?= $data["id"] ?>" class="waves-effect waves-light btn red">Отменить</a></p>
 		</form>
 	</div>
 </div>

@@ -173,7 +173,9 @@ class Admin extends Model {
 		];
 		$this->db->query("DELETE FROM $table WHERE id = :id", $params);
 		$path = "public/images/$table/$id.jpg";
-		unlink($path);
+		if (file_exists($path)) {
+			unlink($path);
+		}
 	}
 
 	public function UploadImage($path, $folder, $id) {
@@ -288,5 +290,55 @@ class Admin extends Model {
 			"display" => 'show',
 		];
 		return count($this->db->row("SELECT * FROM `reviews` WHERE display = :display",$params));
+	}
+
+	public function articlesValidate($post, $type = 'add') {
+		$nameLen = iconv_strlen($post['name']);
+		$urlLen = iconv_strlen($post['url']);
+		$descLen = iconv_strlen($post['description']);
+		if ($nameLen < 3 or $nameLen > 100) {
+			$this->error = 'Имя должно содержать от 3 до 100 символов';
+			return false;
+		} elseif ($urlLen < 3 or $urlLen > 100) {
+			$this->error = 'URL должно содержать от 3 до 100 символов';
+			return false;
+		} elseif ($descLen < 3 or $descLen > 250) {
+			$this->error = 'Описание должно содержать от 20 до 250 символов';
+			return false;
+		} elseif ($post['recommend'] && count($post['recommend']) > 3 ) {
+			$this->error = 'Максимальное количество рекомендованных статьей не больше трёх!';
+			return false;
+		}
+		if (empty($_FILES['img']['tmp_name']) and $type == 'add') {
+			$this->error = 'Изображение не выбрано';
+			return false;
+		}
+		return true;
+	}
+
+	public function articlesAdd($post) {
+		$params = [
+			'name' => $post["name"],
+			'text' => $post["text"],
+			'description' => $post["description"],
+			'recommend' => json_encode($post['recommend']),
+			'url' => $post["url"]
+		];
+		$sql = "INSERT INTO articles (name, text, description, recommend, url) VALUES (:name, :text, :description, :recommend, :url)";
+		$this->db->query($sql,$params);
+		return $this->db->lastInsertId();
+	}
+
+	public function articlesEdit($post, $id) {
+		$params = [
+			'id' => $id,
+			'name' => $post["name"],
+			'text' => $post["text"],
+			'description' => $post["description"],
+			'recommend' => json_encode($post['recommend']),
+			'url' => $post["url"]
+		];
+		$sql = "UPDATE articles SET name = :name, text = :text, description = :description, recommend = :recommend, url = :url WHERE id = :id";
+		$this->db->query($sql,$params);
 	}
 }

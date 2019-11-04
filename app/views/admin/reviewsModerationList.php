@@ -16,9 +16,9 @@
         <?php else: ?>
           <?php foreach ($list as $val): ?>
             <tr>
-              <td><?php echo $val["name"] ?></td>
-              <td><p class="truncate" style="max-width:300px;"><?php echo $val["text"] ?></p></td>
-              <td><a href="/admin/reviewsModerationData/<?php echo $val["id"] ?>" class="waves-effect waves-light btn light-blue darken-4">Модерация</a></td>
+              <td><?= $val["name"] ?></td>
+              <td><p class="truncate" style="max-width:300px;"><?= $val["text"] ?></p></td>
+              <td><a href="/admin/reviewsModerationData/<?= $val["id"] ?>" class="waves-effect waves-light btn light-blue darken-4">Модерация</a></td>
             </tr>
           <?php endforeach; ?>
         <?php endif; ?>
@@ -34,8 +34,8 @@
         <?php foreach ($list as $val): ?>
           <tr>
             <td>
-              <p><?php echo $val["name"]; ?></p>
-              <a href="/admin/reviewsModerationData/<?php echo $val["id"] ?>" class="waves-effect waves-light btn light-blue darken-4">Модерация</a>
+              <p><?= $val["name"]; ?></p>
+              <a href="/admin/reviewsModerationData/<?= $val["id"] ?>" class="waves-effect waves-light btn light-blue darken-4">Модерация</a>
             </td>
           </tr>
         <?php endforeach; ?>

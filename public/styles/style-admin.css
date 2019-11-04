@@ -1,6 +1,6 @@
 html, body {
   font-family: Arial, Helvetica, sans-serif;
-  /* overflow-y:hidden; */
+  overflow-y: hidden;
 }
 .nicescroll-rails-hr {
   display: none;
@@ -70,11 +70,31 @@ html, body {
   transform: translate(-50%, -70%);
 }
 main {
-  padding-left: 300px;
+  padding-left: 310px;
 }
+
+.tdname {
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  max-width: 500px;
+}
+h5.tdname {
+  max-width: 992px;
+}
+
+@media only screen and (max-width: 1270px) {
+  .tdname {
+    max-width: 200px;
+  }
+}
+
 @media only screen and (max-width: 992px) {
   main {
     padding-left: 0;
+  }
+  .tdname {
+    max-width: 320px;
   }
 }
 .sidenav {

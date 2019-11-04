@@ -232,4 +232,80 @@ class AdminController extends Controller {
 		}
 	}
 
+	public function articlesListAction() {
+		$vars = [
+			'pagination' => '',
+			'list' => $this->model->dataList('articles'),
+		];
+		$this->view->render($vars);
+	}
+
+	public function articlesViewAction() {
+		$vars = [
+			'pagination' => '',
+			'data' => $this->model->dataPost($this->route['id'], 'articles')[0],
+		];
+		$this->view->render($vars);
+	}
+
+	public function articlesAddAction() {
+		if (!empty($_POST)) {
+			if (!isset($_POST['recommend'])) {
+				$_POST['recommend'] = NULL;
+			}
+			// var_dump($_POST);exit;
+			if (!$this->model->articlesValidate($_POST,'add')) {
+				$this->view->message('error', $this->model->error, 'Ошибка!');
+			}
+			$id = $this->model->articlesAdd($_POST);
+			if (!$id)	{ 
+				$this->view->message('success', 'Ошибка обработки запроса', 'Ошибка!');
+			}
+			$this->model->UploadImage($_FILES['img']['tmp_name'], 'articles', $id);
+			$this->view->location('admin/articlesList');
+		}
+		$vars = [
+			'list' => $this->model->dataList('articles')
+		];
+		$this->view->render($vars);
+	}
+
+	public function articlesEditAction() {
+		if (!$this->model->isExists('articles','id',$this->route['id'])) {
+			$this->view->errorCode(404);
+		}
+		if (!empty($_POST)) {
+			if (!isset($_POST['recommend'])) {
+				$_POST['recommend'] = NULL;
+			}
+			// var_dump($_POST);exit;
+			if (!$this->model->articlesValidate($_POST, 'edit')) {
+				$this->view->message('error', $this->model->error, 'Ошибка!');
+			}
+			if ($_FILES['img']['tmp_name']) {
+				$this->model->UploadImage($_FILES['img']['tmp_name'], 'articles', $this->route['id']);
+			}
+			$this->model->articlesEdit($_POST,$this->route['id']);
+			$this->view->location('admin/articlesList');
+		}
+		
+		$data = $this->model->dataPost($this->route['id'],'articles')[0];
+		$recommend = json_decode($data['recommend']);
+
+		$vars = [
+			'data' => $data,
+			'list' => $this->model->dataList('articles'),
+			'recommend' => $recommend
+		];
+		$this->view->render($vars);
+	}
+
+	public function articlesDeleteAction() {
+		if (!$this->model->isExists('articles','id',$this->route['id'])) {
+			$this->view->errorCode(404);
+		} else {
+			$this->model->deletePost($this->route['id'],'articles');
+			$this->view->redirect('admin/articlesList');
+		}
+	}
 }

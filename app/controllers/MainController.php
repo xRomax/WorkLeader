@@ -99,4 +99,27 @@ class MainController extends Controller {
 			$this->model->addClient($_POST);
 		}
 	}
+
+	public function articlesListAction() {
+		$page = array_key_exists('page', $this->route) ? $page = (int) $this->route["page"] : 1;
+
+		$vars = [
+			'pagination' => $this->model->pagination($page, $_GET, 'articles', 4),
+			'list' => $this->model->articlesList($page),
+		];
+		$this->view->render($vars);
+	}
+
+	public function articleDataAction() {
+		$data = $this->model->dataPost($this->route['url'],'articles')[0];
+		$recommend = json_decode($data['recommend']);
+
+		$vars = [
+			'data' => $data,
+			'list' => $this->model->dataList('articles', 'ASC'),
+			'recommend' => $recommend
+		];
+		$this->view->render($vars);
+	}
+
 }

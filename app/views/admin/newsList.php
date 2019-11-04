@@ -16,9 +16,9 @@
         <?php else: ?>
           <?php foreach ($list as $val): ?>
             <tr>
-              <td><?php echo $val["name"] ?></td>
-              <td><a href="/admin/newsEdit/<?php echo $val["id"] ?>" class="waves-effect waves-light btn blue">Редактировать</a></td>
-              <td><a href="/admin/newsDelete/<?php echo $val["id"] ?>" class="waves-effect waves-light btn red">Удалить</a></td>
+              <td><?= $val["name"] ?></td>
+              <td><a href="/admin/newsEdit/<?= $val["id"] ?>" class="waves-effect waves-light btn blue">Редактировать</a></td>
+              <td><a href="/admin/newsDelete/<?= $val["id"] ?>" class="waves-effect waves-light btn red">Удалить</a></td>
             </tr>
           <?php endforeach; ?>
         <?php endif; ?>
@@ -33,9 +33,9 @@
         <?php foreach ($list as $val): ?>
           <tr>
             <td>
-              <p><?php echo $val["name"]; ?></p>
-              <a href="/admin/newsEdit/<?php echo $val["id"] ?>" class="waves-effect waves-light btn blue">Редактировать</a>
-              <p><a href="/admin/newsDelete/<?php echo $val["id"] ?>" class="waves-effect waves-light btn red">Удалить</a></p>
+              <p><?= $val["name"]; ?></p>
+              <a href="/admin/newsEdit/<?= $val["id"] ?>" class="waves-effect waves-light btn blue">Редактировать</a>
+              <p><a href="/admin/newsDelete/<?= $val["id"] ?>" class="waves-effect waves-light btn red">Удалить</a></p>
             </td>
           </tr>
         <?php endforeach; ?>

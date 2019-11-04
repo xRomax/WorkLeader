@@ -62,6 +62,23 @@ return [
 		'action' => 'reviews',
 		'path' => 'main/reviews'
 	],
+
+	'articles' => [
+		'controller' => 'main',
+		'action' => 'articlesList',
+		'path' => 'main/articlesList'
+	],
+	'articles/{page:\d+}' => [
+		'controller' => 'main',
+		'action' => 'articlesList',
+		'path' => 'main/articlesList'
+	],
+	'articles/{url:\D+}' => [
+		'controller' => 'main',
+		'action' => 'articleData',
+		'path' => 'main/articleData'
+	],
+
 	// AdminController
 	'admin' => [
 		'controller' => 'admin',
@@ -172,5 +189,31 @@ return [
 		'controller' => 'admin',
 		'action' => 'reviewsDel',
 		'path' => ''
+	],
+
+	'admin/articlesList' => [
+		'controller' => 'admin',
+		'action' => 'articlesList',
+		'path' => 'admin/articlesList'
+	],
+	'admin/articlesAdd' => [
+		'controller' => 'admin',
+		'action' => 'articlesAdd',
+		'path' => 'admin/articlesAdd'
+	],
+	'admin/articlesEdit/{id:\d+}' => [
+		'controller' => 'admin',
+		'action' => 'articlesEdit',
+		'path' => 'admin/articlesEdit'
+	],
+	'admin/articlesDelete/{id:\d+}' => [
+		'controller' => 'admin',
+		'action' => 'articlesDelete',
+		'path' => ''
+	],
+	'admin/articlesView/{id:\d+}' => [
+		'controller' => 'admin',
+		'action' => 'articlesView',
+		'path' => 'admin/articlesView'
 	],
 ];

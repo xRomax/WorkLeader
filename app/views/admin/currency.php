@@ -58,15 +58,15 @@
           <?php if($key == 'NOK' or $key == 'PLN' or $key == 'CZK' or $key == 'USD'): ?>
             <tr>
               <td>1 EUR</td>
-              <td><?php echo $value; ?></td>
-              <td><?php echo $key; ?></td>
+              <td><?= $value; ?></td>
+              <td><?= $key; ?></td>
             </tr>
           <?php endif; ?>
         <?php endforeach; ?>
       </tbody>
       <tr>
         <td>1 EUR</td>
-        <td><?php echo $currencyUAH->rate; ?></td>
+        <td><?= $currencyUAH->rate; ?></td>
         <td>UAH</td>
       </tr>
     </table>

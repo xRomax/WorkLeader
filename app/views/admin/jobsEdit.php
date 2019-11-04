@@ -4,7 +4,7 @@ $(document).ready(function(){
 
   var slider_age = document.getElementById('age-slider');
   noUiSlider.create(slider_age, {
-    start: [<?php echo $data['age_min']; ?>, <?php echo $data['age_max']; ?>],
+    start: [<?= $data['age_min']; ?>, <?= $data['age_max']; ?>],
     connect: true,
     step: 1,
     orientation: 'horizontal',
@@ -27,17 +27,17 @@ $(document).ready(function(){
 });
 
 </script>
-<title>Редактировать вакансию "<?php echo $data['name']; ?>" | Панель Администратора</title>
+<title>Редактировать вакансию "<?= $data['name']; ?>" | Панель Администратора</title>
 <div class="jobs_form">
-	<div class="head">Редактировать вакансию "<?php echo $data['name']; ?>"</div>
+	<div class="head">Редактировать вакансию "<?= $data['name']; ?>"</div>
 	<div class="body">
-    <form action="/admin/jobsEdit/<?php echo $data['id']; ?>" enctype="multipart/form-data" method="post" class="ajax">
+    <form action="/admin/jobsEdit/<?= $data['id']; ?>" enctype="multipart/form-data" method="post" class="ajax">
       <div class="input-field">
-        <input id="name" type="text" name="name" value="<?php echo $data['name']; ?>" class="validate">
+        <input id="name" type="text" name="name" value="<?= $data['name']; ?>" class="validate">
         <label for="name">Название</label>
       </div>
       <div class="input-field">
-        <input id="url" type="text" name="url" value="<?php echo $data['url']; ?>" class="validate">
+        <input id="url" type="text" name="url" value="<?= $data['url']; ?>" class="validate">
         <label for="url">URL адресс</label>
       </div>
       <div class="input-field">
@@ -80,15 +80,15 @@ $(document).ready(function(){
         <input style="position:fixed; top:-100000px;" type="text" id="max-age" name="age_max">
       </div>
       <div class="input-field">
-        <input id="experience" type="text" name="experience" value="<?php echo $data['experience']; ?>" class="validate">
+        <input id="experience" type="text" name="experience" value="<?= $data['experience']; ?>" class="validate">
         <label for="experience">Опыт работы</label>
       </div>
       <div class="input-field">
-        <input id="responsibility" type="text" name="responsibility" value="<?php echo $data['responsibility']; ?>" class="validate">
+        <input id="responsibility" type="text" name="responsibility" value="<?= $data['responsibility']; ?>" class="validate">
         <label for="responsibility">Обязаности</label>
       </div>
       <div class="input-field">
-        <input id="employment_conditions" type="text" name="employment_conditions" value="<?php echo $data['employment_conditions']; ?>" class="validate">
+        <input id="employment_conditions" type="text" name="employment_conditions" value="<?= $data['employment_conditions']; ?>" class="validate">
         <label for="employment_conditions">Условия трудоустройства</label>
       </div>
       <div class="input-field">
@@ -105,15 +105,15 @@ $(document).ready(function(){
         </p>
       </div>
       <div class="input-field">
-        <input id="accommodations" type="text" name="accommodations" value="<?php echo $data['accommodations']; ?>" class="validate">
+        <input id="accommodations" type="text" name="accommodations" value="<?= $data['accommodations']; ?>" class="validate">
         <label for="accommodations">Условия проживания</label>
       </div>
       <div class="input-field">
-        <input id="salary" type="text" name="salary" value="<?php echo $data['salary']; ?>" class="validate">
+        <input id="salary" type="text" name="salary" value="<?= $data['salary']; ?>" class="validate">
         <label for="salary">Зарплата (примерное число в Евро)</label>
       </div>
       <div class="input-field">
-        <input id="salary_desc" type="text" name="salary_desc" value="<?php echo $data['salary_desc']; ?>" class="validate">
+        <input id="salary_desc" type="text" name="salary_desc" value="<?= $data['salary_desc']; ?>" class="validate">
         <label for="salary_desc">Зарплата подробное описание</label>
       </div>
       <div class="file-field input-field">
