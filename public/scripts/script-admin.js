@@ -6,6 +6,11 @@ $(document).ready(function(){
 
   $('select').formSelect();
 
+  $('#editor-button').click(function(){
+    $('#text-input').val($('#editor').html());
+  });
+
+
   $('.ajax').submit(function(event) {
     var json;
     event.preventDefault();

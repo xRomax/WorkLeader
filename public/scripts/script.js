@@ -77,9 +77,9 @@ $(document).ready(function(){
 
   activeLink();
 
-  $(".modalForm #icon_telephone").mask("+38(999)999-99-99");
-  $(".sideForm #telephone").mask("+38(999)999-99-99");
-  $(".bottomForm #phone").mask("+38(999)999-99-99");
+  $(".modalForm #icon_telephone").mask("+99(999)999-99-99");
+  $(".sideForm #telephone").mask("+99(999)999-99-99");
+  $(".bottomForm #phone").mask("+99(999)999-99-99");
 
   $(".nicescroll-rails-hr").css("display","none");
 

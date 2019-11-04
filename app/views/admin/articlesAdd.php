@@ -3,6 +3,7 @@
 	<div class="head">Добавить статью</div>
 	<div class="body">
         <form action="/admin/articlesAdd" enctype="multipart/form-data" method="post" class="ajax">
+        <input type="hidden" id="text-input" name="text">
             <div class="input-field">
                 <input id="name" type="text" name="name" class="validate">
                 <label for="name">Название</label>
@@ -31,13 +32,26 @@
                 <label for="description">Краткое описание</label>
             </div>
             <div class="input-field">
-                <textarea id="editor" class="materialize-textarea" name="text"></textarea>
+                <div id="toolbar-container"></div>
+                <div id="editor">
+                    <p>Текст статьи</p>
+                </div>
             </div>
-            <button style="width:100%;" class="btn waves-effect light-blue darken-4" type="submit">Добавить</button>
+            <button id='editor-button' style="width:100%;" class="btn waves-effect light-blue darken-4" type="submit">Добавить</button>
         </form>
 	</div>
 </div>
-<script type="text/javascript" src="http://js.nicedit.com/nicEdit-latest.js"></script> 
-<script type="text/javascript">
-    bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });
+<script src="https://cdn.ckeditor.com/ckeditor5/15.0.0/decoupled-document/ckeditor.js"></script>
+<script>
+    DecoupledEditor
+        .create( document.querySelector( '#editor' ) )
+        .then( editor => {
+            const toolbarContainer = document.querySelector( '#toolbar-container' );
+
+            toolbarContainer.appendChild( editor.ui.view.toolbar.element );
+        } )
+        .catch( error => {
+            console.error( error );
+        } );
+    
 </script>
