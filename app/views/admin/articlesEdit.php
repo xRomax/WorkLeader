@@ -3,6 +3,7 @@
 	<div class="head">Редактировать статью</div>
 	<div class="body">
         <form action="/admin/articlesEdit/<?= $data['id'] ?>" enctype="multipart/form-data" method="post" class="ajax">
+            <input type="hidden" id="text-input" name="text">
             <div class="input-field">
                 <input id="name" type="text" name="name" class="validate" value="<?= $data['name'] ?>">
                 <label for="name">Название</label>
@@ -33,7 +34,7 @@
                 <?php endif; ?>
             </select>
             <div class="input-field">
-                <input id="description" type="text" name="description" class="validate" value="">
+                <input id="description" type="text" name="description" class="validate" value="<?= $values['description'] ?>">
                 <label for="description">Краткое описание</label>
             </div>
             <div class="input-field">
@@ -42,7 +43,7 @@
                     <?= $data['text'] ?>
                 </div>
             </div>
-            <button style="width:100%;" class="btn waves-effect light-blue darken-4" type="submit">Сохранить изминения</button>
+            <button id='editor-button' style="width:100%;" class="btn waves-effect light-blue darken-4" type="submit">Сохранить изминения</button>
         </form>
 	</div>
 </div>
